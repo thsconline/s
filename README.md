@@ -1,7 +1,3 @@
-## Latest Update - 3rd May 2020
-This repository is currently being rebuilt today so it may not be accessible for the next 48 hours.
-More content including 2019 content will be available. 
-
 ## Notice:
 Any information communicated Github project is reserved for the purposes of bona-fide research and study, for students.
 
