@@ -1,0 +1,103 @@
+#homepage {
+    -webkit-text-size-adjust: none;
+}
+#homepage a.button
+{
+    color:white !important;
+}
+#homepage ol, #homepage  ul {
+	list-style: none;
+}
+#homepage div, #homepage h3, #homepage h4, #homepage h5, #homepage h6, #homepage p, #homepage blockquote, #homepage pre, #homepage a, #homepage abbr, #homepage acronym, #homepage address, #homepage big, #homepage cite, #homepage code, #homepage del, #homepage dfn, #homepage em, #homepage img, #homepage  ul, #homepage  li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+#homepage, #homepage *::before, #homepage  *::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#homepage {
+	line-height: 1;
+}
+#homepage, #homepage  input, #homepage  textarea, #homepage  select {
+	font-family: "XITS", sans-serif;
+color:rgb(41,140,202) !important;
+	font-weight: 300;
+	line-height: 1.75em;
+	font-size: 15pt;
+}
+.homepage #header-wrapper {
+	padding: 10em 0 0 0;
+	background-size: 440px 440px, #homepage				100% 100%, #homepage					auto;
+}
+section, #homepage article {
+	margin-bottom: 3em;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%
+}
+section:last-child, #homepage article:last-child {
+	margin-bottom: 0px;
+}
+#hero {
+	position: relative;
+	color: black;
+	text-align: center;
+	z-index: 1;
+}
+header {
+	margin-bottom: 1.5em;
+}
+#homepage p, #homepage ul, #homepage ol, #homepage dl, #homepage table, #homepage .features {
+	margin-bottom: 1.5em;
+}
+#hero p {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+#homepage section > :last-child, #homepage article > :last-child {
+	margin-bottom: 0px;
+}
+#homepage ul.actions {
+	padding-top: 1em;
+}
+#homepage ul.actions li {
+	display: inline-block;
+	margin-left: 1em;
+}
+#homepage ul.actions li:first-child {
+	margin-left: 0px;
+}
+
+#homepage h2 {
+	font-size: 2em;
+	line-height: 1.25em;
+}
+#hero h2 {
+	color: #222222;
+	font-size: 3em;
+}
+#logo {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	text-align:center;
+	width: 15em;
+}
+
+.homepage a:link, .homepage a:visited {
+	text-decoration: none !important;
+	color: #0000FF !important;
+}
+
+.homepage a:hover, .homepage a:active {
+	text-decoration: none !important;
+	color: #FF5500 !important;
+}
