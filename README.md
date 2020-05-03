@@ -14,3 +14,5 @@ Any information communicated Github project is reserved for the purposes of bona
 - Opera 15 and newer (untested)
 - IOS 10 and newer
 - Android 5 and newer (untested)
+
+Older browsers including Internet Explorer 10 and earlier are not supported.
