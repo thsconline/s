@@ -1,13 +1,93 @@
+var browser;
+var version;
+// this code from https://jsfiddle.net/kmturley/Gd6c8/
+(function () {
+    'use strict';
+    
+    var module = {
+        options: [],
+        header: [navigator.platform, navigator.userAgent, navigator.appVersion, navigator.vendor, window.opera],
+        dataos: [
+            { name: 'Windows Phone', value: 'Windows Phone', version: 'OS' },
+            { name: 'Windows', value: 'Win', version: 'NT' },
+            { name: 'iPhone', value: 'iPhone', version: 'OS' },
+            { name: 'iPad', value: 'iPad', version: 'OS' },
+            { name: 'Kindle', value: 'Silk', version: 'Silk' },
+            { name: 'Android', value: 'Android', version: 'Android' },
+            { name: 'PlayBook', value: 'PlayBook', version: 'OS' },
+            { name: 'BlackBerry', value: 'BlackBerry', version: '/' },
+            { name: 'Macintosh', value: 'Mac', version: 'OS X' },
+            { name: 'Linux', value: 'Linux', version: 'rv' },
+            { name: 'Palm', value: 'Palm', version: 'PalmOS' }
+        ],
+        databrowser: [
+            { name: 'Chrome', value: 'Chrome', version: 'Chrome' },
+            { name: 'Firefox', value: 'Firefox', version: 'Firefox' },
+            { name: 'Safari', value: 'Safari', version: 'Version' },
+            { name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' },
+            { name: 'Opera', value: 'Opera', version: 'Opera' },
+            { name: 'BlackBerry', value: 'CLDC', version: 'CLDC' },
+            { name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' }
+        ],
+        init: function () {
+            var agent = this.header.join(' '),
+                os = this.matchItem(agent, this.dataos),
+                browser = this.matchItem(agent, this.databrowser);
+            
+            return { os: os, browser: browser };
+        },
+        matchItem: function (string, data) {
+            var i = 0,
+                j = 0,
+                html = '',
+                regex,
+                regexv,
+                match,
+                matches,
+                version;
+            
+            for (i = 0; i < data.length; i += 1) {
+                regex = new RegExp(data[i].value, 'i');
+                match = regex.test(string);
+                if (match) {
+                    regexv = new RegExp(data[i].version + '[- /:;]([\\d._]+)', 'i');
+                    matches = string.match(regexv);
+                    version = '';
+                    if (matches) { if (matches[1]) { matches = matches[1]; } }
+                    if (matches) {
+                        matches = matches.split(/[._]+/);
+                        for (j = 0; j < matches.length; j += 1) {
+                            if (j === 0) {
+                                version += matches[j] + '.';
+                            } else {
+                                version += matches[j];
+                            }
+                        }
+                    } else {
+                        version = '0';
+                    }
+                    return {
+                        name: data[i].name,
+                        version: parseFloat(version)
+                    };
+                }
+            }
+            return { name: 'unknown', version: 0 };
+        }
+    };
+    
+    var e = module.init();
+	browser = e.browser.name;
+    	version = e.browser.version;
+	
+}());
+
+
 function downloadFile(myobject)
 {
 	var idxq=myobject.fileref;
 	var b="https://drive.google.com/uc?export=download&id="+idxq;
 	window.location = b;
-}
-function getChromeVersion () {     
-    var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
-
-    return raw ? parseInt(raw[2], 10) : false;
 }
 
 function loadpage()
@@ -48,13 +128,13 @@ function loadpage()
 	win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 	win.document.write("<\/head><body>");
 	
-	if(getChromeVersion() > 82)
+	if(browser == "Chrome" && version > 82)
 	{
-		win.document.write("<span id=\"overlaybar\" style=\"z-index:1000\; width:100%;height:5px;\"><span id=\"overlayinsert\">Downloads in the latest version of Chrome 83 and newer is not yet supported. Some files can be downloading using this link: <a onclick=\"https://thsconline.github.io/s/download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Temp Download Link for Chrome 83<\/a>&nbsp;&nbsp;</span></span><br>");
+	 	win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;height:5px;\"><span id=\"overlayinsert\">Downloads in the latest version of Chrome 83 and newer is not yet supported. Some files can be downloading using this link: <a onclick=\"https://thsconline.github.io/s/download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Temp Download Link for Chrome 83<\/a>&nbsp;&nbsp;</span></div><br>");
 	}			
 			
 	//win.document.write("<span id=\"overlaybar\"><span id=\"overlayinsert\">&nbsp;&nbsp;<a onclick=\"window.close()\" class=\"border\" href=\"#v\">Close &#215;<\/a>&nbsp;&nbsp;</span></span><br>");
-	win.document.write("<iframe style=\"width:100%; height:98%;\" height=\"98%\" sandbox=\"allow-downloads-without-user-activation allow-scripts allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
+	win.document.write("<iframe style=\"width:100%; height:98%;\" height=\"98%\" sandbox=\"allow-scripts allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
 	win.document.write("</body></html>"); 	 
 	win.document.title = titlex;
 
