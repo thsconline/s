@@ -87,12 +87,10 @@ function downloadFile(myobject)
 {
 	var fileData =myobject.fileref;
 	var filename = myobject.name;
-	    const linkSource = `data:application/pdf;base64,${pdf}`;
     const downloadLink = document.createElement("a");
-    const fileName = "vct_illustration.pdf";
 
     downloadLink.href = "data:application/pdf;base64"+fileData;
-    downloadLink.download = fileName;
+    downloadLink.download = filename;
 	document.body.appendChild(downloadLink);
     downloadLink.click();
 	document.body.removeChild(downloadLink);
