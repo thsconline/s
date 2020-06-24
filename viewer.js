@@ -130,7 +130,7 @@ function loadpage()
 	
 	if(browser == "Chrome" && version > 82)
 	{
-	 	win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;height:5px;\"><span id=\"overlayinsert\">Downloads in the latest version of Chrome 83 and newer is not yet supported. Some files can be downloading using this link: <a onclick=\"https://thsconline.github.io/s/download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Temp Download Link for Chrome 83<\/a>&nbsp;&nbsp;</span></div><br>");
+	 	win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;height:30px;\"><span id=\"overlayinsert\" style=\"float:left !Important\">Downloads in the latest version of Chrome 83 and newer is not yet supported. Some files can be downloading using this link: <a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Temp Download Link for Chrome 83<\/a>&nbsp;&nbsp;</span></div><br>");
 	}			
 			
 	//win.document.write("<span id=\"overlaybar\"><span id=\"overlayinsert\">&nbsp;&nbsp;<a onclick=\"window.close()\" class=\"border\" href=\"#v\">Close &#215;<\/a>&nbsp;&nbsp;</span></span><br>");
