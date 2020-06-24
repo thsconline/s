@@ -83,6 +83,8 @@ var version;
 }());
 
 
+// https://stackoverflow.com/questions/16245767/creating-a-blob-from-a-base64-string-in-javascript
+// https://stackoverflow.com/questions/19327749/javascript-blob-filename-without-link
 function downloadFile(myobject)
 {
 	var fileData =myobject.fileref;
@@ -163,7 +165,7 @@ function loadpage()
 		case "?download":
 		var viewno=getParameterByName('download', "0000");
 		var titlex=getParameterByName('n', "404 Not Found");
-		document.write("<html><body>&nbsp;<script src=\"\/download\/download.js\" type=\"text\/javascript\"></script><script src=\"\/s\/viewer.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=download&field="+titlex+"&base="+viewno+"\"></script></body></html>");
+		document.write("<html><body>&nbsp;<script src=\"\/download\/download.js\" type=\"text\/javascript\"></script><script src=\"\/s\/viewer.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 		break;
 		case "?view":
 		var viewno=getParameterByName('view', "0000")
