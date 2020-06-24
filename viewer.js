@@ -85,14 +85,14 @@ var version;
 
 function downloadFile(myobject)
 {
-	var filedata =myobject.fileref;
+	var fileData =myobject.fileref;
 	var filename = myobject.name;
-//	var b="https://drive.google.com/uc?export=download&id="+filedata;
+//	var b="https://drive.google.com/uc?export=download&id="+fileData;
 	
 	
 //	window.location = b;
 	
-	download("data:application/pdf;base64, filename, "application/pdf");
+	download("data:application/pdf;base64"+fileData, filename, "application/pdf");
 	
 }
 
