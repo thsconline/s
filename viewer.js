@@ -87,7 +87,7 @@ function downloadFile(myobject)
 {
 	var fileData =myobject.fileref;
 	var filename = myobject.name;
-    const downloadLink = document.createElement("a");
+/*    const downloadLink = document.createElement("a");
 
     downloadLink.href = "data:application/pdf;base64"+fileData;
     downloadLink.download = filename;
@@ -95,10 +95,10 @@ function downloadFile(myobject)
     downloadLink.click();
 	document.body.removeChild(downloadLink);
 	
-//	var b="https://drive.google.com/uc?export=download&id="+fileData;
+//*/	var b="https://drive.google.com/uc?export=download&id="+fileData;
 	
-	
-//	window.location = b;
+/*	
+//*/	window.location = b;
 
 	
 }
@@ -121,7 +121,7 @@ function loadpage()
 		case "?download":
 		var viewno=getParameterByName('download', "0000");
 		var titlex=getParameterByName('n', "404 Not Found");
-		document.write("<html><body>&nbsp;<script src=\"\/download\/download.js\" type=\"text\/javascript\"></script><script src=\"\/s\/viewer.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
+		document.write("<html><body>&nbsp;<script src=\"\/download\/download.js\" type=\"text\/javascript\"></script><script src=\"\/s\/viewer.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=download&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 		break;
 		case "?view":
 		var viewno=getParameterByName('view', "0000")
@@ -143,7 +143,7 @@ function loadpage()
 	win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 	win.document.write("<\/head><body>");
 	
-	if(browser == "Chrome" && version > 82)
+	if(browser == "Chrome" && version > 73)
 	{
 	 	win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;height:30px;\"><span id=\"overlayinsert\" style=\"float:left !Important\">Downloads in the latest version of Chrome 83 and newer is not yet supported. Some files can be downloading using this link: <a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Temp Download Link for Chrome 83<\/a>&nbsp;&nbsp;</span></div><br>");
 	}			
