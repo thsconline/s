@@ -85,10 +85,18 @@ var version;
 
 function downloadFile(myobject)
 {
-	var idxq=myobject.fileref;
-	var b="https://drive.google.com/uc?export=download&id="+idxq;
-	window.location = b;
+	var filedata =myobject.fileref;
+	var filename = myobject.name;
+//	var b="https://drive.google.com/uc?export=download&id="+filedata;
+	
+	
+//	window.location = b;
+	
+	download("data:application/pdf;base64, filename, "application/pdf");
+	
 }
+
+
 
 function loadpage()
 {
@@ -106,7 +114,7 @@ function loadpage()
 		case "?download":
 		var viewno=getParameterByName('download', "0000");
 		var titlex=getParameterByName('n', "404 Not Found");
-		document.write("<html><body>&nbsp;<script src=\"\/s\/viewer.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=download&field="+titlex+"&base="+viewno+"\"></script></body></html>");
+		document.write("<html><body>&nbsp;<script src=\"\/s\/viewer.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 		break;
 		case "?view":
 		var viewno=getParameterByName('view', "0000")
