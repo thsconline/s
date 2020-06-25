@@ -157,7 +157,7 @@ function loadpage()
 		case "?download":
 		var viewno=getParameterByName('download', "0000");
 		var titlex=getParameterByName('n', "404 Not Found");
-		document.write("<html><body>&nbsp;<script src=\"\/download\/download.js\" type=\"text\/javascript\"></script><script src=\"\/s\/viewer.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
+		document.write("<html><body>&nbsp;<script src=\"\/s\/viewer2.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 		break;
 		case "?view":
 		var viewno=getParameterByName('view', "0000")
