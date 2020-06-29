@@ -51,7 +51,7 @@ function downloadFile(myobject)
 	}
 	catch(err)
 	{
-	var b="https://drive.google.com/uc?export=download&id="+id;
-	window.location = b;
+//	var b="https://drive.google.com/uc?export=download&id="+id;
+//	window.location = b;
 	}
 }
