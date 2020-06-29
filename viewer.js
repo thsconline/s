@@ -35,17 +35,8 @@ function loadpage()
 	win.document.write("<style>html, body {height:100% !important;}</style>");
 	win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 	win.document.write("<\/head><body>");
-	if(typeof browser == "undefined")
-	{
-		try
-		{
-				win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\"><span id=\"overlayinsert\" style=\"float:left !Important\">Downloads in the latest version of Chrome 83 and newer is not yet supported. Some files can be downloading using this link: <a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"win.close()\">Close &#215;</span></div><br>")
-		}
-		catch(err)
-		{
-		}
-		
-	}
+	win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\"><span id=\"overlayinsert\" style=\"float:left !Important\">Downloads in the latest version of Chrome 83 and newer is not yet supported. Some files can be downloading using this link: <a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"win.close()\">Close &#215;</span></div><br>")
+
 	//win.document.write("<span id=\"overlaybar\"><span id=\"overlayinsert\">&nbsp;&nbsp;<a onclick=\"window.close()\" class=\"border\" href=\"#v\">Close &#215;<\/a>&nbsp;&nbsp;</span></span><br>");
 	win.document.write("<iframe style=\"width:100%; height:98%;\" height=\"98%\" sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
 	win.document.write("</body></html>"); 	 
