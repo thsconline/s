@@ -76,11 +76,12 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
   }
     else
     {
-    var i = document.createElement('iframe');
+	    alert("Link not currently available");
+   /* var i = document.createElement('iframe');
     i.style.display = 'none';
     i.src = "https://thsconline.github.io/s/index.html?view="+viewno+"&n="+titlex;
     document.body.appendChild(i);
-    i.onload = function() {setTimeout(function(){i.parentNode.removeChild(i);}, 4000)};
+    i.onload = function() {setTimeout(function(){i.parentNode.removeChild(i);}, 4000)};*/
     }
     
     return false;
