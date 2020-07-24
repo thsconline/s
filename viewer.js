@@ -92,7 +92,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     i.style.display = 'none';
     i.src = "https://thsconline.github.io/s/index.html?view="+viewno+"&n="+titlex;
     document.body.appendChild(i);*/
-	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 5000);
+	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
     }
     
     return false;
