@@ -76,13 +76,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
   }
     else
     {
-	var lastChar = viewno.substr(viewno.length - 1);     
-	    if(lastchar == 0){
-		    
-	    alert("Link not currently available");
-	    }
-	    else
-	    {
+
     try
     {
 	document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"))
@@ -101,7 +95,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     document.body.appendChild(i);*/
 //	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
 	    }
-    }
+   
     
     return false;
 }
