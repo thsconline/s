@@ -76,7 +76,13 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
   }
     else
     {
-	    //alert("Link not currently available");
+	var lastChar = viewno.substr(viewno.length - 1);     
+	    if(lastchar == 0){
+		    
+	    alert("Link not currently available");
+	    }
+	    else
+	    {
     try
     {
 	document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"))
@@ -84,6 +90,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     catch(err)
     {
     }
+	    if
    var i = document.createElement('div');	    
    document.body.appendChild(i);
    i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 0px !important; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?view="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
@@ -92,7 +99,8 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     i.style.display = 'none';
     i.src = "https://thsconline.github.io/s/index.html?view="+viewno+"&n="+titlex;
     document.body.appendChild(i);*/
-	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
+//	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
+	    }
     }
     
     return false;
