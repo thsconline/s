@@ -86,7 +86,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     }
    var i = document.createElement('div');	    
    document.body.appendChild(i);
-   i.innerHTML = "<div id=\"overlaybar\" style=\"position: absolute; bottom: 0px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?view="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
+   i.innerHTML = "<div id=\"overlaybar\" style=\"position: absolute; bottom: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?view="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
    
    /* var i = document.createElement('iframe');
     i.style.display = 'none';
