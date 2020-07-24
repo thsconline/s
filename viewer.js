@@ -79,20 +79,20 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 	    //alert("Link not currently available");
     try
     {
-	document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlay"))
+	document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"))
     }
     catch(err)
     {
     }
    var i = document.createElement('div');	    
    document.body.appendChild(i);
-   i.innerHTML = "<div id=\"overlay\" style=\"position: relative; bottom: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?view="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
+   i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 0px !important; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?view="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" href=\"#v\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
    
    /* var i = document.createElement('iframe');
     i.style.display = 'none';
     i.src = "https://thsconline.github.io/s/index.html?view="+viewno+"&n="+titlex;
     document.body.appendChild(i);*/
-	setTimeout(function(){document.getElementById("overlay").parentNode.removeChild(document.getElementById("overlay"));}, 5000);
+	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 5000);
     }
     
     return false;
