@@ -35,22 +35,23 @@ color:rgb(41,140,202) !important;
 	padding: 10em 0 0 0;
 	background-size: 440px 440px, #homepage				100% 100%, #homepage					auto;
 }
-section, #homepage article {
-	margin-bottom: 3em;
-}
+
 .container {
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%
+	width: 100%;
+	margin-bottom: 3em;
 }
-section:last-child, #homepage article:last-child {
+.container:last-child, #homepage article:last-child {
 	margin-bottom: 0px;
 }
-#hero {
+#links {
 	position: relative;
 	color: black;
-	text-align: center;
+	text-align: left;
+	left:20%;
 	z-index: 1;
+
 }
 header {
 	margin-bottom: 1.5em;
@@ -58,7 +59,7 @@ header {
 #homepage p, #homepage ul, #homepage ol, #homepage dl, #homepage table, #homepage .features {
 	margin-bottom: 1.5em;
 }
-#hero p {
+#links p {
 	font-size: 1.5em;
 	line-height: 1.5em;
 }
@@ -77,19 +78,19 @@ header {
 }
 
 #homepage h2 {
-	font-size: 2em;
+	font-size: 20px;
 	line-height: 1.25em;
 }
-#hero h2 {
+#links h2 {
 	color: #222222;
-	font-size: 3em;
+	font-size: 30px;
 }
 #logo {
 	position: absolute;
 	z-index: 1;
 	top: 0px;
 	text-align:center;
-	width: 15em;
+	width: 150px;
 }
 
 .homepage a:link, .homepage a:visited {
