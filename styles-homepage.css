@@ -8,7 +8,7 @@
 #homepage ol, #homepage  ul {
 	list-style: none;
 }
-#homepage div, #homepage h3, #homepage h4, #homepage h5, #homepage h6, #homepage p, #homepage blockquote, #homepage pre, #homepage a, #homepage abbr, #homepage acronym, #homepage address, #homepage big, #homepage cite, #homepage code, #homepage del, #homepage dfn, #homepage em, #homepage img, #homepage  ul, #homepage  li {
+#homepage span, #homepage div, #homepage h3, #homepage h4, #homepage h5, #homepage h6, #homepage p, #homepage blockquote, #homepage pre, #homepage a, #homepage abbr, #homepage acronym, #homepage address, #homepage big, #homepage cite, #homepage code, #homepage del, #homepage dfn, #homepage em, #homepage img, #homepage  ul, #homepage  li {
 	margin: 0;
 	padding: 0;
 	border: 0;
