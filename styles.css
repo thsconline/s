@@ -347,7 +347,10 @@ td {
 	width:435px;
 	float:left;
 }
-
+#web-list > div > div > div > span > span
+{
+	text-transform:italic;	
+}
 
 // hack for IE9+; IE8 and lower not supported anyways
 @media screen and (min-width:0\0) {
