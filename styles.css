@@ -349,7 +349,7 @@ td {
 }
 #web-list > div > div > div > span > span
 {
-	text-transform:italic;	
+	font-style:italic;	
 }
 
 // hack for IE9+; IE8 and lower not supported anyways
