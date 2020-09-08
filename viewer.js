@@ -7,10 +7,6 @@ function loadpage()
 		
 	switch(queryx)
 	{
-		case "?landing":
-		document.getElementById('homepage').style.display='none';
-		document.getElementById('landingpage').style.display='inline-block';
-		break;
 		case "?download":
 		var viewno=getParameterByName('download', "0000");
 		var titlex=getParameterByName('n', "404 Not Found");
