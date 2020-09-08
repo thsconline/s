@@ -53,37 +53,24 @@ color:rgb(41,140,202) !important;
 	z-index: 1;
 
 }
-header {
-	margin-bottom: 1.5em;
-}
-#homepage p, #homepage ul, #homepage ol, #homepage dl, #homepage table, #homepage .features {
-	margin-bottom: 1.5em;
-}
-#links p {
-	font-size: 1.5em;
-	line-height: 1.5em;
-}
+
 #homepage section > :last-child, #homepage article > :last-child {
 	margin-bottom: 0px;
 }
 #homepage ul.actions {
-	padding-top: 1em;
+	padding-top: 16px;
 }
 #homepage ul.actions li {
 	display: inline-block;
-	margin-left: 1em;
+	margin-left: 16px;
 }
 #homepage ul.actions li:first-child {
 	margin-left: 0px;
 }
 
-#homepage h2 {
-	font-size: 20px;
-	line-height: 1.25em;
-}
 #links h2 {
 	color: #222222;
-	font-size: 30px;
+	font-size: 48px;
 }
 #logo {
 	position: absolute;
