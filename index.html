@@ -2,6 +2,22 @@
   <link href="/s/styles.css" rel="stylesheet" type="text/css" /></head><body><div id="page-wrapper"><div id="content-all">
 <title>THSC Online</title><h2>Collating and Reindexing...</h2>
 <b>Expected Completion Date: </b>22 September 2020<br><br>
+<script>
+	var searchq=window.location.search+""
+	var q=window.location.search+"=z&end" || "?noquery"
+	var qt=q.split("&")[0]
+	var queryx=qt.split("=")[0];
+		
+	switch(queryx)
+	{
+    case "?data":
+    case "?download":
+    case "?view":    
+    document.write('<html><head><link href="/s/styles.css" rel="stylesheet" type="text/css" /></head><body><div id="page-wrapper"><div id="content-all"><title>THSC Online</title><h2>Collating and Reindexing...</h2><b>Expected Completion Date: </b>22 September 2020<br><br>');
+    default
+    break;
+}
+  </script>
 <!--<html><head>
 <title>THSC Online</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
