@@ -109,7 +109,7 @@ window.addEventListener( 'load', function () {
     } );
 
     // Set up our request
-    XHR.open( 'POST', 'https://script.google.com/macros/s/AKfycbwsgd6ioZJ_X9usR5f80vH-GjOkqk8NTNMJONDsEM42KAycKD0/exec' );
+    XHR.open( 'POST', 'https://script.google.com/macros/s/AKfycbzF1ydtQ_i2DefJv_OZ2jbYCav4HQTChR8Ya4LU4QUPkDpQ1QlX/exec' );
 
     // Add the required HTTP header to handle a multipart form data POST request
     XHR.setRequestHeader( 'Content-Type','multipart/form-data; boundary=' + boundary );
@@ -159,7 +159,7 @@ All submissions of past papers or practice questions (TEX/PDF files preferred) a
 <span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/upload/">Back to Uploader Selector Screen</a></span><br>
 </div>
 <br>
-<form id="myForm" action="https://script.google.com/macros/s/AKfycbwsgd6ioZJ_X9usR5f80vH-GjOkqk8NTNMJONDsEM42KAycKD0/exec" method="POST">
+<form id="myForm" action="https://script.google.com/macros/s/AKfycbzF1ydtQ_i2DefJv_OZ2jbYCav4HQTChR8Ya4LU4QUPkDpQ1QlX/exec" method="POST">
                           <label for="resname" class="goog-tree-item-label">Title of File</label><br>
     <input width="1000" type="text" id="qtitle" name="restitle"><br><br>
                       <label for="resname" class="goog-tree-item-label">File</label><br>
@@ -167,9 +167,7 @@ All submissions of past papers or practice questions (TEX/PDF files preferred) a
                       <label for="resname" class="goog-tree-item-label">Reply to Email Address</label><br>
     <input width="1000" value="" type="text" id="q-name" name="resname"><br><br>
                          <input type="submit" value="Upload File" 
-           onclick="this.value='Uploading..';
-                    sendData();
-                    return false;">
+           onclick="this.value='Uploading..';">
                      <input type="reset" value="Cancel">
 For multiple file uploads, please email to thsconline@gmail.com or use the thsconline cmdline upload tool (Windows only)</form>
 </div></div></div></div>
