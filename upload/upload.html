@@ -14,9 +14,11 @@
 window.addEventListener( 'load', function () {
 
   // These variables are used to store the form data
-  const text = document.getElementById( "theText" );
+  const qname = document.getElementById( "qname" );
+  const qtitle = document.getElementById( "qtitle" );
+       
   const file = {
-        dom    : document.getElementById( "theFile" ),
+        dom    : document.getElementById( "qfile" ),
         binary : null
       };
  
@@ -88,13 +90,22 @@ window.addEventListener( 'load', function () {
     data += "--" + boundary + "\r\n";
 
     // Say it's form data, and name it
-    data += 'content-disposition: form-data; name="' + text.name + '"\r\n';
+    data += 'content-disposition: form-data; name="' + qtitle.name + '"\r\n';
     // There's a blank line between the metadata and the data
     data += '\r\n';
 
     // Append the text data to our body's request
-    data += text.value + "\r\n";
+    data += qtitle.value + "\r\n";
 
+    // Say it's form data, and name it
+    data += 'content-disposition: form-data; name="' + qname.name + '"\r\n';
+    // There's a blank line between the metadata and the data
+    data += '\r\n';
+
+    // Append the text data to our body's request
+    data += qname.value + "\r\n";
+         
+         
     // Once we are done, "close" the body's request
     data += "--" + boundary + "--";
 
@@ -165,7 +176,7 @@ All submissions of past papers or practice questions (TEX/PDF files preferred) a
                       <label for="resname" class="goog-tree-item-label">File</label><br>
 <input width="1000" style="width:100% !important;" id="qfile" type="file" name="fileUpload"><br><br>
                       <label for="resname" class="goog-tree-item-label">Reply to Email Address</label><br>
-    <input width="1000" value="" type="text" id="q-name" name="resname"><br><br>
+    <input width="1000" value="" type="text" id="qname" name="resname"><br><br>
                          <input type="submit" value="Upload File" 
            onclick="this.value='Uploading..';">
                      <input type="reset" value="Cancel">
