@@ -1,0 +1,176 @@
+<html><head>
+<title>THSC Online</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><link href="/s/styles.css" rel="stylesheet" type="text/css" />
+<script src="/s/viewer.js" type="text/javascript"></script>
+
+
+<script>
+// https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript
+       function fileUploaded(status) {
+// Because we want to access DOM nodes,
+// we initialize our script at page load.
+window.addEventListener( 'load', function () {
+
+  // These variables are used to store the form data
+  const text = document.getElementById( "theText" );
+  const file = {
+        dom    : document.getElementById( "theFile" ),
+        binary : null
+      };
+ 
+  // Use the FileReader API to access file content
+  const reader = new FileReader();
+
+  // Because FileReader is asynchronous, store its
+  // result when it finishes to read the file
+  reader.addEventListener( "load", function () {
+    file.binary = reader.result;
+  } );
+
+  // At page load, if a file is already selected, read it.
+  if( file.dom.files[0] ) {
+    reader.readAsBinaryString( file.dom.files[0] );
+  }
+
+  // If not, read the file once the user selects it.
+  file.dom.addEventListener( "change", function () {
+    if( reader.readyState === FileReader.LOADING ) {
+      reader.abort();
+    }
+    
+    reader.readAsBinaryString( file.dom.files[0] );
+  } );
+
+  // sendData is our main function
+  function sendData() {
+    // If there is a selected file, wait it is read
+    // If there is not, delay the execution of the function
+    if( !file.binary && file.dom.files.length > 0 ) {
+      setTimeout( sendData, 10 );
+      return;
+    }
+
+    // To construct our multipart form data request,
+    // We need an XMLHttpRequest instance
+    const XHR = new XMLHttpRequest();
+
+    // We need a separator to define each part of the request
+    const boundary = "blob";
+
+    // Store our body request in a string.
+    let data = "";
+
+    // So, if the user has selected a file
+    if ( file.dom.files[0] ) {
+      // Start a new part in our body's request
+      data += "--" + boundary + "\r\n";
+
+      // Describe it as form data
+      data += 'content-disposition: form-data; '
+      // Define the name of the form data
+            + 'name="'         + file.dom.name          + '"; '
+      // Provide the real name of the file
+            + 'filename="'     + file.dom.files[0].name + '"\r\n';
+      // And the MIME type of the file
+      data += 'Content-Type: ' + file.dom.files[0].type + '\r\n';
+
+      // There's a blank line between the metadata and the data
+      data += '\r\n';
+      
+      // Append the binary data to our body's request
+      data += file.binary + '\r\n';
+    }
+
+    // Text data is simpler
+    // Start a new part in our body's request
+    data += "--" + boundary + "\r\n";
+
+    // Say it's form data, and name it
+    data += 'content-disposition: form-data; name="' + text.name + '"\r\n';
+    // There's a blank line between the metadata and the data
+    data += '\r\n';
+
+    // Append the text data to our body's request
+    data += text.value + "\r\n";
+
+    // Once we are done, "close" the body's request
+    data += "--" + boundary + "--";
+
+    // Define what happens on successful data submission
+    XHR.addEventListener( 'load', function( event ) {
+     document.getElementById('redirect').innerHTML = "File Sent/Uploaded";
+    } );
+
+    // Define what happens in case of error
+    XHR.addEventListener( 'error', function( event ) {
+      document.getElementById('redirect').innerHTML = "The file failed to upload";
+    } );
+
+    // Set up our request
+    XHR.open( 'POST', 'https://script.google.com/macros/s/AKfycbwsgd6ioZJ_X9usR5f80vH-GjOkqk8NTNMJONDsEM42KAycKD0/exec' );
+
+    // Add the required HTTP header to handle a multipart form data POST request
+    XHR.setRequestHeader( 'Content-Type','multipart/form-data; boundary=' + boundary );
+
+    // And finally, send our data.
+    XHR.send( data );
+  }
+
+  // Access our form...
+  const form = document.getElementById( "myForm" );
+
+  // ...to take over the submit event
+  form.addEventListener( 'submit', function ( event ) {
+    this.value="Uploading..."
+    event.preventDefault();
+    sendData();
+  } );
+} );
+</script>
+</head>
+<body>
+<h1>thsconline</h1>    
+<div id="page-wrapper">
+<div id="navigation">
+<ul>
+<li class="element"><a href="/s/">THSC Home</a></li>
+<li class="element"><a href="/s/yr10/">Year 10</a></li>
+<li class="element"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li class="element"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li class="current reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline &#8594;</a>&nbsp;
+<a href="/s/upload/">Upload Files &#8594;</a>
+<a class="current" href="/s/upload/uploader.html">Upload Files App &#8594;</a>
+<a class="reverse" href="index.html">&#8598; [<i>Exit App</i>]</a>    
+</div></div>
+<div id="content-all">
+<h3><span class="title">Upload Files to thsc</span></h3>
+<div id="web-list">
+<div><div><div>
+All submissions of past papers or practice questions (TEX/PDF files preferred) are welcome.<br><br>
+<ins style="color:#777;text-decoration:none"><span id="redirect">Please fill in a title and attach the file</span></ins>
+<div id="output"></div>
+<div class="smallscreen" style="display:none;">
+<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/" dir="ltr">Exit App</a></span><br>
+<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/upload/">Back to Uploader Selector Screen</a></span><br>
+</div>
+<br>
+<form id="myForm" action="https://script.google.com/macros/s/AKfycbwsgd6ioZJ_X9usR5f80vH-GjOkqk8NTNMJONDsEM42KAycKD0/exec" method="POST">
+                          <label for="resname" class="goog-tree-item-label">Title of File</label><br>
+    <input width="1000" type="text" id="qtitle" name="restitle"><br><br>
+                      <label for="resname" class="goog-tree-item-label">File</label><br>
+<input width="1000" style="width:100% !important;" id="qfile" type="file" name="fileUpload"><br><br>
+                      <label for="resname" class="goog-tree-item-label">Reply to Email Address</label><br>
+    <input width="1000" value="" type="text" id="q-name" name="resname"><br><br>
+                       <!--  <input type="submit" value="Upload File" 
+           onclick="this.value='Uploading..';
+                    sendData();
+                    return false;">
+                     <input type="reset" value="Cancel">--> Please email to thsconline@gmail.com as this form is faulty</form>
+</div></div></div></div>
+</div></div>
+</body></html>
