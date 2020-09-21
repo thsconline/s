@@ -5,7 +5,11 @@ function loadshell()
 	var url = window.location.pathname;
 	var url = url.replace("&", "_");
 	// var fname = url.substring(url.lastIndexOf('/')+1);z
-	
+	var dkeyx=getParameterByName('dkey', "frenzy");
+	if(dkeyx != "frenzy")
+	{
+		window.location = "/s/fz/"+dkeyx;
+	}
 	var dkey = url.split("/s/fz/")[1].split("/")[0]
 	var serve = url.split("/s/fz/")[1].split("/")[1]
 	
