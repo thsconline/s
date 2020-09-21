@@ -38,8 +38,8 @@ String.prototype.capitalize = function(){
 
 function jumpToCollection() {
     	var searchidx = document.getElementById("serve").value;
-    	var qx = document.getElementById("selector");
- 	var key = document.getElementById("dkey");
+    	var qx = document.getElementById("selector").value;
+ 	var key = document.getElementById("dkey").value;
      	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"
 }
 
