@@ -37,34 +37,16 @@ String.prototype.capitalize = function(){
       }
 
 function jumpToCollection() {
-    var searchidx = document.getElementById("serve").value;
-    var qx = document.getElementById("selector");
-  var key = document.getElementById("dkey");
-     window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"
-
-} 
-catch(err)
-{
-
-}
+    	var searchidx = document.getElementById("serve").value;
+    	var qx = document.getElementById("selector");
+ 	var key = document.getElementById("dkey");
+     	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"
 }
 
 function passwordentry()
 {
-var key = document.getElementById("dkey").value;
-  var seed = 17
-  var date = new Date();
-    var MILLIS_PER_DAY = 1000 * 60 * 60 * 24;
-    var pkey = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569)*seed
-  if(key == pkey)
-  {
-    window.location = "https://thsconline.github.io/s/fz/"+key+"/home/"
-  }
-  else
-  {
-    document.getElementById("mycollection").innerHTML = "<b><span style=\"color:red;\">Incorrect passkey entered!</span></b>"
-  }
-   = a	
+	var key = document.getElementById("dkey").value;
+	window.location = "https://thsconline.github.io/s/fz/"+key+"/home/"
 }
 
 
