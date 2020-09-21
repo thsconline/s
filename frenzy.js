@@ -32,25 +32,6 @@ String.prototype.capitalize = function(){
        return this.replace( /(^|\s)([a-z])/g , function(m,p1,p2){ return p1+p2.toUpperCase(); } );
       }
 
-
-function passwordentry(e) {
-  var key = document.getElementById("dkey").value;
-  var seed = 17
-  var date = new Date();
-  var MILLIS_PER_DAY = 1000 * 60 * 60 * 24;
-  var pkey = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569)*seed
-  if(key == pkey)
-  {
-    a="<img src=\"https://thsconline.github.io/s/images/icon_link.png\">&nbsp;&nbsp;<a class=\"no x\" href=\"https://thsconline.github.io/s/fz/"+key+"/home/\">Click to continue</a>";
-  }
-  else
-  {
-    a = "<b><span style=\"color:red;\">Incorrect passkey entered!</span></b>"
-  }
-  document.getElementById("mycollection").innerHTML = a
-}
-
-
 function jumpToCollection(e) {
     var searchidx = document.getElementById("serve").value;
     var qx = document.getElementById("selector");
