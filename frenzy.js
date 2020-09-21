@@ -1,5 +1,7 @@
 function loadshell()
 {	
+	try
+	{
 	// var folder = document.getElementsByClassName("shell")[0].getAttribute("data-hash");
 	// var fname = document.getElementsByClassName("shell")[0].getAttribute("data-filename");
 	var url = window.location.pathname;
@@ -22,7 +24,11 @@ function loadshell()
 	document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 	document.write("<script src=\"/s/frenzy.js\" type=\"text\/javascript\"><\/script>");
 	document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx1Kjw1qniJW7HXsNSMeyJeQ45BzdCFlcEXouvlvb6he15FPHg\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
-	
+	}
+	catch(err)
+	{
+		docuemnt.write("403 Access Denied")
+	}
 }
 
 function writeshell(http)
