@@ -8,7 +8,7 @@ function loadshell()
 	var dkeyx=getParameterByName('dkey', "frenzy");
 	if(dkeyx != "frenzy")
 	{
-		window.location = "/s/fz/"+dkeyx;
+		window.location = "/s/fz/"+dkeyx+"/home";
 	}
 	var dkey = url.split("/s/fz/")[1].split("/")[0]
 	var serve = url.split("/s/fz/")[1].split("/")[1]
