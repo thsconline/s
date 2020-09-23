@@ -49,8 +49,9 @@ function loadshell()
 	case "images":
 		document.write("")
 	break;	
-	
-	
+	case "upload":
+		window.location = "https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform"
+	break;
 	case "v":
 		try
 		{
@@ -81,7 +82,51 @@ function loadshell()
 		{
 			window.location = "/s/"
 		}
-	break;		
+	break;
+	case "yr9":
+	try
+	{
+		var rest = url.split("/s/yr9/")[1].split("/")[0]
+		window.location = "https://thsconline.github.io/s/files/yr9/"+rest
+	}
+	catch(err)
+	{
+		window.location = "/s/"
+	}
+	break;
+	case "yr10":
+	try
+	{
+		var rest = url.split("/s/yr10/")[1].split("/")[0]
+		window.location = "https://thsconline.github.io/s/files/yr10/"+rest
+	}
+	catch(err)
+	{
+		window.location = "/s/"
+	}
+	break;
+	case "yr11":
+	try
+	{
+		var rest = url.split("/s/yr11/")[1].split("/")[0]
+		window.location = "https://thsconline.github.io/s/files/yr11/"+rest
+	}
+	catch(err)
+	{
+		window.location = "/s/"
+	}
+	break;
+	case "yr12":
+	try
+	{
+		var rest = url.split("/s/yr12/")[1].split("/")[0]
+		window.location = "https://thsconline.github.io/s/yr12/"+rest
+	}
+	catch(err)
+	{
+		window.location = "/s/"
+	}
+	break;
 	default:
 		window.location = "/s/"
 	break;
