@@ -18,7 +18,7 @@ function loadshell()
 		try
 		{
 			var viewno = url.split("/s/d/")[1].split("/")[0]
-			var titlex = url.split("/s/d/")[1].split("/")[1]
+			var titlex = url.split("/s/d/")[1].split("/")[1].replace(/%20/g, " ") 
 			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 		}
 		catch(err)
@@ -31,7 +31,7 @@ function loadshell()
 		try
 		{
 			var dkey = url.split("/s/fz/")[1].split("/")[0]
-			var serve = url.split("/s/fz/")[1].split("/")[1]
+			var serve = url.split("/s/fz/")[1].split("/")[1].replace(/%20/g, " ")
 			
 			document.write("<head><title>thsconline (loading...)</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
 			document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
