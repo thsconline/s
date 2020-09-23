@@ -1,63 +1,93 @@
-function loadpage()
+function writeshell(http)
 {
-	var searchq=window.location.search+""
-	var q=window.location.search+"=z&end" || "?noquery"
-	var qt=q.split("&")[0]
-	var queryx=qt.split("=")[0];
+	document.title = http.title;
+	document.write(http.htmlcontent); 
+	location.href = window.location.hash;  
+}
+
+function loadshell()
+{
+	var url = window.location.pathname;
+	var url = url.replace("&", "_");
+	var queryx = url.split("/s/")[1].split("/")[0]
 		
 	switch(queryx)
 	{
-		case "?download":
-		var viewno=getParameterByName('download', "0000");
-		var titlex=getParameterByName('n', "404 Not Found");
-		document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
+	
+	case "d":
+		try
+		{
+			var viewno = url.split("/s/d/")[1].split("/")[0]
+			var titlex = url.split("/s/d/")[1].split("/")[1]
+			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
+		}
+		catch(err)
+		{
+			window.location = "/s/"
+		}
 		break;
-		case "?view":
-		var viewno=getParameterByName('view', "0000")
-	var titlex=getParameterByName('n', "404 Not Found");
-	if(window.self !== window.top)
-	{
-	 win=window.open("about:blank","_blank");
-	 if (window.focus) {win.focus()}
-	}
-	else
-	{
-	 win=window.open("about:blank","_self");
-	 if (window.focus) {win.focus()}		
-	}
-  	win.document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
-	win.document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image\/x-icon\" href=\"https:\/\/thsconline.github.io\/s\/images\/icon_pdf2.png\">");
-	win.document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\">");
-	win.document.write("<style>html, body {height:100% !important;}</style>");
-	win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
-	win.document.write("<\/head><body>");
-	win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</span></div><br>")
 
-	//win.document.write("<span id=\"overlaybar\"><span id=\"overlayinsert\">&nbsp;&nbsp;<a onclick=\"window.close()\" class=\"border\" href=\"#v\">Close &#215;<\/a>&nbsp;&nbsp;</span></span><br>");
-	win.document.write("<iframe style=\"width:100%; height:96%;\" height=\"96%\" sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
-	win.document.write("</body></html>"); 	 
-	win.document.title = titlex;
-
-
+	case "fz":	
+		try
+		{
+			var dkey = url.split("/s/fz/")[1].split("/")[0]
+			var serve = url.split("/s/fz/")[1].split("/")[1]
 			
-			
-			
-	/*		
-			
-   	document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
-	document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image\/x-icon\" href=\"https:\/\/thsconline.github.io\/s\/images\/icon_def.png\">");
-	document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\">");
-	document.write("<style>html, body {height:100% !important;}</style>");
-	document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
-	document.write("<\/head><body>");
-	document.write("<span id=\"overlaybar\"><span id=\"overlayinsert\">&nbsp;&nbsp;<a onclick=\"window.close()\" class=\"border\" href=\"#v\">Close &#215;<\/a>&nbsp;&nbsp;</span></span><br>");
-	document.write("<iframe style=\"width:100%; height:95%;\" height=\"95%\" allow-downloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
-	document.write("</body></html>"); 	    
- 	*/
-		break;		
-		default:
-		document.getElementById("homepage").style.display='inline';
+			document.write("<head><title>thsconline (loading...)</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
+			document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
+			document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\" />")
+			document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\" />")
+			document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
+			document.write("<script src=\"/s/viewer.js\" type=\"text\/javascript\"><\/script>");
+			document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx1Kjw1qniJW7HXsNSMeyJeQ45BzdCFlcEXouvlvb6he15FPHg\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
+			}
+		catch(err)
+		{
+			window.location = "/s/"
+		}	
 		break;
+	case "images":
+		document.write("")
+	break;	
+	
+	
+	case "v":
+		try
+		{
+			var viewno = url.split("/s/v/")[1].split("/")[0]
+			var titlex = url.split("/s/v/")[1].split("/")[1]	
+		}
+	
+		if(window.self !== window.top)
+		{
+			win=window.open("about:blank","_blank");
+			if (window.focus) {win.focus()}
+		}
+		else
+		{
+			win=window.open("about:blank","_self");
+			if (window.focus) {win.focus()}		
+		}
+		win.document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
+		win.document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image\/x-icon\" href=\"https:\/\/thsconline.github.io\/s\/images\/icon_pdf2.png\">");
+		win.document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\">");
+		win.document.write("<style>html, body {height:100% !important;}</style>");
+		win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
+		win.document.write("<\/head><body>");
+		win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"\" class=\"border\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</span></div><br>")
+
+		win.document.write("<iframe style=\"width:100%; height:96%;\" height=\"96%\" sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
+		win.document.write("</body></html>"); 	 
+		win.document.title = titlex;
+		}
+		catch(err)
+		{
+			window.location = "/s/"
+		}
+	break;		
+	default:
+		window.location = "/s/"
+	break;
 	}
 }
 
@@ -83,17 +113,34 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 	    
    var i = document.createElement('div');	    
    document.body.appendChild(i);
-   i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?view="+viewno+"&n="+titlex+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/?download="+viewno+"&n="+titlex+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
+   i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/?view="+viewno+"&n="+titlex+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
    
    /* var i = document.createElement('iframe');
     i.style.display = 'none';
-    i.src = "https://thsconline.github.io/s/index.html?view="+viewno+"&n="+titlex;
+    i.src = "https://thsconline.github.io/s/v/"+viewno+"/"+titlex;
     document.body.appendChild(i);*/
 //	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
 	    }
    
     
     return false;
+}
+
+String.prototype.capitalize = function(){
+       return this.replace( /(^|\s)([a-z])/g , function(m,p1,p2){ return p1+p2.toUpperCase(); } );
+      }
+
+function jumpToCollection() {
+    	var searchidx = document.getElementById("serve").value;
+    	var qx = document.getElementById("selector").value;
+ 	var key = document.getElementById("dkey").value;
+     	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"
+}
+
+function passwordentry()
+{
+	var key = document.getElementById("dkey").value;
+	window.location = "https://thsconline.github.io/s/fz/"+key+"/home/"
 }
 
 function toggleView(id1, id2)
