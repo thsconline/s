@@ -13,7 +13,13 @@ function loadshell()
 		
 	switch(queryx)
 	{
-	
+	case "download":
+	try
+	{
+		var rest = url.split("/s/view/")[1]
+		window.location = "https://thsconline.github.io/s/v/"+rest
+	}
+	break;			
 	case "d":
 		try
 		{
@@ -26,7 +32,14 @@ function loadshell()
 			window.location = "/s/"
 		}
 		break;
-
+		
+	case "frenzy":
+	try
+	{
+		var rest = url.split("/s/frenzy/")[1]
+		window.location = "https://thsconline.github.io/s/fz/"+rest
+	}
+	break;			
 	case "fz":	
 		try
 		{
@@ -58,6 +71,13 @@ function loadshell()
 				
 	case "upload":
 		window.location = "https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform"
+	break;
+	case "view":
+	try
+	{
+		var rest = url.split("/s/view/")[1]
+		window.location = "https://thsconline.github.io/s/v/"+rest
+	}
 	break;
 	case "v":
 		try
