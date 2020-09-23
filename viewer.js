@@ -19,6 +19,11 @@ function loadshell()
 		var rest = url.split("/s/view/")[1]
 		window.location = "https://thsconline.github.io/s/v/"+rest
 	}
+
+	catch(err)
+	{
+		window.location = "/s/"
+	}			
 	break;			
 	case "d":
 		try
@@ -38,6 +43,11 @@ function loadshell()
 	{
 		var rest = url.split("/s/frenzy/")[1]
 		window.location = "https://thsconline.github.io/s/fz/"+rest
+	}
+			
+	catch(err)
+	{
+		window.location = "/s/fz/"
 	}
 	break;			
 	case "fz":	
@@ -77,6 +87,10 @@ function loadshell()
 	{
 		var rest = url.split("/s/view/")[1]
 		window.location = "https://thsconline.github.io/s/v/"+rest
+	}
+	catch(err)
+	{
+		window.location = "/s/"
 	}
 	break;
 	case "v":
