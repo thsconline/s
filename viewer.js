@@ -32,15 +32,21 @@ function loadshell()
 		{
 			var dkey = url.split("/s/fz/")[1].split("/")[0]
 			var serve = url.split("/s/fz/")[1].split("/")[1]
-			
-			document.write("<head><title>thsconline (loading...)</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
-			document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
-			document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\" />")
-			document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\" />")
-			document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
-			document.write("<script src=\"/s/viewer.js\" type=\"text\/javascript\"><\/script>");
-			document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx1Kjw1qniJW7HXsNSMeyJeQ45BzdCFlcEXouvlvb6he15FPHg\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
+			if(dkey == "add")
+			{
+				window.location = "https://script.google.com/macros/s/AKfycbwC-lfayYHGsDeJKj-qdhiEUFbJS8GnCJg40R9SNhwXkypkIObK/exec"
 			}
+			else
+			{
+				document.write("<head><title>thsconline (loading...)</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
+				document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
+				document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\" />")
+				document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\" />")
+				document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
+				document.write("<script src=\"/s/viewer.js\" type=\"text\/javascript\"><\/script>");
+				document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx1Kjw1qniJW7HXsNSMeyJeQ45BzdCFlcEXouvlvb6he15FPHg\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
+			}
+		}
 		catch(err)
 		{
 			window.location = "/s/"
@@ -48,7 +54,8 @@ function loadshell()
 		break;
 	case "images":
 		document.write("")
-	break;	
+	break;
+				
 	case "upload":
 		window.location = "https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform"
 	break;
