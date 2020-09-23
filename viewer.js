@@ -18,7 +18,7 @@ function loadshell()
 		try
 		{
 			var viewno = url.split("/s/d/")[1].split("/")[0]
-			var titlex = url.split("/s/d/")[1].split("/")[1].replace(/%20/g, " ") 
+			var titlex = url.split("/s/d/")[1].split("/")[1]
 			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 		}
 		catch(err)
@@ -31,7 +31,7 @@ function loadshell()
 		try
 		{
 			var dkey = url.split("/s/fz/")[1].split("/")[0]
-			var serve = url.split("/s/fz/")[1].split("/")[1].replace(/%20/g, " ")
+			var serve = url.split("/s/fz/")[1].split("/")[1]
 			
 			document.write("<head><title>thsconline (loading...)</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />")
 			document.write("<meta name=\"viewport\" content=\"initial-scale=1, minimum-scale=1, width=device-width\" \/>")
@@ -72,7 +72,7 @@ function loadshell()
 			win.document.write("<style>html, body {height:100% !important;}</style>");
 			win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 			win.document.write("<\/head><body>");
-			win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"\" class=\"border\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</span></div><br>")
+			win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">"+ unescape(titlex) +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"\" class=\"border\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</span></div><br>")
 			win.document.write("<iframe style=\"width:100%; height:96%;\" height=\"96%\" sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
 			win.document.write("</body></html>"); 	 
 			win.document.title = titlex;
