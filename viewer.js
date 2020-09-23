@@ -80,7 +80,7 @@ function loadshell()
 	break;
 				
 	case "upload":
-		window.location = "https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform"
+		window.location = "/s/upload/"
 	break;
 	case "view":
 	try
