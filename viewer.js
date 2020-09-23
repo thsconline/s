@@ -86,7 +86,7 @@ function loadshell()
 	case "yr9":
 	try
 	{
-		var rest = url.split("/s/yr9/")[1].split("/")[0]
+		var rest = url.split("/s/yr9/")[1]
 		window.location = "https://thsconline.github.io/s/files/yr9/"+rest
 	}
 	catch(err)
@@ -97,7 +97,7 @@ function loadshell()
 	case "yr10":
 	try
 	{
-		var rest = url.split("/s/yr10/")[1].split("/")[0]
+		var rest = url.split("/s/yr10/")[1]
 		window.location = "https://thsconline.github.io/s/files/yr10/"+rest
 	}
 	catch(err)
@@ -108,7 +108,7 @@ function loadshell()
 	case "yr11":
 	try
 	{
-		var rest = url.split("/s/yr11/")[1].split("/")[0]
+		var rest = url.split("/s/yr11/")[1]
 		window.location = "https://thsconline.github.io/s/files/yr11/"+rest
 	}
 	catch(err)
@@ -119,8 +119,8 @@ function loadshell()
 	case "yr12":
 	try
 	{
-		var rest = url.split("/s/yr12/")[1].split("/")[0]
-		window.location = "https://thsconline.github.io/s/yr12/"+rest
+		var rest = url.split("/s/yr12/")[1]
+		window.location = "https://thsconline.github.io/s/files/yr12/"+rest
 	}
 	catch(err)
 	{
