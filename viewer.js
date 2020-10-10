@@ -56,9 +56,16 @@ function loadshell()
 		{
 			var dkey = url.split("/s/fz/")[1].split("/")[0]
 			var serve = url.split("/s/fz/")[1].split("/")[1]
-			if(dkey == "add")
+			if(dkey == "add" || dkey == "legacycode")
 			{
-				window.location = "https://script.google.com/macros/s/AKfycbwC-lfayYHGsDeJKj-qdhiEUFbJS8GnCJg40R9SNhwXkypkIObK/exec"
+				if(dkey == "add")
+				{
+					window.location = "https://script.google.com/macros/s/AKfycbwC-lfayYHGsDeJKj-qdhiEUFbJS8GnCJg40R9SNhwXkypkIObK/exec"
+				}
+				if(dkey == "legacycode")
+				{
+					window.location = "https://script.google.com/macros/s/AKfycbx1Kjw1qniJW7HXsNSMeyJeQ45BzdCFlcEXouvlvb6he15FPHg/exec?rtype=LEGACYCODE&serve="+serve
+				}
 			}
 			else
 			{
