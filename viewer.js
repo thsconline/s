@@ -91,7 +91,7 @@ function loadshell()
 		var key = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569)*117
 		var checkv = url.split("/s/pkey/")[1].split("/")[0]
 		var checkw = url.split("/s/pkey/")[1].split("/")[1]
-		var checkx = url.split("/s/pkey/")[1].split("/")[1]
+		var checkx = url.split("/s/pkey/")[1].split("/")[2]
 		
 		if(checkv == "today" && checkw == "print" && checkx == "key")
 		{
