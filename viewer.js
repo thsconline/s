@@ -83,10 +83,21 @@ function loadshell()
 			window.location = "/s/"
 		}	
 		break;
+	
 	case "images":
 		document.write("")
 	break;
-				
+		case "pkey":
+		var key = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569)*117
+		var checkv = url.split("/s/pkey/")[1].split("/")[0]
+		var checkw = url.split("/s/pkey/")[1].split("/")[1]
+		var checkx = url.split("/s/pkey/")[1].split("/")[1]
+		
+		if(checkv == "today" && checkw == "print" && checkx == "key")
+		{
+			document.write(key)			
+		}
+		break;
 	case "upload":
 		window.location = "/s/upload/"
 	break;
