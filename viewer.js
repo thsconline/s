@@ -106,7 +106,7 @@ function loadshell()
 			}
 		var checkw = url.split("/s/pkey/")[1].split("/")[1]
 		var checkx = url.split("/s/pkey/")[1].split("/")[2]
-		var key = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569+checkv)*117
+		var key = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569+-(1-checkv)+1)*117
 		if(checkw == "print" && checkx == "key")
 		{			
 			document.write(key)	
