@@ -90,14 +90,26 @@ function loadshell()
 	case "pkey":
 		var date = new Date()
   		var MILLIS_PER_DAY = 1000 * 60 * 60 * 24;
-		var key = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569)*117
+
 		var checkv = url.split("/s/pkey/")[1].split("/")[0]
+		if(checkv == "yesterday")
+			{
+				checkv = -1;
+			}
+			if(checkv == "today")
+			{
+				checkv = 0;
+			}
+			if(checkv == "tomorrow")
+			{
+				checkv = 1
+			}
 		var checkw = url.split("/s/pkey/")[1].split("/")[1]
 		var checkx = url.split("/s/pkey/")[1].split("/")[2]
-		
-		if(checkv == "today" && checkw == "print" && checkx == "key")
-		{
-			document.write(key)			
+		var key = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569+checkv)*117
+		if(checkw == "print" && checkx == "key")
+		{			
+			document.write(key)	
 		}
 	break;
 	case "upload":
