@@ -12,3 +12,5 @@ Any information communicated Github project is reserved for the purposes of bona
 - Android 5 and newer (untested)
 
 Older browsers including Internet Explorer 10 and earlier are not supported.
+
+[View Site](https://thsconline.github.io/s/)
