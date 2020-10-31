@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang=en><meta charset=utf-8><head>
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+<title>NT240 Intensive</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+
+body {
+	
+}
+body > div > div {
+	overflow: visible !important;
+}
+* {
+	font-family: "Palatino Linotype", "Arial", "sans-serif" !important;
+}
+* a:link, * a:visited{
+	text-decoration:none;
+}
+html {
+	margin: 0px;
+	padding: 0px;
+	direction: ltr;
+}
+body {
+margin: 5px;
+	padding: 0;
+	height: 100%;
+
+	line-height: 1.5;
+		
+
+	font-family: "Arial", sans-serif;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+a img {
+	border: 0px !important;
+}
+h1 {
+	font-size: 28px;
+	font-weight: bold;
+	padding-left: 70px;
+	padding-top: 20px;
+	color: #555555;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 14px 0px 0px;
+	color: #555555;
+	text-decoration: none !important;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+h3 {
+	font-size: 20px;
+	padding-bottom: 1px !important;
+	padding-bottom: 3px !important;
+}
+h4 {
+	font-size: 20px;
+	color: #222222;
+	padding-top: 3px !important;
+	padding-bottom: 3px !important;
+	margin-bottom: 2px !important;
+}
+h5 {
+	font-size: 16px;
+	padding-top: 3px !important;
+	border: 0.5px solid #0000FF;
+	border-bottom: 2.5px solid #0000FF;
+	font-weight: bold;
+	color: #0000FF;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
+}
+h5.grey{
+	font-size: 16px;
+	padding-left: 4px !important;
+	border: 0.5px solid #AAAAAA;
+	border-bottom: 2.5px solid #AAAAAA;
+	font-weight: bold;
+	color: #000000;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
+}
+input {
+	border-radius: 5px;
+}
+input[type=button],input[type=submit] {
+	background-color: #555555 !important;
+	text-decoration: none;
+	cursor: pointer;
+	color: rgb(255, 255, 255) !important;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #FFFFFF !important;
+}
+td {
+	vertical-align: top;
+}
+#page-wrapper {
+	background-color:#FFFFFF;
+	margin: 0px 50px 50px;
+	min-width: 440px !important;
+}
+#content-all {
+	padding: 0px 20px 15px;
+	min-height: 405px;
+}
+#folder-tree{
+	padding: 0px 15px 0px;
+	vertical-align: top;
+}
+#navigation, #footer {
+	margin-left: 1px;
+	padding: 0px;
+	font-size: 14px;
+	padding: 0px 0px 0px;
+	color:#55555;
+	text-align: left;
+	overflow: hidden;
+	padding-bottom:25px;
+background-color: #1cabe2 !Important;
+width: 100%;
+height: 50px;
+position: fixed;
+bottom: 0px !important;
+left: 0px !important;
+
+
+}
+#navigation ul {
+	font-weight:bold;
+}
+#navigation li {
+	display: inline-block;
+	list-style-type: none;
+	list-style-image: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 16px 5px;
+	background-color: none;
+	padding: 0px 10px 2px;
+}
+#navigation li.element:hover, #navigation li.current {
+	background-color: #F26A21 !important;
+	color: #FFFFFF !important;
+}
+#navigation li.element a, #navigation li.element a {
+	width: 100%;
+	text-decoration: none;
+	display: block;
+}
+#content-all a:link, #content-all a:visited {
+	text-decoration: none !important;
+	color: #0000FF !important;
+}
+#folder-tree a:link, #folder-tree a:visited {
+	background: none !important;
+	color:#555555 !important;
+}
+#content-all a:hover, #content-all a:active, #folder-tree a:hover, #folder-tree a:active {
+	text-decoration: none !important;
+	color: #FF5500 !important;
+}
+#navigation li.element a:link, #navigation li.element a:visited, #navigation li.element a:hover, #navigation li.element:active {
+	color: #FFFFFF !important;
+}
+#navigation li.element:hover a:link, #navigation li.element:hover a:visited, #navigation li.element:hover a:hover, #navigation li.element:hover a:active {
+	color: #FFFFFF !important;
+}
+#navigation li.current a:link, #navigation li.current a:visited, #navigation li.current a:hover, #navigation li.current:active {
+	color: #FFFFFF !important;
+	background-color: #F26A21 !important;
+}
+#overlaybar{
+	position:absolute;
+	top:0px;
+	width:100%;
+	background-color: #5555FF;
+	z-index: 2;
+	padding: 3px 0px 3px;
+	color:#FFFFFF;
+}
+#overlaybar a:link, #overlaybar a:visited{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 0px 1px 0px;
+	background-color:#0000FF;
+	color:#FFFFFF;
+}
+#overlaybar a:hover, #overlaybar a:active{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #222222;
+	color:#FFFFFF;
+}
+#overlaybar #overlayinsert{
+	float:right;
+}
+#folder-tree .current{
+	font-weight: bold;
+}
+#folder-tree .reverse{
+	float:right;
+}
+#web-grid, #web-grid > div {
+	overflow: auto;
+	margin-top: 4px;
+}
+#web-grid > div, #web-list > div{
+	display: table;
+}
+#web-grid > div > div{
+	display: table-row;
+}
+#web-grid > div > div > div{
+	display: table-cell;
+	position: relative;
+	width: 126px;
+	height: 69px;
+	padding: 2px;
+}
+#web-grid > div > div > div > a > span, #web-grid > div > div > div > a > span > span{
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+#web-grid > div > div > div > a > span{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: solid 1px #E7E7E7;
+	text-align: bottom;
+	background-color: rgb(255, 255, 255);
+	margin-top: 45px;
+	font-size: 12px;
+}
+#web-grid > div > div > div > a > span:hover {
+	background-color: #DDDDDD !important;
+	color: #FFFFFF !important;
+}
+#web-grid > div > div > div > a > span:hover > span {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #0000FF !important;
+	color: #FFFFFF !important;
+}
+#web-grid > div > div > div > a > span:hover > span.inactive {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #555555 !important;
+	color: #FFFFFF !important;
+}
+#web-grid > div > div > div > a > span > span, #web-grid div > div > div > a > span > span {
+	background-color: #F8F8F8 !important;
+}
+#web-grid > div > div > div > a > span img{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+#web-list > div > div{
+	display: table-row;
+	overflow:hidden;
+}
+#web-list > div > div > div{
+	display: table-cell;
+	width:435px;
+	float:left;
+}
+#web-list > div > div > div > span > span{
+	font-style:italic;
+}
+// hack for IE9+;
+IE8 and lower not supported anyways@media screen and (min-width:0\0) {
+	#web-grid > div > div > div{
+	display: inline-block !important;
+	}
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#web-grid > div > div > div{
+	display: inline-block !important;
+	}
+}
+.title {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: inline-block;
+	width: 100%;
+	background-color: rgb(248, 248, 248) !important;
+	color: #555555 !important;
+}
+#content-all table.listing {
+	/* fix whitespace */
+	margin-top:10px;
+	width:100%
+}
+#content-all table.listing td {
+	font-weight:bold;
+}
+#content-all table.listing tr.content td {
+	font-weight:normal !important;
+}
+#content-all table.listing td span.content {
+	display: inline-block;
+	padding-left: 25px;
+	padding-bottom: 12px;
+	font-weight: normal !important;
+}
+}
+body #everything h4 {
+font-size: 16px !important;
+}
+#web-list > div > div > div {
+display: table-row;
+}
+#page-wrapper {
+/*margin: auto;
+*/
+margin-left: 50px !important;
+margin-right: 50px !important;
+}
+a {
+width: inherit !important;
+overflow: ellipsis !important;
+}
+@media screen and (max-width:445px) {
+#content-all {
+	overflow: ellipsis;
+}
+#page-wrapper {
+	/*margin: auto;
+	*/
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+	max-width: 340px !important;
+	min-width: 240px !important;
+}
+}
+body {
+position:absolute;
+max-width:375px;
+}
+.fill {
+background-color:rgb(0 , 174 , 239);
+color: #FFFFFF;
+padding:2px 8px;
+font-weight:bold;
+}
+
+*{
+font-family:"arial" , "sans-serif" !important;
+}
+#listing a, #listing a:visited,#head a, #head a:visited,span{
+color:#555555;
+text-decoration:none;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+text-decoration:none !important;
+cursor:pointer;
+
+}
+
+#listing span
+{
+	border: 1px solid #555555 !important;
+	padding-top:10px !important;
+	padding-bottom:10px !important;
+	margin-top:5px !important;
+	margin-bottom:5px !important;
+	
+}
+
+
+
+#listing span {
+display:inline-block;
+width:100%;
+padding:5px;
+}
+p, .fill, form{
+display:inline-block;
+width:100% !important;
+}
+#listing span:hover{
+background-color:rgb(248 , 248 , 248);
+}
+#listing span:hover a:active{
+font-weight:bold;
+}
+#listing span:hover a, #listing span:hover a:visited, #listing span:hover a:active, #listing span:hover a:active{
+width:100%;
+color:#5555ff;
+text-decoration:none;
+}
+
+input[type="button"]{
+	background-color:#555555 !important;
+	background:-moz-linear-gradient(top , #999999 5% , #555555 100%);
+	background:-webkit-linear-gradient(top , #999999 5% , #555555 100%);
+background:-o-linear-gradient(top , #999999 5% , #555555 100%);
+background:-ms-linear-gradient(top , #999999 5% , #555555 100%) !important;
+background:linear-gradient(to bottom , #999999 5% , #555555 100%) !important;
+background:linear-gradient(rgb(153 , 153 , 153) 5% , rgb(85 , 85 , 85) 100%) rgb(85 , 85 , 85) !important;
+text-decoration:none;
+cursor:pointer;
+color:rgb(255 , 255 , 255) !important;
+border-radius:5px;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+color: #FFFFFF !important;
+}
+
+menu
+{
+	overflow:scroll;
+}
+
+</style>
+ 
+ 
+</style>
+</head>
+<body>
+
+<div id="page-wrapper">
+<div id="navigation">
+<ul>
+<li class="element"><a href="/s/files/"><i class="material-icons">label</i> Profile</li>
+<li class="element"><a href="/s/files/yr10/"> 10</a></li>
+<li class="element"><a href="/s/files/yr11/">Year 11 - Preliminary</a></li>
+<li class="current"><a href="/s/files/yr12/">Year 12 - HSC</a></li>
+<li class="element"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+</div>
+<div class="menu">
+<br>
+<span class="fill">NT240 Intensive</span><br><br><br>
+<div><span id="head"><img src="https://dp964.github.io/s/images/icon_home.png">&nbsp;&nbsp;<b>NT240 Intensive - Home Folder</b>
+</span><br><p>Choose a file/folder... <span class="blink">_</span></p></div>
+<span id="listing" class="menu">
+
+
+<span><img src="https://dp964.github.io/s/images/icon_home.png">&nbsp;&nbsp;<a href="https://dp964.github.io/nt240-intensive/">Home Page</a></span><br>
+<span><img src="https://dp964.github.io/s/images/colours/icon_purple.png">&nbsp;&nbsp;<a href="exam-practice.html">Exam Practice</a></span><br>
+<span><img src="https://dp964.github.io/s/images/colours/icon_green.png">&nbsp;&nbsp;<a href="handouts.html">Handouts</a></span><br>
+<span><img src="https://dp964.github.io/s/images/colours/icon_pink.png">&nbsp;&nbsp;<a href="lecture-outlines.html">Lecture Outlines</a></span><br>
+<span><img src="https://dp964.github.io/s/images/colours/icon_rose.png">&nbsp;&nbsp;<a href="additional-lecture-material.html">Additional Lecture Material</a></span><br>
+<span><img src="https://dp964.github.io/s/images/icon_pdf2.png">&nbsp;&nbsp;<a href="https://drive.google.com/uc?export=download&id=0Bz0_dg0qiFgHYTB4XzFUZUFFdFU">NT240 Learning Guide</a></span><br>
+<span><img src="https://dp964.github.io/s/images/icon_pdf2.png">&nbsp;&nbsp;<a href="https://drive.google.com/uc?export=download&id=0Bz0_dg0qiFgHa2hZMlhBbUlhaUE">NT240 Unit Guide 2016</a></span><br>
+<span><img src="https://dp964.github.io/s/images/icon_wordfile.png">&nbsp;&nbsp;<a href="https://drive.google.com/uc?export=download&id=0Bz0_dg0qiFgHQzB4SVp1MkVwOVk">NT240 Dan's Notes</a></span><br>
+
+
+
+</span>
+</div></div>
+
+</div></body></html>
