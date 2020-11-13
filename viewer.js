@@ -131,8 +131,8 @@ function loadshell()
 	var titlex = url.split("/s/v_standalone/")[1].split("/")[1]		
 	if(window.self !== window.top)
 			{
-				#win=window.open("about:blank","_blank");
-				#if (window.focus) {win.focus()}
+				//win=window.open("about:blank","_blank");
+				//if (window.focus) {win.focus()}
 			}
 			else
 			{
