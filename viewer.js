@@ -24,7 +24,12 @@ function loadshell()
 	{
 		window.location = "/s/"
 	}			
-	break;			
+	break;		
+	case "app":
+	case "cmdtool":
+	case "cli":
+	window.location = "/cli/"
+	break;
 	case "d":
 		try
 		{
