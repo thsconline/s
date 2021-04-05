@@ -69,7 +69,7 @@ function loadshell()
 				}
 				if(dkey == "legacycode")
 				{
-					window.location = "https://script.google.com/macros/s/AKfycbzI7kaqEtc5DluX1HtUArGPXRCg4w9yRhM3KuwMROd_L_pJf9OzFkUohcDy-qM4Aza4/exec?rtype=LEGACYCODE&serve="+serve
+					window.location = "https://script.google.com/macros/s/AKfycbwXHIZV9nurettlm_BvEqowP1Ky2cNlzQ4glcAENH_XdQ2L_YuDbCULFJgbM9RQbIPQ/exec?rtype=LEGACYCODE&serve="+serve
 				}
 			}
 			else
@@ -80,7 +80,7 @@ function loadshell()
 				document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\" />")
 				document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 				document.write("<script src=\"/s/viewer.js\" type=\"text\/javascript\"><\/script>");
-				document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbzI7kaqEtc5DluX1HtUArGPXRCg4w9yRhM3KuwMROd_L_pJf9OzFkUohcDy-qM4Aza4\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
+				document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwXHIZV9nurettlm_BvEqowP1Ky2cNlzQ4glcAENH_XdQ2L_YuDbCULFJgbM9RQbIPQ\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
 			}
 		}
 		catch(err)
