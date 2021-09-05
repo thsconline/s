@@ -44,8 +44,9 @@ function loadshell()
 		{
 			window.location = "/s/"
 		}
-		break;
 		*/
+		break;
+		
 	case "frenzy":
 	try
 	{
