@@ -16,8 +16,8 @@ function loadshell()
 	case "download":
 	try
 	{
-		var rest = url.split("/s/view/")[1]
-		window.location = "https://thsconline.github.io/s/v/"+rest
+		var rest = url.split("/s/download/")[1]
+		window.location = "https://thsconline.github.io/s/d/"+rest
 	}
 
 	catch(err)
@@ -31,11 +31,13 @@ function loadshell()
 	window.location = "/cli/"
 	break;
 	case "d":
+	document.write("Feature currently under maintenance until 7/9/21");
+	/*
 		try
 		{
 			var viewno = url.split("/s/d/")[1].split("/")[0]
 			var titlex = url.split("/s/d/")[1].split("/")[1]
-			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
+			document.write("<html><body>&nbsp;<script src=\"\/s\/download1.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 			document.title = unescape(titlex);
 		}
 		catch(err)
@@ -43,7 +45,7 @@ function loadshell()
 			window.location = "/s/"
 		}
 		break;
-		
+		*/
 	case "frenzy":
 	try
 	{
