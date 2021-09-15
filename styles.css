@@ -1,6 +1,6 @@
 
 * {
-	font-family:  "Palatino Linotype", "Arial", "sans-serif" !important;
+	font-family:  "Consolas", "Arial", "sans-serif" !important;
 }
 
 * a:link, * a:visited
@@ -15,14 +15,14 @@ html {
 }
 
 body {
+	font-size:14px;
 	line-height: 1.5;
 	margin: 0px auto;
 	padding: 0px;
 	direction: ltr;
-	font-family: "Palatino Linotype", "Arial", sans-serif;
-	font-size-adjust: none;
+	font-family: "Consolas", "Arial", sans-serif;
 	font-stretch: normal;
-	background-color: #FAFAFA !important
+	background-color: #FBFBFB !important
 }
 
 iframe
@@ -56,25 +56,25 @@ h2 {
 
 h3 {
 	font-size: 20px;
+	padding-top: 3px !important;
 	padding-bottom: 1px !important;
 	padding-bottom: 3px !important;
 }
 
 h4 {
 	font-size: 20px;
-	color: #222222;
 	padding-top: 3px !important;
-	padding-bottom: 3px !important;
-	margin-bottom: 2px !important;
+	padding-bottom: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 h5 {
 	font-size: 16px;
 	padding-top: 3px !important;	
-	border: 0.5px solid #0000FF;
-	border-bottom: 2.5px solid #0000FF;
-	font-weight: bold;
-	color: #0000FF;
+	/*border: 0.5px solid #0000FF;*/
+	border-bottom: 1px solid #5555FF;
+	font-weight: normal;
+	color: #5555FF;
 	width: 100%;
 	display: inline-block;
 	margin-bottom: 4px;
@@ -184,7 +184,7 @@ td {
 
 #content-all a:hover, #content-all a:active, #folder-tree a:hover, #folder-tree a:active {
 	text-decoration: none !important;
-	color: #FF5500 !important;
+	color: #FF8400 !important;
 }
 
 #navigation li.element a:link, #navigation li.element a:visited, #navigation li.element a:hover, #navigation li.element:active {
@@ -273,9 +273,8 @@ td {
 {
 	display: table-cell;
 	position: relative;
-	width: 126px;
-	height: 69px;
-	padding: 2px;
+	width: 200px;
+	height: 90px;	
 }
 
 
@@ -292,33 +291,24 @@ td {
 
 #web-grid > div > div > div > a > span
 {
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border: solid 1px #E7E7E7;
+	border: solid 1px #F5F5FF;
 	text-align: bottom;
 	background-color: rgb(255, 255, 255);
 	margin-top: 45px;
-	font-size: 12px;
+	font-size: 14px !important;
 }
 
 #web-grid > div > div > div > a > span:hover {
-	background-color: #DDDDDD !important;
+	background-color: #FAFAFF !important;
 	color: #FFFFFF !important;
 }
 
 #web-grid > div > div > div > a > span:hover > span {
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	background-color: #0000FF !important;
 	color: #FFFFFF !important;
 }
 
 #web-grid > div > div > div > a > span:hover > span.inactive {
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	background-color: #555555 !important;
 	color: #FFFFFF !important;
 }
@@ -326,12 +316,12 @@ td {
 
 
 #web-grid > div > div > div > a > span > span, #web-grid div > div > div > a > span > span {
-	background-color: #F8F8F8 !important;
+	background-color: #E5E5FF !important;
 }
 
 #web-grid > div > div > div > a > span img
 {
-	margin-left: 5px;
+	margin-left:5px;
 	margin-top: 5px;
 }
 
@@ -342,13 +332,17 @@ td {
 }
 #web-list > div > div > div
 {
-	display: table-cell;
+	display: table-row;
 	width:435px;
+	
 	float:left;
 }
 #web-list > div > div > div > span > span
 {
-	font-style:italic;	
+	color:#AAAAFF;
+	font-size:80%;
+	padding-left:40px !important;	
+	
 }
 
 // hack for IE9+; IE8 and lower not supported anyways
@@ -366,7 +360,7 @@ td {
 	}
 }
 
-
+/*
 .title {
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -375,13 +369,13 @@ td {
 	width: 100%;
 	background-color: rgb(248, 248, 248) !important;
 	color: #555555 !important;
-}
+}*/
 
 #content-all table.listing { /* fix whitespace */
+	width:100%;
 	margin-top:10px;
-	width:100%
 }
-
+	
 #content-all table.listing td { 
 	font-weight:bold;
 }
