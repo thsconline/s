@@ -68,6 +68,7 @@ function downloadfile(myobject)
 	var redirect = getParameterByName("redirect", 0)
 	if(redirect == 1)
 	{
+		document.write("<br><br><i>Redirecting back to viewer</i>");
 		setTimeout(function(){redirectback()}, 5000);	
 	}
 	
