@@ -1,7 +1,7 @@
 function redirect()
 {
-	var url = window.location.pathname;
-	var rest = url.split("/s/d/")[1]
+	var pageurl = window.location.pathname;
+	var rest = pageurl.split("/s/d/")[1]
 	window.location = "https://thsconline.github.io/s/v/"+rest
 }
 
