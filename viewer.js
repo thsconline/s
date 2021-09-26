@@ -30,14 +30,13 @@ function loadshell()
 	case "cli":
 	window.location = "/cli/"
 	break;
-	case "d":
-	var redirecturl = getParameterByName("redirect", window.location.pathname)
 	
+	case "d":
 		try
 		{
 			var viewno = url.split("/s/d/")[1].split("/")[0]
 			var titlex = url.split("/s/d/")[1].split("/")[1]
-			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"&redirect="+ redirecturl +"\"></script></body></html>");
+			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"\"></script></body></html>");
 			document.title = unescape(titlex);
 		}
 		catch(err)
@@ -179,7 +178,7 @@ function loadshell()
 			win.document.write("<style>html, body {height:100% !important;}</style>");
 			win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 			win.document.write("<\/head><body>");			
-			win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">"+ unescape(titlex) +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"?redirect="+redirecturl+"\" class=\"border\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</span></div><br>")
+			win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">"+ unescape(titlex) +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"?redirect=1\" class=\"border\">Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</span></div><br>")
 			win.document.write("<iframe style=\"width:100%; height:96%;\" height=\"96%\" sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?&export=view&field="+titlex+"&base="+viewno+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
 			win.document.write("</body></html>"); 	 
 			win.document.title = unescape(titlex);
@@ -260,24 +259,14 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     }
 	    
    var i = document.createElement('div');	    
-   document.body.appendChild(i);
-    	var url = window.location.pathname;
-	var url = url.replace("&", "_");	    
-	
-	    var redirecturl = "https://thsconline.github.io/s/" + url.split("/s/")[1]
-	    
-   i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/v/"+viewno+"/"+titlex+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"?redirect="+redirecturl+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
-   
-	    
-	    
+   document.body.appendChild(i);    
+   i.innerHTML = "<div id=\"overlaybar\" style=\"position: fixed; z-index:100; bottom: 20px !important; left: 0px; height:20px; width:100%;\">"+ titlex +"<span id=\"overlayinsert\" style=\"float:right !Important\"><a target=\"_blank\" href=\"https://thsconline.github.io/s/v/"+viewno+"/"+titlex+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">View File<\/a>&nbsp;&nbsp;<a target=\"_blank\" href=\"https://thsconline.github.io/s/d/"+viewno+"/"+titlex+"\" class=\"border\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\" >Download File<\/a>&nbsp;&nbsp;<a class=\"border\" href=\"#v\" onclick=\"document.getElementById('overlaybar').parentNode.removeChild(document.getElementById('overlaybar'));\">Close &#215;</span></div><br>"
    /* var i = document.createElement('iframe');
     i.style.display = 'none';
     i.src = "https://thsconline.github.io/s/v/"+viewno+"/"+titlex;
     document.body.appendChild(i);*/
 //	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
-	    }
-   
-    
+    }
     return false;
 }
 
