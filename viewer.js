@@ -31,13 +31,13 @@ function loadshell()
 	window.location = "/cli/"
 	break;
 	case "d":
-	var redirect = getParameterByName("redirect", window.location.pathname)
+	var redirecturl = getParameterByName("redirect", window.location.pathname)
 	
 		try
 		{
 			var viewno = url.split("/s/d/")[1].split("/")[0]
 			var titlex = url.split("/s/d/")[1].split("/")[1]
-			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"&redirect="+ redirect +"\"></script></body></html>");
+			document.write("<html><body>&nbsp;<script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"&redirect="+ redirecturl +"\"></script></body></html>");
 			document.title = unescape(titlex);
 		}
 		catch(err)
