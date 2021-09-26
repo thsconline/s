@@ -61,7 +61,8 @@ function downloadfile(myobject)
 	}
 	catch(err)
 	{
-	var filename = url.substring(url.lastIndexOf('/')+1);
+	var pageurl = window.location.pathname;
+	var filename = unescape(pageurl.split("/s/d/")[1].split("/")[1]);
 	document.write("<body style=\"font-color:red; !important\"><b>Downloading failed for file: </b>"+filename+"</body>");	 
 	}
 	
