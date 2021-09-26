@@ -1,3 +1,10 @@
+function redirect()
+{
+	var url = window.location.pathname;
+	var rest = url.split("/s/d/")[1]
+	window.location = "https://thsconline.github.io/s/v/"+rest
+}
+
 // https://stackoverflow.com/questions/16245767/creating-a-blob-from-a-base64-string-in-javascript
 // https://stackoverflow.com/questions/19327749/javascript-blob-filename-without-link
 function downloadfile(myobject)
@@ -6,7 +13,12 @@ function downloadfile(myobject)
 	{
 	var fileData = myobject.data;
 	var filename = myobject.name;
-	var mimetype = myobject.mimetype;	
+	var mimetype = myobject.mimetype;
+	
+	document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
+	document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image\/x-icon\" href=\"https:\/\/thsconline.github.io\/s\/images\/icon_pdf2.png\">");
+	document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\">");
+	document.write("<style>html, body {height:100% !important;}</style>");
 	document.write("<body><b>Downloading file: </b><br>"+filename+"</body>");
 	const b64toBlob = (b64Data, contentType='', sliceSize=512) => {
 		const byteCharacters = atob(b64Data);
@@ -52,6 +64,21 @@ function downloadfile(myobject)
 	var filename = url.substring(url.lastIndexOf('/')+1);
 	document.write("<body style=\"font-color:red; !important\"><b>Downloading failed for file: </b>"+filename+"</body>");	 
 	}
-	// setTimeout(function(){redirect(myobject)}, 5000);
 	
+	var redirect = getParameterByName("redirect", 0)
+	if(redirect == 1)
+	{
+		setTimeout(function(){redirect()}, 5000);	
+	}
+	
+}
+
+function getParameterByName(name, defaultx, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return defaultx;
+    if (!results[2]) return defaultx;
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
