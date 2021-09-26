@@ -1,4 +1,4 @@
-function redirect()
+function redirectback()
 {
 	var pageurl = window.location.pathname;
 	var rest = pageurl.split("/s/d/")[1]
@@ -68,7 +68,7 @@ function downloadfile(myobject)
 	var redirect = getParameterByName("redirect", 0)
 	if(redirect == 1)
 	{
-		setTimeout(function(){redirect()}, 5000);	
+		setTimeout(function(){redirectback()}, 5000);	
 	}
 	
 }
