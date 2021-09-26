@@ -15,8 +15,7 @@ function downloadfile(myobject)
 	var filename = myobject.name;
 	var mimetype = myobject.mimetype;
 	
-	document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
-	document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image\/x-icon\" href=\"https:\/\/thsconline.github.io\/s\/images\/icon_pdf2.png\">");
+	document.write("<html><head><title>"+filename+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
 	document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\">");
 	document.write("<style>html, body {height:100% !important;}</style>");
 	document.write("<body><b>Downloading file: </b><br>"+filename+"</body>");
