@@ -1,15 +1,13 @@
 // https://stackoverflow.com/questions/16245767/creating-a-blob-from-a-base64-string-in-javascript
 // https://stackoverflow.com/questions/19327749/javascript-blob-filename-without-link
-function downloadFile(myobject)
-{
+function downloadfile(myobject)
+{	
 	try
 	{
-
-	var id =myobject.fileref;
-	var fileData =myobject.data;
-
+	var fileData = myobject.data;
 	var filename = myobject.name;
-
+	var mimetype = myobject.mimetype;	
+	document.write("<body><b>Downloading file: </b><br>"+filename+"</body>");
 	const b64toBlob = (b64Data, contentType='', sliceSize=512) => {
 		const byteCharacters = atob(b64Data);
 		const byteArrays = [];
@@ -29,7 +27,7 @@ function downloadFile(myobject)
 		const blob = new Blob(byteArrays, {type: contentType});
 		return blob;
 	}
-	const blob = b64toBlob(fileData, "application/pdf");
+	const blob = b64toBlob(fileData, mimetype);
 	//const blobUrl = URL.createObjectURL(blob);
 
 	 if (window.navigator.msSaveOrOpenBlob) {
@@ -47,12 +45,13 @@ function downloadFile(myobject)
 	    }, 0)
 	  }	
 
-//	window.location = blobUrl;
+     	
 	}
 	catch(err)
 	{
-	document.write(err);
-	var b="https://drive.google.com/uc?export=download&id="+id;
-	window.location = b;
+	var filename = url.substring(url.lastIndexOf('/')+1);
+	document.write("<body style=\"font-color:red; !important\"><b>Downloading failed for file: </b>"+filename+"</body>");	 
 	}
+	// setTimeout(function(){redirect(myobject)}, 5000);
+	
 }
