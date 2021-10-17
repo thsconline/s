@@ -5,9 +5,8 @@ function writeshell(http)
 	location.href = window.location.hash;  
 	
 
- var tags = document.getElementsByTagName('script');
+ var tags = document.getElementById('gs');
  for (var i = tags.length; i >= 0; i--){ //search backwards within nodelist for matching elements to remove
-  if (tags[i] && tags[i].getAttribute('id') != null && tags[i].getAttribute('id').indexOf('gs') != -1)
    tags[i].parentNode.removeChild(tags[i]); //remove element by calling parentNode.removeChild()
  }
 
