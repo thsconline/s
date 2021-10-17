@@ -3,6 +3,15 @@ function writeshell(http)
 	document.title = http.title;
 	document.write(http.htmlcontent); 
 	location.href = window.location.hash;  
+	
+
+ var tags = document.getElementsByTagName('script');
+ for (var i = tags.length; i >= 0; i--){ //search backwards within nodelist for matching elements to remove
+  if (tags[i] && tags[i].getAttribute('id') != null && tags[i].getAttribute('id').indexOf('gs') != -1)
+   tags[i].parentNode.removeChild(tags[i]); //remove element by calling parentNode.removeChild()
+ }
+}
+
 }
 
 
@@ -39,7 +48,7 @@ function loadshell()
 			var viewno = url.split("/s/d/")[1].split("/")[0]
 			var titlex = url.split("/s/d/")[1].split("/")[1]
 			var hashvalue = SHA256(viewno)
-			document.write("<html><body><br><script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"&hash="+hashvalue+"\"></script></body></html>");
+			document.write("<html><body><br><script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script id=\"gs\" type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"&hash="+hashvalue+"\"></script></body></html>");
 			document.title = unescape(titlex);
 		/*}
 		catch(err)
@@ -84,7 +93,7 @@ function loadshell()
 				document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\" />")
 				document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 				document.write("<script src=\"/s/viewer.js\" type=\"text\/javascript\"><\/script>");
-				document.write("<script type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwXHIZV9nurettlm_BvEqowP1Ky2cNlzQ4glcAENH_XdQ2L_YuDbCULFJgbM9RQbIPQ\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
+				document.write("<script id=\"gs\" type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwXHIZV9nurettlm_BvEqowP1Ky2cNlzQ4glcAENH_XdQ2L_YuDbCULFJgbM9RQbIPQ\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
 			}
 		}
 		catch(err)
