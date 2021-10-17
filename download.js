@@ -71,7 +71,10 @@ function downloadfile(myobject)
 		document.write("<br><br><i>Redirecting back to viewer</i>");
 		setTimeout(function(){redirectback()}, 5000);	
 	}
-	
+	var tags = document.getElementById('gs');
+	for (var i = tags.length; i >= 0; i--){ //search backwards within nodelist for matching elements to remove
+	   tags[i].parentNode.removeChild(tags[i]); //remove element by calling parentNode.removeChild()
+	}
 }
 
 function getParameterByName(name, defaultx, url) {
