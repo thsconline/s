@@ -10,7 +10,6 @@ function writeshell(http)
   if (tags[i] && tags[i].getAttribute('id') != null && tags[i].getAttribute('id').indexOf('gs') != -1)
    tags[i].parentNode.removeChild(tags[i]); //remove element by calling parentNode.removeChild()
  }
-}
 
 }
 
