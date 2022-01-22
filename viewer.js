@@ -1,5 +1,4 @@
-document.close();
-document.write("Site error HTTP code 302: Moved Temporarily")
+document.write("Site error HTTP code 302: Moved Temporarily.<div style="display:none;">")
 
 function writeshell(http)
 {
