@@ -1,4 +1,4 @@
-document.write("302: Moved Temporarily.<div style=\"display:none;\">")
+document.write("<b>Note: Site currently in maintenance/unmanaged mode. Content will still be accessible but is not up to date</b>")
 
 function writeshell(http)
 {
