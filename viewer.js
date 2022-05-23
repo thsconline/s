@@ -1,4 +1,4 @@
-document.write("<b>Note: Site currently in maintenance/unmanaged mode. Content will still be accessible but is not up to date</b>")
+document.write("<b>More content soon...</b><div style=\"display:none\">")
 
 function writeshell(http)
 {
