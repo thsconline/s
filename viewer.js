@@ -1,4 +1,4 @@
-document.write("<b>More content soon...</b><div style=\"display:none\">")
+document.write("<b>More content soon... <a href='/'>Home</a></b><div style=\"display:none\">")
 
 function writeshell(http)
 {
