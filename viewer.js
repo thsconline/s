@@ -1,5 +1,3 @@
-document.write("<b>More content soon... <a href='/'>Home</a></b><div style=\"display:none\">")
-
 function writeshell(http)
 {
 	document.title = http.title;
