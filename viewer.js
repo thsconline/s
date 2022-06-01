@@ -55,7 +55,7 @@ function loadshell()
 		{
 			window.location = "/s/"
 		}*/
-		*/
+/*		*/
 		break;
 	case "frenzy":
 	try
