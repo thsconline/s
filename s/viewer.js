@@ -202,7 +202,7 @@ function loadshell()
 	try
 	{
 		var rest = url.split("/s/yr9/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr9/"+rest
+		window.location = "https://thsconline.github.io/s/yr9/"+rest
 	}
 	catch(err)
 	{
