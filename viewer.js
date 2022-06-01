@@ -41,7 +41,9 @@ function loadshell()
 	break;
 	
 	case "d":
-		//try
+	document.write("<b>403 Error. Please use the download function in the viewer</b>");
+		/*	
+		try
 		//{
 			var viewno = url.split("/s/d/")[1].split("/")[0]
 			var titlex = url.split("/s/d/")[1].split("/")[1]
@@ -53,7 +55,7 @@ function loadshell()
 		{
 			window.location = "/s/"
 		}*/
-		
+		*/
 		break;
 	case "frenzy":
 	try
