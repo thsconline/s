@@ -13,4 +13,7 @@ Any information communicated Github project is reserved for the purposes of bona
 
 Older browsers including Internet Explorer 10 and earlier are not supported.
 
+**Terms of Use**
+Please email for permission if wanting to publish a copy of the HTML code including on Github pages, as a courtesy.
+
 [View Site](https://thsconline.github.io/s/)
