@@ -213,7 +213,7 @@ function loadshell()
 	try
 	{
 		var rest = url.split("/s/yr10/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr10/"+rest
+		window.location = "https://thsconline.github.io/s/yr10/"+rest
 	}
 	catch(err)
 	{
@@ -224,7 +224,7 @@ function loadshell()
 	try
 	{
 		var rest = url.split("/s/yr11/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr11/"+rest
+		window.location = "https://thsconline.github.io/s/yr11/"+rest
 	}
 	catch(err)
 	{
@@ -235,7 +235,7 @@ function loadshell()
 	try
 	{
 		var rest = url.split("/s/yr12/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr12/"+rest
+		window.location = "https://thsconline.github.io/s/yr12/"+rest
 	}
 	catch(err)
 	{
