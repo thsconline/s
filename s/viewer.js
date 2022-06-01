@@ -243,7 +243,8 @@ function loadshell()
 	}
 	break;
 	default:
-		window.location = "/s/"
+		var rest = url.split(".net/")[1]
+		window.location = "/s/"+rest
 	break;
 	}
 }
