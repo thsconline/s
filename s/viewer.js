@@ -18,7 +18,7 @@ function loadshell()
 {
 	var url = window.location.pathname;
 	var url = url.replace("&", "_");
-	var queryx = url.split("/s/")[1].split("/")[0]
+	var queryx = url.split(".net/")[1].split("/")[0]
 		
 	switch(queryx)
 	{
