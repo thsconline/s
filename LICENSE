@@ -12,15 +12,16 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-** Update 2019-03-01 - This license to copy only applies to copies made from 01/03/2019 onwards.
+** Update 2019-03-01 - 
 
-* The copy made, if identical, is maintained to ensure it is up to the date with the original.
-This applies for HTML / Javascript copied. If the user does not intend to keep maintaining the website he should remove the copy/clone/fork, if the original site is still running.
-* Permission has been sought from the owner. This applies to the use of the CSS and Javascript files only. The HTML folder structure can be copied without permission required. However the user must seek approval to scraper/replicate the entire site exactly. Approval will most likely be granted if sought.
+1. The copy made, if identical, is maintained to ensure it is up to the date with the original.
+By "The Software" applies for HTML / Javascript copied. If the user does not intend to keep maintaining the website he should remove the copy/clone/fork, if the original site is still running.
+2. Permission has been sought from the owner of the software before publication. This applies to the use of the CSS and Javascript files only. The HTML folder structure can be copied without permission. However the copier must seek approval to replicate the entire site exactly in its current form . Approval will most likely be granted if sought.
+3. This license to copy the entire website as is, only applies to copies made from 01/03/2019 onwards. Copies made prior to 01/03/2019 are in breach of copyright. 
 
-Copies made prior to 01/03/2019 are in breach of copyright. 
-
-*** Update 2022-01-06 - Creating a fork on Github does not consistute a breach of copyright, I don't mind resharing code. In order to publishing the content to Github Pages is to submit to the above copy conditions, since technically you are cloning the original. This applies to the "s" repo.
+*** Update 2022-01-06 - 
+4. Creating a fork on Github is permitted since it is an exact copy.
+5. Clarification -Publishing an exact copy of the website including to Github Pages requires informal permission, see (2).
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
