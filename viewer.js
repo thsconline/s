@@ -41,20 +41,19 @@ function loadshell()
 	break;
 	
 	case "d":
-	document.write("<b>403 Error. Please use the download function in the viewer</b>");
-		/*	
+		
 		try
 		{
 			var viewno = url.split("/s/d/")[1].split("/")[0]
 			var titlex = url.split("/s/d/")[1].split("/")[1]
-			var hashvalue = SHA256(viewno)
+			var hashvalue = SHA256(viewno);
 			document.write("<html><body><br><script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script id=\"gs\" type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"&hash="+hashvalue+"\"></script></body></html>");
 			document.title = unescape(titlex);
 		}
 		catch(err)
 		{
 			window.location = "/s/"
-		}*/
+		}
 		break;
 	case "frenzy":
 	try
