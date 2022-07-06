@@ -72,8 +72,7 @@ function loadshell()
 		{
 			var dkey = url.split("/s/fz/")[1].split("/")[0]
 			var serve = url.split("/s/fz/")[1].split("/")[1]
-			
-			
+						
 			if(dkey == "add" || dkey == "legacycode")
 			{
 				if(dkey == "add")
