@@ -72,6 +72,8 @@ function loadshell()
 		{
 			var dkey = url.split("/s/fz/")[1].split("/")[0]
 			var serve = url.split("/s/fz/")[1].split("/")[1]
+			
+			
 			if(dkey == "add" || dkey == "legacycode")
 			{
 				if(dkey == "add")
@@ -91,7 +93,15 @@ function loadshell()
 				document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\" />")
 				document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
 				document.write("<script src=\"/s/viewer.js\" type=\"text\/javascript\"><\/script>");
-				document.write("<script id=\"gs\" type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwXHIZV9nurettlm_BvEqowP1Ky2cNlzQ4glcAENH_XdQ2L_YuDbCULFJgbM9RQbIPQ\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
+				if(serve == "drive")
+				{
+					var driveid = url.split("/s/fz/")[1].split("/")[2]
+					document.write("<script id=\"gs\" type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwXHIZV9nurettlm_BvEqowP1Ky2cNlzQ4glcAENH_XdQ2L_YuDbCULFJgbM9RQbIPQ\/exec?rtype=JSONP&serve="+ serve +"&id="+driveid+"&dkey="+dkey+"\"><\/script><\/head>");
+				}
+				else
+				{
+					document.write("<script id=\"gs\" type=\"application\/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbwXHIZV9nurettlm_BvEqowP1Ky2cNlzQ4glcAENH_XdQ2L_YuDbCULFJgbM9RQbIPQ\/exec?rtype=JSONP&serve="+ serve +"&dkey="+dkey+"\"><\/script><\/head>");
+				}
 			}
 		}
 		catch(err)
@@ -286,10 +296,19 @@ String.prototype.capitalize = function(){
       }
 
 function jumpToCollection() {
-    	var searchidx = document.getElementById("serve").value;
+	
+	var searchidx = document.getElementById("serve").value;
     	var qx = document.getElementById("selector").value;
  	var key = document.getElementById("dkey").value;
-     	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"
+     	if(qx == 0)
+  	{
+	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"
+	}
+	if(qx == 1)
+	{
+	\window.location = "https://thsconline.github.io/s/fz/"+key+"/drive/"+searchidx+"/"
+	}
+	
 }
 
 function passwordentry()
