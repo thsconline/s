@@ -299,15 +299,11 @@ function jumpToCollection() {
 	var searchidx = document.getElementById("serve").value;
     	var qx = document.getElementById("selector").value;
  	var key = document.getElementById("dkey").value;
-     	if(qx == 0)
+     	if(qx == 1)
   	{
-	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"
+		searchidx = "drive/" + searchidx
 	}
-	if(qx == 1)
-	{
-	\window.location = "https://thsconline.github.io/s/fz/"+key+"/drive/"+searchidx+"/"
-	}
-	
+	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"	
 }
 
 function passwordentry()
