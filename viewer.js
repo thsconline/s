@@ -1,4 +1,4 @@
-document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">Content update coming soon. To upload new syllabus including 2022 papers please click <a href=\"/s/upload\">here</a></div><br>")
+document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">Content update coming soon. To upload new syllabus including 2022 papers please click <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform\">here</a></div><br>")
 
 function writeshell(http)
 {
