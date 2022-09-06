@@ -11,7 +11,7 @@ function writeshell(http)
  }
 
 }
-win.document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">Content update coming soon. To upload new syllabus including 2022 papers please click <a href=\"/s/upload\">here</a></div><br>")
+document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">Content update coming soon. To upload new syllabus including 2022 papers please click <a href=\"/s/upload\">here</a></div><br>")
 
 
 function loadshell()
