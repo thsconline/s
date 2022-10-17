@@ -51,7 +51,7 @@ color:rgb(41,140,202) !important;
 	text-align: left;
 	left:20%;
 	z-index: 1;
-
+	max-width:786px;
 }
 
 #homepage section > :last-child, #homepage article > :last-child {
