@@ -294,7 +294,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
    /* var i = document.createElement('iframe');
     i.style.display = 'none';
-    i.src = "https://thsconline.github.io/s/v_embed/"+viewno+"/"+titlex;
+    i.src = "https://thsconline.github.io/s/v/"+vx+"/"+viewno+"/"+titlex;
     document.body.appendChild(i);*/
 	//	setTimeout(function(){document.getElementById("overlaybar").parentNode.removeChild(document.getElementById("overlaybar"));}, 10000);
   /*  }
