@@ -140,11 +140,14 @@ function loadshell()
 	case "upload":
 		window.location = "/s/upload/"
 	break;
+
 	case "v":
+		window.history.go(-1)
 	try
 	{
 		var rest = url.split("/s/view/")[1]
 		window.location = "https://thsconline.github.io/s/v/"+rest
+		
 	}
 	catch(err)
 	{
