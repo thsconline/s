@@ -10,14 +10,16 @@ copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+copies or substantial portions of the Software AND the license terms outlined below.
 
-** Revised 2019-03-01 - 
+=== License Terms ===
+** First revision 2019-03-01: added terms 1-3
+** Second revision 2022-01-06: added terms 5-6
+** Third revision 2023-04-11: revised terms 4-6 and added terms 7-8
 
-1. The copy made, if identical, is maintained to ensure it is up to the date
-   with the original. This applies for HTML / CSS / Javascript copied. If the
-   copier does not intend to keep maintaining the website he should remove the
-   copy, if the original site is still running.
+1. Any copy, if identical is maintained to ensure that it is up to date with the original including any code
+   on this repository. If the copier does not intend to keep maintaining the website he should remove the copy, provided if the original site is still running and   
+   accessible.
 2. Permission has been sought from the owner of the software before publication. 
    This applies to the use of the CSS and Javascript files only. The HTML folder
    structure can be copied without permission. However the copier must seek
@@ -25,11 +27,13 @@ copies or substantial portions of the Software.
    Approval will most likely be granted if sought.
 3. This license to copy the entire website as is, only applies to software copies made
    from 01/03/2019 onwards. Copies made prior to 01/03/2019 are in breach of copyright. 
-
-*** Clarification 2022-01-06 - 
->> Creating a clone on Github is permitted usage, see (1).
->> Publishing an exact copy of the website including to Github Pages
+4. Fair use applies for the use of any of the code on this repository in a school or university project where your own work is expected.
+5. Creating a clone on Github is permitted usage, see (1).
+6. Outside of those uses covered in (4), publishing an exact copy of the website including to Github Pages
    requires informal permission, see (2).
+7. A substantial copy does include creating what could be perceived as a mirror site including linking to all pages listed in the HTML code of thsconline or a      
+   significant portion there of.
+8. This license does not cover the use of the any Google App Scripts referenced these are licensed separately.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
