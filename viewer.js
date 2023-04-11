@@ -187,7 +187,7 @@ function loadshell()
 		    	var b = viewno+titlex
     			var vx = (SHA256(b.substring(20))).substring(6)
 			if(hash != vx){
-				document.write("Unable to connect to viewer")
+				document.write("Unable to connect to viewer"+vx + " "+ hash)
 			}
 			else
 			{
