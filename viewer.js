@@ -185,9 +185,9 @@ function loadshell()
 			var viewno = url.split("/s/v/")[1].split("/")[1]
 			var titlex = url.split("/s/v/")[1].split("/")[2]
 		    	var b = viewno+titlex
-    			var vx = SHA256(b.substring(20)).substring(6)
+    			var vx = (SHA256(b.substring(20))).substring(6)
 			if(hash != vx){
-			document.write(viewno + " " + hash + " " + vx)
+				document.write("Unable to connect to viewer")
 			}
 			else
 			{
@@ -275,7 +275,7 @@ function pdf(input, viewno)
   
     var titlex = input.innerHTML;
     var b = viewno+titlex
-    var vx = SHA256(b.substring(20)).substring(6)
+    var vx = (SHA256(b.substring(20))).substring(6)
     
 /*	
 	
