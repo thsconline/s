@@ -184,7 +184,7 @@ function loadshell()
 			var vx = url.split("/s/v/")[1].split("/")[0]
 			var viewno = url.split("/s/v/")[1].split("/")[1]
 			var titlex = url.split("/s/v/")[1].split("/")[2]
-			var hashvalue = substring(SHA256(viewno + ". " + titlex),10)
+			var hashvalue = SHA256(viewno + ". " + titlex)
 			if(hashvalue != vx){
 			document.write(hashvalue + " " + vx)
 			}
@@ -273,7 +273,7 @@ function pdf(input, viewno)
 {
   
     var titlex = input.innerHTML;
-    var vx = substring(SHA256(viewno + ". " + titlex),10)
+    var vx = SHA256(viewno + ". " + titlex)
 /*	
 	
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
