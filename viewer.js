@@ -193,7 +193,7 @@ function loadshell()
 		    	var vy = SHA256(vb)
     			var vx = vy.toUpperCase().charCodeAt(0)-32
 			if(hash != vx){
-				document.write("Unable to connect to viewer. "+vx + " "+ hash)
+				document.write("Unable to connect to viewer")
 			}
 			else
 			{
