@@ -181,7 +181,7 @@ function loadshell()
 		try
 		{
 			
-			var viewno = url.split("/s/v/")[1].split("/")[0]
+			var vx = url.split("/s/v/")[1].split("/")[0]
 			var viewno = url.split("/s/v/")[1].split("/")[1]
 			var titlex = url.split("/s/v/")[1].split("/")[2]
 			var hashvalue = SHA256(viewno + ". " + titlex)
