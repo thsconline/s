@@ -184,9 +184,9 @@ function loadshell()
 			var hash = url.split("/s/v/")[1].split("/")[0]
 			var viewno = url.split("/s/v/")[1].split("/")[1]
 			var titlex = url.split("/s/v/")[1].split("/")[2]
-		    	var b = viewno+btoa(titlex.substring(0,4))
-		    	var vy = SHA256(b)
-    			var vx = vy.substring(0,1).charCodeAt(0)
+		    	var vb = viewno+btoa(titlex.substring(0,3))
+		    	var vy = SHA256(vb)
+    			var vx = vy.charCodeAt(0)
 			if(hash != vx){
 				document.write("Unable to connect to viewer: "+vx + " "+ hash)
 			}
@@ -275,9 +275,9 @@ function pdf(input, viewno)
 {
   
 var titlex = input.innerHTML;
-var b = viewno+btoa(titlex.substring(0,4))
-var vy = SHA256(b)
-var vx = vy.substring(0,1).charCodeAt(0)
+var vb = viewno+btoa(titlex.substring(0,3))
+var vy = SHA256(vb)
+var vx = vy.charCodeAt(0)
 /*	
 	
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
