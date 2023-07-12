@@ -189,7 +189,7 @@ function loadshell()
 			var hash = url.split("/s/v/")[1].split("/")[0]
 			var viewno = url.split("/s/v/")[1].split("/")[1]
 			var titlex = url.split("/s/v/")[1].split("/")[2]
-		    	var vb = viewno+btoa(titlex.substring(0,4))
+		    	var vb = viewno+btoa(titlex.replace(/\ /g, "_").substring(0,4))
 		    	var vy = SHA256(vb.trim())
     			var vx = vy.toUpperCase().charCodeAt(0)-32
 			if(hash != vx){
@@ -280,7 +280,7 @@ function pdf(input, viewno)
 {
   
 var titlex = input.innerHTML;
-var vb = viewno+btoa(titlex.substring(0,4))
+var vb = viewno+btoa(titlex.replace(/\ /g, "_").substring(0,4))
 var vy = SHA256(vb.trim())
 var vx = vy.toUpperCase().charCodeAt(0)-32
 /*	
