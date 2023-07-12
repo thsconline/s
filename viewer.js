@@ -18,12 +18,12 @@ function writeshell(http)
 function loadshell()
 {
 	var url = window.location.pathname;
-	var url = url.replace("&", "_");
+	var url = url.replace("&", "_");	
 	var url = url.replace("/v1", "/v/1");
 	var url = url.replace("/v2", "/v/2");
 	var url = url.replace("/v3", "/v/3");
 	var url = url.replace("/v6", "/v/6");
-	var url = url.replace("/v7", "/v/7");
+	var url = url.replace("/v7", "/v/7");	
 	var queryx = url.split("/s/")[1].split("/")[0]
 		
 	switch(queryx)
@@ -189,7 +189,7 @@ function loadshell()
 			var hash = url.split("/s/v/")[1].split("/")[0]
 			var viewno = url.split("/s/v/")[1].split("/")[1]
 			var titlex = url.split("/s/v/")[1].split("/")[2]
-		    	var vb = viewno+btoa(titlex.substring(0,3))
+		    	var vb = viewno+btoa(titlex.replace(/\s/g, '').substring(0,3))
 		    	var vy = SHA256(vb)
     			var vx = vy.toUpperCase().charCodeAt(0)-32
 			if(hash != vx){
@@ -280,7 +280,7 @@ function pdf(input, viewno)
 {
   
 var titlex = input.innerHTML;
-var vb = viewno+btoa(titlex.substring(0,3))
+var vb = viewno+btoa(titlex.replace(/\s/g, '').substring(0,3))
 var vy = SHA256(vb)
 var vx = vy.toUpperCase().charCodeAt(0)-32
 /*	
