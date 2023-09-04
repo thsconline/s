@@ -1,4 +1,4 @@
-document.write("<div id=\"overlaybar\" style=\"z-index:1000\; float:bottom; width:100%;\">As most of thsconline is no longer being actively maintained,<br />no guarantee that 2023 papers will not be available due to lack of submissions as of yet<br />However there will be several more new syllabus resources from 2022 soon.<br /><br/> To upload new syllabus including 2023 papers please click <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform\">here</a><br /></div>")
+document.write("<div id=\"overlaybar\" style=\"z-index:1000\; bottom:0px !important; float:bottom; width:100%;\">As most of thsconline is no longer being actively maintained,<br />no guarantee that 2023 papers will not be available due to lack of submissions as of yet<br />However there will be several more new syllabus resources from 2022 soon.<br /><br/> To upload new syllabus including 2023 papers please click <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform\">here</a><br /></div>")
 
 function writeshell(http)
 {
