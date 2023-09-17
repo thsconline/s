@@ -109,7 +109,7 @@ function loadshell()
 		}
 		catch(err)
 		{
-			window.location = "/fz/home"
+			window.location = "/s/fz/home"
 		}	
 		break;
 	
