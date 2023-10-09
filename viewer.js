@@ -1,5 +1,4 @@
-
-	 // document.write("<div id=\"overlaybar\" style=\"z-index:1000\; width:100%;\">Content update coming soon. To upload new syllabus including 2022 papers please click <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform\">here</a></div><br>")
+document.write("<div style=\"z-index:1000\; bottom:0px !important; float:bottom; width:100%;\">To upload new syllabus including 2023 papers please click <a href=\"https://thsconline.github.io/s/upload/\">here</a><br /></div>")
 
 function writeshell(http)
 {
@@ -110,7 +109,7 @@ function loadshell()
 		}
 		catch(err)
 		{
-			window.location = "/s/"
+			window.location = "/s/fz/home"
 		}	
 		break;
 	
