@@ -1,4 +1,4 @@
-document.write("<div style=\"z-index:1000\; bottom:0px !important; float:bottom; width:100%;\">To upload new syllabus including 2023 papers please click <a href=\"https://thsconline.github.io/s/upload/\">here</a><br /></div>")
+//document.write("<div style=\"z-index:1000\; bottom:0px !important; float:bottom; width:100%;\"><b>2024 papers for English and MX2 uploaded</b><br /></div>")
 
 function writeshell(http)
 {
