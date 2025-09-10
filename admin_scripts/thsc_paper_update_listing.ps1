@@ -43,7 +43,7 @@ Add-Type -Path .\System.Text.Encoding.CodePages.dll  -ErrorAction 'SilentlyConti
 Add-Type -Path .\System.Buffers.dll  -ErrorAction 'SilentlyContinue'
 Add-Type -Path .\System.Runtime.CompilerServices.Unsafe.dll -ErrorAction 'SilentlyContinue'
 
-## Set paramters for files - assume cloud storage is mounted as G:\
+## Set paramters for files - assume cloud storage is mounted as T:\
 ## Eventually move these to a JSON file for each paper type.
 
 $DrivePath = $Params.DrivePath  
