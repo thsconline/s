@@ -108,6 +108,19 @@ input[type=button],input[type=submit] {
 	color: #FFFFFF !important;
 }
 
+span.remark {
+	font-size: 10px;
+	background-color: #CCCCFF !important;
+	text-decoration: none;
+	cursor: pointer;
+	color: #141400 !important;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #141400 !important;
+}
+
+
 
 td {
 	vertical-align: top;
