@@ -96,12 +96,15 @@ $Schools | % {
 	{
 	$PapersetA = "<tr><td>$($SchoolName)<br />`r`n<span class=`"content`">`r`n";
 	$PapersetB = ($Paperset -replace "^(.*)", '<a>$1</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, $PDFTemplateCode)`">") -join "<br />" -replace "<br />", "<br />`r`n";
-	# Override for English 
+	# Override for English and general maths and stadnard maths
 	switch($PDFTemplateCode)
 	{
 		"2718" {$PapersetB = ($Paperset -replace "^(.*)", '<a>$1 P1</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, $PDFTemplateCode)`">") -join "<br />" -replace "<br />", "<br />`r`n"; break;}
 		"2727" {$PapersetB = ($Paperset -replace "^(.*)", '<a>$1 P2 (Std.)</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, $PDFTemplateCode)`">") -join "<br />" -replace "<br />", "<br />`r`n"; break;}
-		"2728" {$PapersetB = ($Paperset -replace "^(.*)", '<a>$1 P2 (Adv.)</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, $PDFTemplateCode)`">") -join "<br />" -replace "<br />", "<br />`r`n"; break;}		
+		"2728" {$PapersetB = ($Paperset -replace "^(.*)", '<a>$1 P2 (Adv.)</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, $PDFTemplateCode)`">") -join "<br />" -replace "<br />", "<br />`r`n"; break;}
+		"5218G" {$PapersetB = ($Paperset -replace "^(.*)", '<a>$1</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, 5218)`">") -join "<br />" -replace "<br />", "<br />`r`n"; break;}
+		"5318G" {$PapersetB = ($Paperset -replace "^(.*)", '<a>$1</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, 5318)`">") -join "<br />" -replace "<br />", "<br />`r`n"; break;}
+		
 		default {break;}
 		
 	}
