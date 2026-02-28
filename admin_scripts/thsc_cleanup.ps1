@@ -4,11 +4,16 @@ cd "E:\"
 $folderPairs = @(
     @{ X = 'E:\'; Y = 'T:\My Drive\thsconline collection\Year 9 & 10' },
     @{ X = 'E:\'; Y = 'T:\My Drive\thsconline collection\Year 11 & 12 - Internal Examinations' }
+	@{ X = 'C:\Users\dprit\OneDrive\TRANSFER'; Y = 'T:\My Drive\thsconline collection\Year 9 & 10' },
+    @{ X = 'C:\Users\dprit\OneDrive\TRANSFER'; Y = 'T:\My Drive\thsconline collection\Year 11 & 12 - Internal Examinations' }
+	
 	@{ X = 'C:\users\dprit\Downloads'; Y = 'T:\My Drive\thsconline collection\Year 9 & 10' },
     @{ X = 'C:\users\dprit\Downloads'; Y = 'T:\My Drive\thsconline collection\Year 11 & 12 - Internal Examinations' }
 	@{ X = 'C:\Users\dprit\OneDrive\thsc'; Y = 'T:\My Drive\thsconline collection\Year 9 & 10' },
     @{ X = 'C:\Users\dprit\OneDrive\thsc'; Y = 'T:\My Drive\thsconline collection\Year 11 & 12 - Internal Examinations' }
     @{ X = 'E:\'; Y = 'U:\My Drive\Additional Papers\Year 11 & 12 - Unlisted Collection' }
+	@{ X = 'C:\Users\dprit\OneDrive\TRANSFER'; Y = 'U:\My Drive\Additional Papers\Year 11 & 12 - Unlisted Collection' }
+	
     @{ X = 'C:\users\dprit\Downloads'; Y = 'U:\My Drive\Additional Papers\Year 11 & 12 - Unlisted Collection' }
     @{ X = 'C:\Users\dprit\OneDrive\thsc'; Y = 'U:\My Drive\Additional Papers\Year 11 & 12 - Unlisted Collection' }
 	@{ X = 'E:\'; Y = 'E:\' }	

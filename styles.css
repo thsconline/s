@@ -1,6 +1,7 @@
 
 * {
-	font-family:  "Consolas", "Arial", "sans-serif" !important;
+	font-family: "Arial", "Inter", "Helvetica Neue", Arial, sans-serif !important;
+	/* font-family:  "Consolas", "Arial", "sans-serif" !important; */
 }
 
 * a:link, * a:visited
@@ -20,7 +21,7 @@ body {
 	margin: 0px auto;
 	padding: 0px;
 	direction: ltr;
-	font-family: "Consolas", "Arial", sans-serif;
+	font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif !important;
 	font-stretch: normal;
 	background-color: #FBFBFB !important
 }
@@ -39,9 +40,20 @@ h1 {
 	font-weight: bold;
 	padding-left: 70px;
 	padding-top: 20px;
-	color: #555555;
+	color: #111827;
 	font-size-adjust: none;
 	font-stretch: normal;
+	  position: relative;
+  display: inline-block; /* ensures underline matches text width */
+}
+h1::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #5555FF; /* adjust color if needed */
+  margin-top: 6px;
+  border-radius: 2px;
 }
 
 h2 {
@@ -131,11 +143,14 @@ td {
 	background-color:#FFFFFF;
 	margin: 0px 50px 50px;
 	min-width: 440px !important;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+	border-radius: 14px;
+	overflow: hidden;
 }
 
 #content-all {
 	padding: 0px 20px 15px;
-	min-height: 405px;
+	min-height: 515px;
 }
 
 #folder-tree
@@ -144,23 +159,48 @@ td {
 	vertical-align: top;
 }
 
-#navigation, #footer {
+#navigation {
+  padding: 0 30px;
+  background: #111827
+}
+
+#navigation {
 	margin-left: 1px;
 	padding: 0px;
 	font-size: 14px;
 	padding: 5px 5px 0px;
-	color:#55555;
+	color:#FFFFFF;
 	text-align: left;
 	overflow: hidden;
 
+}
+
+#footer {
+  padding: 20px 30px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #AAAAFF;
 }
 
 #navigation ul {
 	margin: 0px;
 	padding: 0px;
 	font-weight:bold;
+	list-style: none;
+	padding-bottom: 20px;
 }
 
+#navigation li {
+  display: inline-block;
+  padding: 18px 16px;
+  color: #0000FF;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 5px;
+}
+/*
 #navigation li {
 	display: inline-block;
 	list-style-type: none;
@@ -171,7 +211,10 @@ td {
 	background-color: none;
 	padding: 4px 10px 2px;
 }
-
+*/
+#navigation li a {
+  color: #0000FF;
+}
 #navigation li.element:hover, #navigation li.current {
 	background-color: #0000FF !important;
 	color: #FFFFFF !important;
@@ -183,6 +226,11 @@ td {
 	display: block;
 }
 
+#navigation li:hover,
+#navigation li.current {
+  background: #1f2937;
+}
+
 #content-all a:link, #content-all  a:visited {
 	text-decoration: none !important;
 	color: #0000FF !important;
@@ -192,16 +240,16 @@ td {
 
 #folder-tree a:link, #folder-tree a:visited {
 	background: none !important;
-	color:#555555 !important;
+	color:#aaaaff !important;
 }
 
 #content-all a:hover, #content-all a:active, #folder-tree a:hover, #folder-tree a:active {
 	text-decoration: none !important;
-	color: #FF8400 !important;
+	color: #FFAA00 !important;
 }
 
 #navigation li.element a:link, #navigation li.element a:visited, #navigation li.element a:hover, #navigation li.element:active {
-	color: #0000FF !important;
+	color: #ffffff !important;
 }
 
 
@@ -261,6 +309,8 @@ td {
 {
 	float:right;
 }
+
+
 #folder-tree .current 
 {
 	font-weight: bold;
@@ -269,6 +319,30 @@ td {
 {
 	float:right;
 }
+
+
+#web-grid, #web-grid > div {
+	overflow: auto;
+	margin-top: 4px;
+}
+
+#web-grid > div, #web-list > div
+{
+	display: table;
+}
+#web-grid > div > div
+{
+	display: table-row;
+}
+#web-grid > div > div > div
+{
+	display: table-cell;
+	position: relative;
+	width: 200px;
+	height: 90px;	
+}
+
+
 #web-grid, #web-grid > div {
 	overflow: auto;
 	margin-top: 4px;
@@ -387,30 +461,41 @@ td {
 #content-all table.listing { /* fix whitespace */
 	width:100%;
 	margin-top:10px;
+    border-collapse: separate;
+	border-spacing: 0 0px;
 }
 	
 #content-all table.listing td { 
 	font-weight:bold;
 }
+
+#content-all table.listing tr:not(.content) td:has(span.content) {
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: box-shadow 0.2s ease;
+}
+
 #content-all table.listing tr.content td { 
 	font-weight:normal !important;
 }
 
 #content-all table.listing td span.content {
 	display: inline-block;
-	padding-left: 25px;
+	padding-left: 15px;
 	padding-bottom: 12px;
 	font-weight: normal !important;
 } 
 
 /* Container for search input and checkbox */
-.search {
+/*.search {
   padding: 5px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #ddd;
 }
 
 /* Style the search input */
+/*
 #search-bar {
   width: 100%;
   font-size: 12px;
@@ -423,6 +508,57 @@ td {
 #search-bar:focus {
   border-color: #FF5500;
   outline: none;
+}
+*/
+
+
+/* =====================
+   SEARCH
+===================== */
+
+.search {
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+#search-bar {
+  width: 98%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+#search-bar:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+input[type="submit"],
+input[type="button"] {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active {
+  transform: translateY(0);
 }
 
 /* Style the checkbox and label */
