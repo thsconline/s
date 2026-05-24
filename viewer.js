@@ -482,7 +482,7 @@ async function pdf(input, viewno, event)
 		cleanup();
 		launch(defaultItem,bulkdownload=="1"?"download":"view");
 	}
-	},50);
+	},50000);
 }
 
 String.prototype.capitalize = function(){
