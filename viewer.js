@@ -314,6 +314,7 @@ function loadshell()
 						{
 							console.log("✅ EM MATCH FOUND:", match);
 							console.log("➡️ Redirecting to:", match.url);
+
 							win.location.href =
 								new URL(match.url, "https://thsconline.github.io").href;
 						}
@@ -322,8 +323,15 @@ function loadshell()
 							console.log("❌ No /s/em/ match found for:", titlex);
 						}
 					}
+					else
+					{
+						console.log("⚠️ No valid data[titlex] array:", titlex, data);
+					}
 				})
-				.catch(() => {});
+				.catch(err =>
+				{
+					console.log("❌ Fetch error:", err);
+				});
 		}
 		catch (err)
 		{
