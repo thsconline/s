@@ -37,6 +37,7 @@ function loadshell()
 	case "cli":
 	window.location = "/cli/"
 	break;
+	// Download
 	case "d":
 		try
 		{
@@ -61,7 +62,8 @@ function loadshell()
 	{
 		window.location = "/s/fz/"
 	}
-	break;		
+	break;
+	// Embed
 	case "em":
 	try
 	{
@@ -121,6 +123,7 @@ function loadshell()
 		window.location = "/s/";
 	}
 	break;
+	// Embed (headless)
 	case "em_standalone":
 		try
 		{
@@ -168,6 +171,7 @@ function loadshell()
 			window.location = "/s/"
 		}
 	break;
+	// Frenzy (directory listing/site-tree)
 	case "fz":	
 		try
 		{
@@ -250,6 +254,7 @@ function loadshell()
 		window.location = "/s/"
 	}
 	break;
+	// Main viewer logic (headless)
 	case "v_standalone":
 		try
 		{
@@ -319,7 +324,7 @@ function loadshell()
 			window.location = "/s/";
 		}
 	break;
-
+	// Main viewer logic
 	case "v":
 		try
 	{
