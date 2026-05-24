@@ -400,7 +400,7 @@ async function pdf(input, viewno, event)
 	var isMobile=/android|iphone|ipad|mobile/i.test(navigator.userAgent);
 	function launch(resource,mode)
 	{
-	var finalurl=resource?.pdfData||(mode=="download"?
+	var finalurl=resource?.url||(mode=="download"?
 	"https://thsconline.github.io/s/d/"+viewno+"/"+titlex:
 	"https://thsconline.github.io/s/v/"+viewno+"/"+titlex);
 	if(mode=="download")
