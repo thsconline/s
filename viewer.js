@@ -446,7 +446,7 @@ async function pdf(input, viewno, event)
 	popup.style.top=rect.top+"px";
 	popup.id=pdfSelectionId;
 	popup.innerHTML=`
-	<strong>${display}</strong>
+	<strong>${titlex}</strong>
 	<div id="${pdfSelectionId}_links"></div>
 	<div class="pdf-progress"><div class="pdf-progress-bar" id="${pdfSelectionId}_bar"></div></div>
 	<button id="${pdfSelectionId}_cancel">Cancel</button>
@@ -456,7 +456,7 @@ async function pdf(input, viewno, event)
 	resources.forEach(r=>{
 	var a=document.createElement("a");
 	a.href="#";
-	a.textContent=r.title||"Open";
+	a.textContent=r.display||"Open";
 	a.onclick=function(e)
 	{
 	e.preventDefault();
