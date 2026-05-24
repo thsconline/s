@@ -282,7 +282,7 @@ function loadshell()
 
 							if (match)
 							{
-								win.location.href = match.url;
+								win.location.href = "https://thsconline.github.io" + match.url;
 								return;
 							}
 						}
@@ -360,7 +360,7 @@ function loadshell()
 
 							if (match)
 							{
-								win.location.href = match.url;
+								win.location.href = "https://thsconline.github.io" + match.url;
 								return;
 							}
 						}
@@ -461,7 +461,23 @@ function loadshell()
 	}
 }
 /* Rewritten PDF logic 24/05/2026 */
-async function pdf(input, viewno, event)
+function pdf(input, viewno, event)
+{
+	var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
+
+	if (isMobile)
+	{
+		// simple direct navigation (no popup system)
+		window.location.href =
+			"https://thsconline.github.io/s/v/" + viewno + "/" + input.innerHTML.trim();
+		return;
+	}
+
+	// desktop
+	return pdfa(input, viewno, event);
+}
+
+async function pdfa(input, viewno, event)
 {
 	var titlex=input.innerHTML.trim();
 	var urlParams=new URLSearchParams(window.location.search);
