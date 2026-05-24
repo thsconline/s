@@ -261,8 +261,7 @@ function loadshell()
 
 				if (window.self !== window.top)
 				{
-					win = window.open("about:blank", "_blank");
-					if (window.focus) win.focus();
+
 				}
 				else
 				{
@@ -293,9 +292,7 @@ function loadshell()
 					{
 						renderStandalone();
 					});
-				// =========================
-				// ORIGINAL STANDALONE VIEWER
-				// =========================
+
 				function renderStandalone()
 				{
 					win.document.write("<html><head><title>" + titlex + "</title>");
@@ -332,22 +329,17 @@ function loadshell()
 			function openViewer()
 			{
 				var win;
-				// =========================
-				// OPEN FIRST (iOS SAFE)
-				// =========================
+
 				if (window.self !== window.top)
 				{
-					win = window.open("about:blank", "_blank");
-					if (window.focus) win.focus();
+
 				}
 				else
 				{
 					win = window.open("about:blank", "_self");
 					if (window.focus) win.focus();
 				}
-				// =========================
-				// FETCH OVERRIDE MAP
-				// =========================
+
 				fetch("https://thsconline.github.io/s/em/" + viewno + ".json")
 					.then(r => r.ok ? r.json() : null)
 					.then(data =>
@@ -372,9 +364,6 @@ function loadshell()
 						renderStandalone();
 					});
 
-				// =========================
-				// ORIGINAL VIEWER
-				// =========================
 				function renderViewer()
 				{
 					win.document.write("<html><head><title>" + titlex + "</title>");
