@@ -583,7 +583,7 @@ input[type="checkbox"] {
 .pdf-popup {
   position: absolute;
   background: #CCCCFF;
-  color: white;
+  color: #555555;
   padding: 12px;
   border-radius: 10px;
   min-width: 260px;
