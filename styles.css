@@ -595,14 +595,11 @@ input[type="checkbox"] {
 
 .pdf-popup a {
   display: block;
-  color: #7dd3fc;
   text-decoration: none;
   margin: 6px 0;
 }
 
-.pdf-popup a:hover {
-  text-decoration: underline;
-}
+
 
 .pdf-progress {
   height: 6px;
