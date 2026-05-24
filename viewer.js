@@ -397,25 +397,28 @@ async function pdf(input, viewno, event)
 	var forceChoice=/[05]$/.test(viewno.toString());
 	var usepdfSelection=forceChoice||pdfSelectionEnabled;
 	var pdfSelectionId="pdf_"+viewno+"_"+Date.now()+"_"+Math.floor(Math.random()*100000);
-	var isMobile=/android|iphone|ipad|mobile/i.test(navigator.userAgent);
-	function launch(resource,mode)
+	
+	function launch(resource, mode)
 	{
-	var finalurl=resource?.url||(mode=="download"?
-	"https://thsconline.github.io/s/d/"+viewno+"/"+titlex:
-	"https://thsconline.github.io/s/v/"+viewno+"/"+titlex);
-	if(mode=="download")
-	{
-	if(legacymode=="1"&&!isMobile)
-	{
-	var i=document.createElement("iframe");
-	i.style.display="none";
-	i.sandbox="allow-downloads allow-scripts";
-	i.src=finalurl;
-	document.body.appendChild(i);
-	}
-	else window.open(finalurl);
-	}
-	else window.open(finalurl);
+	  var finalurl = resource?.url || (
+		mode=="download"
+		  ? "https://thsconline.github.io/s/d/"+viewno+"/"+titlex
+		  : "https://thsconline.github.io/s/v/"+viewno+"/"+titlex
+	  );
+
+	  if(mode === "download")
+	  {
+		const a = document.createElement("a");
+		a.href = finalurl;
+		a.download = "";
+		document.body.appendChild(a);
+		a.click();
+		a.remove();
+	  }
+	  else
+	  {
+		window.open(finalurl);
+	  }
 	}
 	var resources=null;
 	try
