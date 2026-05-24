@@ -390,162 +390,95 @@ function loadshell()
 async function pdf(input, viewno)
 {
 var titlex = input.innerHTML.trim();
-
-var url = window.location.search.substring(1);
-var urlParams = new URLSearchParams(url);
-
+var urlParams = new URLSearchParams(window.location.search.substring(1));
 var bulkdownload = urlParams.get("download");
-var legacymode = urlParams.get("legacy");
-
-var pdfSelection = urlParams.get("pdfSelection");
-var pdfSelectionEnabled = pdfSelection == "1" || pdfSelection == "true";
-
-var forceChoice = /[05]$/.test(viewno.toString());
-var usepdfSelection = forceChoice || pdfSelectionEnabled;
-
-var pdfSelectionId =
-"pdfsel_" + viewno + "_" + Date.now() + "_" + Math.floor(Math.random() * 100000);
-
-var isMobile =
-/(android|bb\d+|meego|iphone|ipad|ipod|blackberry|opera mini|iemobile|windows phone)/i
-.test(navigator.userAgent);
-
-function launch(resource, mode)
-{
-var finalurl =
-resource?.pdfData ||
-(mode == "download"
-? "https://thsconline.github.io/s/d/" + viewno + "/" + titlex
-: "https://thsconline.github.io/s/v/" + viewno + "/" + titlex);
-
-if(mode == "download")
-{
-if((legacymode == "true" || legacymode == "1") && !isMobile)
-{
-var i = document.createElement("iframe");
-i.sandbox = "allow-scripts allow-downloads";
-i.style.display = "none";
-i.src = finalurl;
-document.body.appendChild(i);
-}
-else
-{
-window.open(finalurl);
-}
-}
-else
-{
-window.open(finalurl);
-}
-}
-
+var pdfSelectionId = "pdf_" + viewno + "_" + Date.now();
+var countdown = 3;
 var resources = null;
-
 try
 {
 const res = await fetch("https://thsconline.github.io/s/index/" + viewno + ".json");
-if(res.ok)
-{
-const data = await res.json();
-if(data[titlex])
-{
-resources = Array.isArray(data[titlex]) ? data[titlex] : [data[titlex]];
+if(res.ok) resources = await res.json();
 }
-}
-}
-catch(e)
-{
-console.log(e);
-}
-
+catch(err){}
 if(!resources)
 {
-if(bulkdownload == "true" || bulkdownload == "1") launch({}, "download");
-else launch({}, "view");
+launchFallback();
 return;
 }
-
-var defaultItem = resources.find(x => x.default === true) || resources[0];
-
-if(!usepdfSelection || resources.length <= 1)
+var item = resources[titlex];
+if(!item)
 {
-if(bulkdownload == "true" || bulkdownload == "1") launch(defaultItem, "download");
-else launch(defaultItem, "view");
+launchFallback();
 return;
 }
-
-var el = document.createElement("div");
-el.id = pdfSelectionId;
-el.className = "pdfSelectionModal";
-
-el.innerHTML =
-"<h3>" + titlex + "</h3>" +
+if(!Array.isArray(item)) item = [item];
+var defaultItem = item.find(x => x.default) || item[0];
+if(item.length === 1)
+{
+launch(defaultItem);
+return;
+}
+var box = document.createElement("div");
+box.id = pdfSelectionId;
+box.style.cssText =
+"position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);" +
+"background:#fff;padding:20px;border:1px solid #ccc;z-index:999999;" +
+"min-width:320px;box-shadow:0 0 15px rgba(0,0,0,0.4)";
+box.innerHTML =
+"<h3 style='margin:0 0 10px 0'>" + titlex + "</h3>" +
 "<div id='" + pdfSelectionId + "_links'></div>" +
-"<div class='pdfSelectionBarOuter'>" +
-"<div id='" + pdfSelectionId + "_bar' class='pdfSelectionBarInner'></div>" +
+"<div class='pdfbarwrap'>" +
+"<div id='" + pdfSelectionId + "_bar' class='pdfbar'></div>" +
 "</div>" +
-"<button id='" + pdfSelectionId + "_cancel' class='pdfSelectionCancel'>Cancel</button>";
-
-document.body.appendChild(el);
-
-var links = document.getElementById(pdfSelectionId + "_links");
-
-function closeUI()
-{
-clearInterval(timer);
-if(el) el.remove();
-}
-
-resources.forEach(function(r)
+"<button id='" + pdfSelectionId + "_cancel'>Cancel</button>";
+document.body.appendChild(box);
+var linksDiv = document.getElementById(pdfSelectionId + "_links");
+item.forEach(r =>
 {
 var a = document.createElement("a");
 a.href = "#";
-a.className = "pdfSelectionLink";
-a.textContent = r.title || r.pdfData;
-
+a.style.display = "block";
+a.style.margin = "6px 0";
+a.innerText = r.display;
 a.onclick = function(e)
 {
 e.preventDefault();
-closeUI();
-
-if(bulkdownload == "true" || bulkdownload == "1")
-launch(r, "download");
-else
-launch(r, "view");
+clearInterval(timer);
+box.remove();
+launch(r);
 };
-
-links.appendChild(a);
+linksDiv.appendChild(a);
 });
-
-document.getElementById(pdfSelectionId + "_cancel").onclick = closeUI;
-
-/* 3 second right-to-left bar */
-var start = Date.now();
-var duration = 3000;
-
-var timer = setInterval(function()
+document.getElementById(pdfSelectionId + "_cancel").onclick = () =>
 {
-var elapsed = Date.now() - start;
-var progress = Math.max(0, 1 - (elapsed / duration));
-
+clearInterval(timer);
+box.remove();
+};
 var bar = document.getElementById(pdfSelectionId + "_bar");
-
-if(bar)
+var width = 100;
+var timer = setInterval(() =>
 {
-bar.style.transform = "scaleX(" + progress + ")";
+width -= (100 / (countdown * 10));
+if(bar) bar.style.width = width + "%";
+if(width <= 0)
+{
+clearInterval(timer);
+box.remove();
+launch(defaultItem);
 }
-
-if(progress <= 0)
+}, 100);
+function launch(r)
 {
-closeUI();
-
-if(bulkdownload == "true" || bulkdownload == "1")
-launch(defaultItem, "download");
+if(bulkdownload == "true")
+window.open(r.url);
 else
-launch(defaultItem, "view");
+window.open(r.url);
 }
-
-}, 50);
+function launchFallback()
+{
+window.open("/s/index/404_html.pdf");
+}
 }
 
 String.prototype.capitalize = function(){
