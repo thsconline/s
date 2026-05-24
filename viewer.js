@@ -304,34 +304,21 @@ function loadshell()
 				.then(r => r.ok ? r.json() : null)
 				.then(data =>
 				{
-					if (data && Array.isArray(data[titlex]))
+					var titley = unescape(titlex)
+					if (data && Array.isArray(data[titley]))
 					{
-						var match = data[titlex].find(x =>
+						var match = data[titley].find(x =>
 							x.url && x.url.startsWith("/s/em/")
 						);
 
 						if (match)
 						{
-							console.log("✅ EM MATCH FOUND:", match);
-							console.log("➡️ Redirecting to:", match.url);
-
 							win.location.href =
 								new URL(match.url, "https://thsconline.github.io").href;
 						}
-						else
-						{
-							console.log("❌ No /s/em/ match found for:", titlex);
-						}
-					}
-					else
-					{
-						console.log("⚠️ No valid data[titlex] array:", titlex, data);
 					}
 				})
-				.catch(err =>
-				{
-					console.log("❌ Fetch error:", err);
-				});
+				.catch(() => {});
 		}
 		catch (err)
 		{
@@ -401,9 +388,10 @@ function loadshell()
 			.then(r => r.ok ? r.json() : null)
 			.then(data =>
 			{
-				if (data && Array.isArray(data[titlex]))
+				var titley = unescape(titlex)
+				if (data && Array.isArray(data[titley]))
 				{
-					var match = data[titlex].find(x =>
+					var match = data[titley].find(x =>
 						x.url && x.url.startsWith("/s/em/")
 					);
 
