@@ -477,7 +477,7 @@ window.open(r.url);
 }
 function launchFallback()
 {
-window.open("/s/index/404_html.pdf");
+window.open("https://thsconline.github.io/s/v/"+viewno+"/"+titlex");
 }
 }
 
