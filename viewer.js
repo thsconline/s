@@ -459,9 +459,9 @@ function pdf(input, viewno, event)
 
 	if (isMobile)
 	{
+		var titlex=input.innerHTML.trim();
 		// simple direct navigation (no popup system)
-		window.location.href =
-			"https://thsconline.github.io/s/v/" + viewno + "/" + input.innerHTML.trim();
+		window.open("https://thsconline.github.io/s/v/" + viewno + "/" + titlex);
 		return;
 	}
 
