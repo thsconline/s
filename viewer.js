@@ -332,7 +332,8 @@ function loadshell()
 
 				if (window.self !== window.top)
 				{
-
+					win = window.open("about:blank", "_self");
+					if (window.focus) win.focus();
 				}
 				else
 				{
@@ -357,11 +358,11 @@ function loadshell()
 							}
 						}
 
-						renderStandalone();
+						renderViewer();
 					})
 					.catch(() =>
 					{
-						renderStandalone();
+						renderViewer();
 					});
 
 				function renderViewer()
