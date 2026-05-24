@@ -300,7 +300,7 @@ function loadshell()
 			// =========================
 			// FETCH IN BACKGROUND
 			// =========================
-			fetch("https://thsconline.github.io/s/em/" + viewno + ".json")
+			fetch("https://thsconline.github.io/s/index/" + viewno + ".json")
 				.then(r => r.ok ? r.json() : null)
 				.then(data =>
 				{
@@ -383,7 +383,7 @@ function loadshell()
 		// =========================
 		// FETCH IN BACKGROUND
 		// =========================
-		fetch("https://thsconline.github.io/s/em/" + viewno + ".json")
+		fetch("https://thsconline.github.io/s/index/" + viewno + ".json")
 			.then(r => r.ok ? r.json() : null)
 			.then(data =>
 			{
@@ -408,50 +408,7 @@ function loadshell()
 		window.location = "/s/";
 	}
 	break;
-	case "yr9":
-	try
-	{
-		var rest = url.split("/s/yr9/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr9/"+rest
-	}
-	catch(err)
-	{
-		window.location = "/s/"
-	}
-	break;
-	case "yr10":
-	try
-	{
-		var rest = url.split("/s/yr10/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr10/"+rest
-	}
-	catch(err)
-	{
-		window.location = "/s/"
-	}
-	break;
-	case "yr11":
-	try
-	{
-		var rest = url.split("/s/yr11/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr11/"+rest
-	}
-	catch(err)
-	{
-		window.location = "/s/"
-	}
-	break;
-	case "yr12":
-	try
-	{
-		var rest = url.split("/s/yr12/")[1]
-		window.location = "https://thsconline.github.io/s/files/yr12/"+rest
-	}
-	catch(err)
-	{
-		window.location = "/s/"
-	}
-	break;
+
 	default:
 		window.location = "/s/"
 	break;
