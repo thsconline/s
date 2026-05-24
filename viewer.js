@@ -312,8 +312,14 @@ function loadshell()
 
 						if (match)
 						{
+							console.log("✅ EM MATCH FOUND:", match);
+							console.log("➡️ Redirecting to:", match.url);
 							win.location.href =
 								new URL(match.url, "https://thsconline.github.io").href;
+						}
+						else
+						{
+							console.log("❌ No /s/em/ match found for:", titlex);
 						}
 					}
 				})
