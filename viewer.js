@@ -446,7 +446,7 @@ async function pdf(input, viewno, event)
 	popup.style.top=rect.top+"px";
 	popup.id=pdfSelectionId;
 	popup.innerHTML=`
-	<strong>${titlex}</strong>
+	<strong>${display}</strong>
 	<div id="${pdfSelectionId}_links"></div>
 	<div class="pdf-progress"><div class="pdf-progress-bar" id="${pdfSelectionId}_bar"></div></div>
 	<button id="${pdfSelectionId}_cancel">Cancel</button>
@@ -470,19 +470,22 @@ async function pdf(input, viewno, event)
 		clearInterval(timer);
 		popup.remove();
 	}
-		document.getElementById(pdfSelectionId+"_cancel").onclick=cleanup;
-		var bar=document.getElementById(pdfSelectionId+"_bar");
-		var time=3;
-		var timer=setInterval(()=>{
-		time-=0.05;
-		var p=Math.max(0,time/3);
-		bar.style.transform=`scaleX(${p})`;
+	document.getElementById(pdfSelectionId+"_cancel").onclick=cleanup;
+	var bar=document.getElementById(pdfSelectionId+"_bar");
+	var time=3;
+	var total=3;
+	var timer=setInterval(()=>{
+	time-=0.05;
+	if(time<0)time=0;
+	var p=time/total;
+	bar.style.transform=`scaleX(${p})`;
 	if(time<=0)
 	{
-		cleanup();
-		launch(defaultItem,bulkdownload=="1"?"download":"view");
+	clearInterval(timer);
+	cleanup();
+	launch(defaultItem,bulkdownload=="1"?"download":"view");
 	}
-	},50000);
+	},50);
 }
 
 String.prototype.capitalize = function(){
