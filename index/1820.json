@@ -1,0 +1,346 @@
+{
+  "1995 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "1995 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 1995 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "1996 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "1996 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 1996 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "1997 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "1997 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 1997 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "1998 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "1998 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 1998 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "1999 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "1999 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 1999 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2000 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2000 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2000 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2001 HSC": [
+    {
+      "display": "NESA (archive PDF)",
+      "title": "2001 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2021-xx/chemistry-hsc-exam-2001.pdf",
+      "type": "official",
+      "default": true
+    },
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2001 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2001 HSC.pdf",
+      "type": "mirror",
+      "default": false
+    }
+  ],
+
+  "2002 HSC": [
+    {
+      "display": "NESA (archive PDF)",
+      "title": "2002 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2021-xx/chemistry-hsc-exam-2002.pdf",
+      "type": "official",
+      "default": true
+    },
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2002 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2002 HSC.pdf",
+      "type": "mirror",
+      "default": false
+    }
+  ],
+
+  "2003 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2003 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2003 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2004 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2004 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2004 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2005 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2005 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2005 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2006 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2006 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2006 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2007 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2007 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2007 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2008 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2008 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2008 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2009 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2009 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2009 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2010 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2010 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2010 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2011 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2011 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2011 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2012 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2012 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2012 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2013 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2013 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2013 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2014 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2014 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2014 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2015 HSC": [
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2015 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2015 HSC.pdf",
+      "type": "mirror",
+      "default": true
+    }
+  ],
+
+  "2016 HSC": [
+    {
+      "display": "NESA (archive PDF)",
+      "title": "2016 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/chemistry-hsc-exam-2016.pdf",
+      "type": "official",
+      "default": true
+    }
+  ],
+
+  "2017 HSC": [
+    {
+      "display": "NESA (archive PDF)",
+      "title": "2017 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/chemistry-hsc-exam-2017.pdf",
+      "type": "official",
+      "default": true
+    }
+  ],
+
+  "2018 HSC": [
+    {
+      "display": "NESA (official)",
+      "title": "2018 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2018-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    },
+    {
+      "display": "NESA Marking Guidelines",
+      "title": "2018 Marking Guidelines",
+      "url": "https://www.nsw.gov.au/sites/default/files/2018-chemistry-marking-guidelines.pdf",
+      "type": "official",
+      "default": false
+    },
+    {
+      "display": "Mirror (GitHub)",
+      "title": "2018 HSC",
+      "url": "/s/em/hsc_exams/Chemistry/Chemistry 2018 HSC.pdf",
+      "type": "mirror",
+      "default": false
+    }
+  ],
+
+  "2019 HSC": [
+    {
+      "display": "NESA PDF",
+      "title": "2019 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2019-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    }
+  ],
+
+  "2020 HSC": [
+    {
+      "display": "NESA PDF",
+      "title": "2020 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2020-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    }
+  ],
+
+  "2021 HSC": [
+    {
+      "display": "NESA PDF",
+      "title": "2021 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2021-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    }
+  ],
+
+  "2022 HSC": [
+    {
+      "display": "NESA PDF",
+      "title": "2022 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2022-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    },
+    {
+      "display": "NESA Marking Guidelines",
+      "title": "2022 Marking Guidelines",
+      "url": "https://www.nsw.gov.au/sites/default/files/2022-chemistry-marking-guidelines.pdf",
+      "type": "official",
+      "default": false
+    }
+  ],
+
+  "2023 HSC": [
+    {
+      "display": "NESA PDF",
+      "title": "2023 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2023-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    }
+  ],
+
+  "2024 HSC": [
+    {
+      "display": "NESA PDF",
+      "title": "2024 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2024-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    }
+  ],
+
+  "2025 HSC": [
+    {
+      "display": "NESA PDF",
+      "title": "2025 HSC Chemistry Exam",
+      "url": "https://www.nsw.gov.au/sites/default/files/2025-chemistry-hsc-exam.pdf",
+      "type": "official",
+      "default": true
+    }
+  ]
+}
