@@ -304,7 +304,9 @@ function loadshell()
 				.then(r => r.ok ? r.json() : null)
 				.then(data =>
 				{
-					var titley = unescape(titlex)
+					var titley = unescape(titlex);
+					var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
+
 					if (data && Array.isArray(data[titley]))
 					{
 						var match = data[titley].find(x =>
@@ -315,10 +317,26 @@ function loadshell()
 						{
 							win.location.href =
 								new URL(match.url, "https://thsconline.github.io").href;
+							return;
 						}
 					}
+
+					// fallback ONLY if mobile and no match
+					if (isMobile)
+					{
+						win.location.href = redirecturl;
+					}
 				})
-				.catch(() => {});
+				.catch(() =>
+				{
+					var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
+
+					// fallback ONLY on mobile if fetch fails
+					if (isMobile)
+					{
+						win.location.href = redirecturl;
+					}
+				});
 		}
 		catch (err)
 		{
