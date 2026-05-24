@@ -255,46 +255,48 @@ function loadshell()
 		{
 			var viewno = url.split("/s/v_standalone/")[1].split("/")[0];
 			var titlex = url.split("/s/v_standalone/")[1].split("/")[1];
-			function openStandalone()
+
+			var win;
+
+			if (window.self !== window.top)
 			{
-				var win;
+				win = window.open("about:blank", "_blank");
+				if (window.focus) win.focus();
+			}
+			else
+			{
+				win = window.open("about:blank", "_self");
+				if (window.focus) win.focus();
+			}
 
-				if (window.self !== window.top)
+			var redirectUrl = null;
+
+			fetch("https://thsconline.github.io/s/em/" + viewno + ".json")
+				.then(r => r.ok ? r.json() : null)
+				.then(data =>
 				{
-
-				}
-				else
-				{
-					win = window.open("about:blank", "_self");
-					if (window.focus) win.focus();
-				}
-
-				fetch("https://thsconline.github.io/s/em/" + viewno + ".json")
-					.then(r => r.ok ? r.json() : null)
-					.then(data =>
+					if (data && Array.isArray(data[titlex]))
 					{
-						if (data && Array.isArray(data[titlex]))
+						var match = data[titlex].find(x =>
+							x.url && x.url.startsWith("/s/em/")
+						);
+
+						if (match)
 						{
-							var match = data[titlex].find(x =>
-								x.url && x.url.startsWith("/s/em/")
-							);
-
-							if (match)
-							{
-								win.location.href = "https://thsconline.github.io" + match.url;
-								return;
-							}
+							redirectUrl =
+								new URL(match.url, "https://thsconline.github.io").href;
 						}
-
-						renderStandalone();
-					})
-					.catch(() =>
-					{
-						renderStandalone();
-					});
-
-				function renderStandalone()
+					}
+				})
+				.catch(() => {})
+				.then(() =>
 				{
+					if (redirectUrl)
+					{
+						win.location.href = redirectUrl;
+						return;
+					}
+
 					win.document.write("<html><head><title>" + titlex + "</title>");
 					win.document.write("<meta http-equiv='X-UA-Compatible' content='IE=Edge'>");
 					win.document.write("<meta http-equiv='content-type' content='text/html; charset=utf-8'>");
@@ -302,6 +304,7 @@ function loadshell()
 					win.document.write("<link href='/s/styles.css' rel='stylesheet' type='text/css'>");
 					win.document.write("<style>html, body {height:100% !important;}</style>");
 					win.document.write("</head><body>");
+
 					win.document.write(
 						"<iframe style='width:100%;height:96%;' frameborder='0' " +
 						"sandbox='allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads' " +
@@ -310,63 +313,64 @@ function loadshell()
 						titlex + "&base=" + viewno +
 						"'></iframe>"
 					);
+
 					win.document.write("</body></html>");
 					win.document.title = unescape(titlex);
-				}
-			}		
-			openStandalone();
+				});
 		}
 		catch (err)
 		{
 			window.location = "/s/";
 		}
 	break;
+
 	case "v":
 		try
 		{
 			var viewno = url.split("/s/v/")[1].split("/")[0];
 			var titlex = url.split("/s/v/")[1].split("/")[1];
-			function openViewer()
+
+			var win;
+
+			if (window.self !== window.top)
 			{
-				var win;
+				win = window.open("about:blank", "_blank");
+				if (window.focus) win.focus();
+			}
+			else
+			{
+				win = window.open("about:blank", "_self");
+				if (window.focus) win.focus();
+			}
 
-				if (window.self !== window.top)
-				{
-					win = window.open("about:blank", "_self");
-					if (window.focus) win.focus();
-				}
-				else
-				{
-					win = window.open("about:blank", "_self");
-					if (window.focus) win.focus();
-				}
+			var redirectUrl = null;
 
-				fetch("https://thsconline.github.io/s/em/" + viewno + ".json")
-					.then(r => r.ok ? r.json() : null)
-					.then(data =>
+			fetch("https://thsconline.github.io/s/em/" + viewno + ".json")
+				.then(r => r.ok ? r.json() : null)
+				.then(data =>
+				{
+					if (data && Array.isArray(data[titlex]))
 					{
-						if (data && Array.isArray(data[titlex]))
+						var match = data[titlex].find(x =>
+							x.url && x.url.startsWith("/s/em/")
+						);
+
+						if (match)
 						{
-							var match = data[titlex].find(x =>
-								x.url && x.url.startsWith("/s/em/")
-							);
-
-							if (match)
-							{
-								win.location.href = "https://thsconline.github.io" + match.url;
-								return;
-							}
+							redirectUrl =
+								new URL(match.url, "https://thsconline.github.io").href;
 						}
-
-						renderViewer();
-					})
-					.catch(() =>
-					{
-						renderViewer();
-					});
-
-				function renderViewer()
+					}
+				})
+				.catch(() => {})
+				.then(() =>
 				{
+					if (redirectUrl)
+					{
+						win.location.href = redirectUrl;
+						return;
+					}
+
 					win.document.write("<html><head><title>" + titlex + "</title>");
 					win.document.write("<meta http-equiv='X-UA-Compatible' content='IE=Edge'>");
 					win.document.write("<meta http-equiv='content-type' content='text/html; charset=utf-8'>");
@@ -374,6 +378,7 @@ function loadshell()
 					win.document.write("<link href='/s/styles.css' rel='stylesheet' type='text/css'>");
 					win.document.write("<style>html, body {height:100% !important;}</style>");
 					win.document.write("</head><body>");
+
 					win.document.write(
 						"<div id='overlaybar' style='z-index:1000;width:100%;'>" +
 						unescape(titlex) +
@@ -383,18 +388,17 @@ function loadshell()
 						"' class='border'>Download File</a>&nbsp;&nbsp;" +
 						"<a class='border' onclick='window.close()'>Close ✕</a></span></div><br>"
 					);
+
 					win.document.write(
 						"<iframe style='width:100%;height:96%;' frameborder='0' " +
 						"src='https://script.google.com/macros/s/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-/exec?&export=view&field=" +
 						titlex + "&base=" + viewno +
 						"'></iframe>"
 					);
+
 					win.document.write("</body></html>");
 					win.document.title = unescape(titlex);
-				}
-			}
-			// run everything
-			openViewer();
+				});
 		}
 		catch (err)
 		{
