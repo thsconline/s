@@ -449,7 +449,7 @@ async function pdf(input, viewno, event)
 	popup.style.top=rect.top+"px";
 	popup.id=pdfSelectionId;
 	popup.innerHTML=`
-	<strong>${titlex}</strong>
+	<b>${titlex}</b>
 	<div id="${pdfSelectionId}_links"></div>
 	<div class="pdf-progress"><div class="pdf-progress-bar" id="${pdfSelectionId}_bar"></div></div>
 	<button id="${pdfSelectionId}_cancel">Cancel</button>
