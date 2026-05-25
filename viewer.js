@@ -417,8 +417,15 @@ function loadshell()
 
 					if (match)
 					{
+						if (isMobile)
+						{
+							win.location.href = match.url.replace("/s/em", "/");
+						}
+						else
+						{
 						win.location.href =
 							new URL(match.url, "https://thsconline.github.io").href;
+						}
 						return;
 					}
 				}
