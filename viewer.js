@@ -419,7 +419,7 @@ function loadshell()
 					{
 						if (isMobile)
 						{
-							redirecturl = match.url.replace("/s/em", "https://thsconline.github.io/");							
+							win.location.href = match.url.replace("/s/em", "https://thsconline.github.io/");							
 						}
 						else
 						{
