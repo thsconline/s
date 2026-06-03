@@ -1,7 +1,14 @@
 {
   "1995 HSC": [
+	{
+      "display": "Board of Studies (archive)",
+      "title": "1995 HSC",
+      "url": "https://www.boardofstudies.nsw.edu.au/hsc00_chemistry/95CHEM2U.PDF",
+      "type": "mirror",
+      "default": false
+    },
     {
-      "display": "Mirror (GitHub)",
+      "display": "thsc mirror",
       "title": "1995 HSC",
       "url": "/s/em/hsc_exams/Chemistry/Chemistry 1995 HSC.pdf",
       "type": "mirror",
@@ -62,7 +69,7 @@
   "2001 HSC": [
     {
       "display": "NESA (archive PDF)",
-      "title": "2001 HSC Chemistry Exam",
+      "title": "2001 HSC",
       "url": "https://www.nsw.gov.au/sites/default/files/2021-xx/chemistry-hsc-exam-2001.pdf",
       "type": "official",
       "default": true
