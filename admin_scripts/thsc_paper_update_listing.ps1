@@ -3,28 +3,55 @@ Param (
 [Parameter(Mandatory=$true)]
 $PDFTemplateCode
 )
-
-if($PDFTemplateCode -eq "AllAvailable")
-{
-	$host.ui.RawUI.WindowTitle = "thsconline admin script $PDFTemplateCode"
-	chdir $PSScriptRoot # change to current directory
-	$ErrorActionPreference = "Stop"
-	$ProgressPreference = "SilentlyContinue"
-
-	$Templates = (gci ".\config_files\*.json").name -replace ".json",""
-	$Templates | % {
-	Write-Host -f Magenta "Running template $($_)"
-	.\thsc_paper_update_listing.ps1 -PDFTemplateCode "$($_)"
-	}
-}
-
-chdir $PSScriptRoot
-
-
 $host.ui.RawUI.WindowTitle = "thsconline admin script $PDFTemplateCode"
 chdir $PSScriptRoot # change to current directory
 $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
+
+. .\ForEach-Parallel.ps1
+if ($PDFTemplateCode -eq "AllAvailable") {
+
+    $host.UI.RawUI.WindowTitle = "thsconline admin script $PDFTemplateCode"
+
+    Set-Location $PSScriptRoot
+    chdir $PSScriptRoot
+
+    $ErrorActionPreference = "Stop"
+    $ProgressPreference = "SilentlyContinue"
+
+    $TemplateGroups = Get-ChildItem ".\config_files\*.json" |
+        ForEach-Object {
+            $_.BaseName
+        } |
+        Group-Object {
+            if ($_.Length -ge 3) {
+                $_.Substring(0,3)
+            }
+            else {
+                $_
+            }
+        }
+
+    $TemplateGroups | ForEach-Parallel -MaxRunspaces 6 -ArgumentList $PSScriptRoot -ScriptBlock {
+
+        $group = $_.Group
+        $scriptRoot = $0
+
+        $ProgressPreference = 'SilentlyContinue'
+
+        foreach ($template in $group) {
+            Write-Host -ForegroundColor Magenta "Running template $template"
+
+            & (Join-Path $scriptRoot "thsc_paper_update_listing.ps1") `
+                -PDFTemplateCode $template
+        }
+    }
+
+    exit
+}
+
+
+
 
 try
 {
