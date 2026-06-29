@@ -516,8 +516,13 @@ async function pdfa(input, viewno, event)
 	{
 	resources=Array.isArray(resources[titlex])?resources[titlex]:[resources[titlex]];
 	}
+	// enforce array OR fail
+    	if (!Array.isArray(resources) || resources.length === 0) {
+        resources = null;
+    	}
+
 	}
-	catch(e){}
+	catch(e){resources = null;}
 	if(!resources)
 	{
 	launch({},bulkdownload=="1"?"download":"view");
