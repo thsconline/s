@@ -89,7 +89,7 @@ $x = @(
 # =========================
 # PARALLEL SCRAPE (PRESERVES PRE/POST 2013 LOGIC)
 # =========================
-$linklist = $x | ForEach-Parallel -MaxRunspaces 8 -ArgumentList $Subject, $PSScriptRoot -ScriptBlock {
+$linklist = $x | ForEach-Parallel -MaxRunspaces 14 -ArgumentList $Subject, $PSScriptRoot -ScriptBlock {
 	$ProgressPreference = "SilentlyContinue"
     $subject    = $0
     $scriptRoot = $1
