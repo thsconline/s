@@ -253,27 +253,28 @@ $linklist = $x | ForEach-Parallel -MaxRunspaces 8 -ArgumentList $Subject, $PSScr
 $result = $linklist | ForEach-Object {
 
     $r = $_
-    $key = "$Subject $($r.Year) HSC"
-
+    $key = "$($r.Year) HSC"
+    $title = "$($r.Year) HSC"
     switch ($r.Year) {
 
         {$_ -ge 1995 -and $_ -le 2005} {
-            if ($r.Url -match "_er") { $key += " - Marking Guidelines" }
+            if ($r.Url -match "_er") { $title += " - Marking Guidelines" ;  $key = $key -replace "HSC", "Marking Guidelines"
+			}
         }
 
         {$_ -ge 2006 -and $_ -le 2008} {
-            if ($r.Url -match "-notes|_notes") { $key += " - Marking Guidelines" }
+            if ($r.Url -match "-notes|_notes") { $title += " - Marking Guidelines"; $key = $key -replace "HSC", "Marking Guidelines"}
         }
 
         {$_ -ge 2009 -and $_ -le 2012} {
-            if ($r.Url -match "-marking-guide") { $key += " - Marking Guidelines" }
-            elseif ($r.Url -match "-sample-answers") { $key += " - Sample Answers" }
-            elseif ($r.Url -match "-notes") { $key += " - Marking Notes" }
+            if ($r.Url -match "-marking-guide") { $title += " - Marking Guidelines"; $key = $key -replace "HSC", "Marking Guidelines"}
+            elseif ($r.Url -match "-sample-answers") { $title += " - Sample Answers"; $key = $key -replace "HSC", "Sample Answers" }
+            elseif ($r.Url -match "-notes") { $title += " - Marking Feedback"; $key = $key -replace "HSC", "Marking Feedback" }
         }
 
         {$_ -ge 2013 -and $_ -le 2015} {
-            if ($r.Url -match "-mg") { $key += " - Marking Guidelines" }
-            elseif ($r.Url -match "-notes") { $key += " - Marking Notes" }
+            if ($r.Url -match "-mg") { $title += " - Marking Guidelines"; $key = $key -replace "HSC", "Marking Guidelines" }
+            elseif ($r.Url -match "-notes") { $title += " - Marking Feedback"; $key = $key -replace "HSC", "Marking Feedback" }
         }
     }
 
@@ -282,7 +283,7 @@ $result = $linklist | ForEach-Object {
         Value = @(
             [PSCustomObject]@{
                 display = "Board of Studies / NESA (official)"
-                title   = "$($r.Year) $($key)"
+                title   = "$Subject $($title)"
                 url     = $r.Url
                 type    = "official"
                 default = $true
