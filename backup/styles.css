@@ -1,0 +1,478 @@
+
+* {
+	font-family:  "Consolas", "Arial", "sans-serif" !important;
+}
+
+* a:link, * a:visited
+{
+	text-decoration:none;
+}
+
+html {
+	margin: 0px;
+	padding: 0px;
+	direction: ltr;
+}
+
+body {
+	font-size:14px;
+	line-height: 1.5;
+	margin: 0px auto;
+	padding: 0px;
+	direction: ltr;
+	font-family: "Consolas", "Arial", sans-serif;
+	font-stretch: normal;
+	background-color: #FBFBFB !important
+}
+
+iframe
+{
+	border:0px;
+}
+
+a img {
+	border: 0px !important;
+}
+
+h1 {
+	font-size: 28px;
+	font-weight: bold;
+	padding-left: 70px;
+	padding-top: 20px;
+	color: #555555;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 14px 0px 0px;
+	color: #555555;
+	text-decoration: none !important;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+h3 {
+	font-size: 20px;
+	padding-top: 3px !important;
+	padding-bottom: 1px !important;
+	padding-bottom: 3px !important;
+}
+
+h4 {
+	font-size: 20px;
+	padding-top: 3px !important;
+	padding-bottom: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+h5 {
+	font-size: 16px;
+	padding-top: 3px !important;	
+	/*border: 0.5px solid #0000FF;*/
+	border-bottom: 1px solid #5555FF;
+	font-weight: normal;
+	color: #5555FF;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
+}
+
+h5.grey
+{
+	font-size: 16px;
+	padding-left: 4px !important;
+	border: 0.5px solid #AAAAAA;
+	border-bottom: 2.5px solid #AAAAAA;
+	font-weight: bold;
+	color: black;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
+}
+
+input {
+	border-radius: 5px;
+}
+
+input[type=button],input[type=submit] {
+	background-color: #555555 !important;
+	text-decoration: none;
+	cursor: pointer;
+	color: rgb(255, 255, 255) !important;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #FFFFFF !important;
+}
+
+
+td {
+	vertical-align: top;
+}
+
+
+#page-wrapper {
+	background-color:#FFFFFF;
+	margin: 0px 50px 50px;
+	min-width: 440px !important;
+}
+
+#content-all {
+	padding: 0px 20px 15px;
+	min-height: 405px;
+}
+
+#folder-tree
+{
+	padding: 0px 15px 0px;
+	vertical-align: top;
+}
+
+#navigation, #footer {
+	margin-left: 1px;
+	padding: 0px;
+	font-size: 14px;
+	padding: 5px 5px 0px;
+	color:#55555;
+	text-align: left;
+	overflow: hidden;
+
+}
+
+#navigation ul {
+	margin: 0px;
+	padding: 0px;
+	font-weight:bold;
+}
+
+#navigation li {
+	display: inline-block;
+	list-style-type: none;
+	list-style-image: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 16px 5px;
+	background-color: none;
+	padding: 4px 10px 2px;
+}
+
+#navigation li.element:hover, #navigation li.current {
+	background-color: #0000FF !important;
+	color: #FFFFFF !important;
+}
+
+#navigation li.element a, #navigation li.element a {
+	width: 100%;
+	text-decoration: none;
+	display: block;
+}
+
+#content-all a:link, #content-all  a:visited {
+	text-decoration: none !important;
+	color: #0000FF !important;
+}
+
+
+
+#folder-tree a:link, #folder-tree a:visited {
+	background: none !important;
+	color:#555555 !important;
+}
+
+#content-all a:hover, #content-all a:active, #folder-tree a:hover, #folder-tree a:active {
+	text-decoration: none !important;
+	color: #FF8400 !important;
+}
+
+#navigation li.element a:link, #navigation li.element a:visited, #navigation li.element a:hover, #navigation li.element:active {
+	color: #0000FF !important;
+}
+
+
+#navigation li.element:hover a:link, #navigation li.element:hover a:visited, #navigation li.element:hover a:hover, #navigation li.element:hover a:active {
+	color: #FFFFFF !important;
+}
+
+#navigation li.current a:link, #navigation li.current a:visited, #navigation li.current a:hover, #navigation li.current:active {
+	color: #FFFFFF !important;
+	background-color: #0000FF !important;
+}
+
+#viewer
+{
+	width:100%;
+	height:95%;
+	margin-top:3px;
+}
+
+#openFile, #viewBookmark, #secondaryOpenFile, #secondaryViewBookmark
+{
+	display:none !Important;
+	width:0px !important;
+	height:0px !important;
+}
+
+#overlaybar
+{
+	position:absolute;
+	top:0px;
+	width:100%;
+	background-color: #5555FF;
+	z-index: 2;
+	padding: 3px 0px 3px;
+	color:#FFFFFF;
+}
+
+#overlaybar a:link, #overlaybar a:visited
+{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 0px 1px 0px;
+	background-color:#0000FF;
+	color:#FFFFFF;
+} 
+
+#overlaybar a:hover, #overlaybar a:active
+{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #222222;
+	color:#FFFFFF;
+} 
+#overlaybar #overlayinsert
+{
+	float:right;
+}
+#folder-tree .current 
+{
+	font-weight: bold;
+}
+#folder-tree .reverse
+{
+	float:right;
+}
+#web-grid, #web-grid > div {
+	overflow: auto;
+	margin-top: 4px;
+}
+
+#web-grid > div, #web-list > div
+{
+	display: table;
+}
+#web-grid > div > div
+{
+	display: table-row;
+}
+#web-grid > div > div > div
+{
+	display: table-cell;
+	position: relative;
+	width: 200px;
+	height: 90px;	
+}
+
+
+
+#web-grid > div > div > div > a > span, #web-grid > div > div > div > a > span > span
+{
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#web-grid > div > div > div > a > span
+{
+	border: solid 1px #F5F5FF;
+	text-align: bottom;
+	background-color: rgb(255, 255, 255);
+	margin-top: 45px;
+	font-size: 14px !important;
+}
+
+#web-grid > div > div > div > a > span:hover {
+	background-color: #FAFAFF !important;
+	color: #FFFFFF !important;
+}
+
+#web-grid > div > div > div > a > span:hover > span {
+	background-color: #0000FF !important;
+	color: #FFFFFF !important;
+}
+
+#web-grid > div > div > div > a > span:hover > span.inactive {
+	background-color: #555555 !important;
+	color: #FFFFFF !important;
+}
+
+
+
+#web-grid > div > div > div > a > span > span, #web-grid div > div > div > a > span > span {
+	background-color: #E5E5FF !important;
+}
+
+#web-grid > div > div > div > a > span img
+{
+	margin-left:5px;
+	margin-top: 5px;
+}
+
+#web-list > div > div
+{
+	display: table-row;
+	overflow:hidden;
+}
+#web-list > div > div > div
+{
+	display: table-row;
+	width:435px;
+	
+	float:left;
+}
+#web-list > div > div > div > span > span
+{
+	color:#AAAAFF;
+	font-size:80%;
+	padding-left:40px !important;	
+	
+}
+
+// hack for IE9+; IE8 and lower not supported anyways
+@media screen and (min-width:0\0) {
+	#web-grid > div > div > div
+	{
+		display: inline-block !important;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#web-grid > div > div > div
+	{
+		display: inline-block !important;
+	}
+}
+
+/*
+.title {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: inline-block;
+	width: 100%;
+	background-color: rgb(248, 248, 248) !important;
+	color: #555555 !important;
+}*/
+
+#content-all table.listing { /* fix whitespace */
+	width:100%;
+	margin-top:10px;
+}
+	
+#content-all table.listing td { 
+	font-weight:bold;
+}
+#content-all table.listing tr.content td { 
+	font-weight:normal !important;
+}
+
+#content-all table.listing td span.content {
+	display: inline-block;
+	padding-left: 25px;
+	padding-bottom: 12px;
+	font-weight: normal !important;
+} 
+
+@media screen and (max-width:1095px) {
+	.reducible {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width:995px) {
+	/* Nothing needed at the moment */
+
+	.layout-searchbox {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width:840px) {
+	div#web-list {
+		display: inherit !important;
+	}
+
+	.smallscreen {
+		display: block !important;
+	}
+
+	#web-grid, #folder-tree {
+		display: none !important;
+	}
+
+}
+
+@media screen and (max-width:795px) {
+	.reverse-element, .reverse-wedge {
+		display: none;
+	}
+
+	body #page-title-navigation {
+		font-size: 22px !important;
+	}
+
+	body #everything h4 {
+		font-size: 16px !important;
+	}
+}
+
+@media screen and (max-width:745px) {
+	#web-list > div > div > div {
+		display: table-row;
+	}
+}
+
+@media screen and (max-width:695px) {
+	#web-list > div > div > div {
+		display: table-row;
+	}
+
+	#navigation {
+		display: none !important;
+	}
+
+	#page-wrapper {
+		/*	margin: auto; */
+		margin-left: 50px !important;
+		margin-right: 50px !important;
+	}
+
+	a {
+		width: inherit !important;
+		overflow: ellipsis !important;
+	}
+
+}
+
+@media screen and (max-width:445px) {
+
+
+	#content-all {
+		overflow: ellipsis;
+	}
+
+	#page-wrapper {
+		/*	margin: auto; */
+		margin-left: 20px !important;
+		margin-right: 20px !important;
+		max-width: 1032px !important;
+		min-width: 440px !important;
+	}
+}
