@@ -289,7 +289,7 @@ function loadshell()
 				"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
 				"sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
 				"allowfullscreen=\"1\" " +
-				"src=\"https://script.google.com/macros/s/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-/exec?&export=view&field=" +
+				"src=\"https://thsconline.github.io/s/viewer.html?field=" +
 				titlex + "&base=" + viewno +
 				"\"></iframe>"
 			);
@@ -391,7 +391,7 @@ function loadshell()
 			"sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
 			"allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" " +
 			"frameborder=\"0\" id=\"viewer\" " +
-			"src=\"https://script.google.com/macros/s/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-/exec?&export=view&field=" +
+			"src=\"https://thsconline.github.io/s/viewer.html?field=" +
 			titlex + "&base=" + viewno +
 			"\"><noscript>&nbsp;Enable Javascript to Load File</noscript></iframe>"
 		);
