@@ -160,11 +160,8 @@ td {
 }
 
 #navigation {
-  padding: 0 30px;
-  background: #111827
-}
-
-#navigation {
+	padding: 0 30px;
+	background: #111827;
 	margin-left: 1px;
 	padding: 0px;
 	font-size: 14px;
@@ -470,7 +467,7 @@ td {
 }
 
 #content-all table.listing tr:not(.content) td:has(span.content) {
-  background: #ffffff;
+  background: inherit;
   padding: 8px 16px;
   border-radius: 12px;
   transition: box-shadow 0.2s ease;
@@ -511,6 +508,93 @@ td {
 }
 */
 
+/* ======================
+   DARK MODE
+====================== */
+
+body.dark-mode {
+    background: #0f172a !important;
+    color: #e5e7eb;
+}
+
+body.dark-mode #page-wrapper {
+    background: #111827;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+    color: #f3f4f6;
+}
+
+body.dark-mode h1::after
+{
+    border-color: #ffff00;    
+	background: #ffff00;    
+}
+
+body.dark-mode h5 {
+    border-color: #ffff00;    
+}
+
+body.dark-mode #navigation {
+    background: #030712;
+}
+
+body.dark-mode #navigation li:hover,
+body.dark-mode #navigation li.current {
+    background: #1e3a8a;
+}
+
+body.dark-mode #content-all a,
+body.dark-mode #folder-tree a {
+    color: #93c5fd !important;
+}
+
+body.dark-mode #content-all a:hover {
+    color: #fbbf24 !important;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #1f2937;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+}
+
+body.dark-mode .search {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-mode #search-bar {
+    background: #111827;
+    color: #fff;
+    border-color: #4b5563;
+}
+
+body.dark-mode table.listing tr:not(.content) td:has(span.content) {
+    background: #1f2937;
+}
+
+body.dark-mode #footer {
+    background: #111827;
+    border-top-color: #374151;
+    color: #9ca3af;
+}
+
+body.dark-mode .pdf-popup {
+    background: #1f2937;
+    color: #f3f4f6;
+}
+
+body.dark-mode #overlaybar {
+    background: #1e40af;
+}
 
 /* =====================
    SEARCH
