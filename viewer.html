@@ -87,17 +87,14 @@ See https://github.com/adobe-type-tools/cmap-resources
 
 	  })
 	  .catch(err => {
-		console.error("File load failed:", err);
-		document.getElementById("output").textContent =
+		console.error("File load failed:", err);		
 		  throw new Error("405 Method Not Allowed: File load failed.");
 	  });
 
 	}
 	else
 	{
-	  document.getElementById("output").textContent =
-		throw new Error("405 Method Not Allowed: Missing parameter.")
-		
+		throw new Error("405 Method Not Allowed: Missing parameter.")	
 	}
 
 
