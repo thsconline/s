@@ -318,7 +318,7 @@ function loadshell()
 				"sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
 				"allowfullscreen=\"1\" " +
 				"src=\"https://thsconline.github.io/s/viewer.html?field=" +
-				titlex + "&base=" + viewno + "&w=" + endpoint
+				titlex + "&base=" + viewno + "&w=" + endpoint +
 				"\"></iframe>"
 			);
 
@@ -444,7 +444,7 @@ function loadshell()
 			"allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" " +
 			"frameborder=\"0\" id=\"viewer\" " +
 			"src=\"https://thsconline.github.io/s/viewer.html?field=" +
-			titlex + "&base=" + viewno + "&w=" + endpoint
+			titlex + "&base=" + viewno + "&w=" + endpoint +
 			"\"><noscript>&nbsp;Enable Javascript to Load File</noscript></iframe>"
 		);
 
