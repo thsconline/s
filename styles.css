@@ -1,45 +1,57 @@
 /* =========================================================
-   THSC Online
-   Modern styling using the original THSC blue/indigo palette
-   No HTML / JS changes required
+   THSC ONLINE
+   Modern redesign based on the original stylesheet
+
+   Design:
+   - Original THSC structure preserved
+   - Blue / indigo colour palette
+   - No underline on links
+   - Plain thsconline title
+   - Blue title underline retained
+   - Existing grid/list HTML supported
+   - Existing overlay bar retained
    ========================================================= */
 
 
 /* =========================================================
-   COLOUR VARIABLES
+   THEME
    ========================================================= */
 
 :root {
-    --bg: #f5f7fb;
+    --blue: #0000ff;
+    --blue-main: #5555ff;
+    --blue-light: #7777ff;
+    --blue-soft: #f0f0ff;
+    --blue-pale: #f7f7ff;
+
+    --indigo: #4f46e5;
+    --indigo-dark: #3730a3;
+
+    --orange: #ffaa00;
+    --green: #22c55e;
+
+    --text: #111827;
+    --text-soft: #374151;
+    --muted: #6b7280;
+
+    --background: #f5f6fa;
     --surface: #ffffff;
     --surface-soft: #fafaff;
 
     --border: #e5e7eb;
-    --border-hover: #d1d5db;
-
-    --text: #172033;
-    --text-muted: #64748b;
-
-    /* Original THSC colours */
-    --primary: #5555ff;
-    --primary-dark: #0000ff;
-    --primary-hover: #4444dd;
-    --primary-soft: #eeeeff;
-
-    --nav: #111827;
-    --nav-hover: #1f2937;
-
-    --accent-yellow: #ffaa00;
+    --border-blue: #ddddff;
 
     --radius: 10px;
-    --radius-sm: 7px;
+    --radius-small: 7px;
 
-    --shadow-sm:
-        0 1px 2px rgba(15, 23, 42, 0.04),
-        0 2px 6px rgba(15, 23, 42, 0.04);
+    --shadow-small:
+        0 2px 7px rgba(17, 24, 39, 0.05);
 
-    --shadow-md:
-        0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow:
+        0 8px 25px rgba(17, 24, 39, 0.07);
+
+    --shadow-hover:
+        0 12px 30px rgba(17, 24, 39, 0.11);
 }
 
 
@@ -61,29 +73,17 @@
 html {
     margin: 0;
     padding: 0;
-
-    min-height: 100%;
-
     direction: ltr;
-
-    background: var(--bg);
+    min-height: 100%;
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-
-    min-height: 100vh;
 
     direction: ltr;
 
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(85, 85, 255, 0.045),
-            transparent 35%
-        ),
-        var(--bg) !important;
+    background: var(--background) !important;
 
     color: var(--text);
 
@@ -100,17 +100,16 @@ body {
     font-stretch: normal;
 
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
 }
 
 
 /* =========================================================
-   LINKS
+   GLOBAL LINKS
    ========================================================= */
 
 /*
    IMPORTANT:
-   Links remain completely underline-free.
+   THSC links intentionally have NO underline.
 */
 
 a,
@@ -121,120 +120,110 @@ a:active {
     text-decoration: none !important;
 }
 
-
-/* =========================================================
-   IMAGES / IFRAMES
-   ========================================================= */
+a img {
+    border: 0 !important;
+}
 
 iframe {
     border: 0;
 }
 
-a img {
-    border: 0 !important;
-}
-
 
 /* =========================================================
-   SITE TITLE
+   THSC ONLINE TITLE
    ========================================================= */
 
 /*
    Deliberately NO background.
-   This keeps "thsconline" as a simple page heading.
+
+   The original title remains floating naturally above
+   the main application.
 */
 
 body > h1 {
+    display: inline-block;
+
+    position: relative;
+
     margin: 0;
 
     padding:
-        24px
-        max(24px, calc((100vw - 1180px) / 2))
-        14px;
+        24px 0 7px
+        max(25px, calc((100% - 1180px) / 2));
+
+    color: var(--text);
 
     background: transparent !important;
 
-    color: #111827;
-
-    font-size: 28px;
+    font-size: 27px;
     font-weight: 700;
 
-    line-height: 1.2;
+    line-height: 1.15;
 
-    letter-spacing: -0.025em;
-
-    border: 0;
-
-    box-shadow: none;
+    letter-spacing: -0.4px;
 }
 
+/*
+   The blue underline you liked.
+*/
 
-/* =========================================================
-   HEADINGS
-   ========================================================= */
-
-h1 {
-    font-size: 28px;
-    font-weight: 700;
-
-    color: #111827;
-
-    position: relative;
-    display: inline-block;
-}
-
-h1::after {
+body > h1::after {
     content: "";
 
     display: block;
 
-    height: 4px;
     width: 100%;
+    height: 4px;
 
-    margin-top: 6px;
+    margin-top: 8px;
 
     background:
         linear-gradient(
             90deg,
-            #5555ff,
-            #6666ff
+            var(--blue-main),
+            var(--blue-light)
         );
 
-    border-radius: 3px;
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   GENERAL HEADINGS
+   ========================================================= */
+
+h1 {
+    color: var(--text);
 }
 
 h2 {
-    padding: 14px 0 0;
+    margin-top: 20px;
 
-    color: #374151;
+    padding: 8px 0 0;
+
+    color: var(--text-soft);
 
     font-size: 22px;
     font-weight: 700;
-
-    text-decoration: none !important;
 }
 
 h3 {
-    margin: 0 0 18px;
+    margin: 0 0 16px;
 
     padding-top: 3px !important;
     padding-bottom: 3px !important;
 
     color: var(--text);
-
-    font-size: 24px;
-    font-weight: 700;
-
-    line-height: 1.25;
-
-    letter-spacing: -0.02em;
 }
 
 h4 {
-    margin-bottom: 0 !important;
+    margin-top: 0;
+    margin-bottom: 8px !important;
 
     padding-top: 3px !important;
     padding-bottom: 0 !important;
+
+    color: var(--text);
 
     font-size: 20px;
 }
@@ -242,1026 +231,4 @@ h4 {
 h5 {
     display: inline-block;
 
-    width: 100%;
-
-    margin-bottom: 4px;
-
-    padding-top: 3px !important;
-
-    border-bottom: 1px solid var(--primary);
-
-    color: var(--primary);
-
-    font-size: 16px;
-    font-weight: 500;
-}
-
-h5.grey {
-    display: inline-block;
-
-    width: 100%;
-
-    margin-bottom: 4px;
-
-    padding-left: 4px !important;
-
-    border: 1px solid #d1d5db;
-    border-bottom: 2px solid #9ca3af;
-
-    color: #111827;
-
-    font-size: 16px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   MAIN PAGE WRAPPER
-   ========================================================= */
-
-#page-wrapper {
-    position: relative;
-
-    width: min(1180px, calc(100% - 40px));
-
-    margin:
-        0 auto
-        50px;
-
-    min-width: 440px !important;
-
-    background: var(--surface);
-
-    border:
-        1px solid
-        rgba(226, 232, 240, 0.9);
-
-    border-radius: 14px;
-
-    overflow: hidden;
-
-    box-shadow: var(--shadow-md);
-}
-
-#content-all {
-    min-height: 515px;
-
-    padding:
-        28px 24px
-        25px;
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-#navigation {
-    margin: 0;
-
-    padding: 0;
-
-    background: var(--nav);
-
-    color: #ffffff;
-
-    font-size: 14px;
-
-    text-align: left;
-
-    overflow: hidden;
-}
-
-#navigation ul {
-    display: flex;
-
-    align-items: center;
-
-    gap: 4px;
-
-    margin: 0;
-
-    padding:
-        8px 10px;
-
-    list-style: none;
-
-    font-weight: 600;
-}
-
-#navigation li {
-    display: inline-block;
-
-    margin: 0;
-
-    padding: 0;
-
-    border-radius: 7px;
-
-    color: #ffffff;
-
-    font-weight: 500;
-
-    cursor: pointer;
-
-    transition:
-        background 0.18s ease,
-        color 0.18s ease;
-}
-
-#navigation li a {
-    display: block;
-
-    width: 100%;
-
-    padding:
-        11px 14px;
-
-    color: #ffffff !important;
-
-    text-decoration: none !important;
-
-    white-space: nowrap;
-}
-
-#navigation li:hover {
-    background: var(--nav-hover);
-}
-
-#navigation li.element:hover {
-    background: var(--primary) !important;
-
-    color: #ffffff !important;
-}
-
-#navigation li.current {
-    background: var(--primary) !important;
-
-    color: #ffffff !important;
-}
-
-#navigation li.current a,
-#navigation li.element a {
-    color: #ffffff !important;
-}
-
-#navigation li.current:hover {
-    background: var(--primary-hover) !important;
-}
-
-
-/* =========================================================
-   FOLDER / BREADCRUMB BAR
-   ========================================================= */
-
-#folder-tree {
-    display: flex;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 4px;
-
-    padding:
-        10px 18px
-        11px;
-
-    border-top:
-        1px solid
-        rgba(255, 255, 255, 0.04);
-
-    background: #151d2d;
-
-    color: #cbd5e1;
-
-    font-size: 13px;
-}
-
-#folder-tree a,
-#folder-tree a:link,
-#folder-tree a:visited {
-    background: none !important;
-
-    color: #cbd5e1 !important;
-
-    text-decoration: none !important;
-}
-
-#folder-tree a:hover,
-#folder-tree a:active {
-    background: none !important;
-
-    color: var(--accent-yellow) !important;
-
-    text-decoration: none !important;
-}
-
-#folder-tree .current {
-    color: #ffffff !important;
-
-    font-weight: 700;
-}
-
-#folder-tree .reverse {
-    float: none;
-
-    margin-left: auto;
-}
-
-
-/* =========================================================
-   CONTENT LINKS
-   ========================================================= */
-
-/*
-   These retain the original THSC behaviour:
-   - blue links
-   - no underline
-   - orange hover
-*/
-
-#content-all a,
-#content-all a:link,
-#content-all a:visited {
-    color: #0000ff !important;
-
-    text-decoration: none !important;
-}
-
-#content-all a:hover,
-#content-all a:active {
-    color: #ffaa00 !important;
-
-    text-decoration: none !important;
-}
-
-
-/* =========================================================
-   WEB GRID
-   ========================================================= */
-
-#web-grid,
-#web-grid > div {
-    overflow: auto;
-
-    margin-top: 4px;
-}
-
-#web-grid > div,
-#web-list > div {
-    display: table;
-}
-
-#web-grid > div > div {
-    display: table-row;
-}
-
-#web-grid > div > div > div {
-    position: relative;
-
-    display: table-cell;
-
-    width: 200px;
-    height: 90px;
-}
-
-
-/* =========================================================
-   SUBJECT TILES
-   ========================================================= */
-
-/*
-   The subject tiles deliberately DO NOT use the blue shaded
-   link background from the previous iteration.
-
-   The original icon colours remain visible and the tile is
-   mostly white/neutral.
-*/
-
-#web-grid > div > div > div > a {
-    display: block;
-
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    color: #0000ff !important;
-
-    text-decoration: none !important;
-}
-
-#web-grid > div > div > div > a > span {
-    display: block;
-
-    position: absolute;
-
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    margin-top: 45px;
-
-    padding: 0;
-
-    border:
-        1px solid
-        #edf0f5;
-
-    border-radius: 8px;
-
-    background: #ffffff !important;
-
-    color: #0000ff !important;
-
-    font-size: 14px !important;
-
-    text-align: left;
-
-    box-shadow:
-        0 1px 2px rgba(15, 23, 42, 0.025);
-
-    transition:
-        border-color 0.18s ease,
-        box-shadow 0.18s ease,
-        background 0.18s ease;
-}
-
-#web-grid > div > div > div > a > span:hover {
-    background: #ffffff !important;
-
-    border-color: #cfd4ff;
-
-    color: #0000ff !important;
-
-    box-shadow:
-        0 5px 14px rgba(15, 23, 42, 0.07);
-}
-
-
-/*
-   Text strip inside each subject tile.
-
-   Keep this subtle rather than using the old blue block.
-*/
-
-#web-grid > div > div > div > a > span > span {
-    display: block;
-
-    position: absolute;
-
-    bottom: 5px;
-
-    left: 0;
-
-    width: 100%;
-
-    padding:
-        2px 7px;
-
-    background: transparent !important;
-
-    color: #0000ff !important;
-
-    font-weight: 600;
-
-    text-decoration: none !important;
-
-    transition:
-        color 0.15s ease;
-}
-
-#web-grid > div > div > div > a:hover > span > span {
-    background: transparent !important;
-
-    color: #ffaa00 !important;
-}
-
-#web-grid > div > div > div > a > span > span.inactive {
-    background: transparent !important;
-
-    color: #64748b !important;
-}
-
-
-/*
-   Icons
-*/
-
-#web-grid > div > div > div > a > span img {
-    margin-top: 5px;
-    margin-left: 5px;
-}
-
-
-/* =========================================================
-   WEB LIST / MOBILE
-   ========================================================= */
-
-#web-list > div > div {
-    display: table-row;
-
-    overflow: hidden;
-}
-
-#web-list > div > div > div {
-    display: table-row;
-
-    width: 435px;
-
-    float: left;
-}
-
-#web-list > div > div > div > span > span {
-    padding-left: 40px !important;
-
-    color: #7777cc;
-
-    font-size: 80%;
-}
-
-#web-list a,
-#web-list a:link,
-#web-list a:visited {
-    color: #0000ff !important;
-
-    text-decoration: none !important;
-}
-
-#web-list a:hover,
-#web-list a:active {
-    color: #ffaa00 !important;
-
-    text-decoration: none !important;
-}
-
-
-/* =========================================================
-   SMALL SCREEN NAVIGATION
-   ========================================================= */
-
-.smallscreen {
-    margin-bottom: 14px;
-
-    padding:
-        13px 14px;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius: 8px;
-
-    background: #fafaff;
-
-    box-shadow: var(--shadow-sm);
-}
-
-.smallscreen a {
-    color: #0000ff !important;
-
-    font-weight: 600;
-
-    text-decoration: none !important;
-}
-
-.smallscreen a:hover {
-    color: #ffaa00 !important;
-}
-
-
-/* =========================================================
-   SEARCH
-   ========================================================= */
-
-.search {
-    margin-bottom: 20px;
-
-    padding: 15px;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius: 10px;
-
-    background: #f8fafc;
-}
-
-#search-bar {
-    width: 98%;
-
-    padding:
-        10px 12px;
-
-    border:
-        1px solid
-        #d1d5db;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    color: var(--text);
-
-    font-size: 14px;
-
-    outline: none;
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-#search-bar::placeholder {
-    color: #94a3b8;
-}
-
-#search-bar:focus {
-    border-color: #7777ff;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(85, 85, 255, 0.10);
-}
-
-input {
-    border-radius: 7px;
-}
-
-input[type="submit"],
-input[type="button"] {
-    margin-top: 10px;
-
-    padding:
-        8px 16px;
-
-    background: var(--primary) !important;
-
-    border: none;
-
-    border-radius: 7px;
-
-    color: #ffffff !important;
-
-    cursor: pointer;
-
-    transition:
-        background 0.18s ease,
-        transform 0.1s ease,
-        box-shadow 0.18s ease;
-}
-
-input[type="submit"]:hover,
-input[type="button"]:hover {
-    background: var(--primary-hover) !important;
-
-    color: #ffffff !important;
-
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 4px 10px
-        rgba(85, 85, 255, 0.20);
-}
-
-input[type="submit"]:active,
-input[type="button"]:active {
-    transform: translateY(0);
-}
-
-label {
-    display: inline-flex;
-
-    align-items: center;
-
-    margin-top: 10px;
-
-    color: var(--text-muted);
-
-    font-size: 14px;
-
-    font-weight: normal !important;
-}
-
-input[type="checkbox"] {
-    margin-right: 8px;
-
-    accent-color: var(--primary);
-}
-
-#search-message {
-    margin-top: 5px;
-
-    color: #ff5500;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   LISTING TABLES
-   ========================================================= */
-
-#content-all table.listing {
-    width: 100%;
-
-    margin-top: 10px;
-
-    border-collapse: separate;
-
-    border-spacing: 0 8px;
-}
-
-#content-all table.listing td {
-    vertical-align: top;
-}
-
-#content-all table.listing tr.content td {
-    font-weight: normal !important;
-}
-
-#content-all table.listing td span.content {
-    display: inline-block;
-
-    padding-left: 15px;
-    padding-bottom: 12px;
-
-    font-weight: normal !important;
-}
-
-
-/* =========================================================
-   PDF POPUP
-   ========================================================= */
-
-.pdf-popup {
-    position: absolute;
-
-    min-width: 260px;
-    max-width: 320px;
-
-    padding: 12px;
-
-    background: #e4e4ff;
-
-    color: #555555;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 10px 25px
-        rgba(0, 0, 0, 0.25);
-
-    z-index: 999999;
-
-    font-family: Arial, sans-serif !important;
-}
-
-.pdf-popup a,
-.pdf-popup a:link,
-.pdf-popup a:visited {
-    display: block;
-
-    margin: 6px 0;
-
-    color: #0000ff !important;
-
-    text-decoration: none !important;
-}
-
-.pdf-popup a:hover {
-    color: #ffaa00 !important;
-
-    text-decoration: none !important;
-}
-
-.pdf-progress {
-    height: 6px;
-
-    margin-top: 10px;
-
-    background: #333333;
-
-    border-radius: 4px;
-
-    overflow: hidden;
-}
-
-.pdf-progress-bar {
-    width: 100%;
-    height: 100%;
-
-    background: #22c55e;
-
-    transform-origin: right;
-    transform: scaleX(1);
-
-    transition: transform linear;
-}
-
-.pdf-popup button {
-    margin-top: 8px;
-
-    padding:
-        6px 10px;
-
-    background: #444444;
-
-    border: none;
-
-    border-radius: 6px;
-
-    color: #ffffff;
-
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   VIEWER
-   ========================================================= */
-
-#viewer {
-    width: 100%;
-    height: 95%;
-
-    margin-top: 3px;
-}
-
-#openFile,
-#viewBookmark,
-#secondaryOpenFile,
-#secondaryViewBookmark {
-    display: none !important;
-
-    width: 0 !important;
-    height: 0 !important;
-}
-
-
-/* =========================================================
-   OVERLAY BAR
-   ========================================================= */
-
-/*
-   This is the main colour reference for the stylesheet.
-
-   Original:
-       #5555FF
-       #0000FF
-
-   Kept deliberately strong here.
-*/
-
-#overlaybar {
-    position: absolute;
-
-    top: 0;
-
-    width: 100%;
-
-    padding:
-        4px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #5555ff 0%,
-            #5555ee 50%,
-            #4d4dcc 100%
-        );
-
-    color: #ffffff;
-
-    z-index: 2;
-
-    box-shadow:
-        0 3px 10px
-        rgba(0, 0, 0, 0.18);
-}
-
-#overlaybar a,
-#overlaybar a:link,
-#overlaybar a:visited {
-    padding:
-        2px 6px;
-
-    border-radius: 5px;
-
-    background: #0000ff;
-
-    color: #ffffff !important;
-
-    text-decoration: none !important;
-}
-
-#overlaybar a:hover,
-#overlaybar a:active {
-    background: #222222;
-
-    color: #ffffff !important;
-
-    text-decoration: none !important;
-}
-
-#overlaybar #overlayinsert {
-    float: right;
-}
-
-
-/* =========================================================
-   FOCUS
-   ========================================================= */
-
-a:focus-visible,
-input:focus-visible,
-button:focus-visible {
-    outline:
-        3px solid
-        rgba(85, 85, 255, 0.25);
-
-    outline-offset: 2px;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media screen and (max-width: 1095px) {
-
-    .reducible {
-        display: none !important;
-    }
-}
-
-
-@media screen and (max-width: 995px) {
-
-    .layout-searchbox {
-        display: none !important;
-    }
-}
-
-
-@media screen and (max-width: 840px) {
-
-    div#web-list {
-        display: inherit !important;
-    }
-
-    .smallscreen {
-        display: block !important;
-    }
-
-    #web-grid,
-    #folder-tree {
-        display: none !important;
-    }
-
-    #content-all {
-        padding:
-            24px 20px
-            20px;
-    }
-}
-
-
-@media screen and (max-width: 795px) {
-
-    .reverse-element,
-    .reverse-wedge {
-        display: none;
-    }
-
-    body #page-title-navigation {
-        font-size: 22px !important;
-    }
-
-    body #everything h4 {
-        font-size: 16px !important;
-    }
-}
-
-
-@media screen and (max-width: 745px) {
-
-    #web-list > div > div > div {
-        display: table-row;
-    }
-}
-
-
-@media screen and (max-width: 695px) {
-
-    #web-list > div > div > div {
-        display: table-row;
-    }
-
-    #navigation {
-        display: block !important;
-
-        overflow-x: auto;
-    }
-
-    #navigation ul {
-        width: max-content;
-    }
-
-    #page-wrapper {
-        width: calc(100% - 24px);
-
-        margin-left: 12px !important;
-        margin-right: 12px !important;
-    }
-
-    body > h1 {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    #content-all a {
-        width: inherit !important;
-
-        overflow-wrap: break-word;
-    }
-}
-
-
-@media screen and (max-width: 500px) {
-
-    #page-wrapper {
-        width: calc(100% - 16px);
-
-        margin-left: 8px !important;
-        margin-right: 8px !important;
-
-        min-width: 0 !important;
-    }
-
-    body > h1 {
-        padding:
-            18px 12px
-            12px;
-
-        font-size: 24px;
-    }
-
-    #content-all {
-        padding:
-            20px 14px
-            20px;
-    }
-
-    #navigation ul {
-        padding-left: 6px;
-        padding-right: 6px;
-    }
-
-    #navigation li a {
-        padding:
-            10px 11px;
-
-        font-size: 13px;
-    }
-}
-
-
-/* =========================================================
-   INTERNET EXPLORER / LEGACY GRID SUPPORT
-   ========================================================= */
-
-@media screen and (min-width: 0\0) {
-
-    #web-grid > div > div > div {
-        display: inline-block !important;
-    }
-}
-
-@media all and (-ms-high-contrast: none),
-       (-ms-high-contrast: active) {
-
-    #web-grid > div > div > div {
-        display: inline-block !important;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-
-        transition: none !important;
-    }
-}
+    width: 100
