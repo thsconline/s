@@ -443,9 +443,6 @@ h5.grey
     background: var(--primary-soft) !important;    
 }
 
-#folder-tree .reverse:first-of-type {
-    margin-left: auto;
-}
 
 #folder-tree .reverse {
 	margin-left: 6px;
@@ -458,6 +455,11 @@ h5.grey
     color: var(--primary) !important;
     
 }
+
+#folder-tree > :not(.reverse) + .reverse {
+    margin-left: auto !important; /* force right align for reverse items */
+}
+
 
 #folder-tree .reverse:hover {
     background: var(--indigo-soft) !important;
