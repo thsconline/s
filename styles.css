@@ -1,25 +1,21 @@
 /* =========================================================
-   THSC Online — Modern stylesheet
-   Refined version
-   - Modern layout
-   - Original link colours
-   - No link underlines
-   - No shaded paper-link boxes
-   - Original overlay-bar blue palette
+   THSC Online
+   Modern styling using the original THSC blue/indigo palette
+   No HTML / JS changes required
    ========================================================= */
 
 
 /* =========================================================
-   VARIABLES
+   COLOUR VARIABLES
    ========================================================= */
 
 :root {
     --bg: #f5f7fb;
     --surface: #ffffff;
-    --surface-soft: #f8fafc;
+    --surface-soft: #fafaff;
 
-    --border: #e2e8f0;
-    --border-hover: #cbd5e1;
+    --border: #e5e7eb;
+    --border-hover: #d1d5db;
 
     --text: #172033;
     --text-muted: #64748b;
@@ -28,22 +24,19 @@
     --primary: #5555ff;
     --primary-dark: #0000ff;
     --primary-hover: #4444dd;
+    --primary-soft: #eeeeff;
 
-    --link: #0000ff;
-    --link-hover: #ffaa00;
-    --folder-link: #aaaaff;
+    --nav: #111827;
+    --nav-hover: #1f2937;
 
-    --overlay: #5555ff;
-    --overlay-dark: #0000ff;
+    --accent-yellow: #ffaa00;
 
-    --success: #16a34a;
-
-    --radius: 12px;
-    --radius-sm: 8px;
+    --radius: 10px;
+    --radius-sm: 7px;
 
     --shadow-sm:
         0 1px 2px rgba(15, 23, 42, 0.04),
-        0 1px 3px rgba(15, 23, 42, 0.06);
+        0 2px 6px rgba(15, 23, 42, 0.04);
 
     --shadow-md:
         0 10px 30px rgba(15, 23, 42, 0.08);
@@ -51,7 +44,7 @@
 
 
 /* =========================================================
-   BASE
+   GLOBAL
    ========================================================= */
 
 * {
@@ -66,24 +59,28 @@
 }
 
 html {
-    min-height: 100%;
     margin: 0;
     padding: 0;
+
+    min-height: 100%;
+
     direction: ltr;
+
     background: var(--bg);
 }
 
 body {
     margin: 0;
-    min-height: 100vh;
     padding: 0;
+
+    min-height: 100vh;
 
     direction: ltr;
 
     background:
         radial-gradient(
             circle at top left,
-            rgba(85, 85, 255, 0.05),
+            rgba(85, 85, 255, 0.045),
             transparent 35%
         ),
         var(--bg) !important;
@@ -108,8 +105,13 @@ body {
 
 
 /* =========================================================
-   GLOBAL LINKS
+   LINKS
    ========================================================= */
+
+/*
+   IMPORTANT:
+   Links remain completely underline-free.
+*/
 
 a,
 a:link,
@@ -134,15 +136,46 @@ a img {
 
 
 /* =========================================================
+   SITE TITLE
+   ========================================================= */
+
+/*
+   Deliberately NO background.
+   This keeps "thsconline" as a simple page heading.
+*/
+
+body > h1 {
+    margin: 0;
+
+    padding:
+        24px
+        max(24px, calc((100vw - 1180px) / 2))
+        14px;
+
+    background: transparent !important;
+
+    color: #111827;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+
+    border: 0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
    HEADINGS
    ========================================================= */
 
 h1 {
     font-size: 28px;
     font-weight: 700;
-
-    padding-left: 70px;
-    padding-top: 20px;
 
     color: #111827;
 
@@ -158,147 +191,124 @@ h1::after {
     height: 4px;
     width: 100%;
 
+    margin-top: 6px;
+
     background:
         linear-gradient(
             90deg,
             #5555ff,
-            #7676ff
+            #6666ff
         );
-
-    margin-top: 6px;
 
     border-radius: 3px;
 }
 
 h2 {
-    font-size: 22px;
-    font-weight: 700;
-
     padding: 14px 0 0;
 
     color: #374151;
+
+    font-size: 22px;
+    font-weight: 700;
 
     text-decoration: none !important;
 }
 
 h3 {
-    font-size: 20px;
+    margin: 0 0 18px;
 
     padding-top: 3px !important;
     padding-bottom: 3px !important;
+
+    color: var(--text);
+
+    font-size: 24px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.02em;
 }
 
 h4 {
-    font-size: 20px;
+    margin-bottom: 0 !important;
 
     padding-top: 3px !important;
     padding-bottom: 0 !important;
 
-    margin-bottom: 0 !important;
+    font-size: 20px;
 }
 
 h5 {
-    font-size: 16px;
-
-    padding-top: 3px !important;
-
-    border-bottom: 1px solid #5555ff;
-
-    font-weight: 500;
-
-    color: #5555ff;
+    display: inline-block;
 
     width: 100%;
 
-    display: inline-block;
-
     margin-bottom: 4px;
+
+    padding-top: 3px !important;
+
+    border-bottom: 1px solid var(--primary);
+
+    color: var(--primary);
+
+    font-size: 16px;
+    font-weight: 500;
 }
 
 h5.grey {
-    font-size: 16px;
+    display: inline-block;
+
+    width: 100%;
+
+    margin-bottom: 4px;
 
     padding-left: 4px !important;
 
     border: 1px solid #d1d5db;
     border-bottom: 2px solid #9ca3af;
 
-    font-weight: 700;
-
     color: #111827;
 
-    width: 100%;
-
-    display: inline-block;
-
-    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 
 /* =========================================================
-   SITE TITLE
-   ========================================================= */
-
-body > h1 {
-    margin: 0;
-
-    padding:
-        22px
-        max(24px, calc((100vw - 1180px) / 2));
-
-    background: #0f172a;
-
-    color: #ffffff;
-
-    font-size: 21px;
-
-    font-weight: 750;
-
-    letter-spacing: -0.025em;
-
-    box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-
-/* =========================================================
-   PAGE WRAPPER
+   MAIN PAGE WRAPPER
    ========================================================= */
 
 #page-wrapper {
     position: relative;
 
-    background: rgba(255, 255, 255, 0.96);
+    width: min(1180px, calc(100% - 40px));
 
     margin:
-        0
-        50px
+        0 auto
         50px;
 
     min-width: 440px !important;
+
+    background: var(--surface);
+
+    border:
+        1px solid
+        rgba(226, 232, 240, 0.9);
 
     border-radius: 14px;
 
     overflow: hidden;
 
-    box-shadow:
-        0 10px 30px rgba(17, 24, 39, 0.07),
-        0 2px 8px rgba(85, 85, 255, 0.04);
+    box-shadow: var(--shadow-md);
 }
 
-
-/* =========================================================
-   MAIN CONTENT
-   ========================================================= */
-
 #content-all {
-    width: min(1180px, calc(100% - 40px));
-
-    margin: 34px auto 70px;
-
-    padding: 0;
-
     min-height: 515px;
+
+    padding:
+        28px 24px
+        25px;
 }
 
 
@@ -307,17 +317,15 @@ body > h1 {
    ========================================================= */
 
 #navigation {
-    max-width: 1180px;
-
-    margin: 0 auto;
+    margin: 0;
 
     padding: 0;
 
-    background: transparent;
-
-    font-size: 14px;
+    background: var(--nav);
 
     color: #ffffff;
+
+    font-size: 14px;
 
     text-align: left;
 
@@ -334,33 +342,31 @@ body > h1 {
     margin: 0;
 
     padding:
-        10px
-        20px
-        10px;
+        8px 10px;
 
     list-style: none;
 
-    font-weight: bold;
+    font-weight: 600;
 }
 
 #navigation li {
-    display: block;
+    display: inline-block;
 
     margin: 0;
 
     padding: 0;
 
-    color: #64748b;
+    border-radius: 7px;
+
+    color: #ffffff;
 
     font-weight: 500;
 
     cursor: pointer;
 
-    border-radius: 7px;
-
     transition:
-        background 0.2s ease,
-        color 0.2s ease;
+        background 0.18s ease,
+        color 0.18s ease;
 }
 
 #navigation li a {
@@ -369,48 +375,43 @@ body > h1 {
     width: 100%;
 
     padding:
-        8px
-        13px;
+        11px 14px;
 
-    color: #64748b !important;
-
-    font-size: 14px;
-    font-weight: 600;
+    color: #ffffff !important;
 
     text-decoration: none !important;
+
+    white-space: nowrap;
 }
 
 #navigation li:hover {
-    background: #f1f5f9;
-}
-
-#navigation li:hover a {
-    color: #172033 !important;
-}
-
-#navigation li.current {
-    background: #5555ff !important;
-
-    color: #ffffff !important;
-}
-
-#navigation li.current a {
-    color: #ffffff !important;
+    background: var(--nav-hover);
 }
 
 #navigation li.element:hover {
-    background: #5555ff !important;
+    background: var(--primary) !important;
 
     color: #ffffff !important;
 }
 
-#navigation li.element:hover a {
+#navigation li.current {
+    background: var(--primary) !important;
+
     color: #ffffff !important;
+}
+
+#navigation li.current a,
+#navigation li.element a {
+    color: #ffffff !important;
+}
+
+#navigation li.current:hover {
+    background: var(--primary-hover) !important;
 }
 
 
 /* =========================================================
-   FOLDER TREE
+   FOLDER / BREADCRUMB BAR
    ========================================================= */
 
 #folder-tree {
@@ -423,16 +424,16 @@ body > h1 {
     gap: 4px;
 
     padding:
-        11px
-        20px
-        13px;
+        10px 18px
+        11px;
 
     border-top:
-        1px solid #f1f5f9;
+        1px solid
+        rgba(255, 255, 255, 0.04);
 
-    vertical-align: top;
+    background: #151d2d;
 
-    color: #64748b;
+    color: #cbd5e1;
 
     font-size: 13px;
 }
@@ -442,46 +443,43 @@ body > h1 {
 #folder-tree a:visited {
     background: none !important;
 
-    color: #aaaaff !important;
+    color: #cbd5e1 !important;
 
     text-decoration: none !important;
 }
 
 #folder-tree a:hover,
 #folder-tree a:active {
-    color: #ffaa00 !important;
+    background: none !important;
+
+    color: var(--accent-yellow) !important;
 
     text-decoration: none !important;
 }
 
 #folder-tree .current {
-    font-weight: bold;
+    color: #ffffff !important;
+
+    font-weight: 700;
 }
 
 #folder-tree .reverse {
-    float: right;
+    float: none;
+
     margin-left: auto;
-
-    padding:
-        5px
-        9px;
-
-    border-radius: 6px;
-
-    background: #f8fafc;
-}
-
-#folder-tree .reverse:hover {
-    background: #f1f5f9;
 }
 
 
 /* =========================================================
    CONTENT LINKS
-   Original colours retained:
-   blue normally
-   orange on hover
    ========================================================= */
+
+/*
+   These retain the original THSC behaviour:
+   - blue links
+   - no underline
+   - orange hover
+*/
 
 #content-all a,
 #content-all a:link,
@@ -496,408 +494,6 @@ body > h1 {
     color: #ffaa00 !important;
 
     text-decoration: none !important;
-}
-
-
-/* =========================================================
-   PAGE HEADING
-   ========================================================= */
-
-#content-all > h4 {
-    margin: 0 0 18px;
-
-    color: #172033;
-
-    font-size: 27px;
-
-    font-weight: 750;
-
-    line-height: 1.25;
-
-    letter-spacing: -0.035em;
-}
-
-
-/* =========================================================
-   INTRO / CONTENT ROWS
-   ========================================================= */
-
-tr.content td {
-    padding:
-        18px
-        22px;
-
-    background: #ffffff;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow-sm);
-}
-
-tr.content ul {
-    margin: 0;
-
-    padding-left: 20px;
-
-    color: #64748b;
-}
-
-tr.content li + li {
-    margin-top: 5px;
-}
-
-tr.content a {
-    color: #0000ff !important;
-
-    font-weight: 600;
-
-    text-decoration: none !important;
-}
-
-tr.content a:hover {
-    color: #ffaa00 !important;
-}
-
-
-/* =========================================================
-   SEARCH
-   ========================================================= */
-
-.search {
-    padding: 15px;
-
-    margin-bottom: 20px;
-
-    background: #f8fafc;
-
-    border:
-        1px solid #e5e7eb;
-
-    border-radius: 10px;
-}
-
-#search-row td {
-    padding:
-        0
-        0
-        18px;
-
-    border: 0;
-
-    background: transparent;
-}
-
-#search-bar {
-    width: 100%;
-
-    margin: 0 0 11px;
-
-    padding:
-        13px
-        15px;
-
-    border:
-        1px solid #d1d5db;
-
-    border-radius: 10px;
-
-    background: #ffffff;
-
-    color: #172033;
-
-    font-size: 14px;
-
-    outline: none;
-
-    box-shadow: var(--shadow-sm);
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
-}
-
-#search-bar::placeholder {
-    color: #94a3b8;
-}
-
-#search-bar:focus {
-    border-color: #5555ff;
-
-    box-shadow:
-        0 0 0 3px rgba(85, 85, 255, 0.10),
-        var(--shadow-sm);
-}
-
-#search-row label,
-label {
-    display: inline-flex;
-
-    align-items: center;
-
-    color: #64748b;
-
-    font-size: 13px;
-
-    cursor: pointer;
-
-    font-weight: normal !important;
-}
-
-input[type="checkbox"] {
-    margin-right: 8px;
-
-    accent-color: #5555ff;
-}
-
-#search-message {
-    display: inline-block;
-
-    margin-top: 7px;
-
-    color: #ff5500;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-input {
-    border-radius: 7px;
-}
-
-input[type="submit"],
-input[type="button"] {
-    margin-top: 10px;
-
-    padding:
-        8px
-        16px;
-
-    background: #5555ff !important;
-
-    border: none;
-
-    border-radius: 7px;
-
-    color: #ffffff !important;
-
-    cursor: pointer;
-
-    text-decoration: none;
-
-    transition:
-        background 0.2s ease,
-        transform 0.1s ease,
-        box-shadow 0.2s ease;
-}
-
-input[type="submit"]:hover,
-input[type="button"]:hover {
-    background: #4444dd !important;
-
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 4px 10px rgba(85, 85, 255, 0.25);
-}
-
-input[type="submit"]:active,
-input[type="button"]:active {
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   REMARK
-   ========================================================= */
-
-span.remark {
-    font-size: 10px;
-
-    background-color: #ccccff !important;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    color: #141400 !important;
-
-    border-radius: 5px;
-
-    padding:
-        2px
-        5px;
-}
-
-
-/* =========================================================
-   TABLES
-   ========================================================= */
-
-td {
-    vertical-align: top;
-}
-
-table.listing {
-    width: 100%;
-
-    margin:
-        18px
-        0
-        0;
-
-    border-collapse: separate;
-
-    border-spacing:
-        0
-        10px;
-
-    table-layout: fixed;
-}
-
-#content-all table.listing td {
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   LISTING CARDS
-   ========================================================= */
-
-table.listing
-> tbody
-> tr:not(.search):not(.content)
-> td {
-    padding:
-        18px
-        22px;
-
-    background: #ffffff;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    color: var(--text);
-
-    font-size: 16px;
-
-    font-weight: 750;
-
-    box-shadow: var(--shadow-sm);
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
-}
-
-table.listing
-> tbody
-> tr:not(.search):not(.content)
-> td:hover {
-    border-color: var(--border-hover);
-
-    box-shadow: var(--shadow-md);
-}
-
-
-/* =========================================================
-   LISTING CONTENT
-   ========================================================= */
-
-#content-all table.listing tr.content td {
-    font-weight: normal !important;
-}
-
-#content-all table.listing td span.content {
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fill,
-            minmax(185px, 1fr)
-        );
-
-    gap: 8px;
-
-    padding-left: 0;
-
-    padding-bottom: 0;
-
-    margin-top: 14px;
-
-    font-weight: normal !important;
-}
-
-
-/* =========================================================
-   PAPER LINKS
-   IMPORTANT:
-   No shaded boxes.
-   No underline.
-   Original blue/orange colours.
-   ========================================================= */
-
-table.listing span.content a,
-table.listing span.content a:link,
-table.listing span.content a:visited {
-    display: inline;
-
-    padding: 0;
-
-    margin: 0;
-
-    border: 0;
-
-    border-radius: 0;
-
-    background: transparent !important;
-
-    color: #0000ff !important;
-
-    font-size: 13px;
-
-    font-weight: 550;
-
-    line-height: 1.5;
-
-    text-decoration: none !important;
-
-    box-shadow: none;
-
-    transform: none;
-}
-
-table.listing span.content a:hover,
-table.listing span.content a:active {
-    background: transparent !important;
-
-    color: #ffaa00 !important;
-
-    border: 0;
-
-    text-decoration: none !important;
-
-    box-shadow: none;
-
-    transform: none;
-}
-
-
-/*
-   Existing <br> elements can remain hidden so the
-   grid layout continues to work.
-*/
-
-table.listing span.content br {
-    display: none;
 }
 
 
@@ -922,119 +518,147 @@ table.listing span.content br {
 }
 
 #web-grid > div > div > div {
-    display: table-cell;
-
     position: relative;
 
-    width: 200px;
+    display: table-cell;
 
+    width: 200px;
     height: 90px;
 }
 
-#web-grid
-> div
-> div
-> div
-> a
-> span,
-#web-grid
-> div
-> div
-> div
-> a
-> span
-> span {
-    display: inline-block;
+
+/* =========================================================
+   SUBJECT TILES
+   ========================================================= */
+
+/*
+   The subject tiles deliberately DO NOT use the blue shaded
+   link background from the previous iteration.
+
+   The original icon colours remain visible and the tile is
+   mostly white/neutral.
+*/
+
+#web-grid > div > div > div > a {
+    display: block;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    color: #0000ff !important;
+
+    text-decoration: none !important;
+}
+
+#web-grid > div > div > div > a > span {
+    display: block;
 
     position: absolute;
 
     bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 45px;
+
+    padding: 0;
+
+    border:
+        1px solid
+        #edf0f5;
+
+    border-radius: 8px;
+
+    background: #ffffff !important;
+
+    color: #0000ff !important;
+
+    font-size: 14px !important;
+
+    text-align: left;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.025);
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
+}
+
+#web-grid > div > div > div > a > span:hover {
+    background: #ffffff !important;
+
+    border-color: #cfd4ff;
+
+    color: #0000ff !important;
+
+    box-shadow:
+        0 5px 14px rgba(15, 23, 42, 0.07);
+}
+
+
+/*
+   Text strip inside each subject tile.
+
+   Keep this subtle rather than using the old blue block.
+*/
+
+#web-grid > div > div > div > a > span > span {
+    display: block;
+
+    position: absolute;
+
+    bottom: 5px;
 
     left: 0;
 
     width: 100%;
 
-    height: 100%;
+    padding:
+        2px 7px;
+
+    background: transparent !important;
+
+    color: #0000ff !important;
+
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    transition:
+        color 0.15s ease;
 }
 
-#web-grid
-> div
-> div
-> div
-> a
-> span {
-    border:
-        solid 1px #f5f5ff;
+#web-grid > div > div > div > a:hover > span > span {
+    background: transparent !important;
 
-    text-align: bottom;
-
-    background: #ffffff;
-
-    margin-top: 45px;
-
-    font-size: 14px !important;
+    color: #ffaa00 !important;
 }
 
-#web-grid
-> div
-> div
-> div
-> a
-> span:hover {
-    background: #fafaff !important;
+#web-grid > div > div > div > a > span > span.inactive {
+    background: transparent !important;
 
-    color: #ffffff !important;
+    color: #64748b !important;
 }
 
-#web-grid
-> div
-> div
-> div
-> a
-> span:hover
-> span {
-    background: #0000ff !important;
 
-    color: #ffffff !important;
-}
+/*
+   Icons
+*/
 
-#web-grid
-> div
-> div
-> div
-> a
-> span:hover
-> span.inactive {
-    background: #555555 !important;
-
-    color: #ffffff !important;
-}
-
-#web-grid
-> div
-> div
-> div
-> a
-> span
-> span {
-    background: #e5e5ff !important;
-}
-
-#web-grid
-> div
-> div
-> div
-> a
-> span
-> img {
-    margin-left: 5px;
-
+#web-grid > div > div > div > a > span img {
     margin-top: 5px;
+    margin-left: 5px;
 }
 
 
 /* =========================================================
-   WEB LIST
+   WEB LIST / MOBILE
    ========================================================= */
 
 #web-list > div > div {
@@ -1051,193 +675,27 @@ table.listing span.content br {
     float: left;
 }
 
-#web-list
-> div
-> div
-> div
-> span
-> span {
-    color: #aaaaff;
+#web-list > div > div > div > span > span {
+    padding-left: 40px !important;
+
+    color: #7777cc;
 
     font-size: 80%;
-
-    padding-left: 40px !important;
 }
 
-
-/* =========================================================
-   OVERLAY BAR
-   Original colours preserved
-   ========================================================= */
-
-#overlaybar {
-    position: absolute;
-
-    top: 0;
-
-    width: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            #5555ff 0%,
-            #5b5be8 50%,
-            #4d4dcc 100%
-        );
-
-    z-index: 2;
-
-    padding:
-        5px
-        0;
-
-    color: #ffffff;
-
-    box-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.18);
-}
-
-#overlaybar a,
-#overlaybar a:link,
-#overlaybar a:visited {
-    border-radius: 6px;
-
-    padding:
-        2px
-        6px;
-
-    background: #0000ff;
-
-    color: #ffffff !important;
-
-    text-decoration: none !important;
-}
-
-#overlaybar a:hover,
-#overlaybar a:active {
-    border-radius: 6px;
-
-    background: #222222;
-
-    color: #ffffff !important;
-
-    text-decoration: none !important;
-}
-
-#overlaybar #overlayinsert {
-    float: right;
-}
-
-
-/* =========================================================
-   VIEWER
-   ========================================================= */
-
-#viewer {
-    width: 100%;
-
-    height: 95%;
-
-    margin-top: 3px;
-}
-
-#openFile,
-#viewBookmark,
-#secondaryOpenFile,
-#secondaryViewBookmark {
-    display: none !important;
-
-    width: 0 !important;
-
-    height: 0 !important;
-}
-
-
-/* =========================================================
-   PDF POPUP
-   ========================================================= */
-
-.pdf-popup {
-    position: absolute;
-
-    background: #ccccff;
-
-    color: #555555;
-
-    padding: 12px;
-
-    border-radius: 10px;
-
-    min-width: 260px;
-
-    max-width: 320px;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.4);
-
-    z-index: 999999;
-
-    font-family: Arial, sans-serif;
-}
-
-.pdf-popup a,
-.pdf-popup a:link,
-.pdf-popup a:visited {
-    display: block;
-
-    text-decoration: none !important;
-
-    margin: 6px 0;
-
+#web-list a,
+#web-list a:link,
+#web-list a:visited {
     color: #0000ff !important;
+
+    text-decoration: none !important;
 }
 
-.pdf-popup a:hover {
+#web-list a:hover,
+#web-list a:active {
     color: #ffaa00 !important;
-}
 
-.pdf-progress {
-    height: 6px;
-
-    background: #333333;
-
-    border-radius: 4px;
-
-    overflow: hidden;
-
-    margin-top: 10px;
-}
-
-.pdf-progress-bar {
-    height: 100%;
-
-    width: 100%;
-
-    background: #22c55e;
-
-    transform-origin: right;
-
-    transform: scaleX(1);
-
-    transition: transform linear;
-}
-
-.pdf-popup button {
-    margin-top: 8px;
-
-    background: #444444;
-
-    color: #ffffff;
-
-    border: none;
-
-    padding:
-        6px
-        10px;
-
-    border-radius: 6px;
-
-    cursor: pointer;
+    text-decoration: none !important;
 }
 
 
@@ -1246,35 +704,23 @@ table.listing span.content br {
    ========================================================= */
 
 .smallscreen {
-    padding: 15px;
+    margin-bottom: 14px;
 
-    margin-bottom: 15px;
+    padding:
+        13px 14px;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: var(--radius);
+    border-radius: 8px;
 
-    background: #ffffff;
+    background: #fafaff;
 
     box-shadow: var(--shadow-sm);
 }
 
-.smallscreen span {
-    display: block;
-
-    padding:
-        5px
-        0;
-}
-
-.smallscreen img {
-    vertical-align: middle;
-}
-
-.smallscreen a,
-.smallscreen a:link,
-.smallscreen a:visited {
+.smallscreen a {
     color: #0000ff !important;
 
     font-weight: 600;
@@ -1288,33 +734,355 @@ table.listing span.content br {
 
 
 /* =========================================================
-   FOOTER
+   SEARCH
    ========================================================= */
 
-#footer {
-    padding:
-        20px
-        30px;
+.search {
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 10px;
 
     background: #f8fafc;
+}
 
-    border-top:
-        1px solid #e5e7eb;
+#search-bar {
+    width: 98%;
+
+    padding:
+        10px 12px;
+
+    border:
+        1px solid
+        #d1d5db;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#search-bar::placeholder {
+    color: #94a3b8;
+}
+
+#search-bar:focus {
+    border-color: #7777ff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(85, 85, 255, 0.10);
+}
+
+input {
+    border-radius: 7px;
+}
+
+input[type="submit"],
+input[type="button"] {
+    margin-top: 10px;
+
+    padding:
+        8px 16px;
+
+    background: var(--primary) !important;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: #ffffff !important;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        transform 0.1s ease,
+        box-shadow 0.18s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background: var(--primary-hover) !important;
+
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(85, 85, 255, 0.20);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active {
+    transform: translateY(0);
+}
+
+label {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 10px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    font-weight: normal !important;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+
+    accent-color: var(--primary);
+}
+
+#search-message {
+    margin-top: 5px;
+
+    color: #ff5500;
 
     font-size: 12px;
-
-    color: #64748b;
 }
 
 
 /* =========================================================
-   ACCESSIBILITY
+   LISTING TABLES
+   ========================================================= */
+
+#content-all table.listing {
+    width: 100%;
+
+    margin-top: 10px;
+
+    border-collapse: separate;
+
+    border-spacing: 0 8px;
+}
+
+#content-all table.listing td {
+    vertical-align: top;
+}
+
+#content-all table.listing tr.content td {
+    font-weight: normal !important;
+}
+
+#content-all table.listing td span.content {
+    display: inline-block;
+
+    padding-left: 15px;
+    padding-bottom: 12px;
+
+    font-weight: normal !important;
+}
+
+
+/* =========================================================
+   PDF POPUP
+   ========================================================= */
+
+.pdf-popup {
+    position: absolute;
+
+    min-width: 260px;
+    max-width: 320px;
+
+    padding: 12px;
+
+    background: #e4e4ff;
+
+    color: #555555;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.25);
+
+    z-index: 999999;
+
+    font-family: Arial, sans-serif !important;
+}
+
+.pdf-popup a,
+.pdf-popup a:link,
+.pdf-popup a:visited {
+    display: block;
+
+    margin: 6px 0;
+
+    color: #0000ff !important;
+
+    text-decoration: none !important;
+}
+
+.pdf-popup a:hover {
+    color: #ffaa00 !important;
+
+    text-decoration: none !important;
+}
+
+.pdf-progress {
+    height: 6px;
+
+    margin-top: 10px;
+
+    background: #333333;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+.pdf-progress-bar {
+    width: 100%;
+    height: 100%;
+
+    background: #22c55e;
+
+    transform-origin: right;
+    transform: scaleX(1);
+
+    transition: transform linear;
+}
+
+.pdf-popup button {
+    margin-top: 8px;
+
+    padding:
+        6px 10px;
+
+    background: #444444;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   VIEWER
+   ========================================================= */
+
+#viewer {
+    width: 100%;
+    height: 95%;
+
+    margin-top: 3px;
+}
+
+#openFile,
+#viewBookmark,
+#secondaryOpenFile,
+#secondaryViewBookmark {
+    display: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* =========================================================
+   OVERLAY BAR
+   ========================================================= */
+
+/*
+   This is the main colour reference for the stylesheet.
+
+   Original:
+       #5555FF
+       #0000FF
+
+   Kept deliberately strong here.
+*/
+
+#overlaybar {
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+
+    padding:
+        4px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5555ff 0%,
+            #5555ee 50%,
+            #4d4dcc 100%
+        );
+
+    color: #ffffff;
+
+    z-index: 2;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.18);
+}
+
+#overlaybar a,
+#overlaybar a:link,
+#overlaybar a:visited {
+    padding:
+        2px 6px;
+
+    border-radius: 5px;
+
+    background: #0000ff;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+}
+
+#overlaybar a:hover,
+#overlaybar a:active {
+    background: #222222;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+}
+
+#overlaybar #overlayinsert {
+    float: right;
+}
+
+
+/* =========================================================
+   FOCUS
    ========================================================= */
 
 a:focus-visible,
-input:focus-visible {
+input:focus-visible,
+button:focus-visible {
     outline:
-        3px solid rgba(85, 85, 255, 0.25);
+        3px solid
+        rgba(85, 85, 255, 0.25);
 
     outline-offset: 2px;
 }
@@ -1354,82 +1122,28 @@ input:focus-visible {
     #folder-tree {
         display: none !important;
     }
+
+    #content-all {
+        padding:
+            24px 20px
+            20px;
+    }
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 795px) {
 
-    body > h1 {
-        padding:
-            18px
-            20px;
-
-        font-size: 19px;
-    }
-
-    #navigation > ul {
-        overflow-x: auto;
-
-        padding:
-            8px
-            12px;
-
-        scrollbar-width: none;
-    }
-
-    #navigation > ul::-webkit-scrollbar {
+    .reverse-element,
+    .reverse-wedge {
         display: none;
     }
 
-    #navigation > ul a {
-        white-space: nowrap;
+    body #page-title-navigation {
+        font-size: 22px !important;
     }
 
-    #folder-tree {
-        overflow-x: auto;
-
-        flex-wrap: nowrap;
-
-        padding:
-            9px
-            14px;
-
-        white-space: nowrap;
-
-        scrollbar-width: none;
-    }
-
-    #folder-tree::-webkit-scrollbar {
-        display: none;
-    }
-
-    #folder-tree .reverse {
-        margin-left: 0;
-    }
-
-    #content-all {
-        width: calc(100% - 24px);
-
-        margin:
-            22px
-            auto
-            45px;
-    }
-
-    #content-all > h4 {
-        font-size: 23px;
-    }
-
-    table.listing
-    > tbody
-    > tr:not(.search):not(.content)
-    > td {
-        padding: 15px;
-    }
-
-    #page-wrapper {
-        margin-left: 20px;
-        margin-right: 20px;
+    body #everything h4 {
+        font-size: 16px !important;
     }
 }
 
@@ -1444,74 +1158,95 @@ input:focus-visible {
 
 @media screen and (max-width: 695px) {
 
+    #web-list > div > div > div {
+        display: table-row;
+    }
+
     #navigation {
-        display: none !important;
+        display: block !important;
+
+        overflow-x: auto;
+    }
+
+    #navigation ul {
+        width: max-content;
     }
 
     #page-wrapper {
-        margin-left: 20px !important;
-        margin-right: 20px !important;
+        width: calc(100% - 24px);
+
+        margin-left: 12px !important;
+        margin-right: 12px !important;
     }
 
-    a {
+    body > h1 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #content-all a {
         width: inherit !important;
-        overflow: hidden;
+
+        overflow-wrap: break-word;
     }
 }
 
 
 @media screen and (max-width: 500px) {
 
-    #content-all {
+    #page-wrapper {
         width: calc(100% - 16px);
+
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+
+        min-width: 0 !important;
     }
 
-    #content-all > h4 {
-        font-size: 21px;
+    body > h1 {
+        padding:
+            18px 12px
+            12px;
+
+        font-size: 24px;
     }
 
-    table.listing {
-        border-spacing:
-            0
-            8px;
+    #content-all {
+        padding:
+            20px 14px
+            20px;
     }
 
-    table.listing
-    > tbody
-    > tr:not(.search):not(.content)
-    > td {
-        padding: 15px;
+    #navigation ul {
+        padding-left: 6px;
+        padding-right: 6px;
     }
 
-    table.listing span.content {
-        grid-template-columns: 1fr 1fr;
+    #navigation li a {
+        padding:
+            10px 11px;
 
-        gap: 6px;
-    }
-
-    table.listing span.content a {
-        font-size: 12px;
-    }
-
-    tr.content td {
-        padding: 15px;
+        font-size: 13px;
     }
 }
 
 
-@media screen and (max-width: 445px) {
+/* =========================================================
+   INTERNET EXPLORER / LEGACY GRID SUPPORT
+   ========================================================= */
 
-    #content-all {
-        overflow: hidden;
+@media screen and (min-width: 0\0) {
+
+    #web-grid > div > div > div {
+        display: inline-block !important;
     }
+}
 
-    #page-wrapper {
-        margin-left: 20px !important;
-        margin-right: 20px !important;
+@media all and (-ms-high-contrast: none),
+       (-ms-high-contrast: active) {
 
-        max-width: 1032px !important;
-
-        min-width: 440px !important;
+    #web-grid > div > div > div {
+        display: inline-block !important;
     }
 }
 
