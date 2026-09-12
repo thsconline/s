@@ -1,1334 +1,543 @@
 /* =========================================================
-   THSC ONLINE
-   Modern redesign based on the original stylesheet
+THSC ONLINE — REDESIGNED STYLESHEET
 
-   Design:
-   - Original THSC structure preserved
-   - Blue / indigo colour palette
-   - No underline on links
-   - Plain thsconline title
-   - Blue title underline retained
-   - Existing grid/list HTML supported
-   - Existing overlay bar retained
-   ========================================================= */
-
+HTML / JS compatible with existing site
+Theme: Indigo / Blue / Clean Academic
+========================================================= */
 
 /* =========================================================
-   THEME
-   ========================================================= */
+COLOUR SYSTEM
+========================================================= */
 
 :root {
-    --blue: #0000ff;
-    --blue-main: #5555ff;
-    --blue-light: #7777ff;
-    --blue-soft: #f0f0ff;
-    --blue-pale: #f7f7ff;
+--page-bg: #f4f6fb;
+--surface: #ffffff;
+--surface-soft: #f8f9ff;
 
-    --indigo: #4f46e5;
-    --indigo-dark: #3730a3;
+--nav: #111827;
+--nav-hover: #1f2937;
 
-    --orange: #ffaa00;
-    --green: #22c55e;
+--primary: #5555ff;
+--primary-dark: #3f3fd9;
+--primary-light: #eeeeff;
 
-    --text: #111827;
-    --text-soft: #374151;
-    --muted: #6b7280;
+--link: #3333cc;
+--link-hover: #f05a00;
 
-    --background: #f5f6fa;
-    --surface: #ffffff;
-    --surface-soft: #fafaff;
+--text: #172033;
+--text-secondary: #596579;
+--text-light: #7b8798;
 
-    --border: #e5e7eb;
-    --border-blue: #ddddff;
+--border: #e4e8f1;
+--border-strong: #d5daE6;
 
-    --radius: 10px;
-    --radius-small: 7px;
+--success: #22a06b;
 
-    --shadow-small:
-        0 2px 7px rgba(17, 24, 39, 0.05);
+--radius: 12px;
+--radius-small: 8px;
 
-    --shadow:
-        0 8px 25px rgba(17, 24, 39, 0.07);
+--shadow:
+    0 2px 5px rgba(15, 23, 42, 0.04),
+    0 8px 24px rgba(15, 23, 42, 0.06);
 
-    --shadow-hover:
-        0 12px 30px rgba(17, 24, 39, 0.11);
+--shadow-hover:
+    0 8px 24px rgba(15, 23, 42, 0.10),
+    0 3px 8px rgba(85, 85, 255, 0.08);
+
+
 }
 
-
 /* =========================================================
-   GLOBAL
-   ========================================================= */
+RESET / BASE
+========================================================= */
 
-* {
-    box-sizing: border-box;
-
-    font-family:
-        "Arial",
-        "Inter",
-        "Helvetica Neue",
-        Arial,
-        sans-serif !important;
+{
+box-sizing: border-box;
 }
 
 html {
-    margin: 0;
-    padding: 0;
-    direction: ltr;
-    min-height: 100%;
+margin: 0;
+padding: 0;
+min-height: 100%;
+background: var(--page-bg);
 }
 
 body {
-    margin: 0 auto;
-    padding: 0;
+margin: 0;
+padding: 0;
 
-    direction: ltr;
+min-height: 100vh;
 
-    background: var(--background) !important;
+background:
+    radial-gradient(
+        circle at 10% 0%,
+        rgba(85, 85, 255, 0.055),
+        transparent 30%
+    ),
+    var(--page-bg);
 
-    color: var(--text);
+color: var(--text);
 
-    font-family:
-        "Segoe UI",
-        "Inter",
-        "Helvetica Neue",
-        Arial,
-        sans-serif !important;
+font-family:
+    "Arial",
+    "Inter",
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
 
-    font-size: 14px;
-    line-height: 1.5;
+font-size: 14px;
+line-height: 1.5;
 
-    font-stretch: normal;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
 
-    -webkit-font-smoothing: antialiased;
+
 }
 
+iframe {
+border: 0;
+}
 
-/* =========================================================
-   GLOBAL LINKS
-   ========================================================= */
-
-/*
-   IMPORTANT:
-   THSC links intentionally have NO underline.
-*/
+img {
+max-width: 100%;
+}
 
 a,
 a:link,
 a:visited,
 a:hover,
 a:active {
-    text-decoration: none !important;
+text-decoration: none !important;
 }
 
 a img {
-    border: 0 !important;
+border: 0 !important;
 }
 
-iframe {
-    border: 0;
+td {
+vertical-align: top;
 }
-
 
 /* =========================================================
-   THSC ONLINE TITLE
-   ========================================================= */
+SITE TITLE
 
-/*
-   Deliberately NO background.
-
-   The original title remains floating naturally above
-   the main application.
-*/
+Deliberately NO background.
+========================================================= */
 
 body > h1 {
-    display: inline-block;
+margin: 0;
+padding: 28px 50px 17px;
 
-    position: relative;
+background: transparent;
 
-    margin: 0;
+color: #111827;
 
-    padding:
-        24px 0 7px
-        max(25px, calc((100% - 1180px) / 2));
+font-family:
+    "Arial",
+    "Inter",
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
 
-    color: var(--text);
+font-size: 28px;
+font-weight: 700;
 
-    background: transparent !important;
+line-height: 1.2;
+letter-spacing: -0.6px;
 
-    font-size: 27px;
-    font-weight: 700;
+position: relative;
+display: inline-block;
 
-    line-height: 1.15;
 
-    letter-spacing: -0.4px;
 }
 
-/*
-   The blue underline you liked.
-*/
+/* The underline you liked */
 
 body > h1::after {
-    content: "";
+content: "";
 
-    display: block;
+display: block;
 
-    width: 100%;
-    height: 4px;
+width: 100%;
+height: 4px;
 
-    margin-top: 8px;
+margin-top: 7px;
 
-    background:
-        linear-gradient(
-            90deg,
-            var(--blue-main),
-            var(--blue-light)
-        );
+background: linear-gradient(
+    90deg,
+    #5555ff 0%,
+    #6666ff 65%,
+    #8585ff 100%
+);
 
-    border-radius: 4px;
+border-radius: 4px;
+
+
 }
-
 
 /* =========================================================
-   GENERAL HEADINGS
-   ========================================================= */
-
-h1 {
-    color: var(--text);
-}
-
-h2 {
-    margin-top: 20px;
-
-    padding: 8px 0 0;
-
-    color: var(--text-soft);
-
-    font-size: 22px;
-    font-weight: 700;
-}
-
-h3 {
-    margin: 0 0 16px;
-
-    padding-top: 3px !important;
-    padding-bottom: 3px !important;
-
-    color: var(--text);
-}
-
-h4 {
-    margin-top: 0;
-    margin-bottom: 8px !important;
-
-    padding-top: 3px !important;
-    padding-bottom: 0 !important;
-
-    color: var(--text);
-
-    font-size: 20px;
-}
-
-h5 {
-    display: inline-block;
-
-    width: 100%;
-
-    margin-bottom: 6px;
-
-    padding-top: 3px !important;
-
-    border-bottom: 1px solid var(--blue-main);
-
-    color: var(--blue-main);
-
-    font-size: 16px;
-    font-weight: 500;
-}
-
-h5.grey {
-    display: inline-block;
-
-    width: 100%;
-
-    margin-bottom: 6px;
-
-    padding-left: 6px !important;
-
-    border: 1px solid #d1d5db;
-    border-bottom: 2px solid #9ca3af;
-
-    color: var(--text);
-
-    font-size: 16px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   MAIN PAGE
-   ========================================================= */
+MAIN PAGE CONTAINER
+========================================================= */
 
 #page-wrapper {
-    position: relative;
+position: relative;
 
-    min-width: 440px;
+margin: 0 50px 50px;
 
-    margin:
-        0 auto 50px;
+min-width: 440px !important;
 
-    width:
-        min(1180px, calc(100% - 70px));
+background: var(--surface);
 
-    overflow: hidden;
+border: 1px solid var(--border);
 
-    background: var(--surface);
+border-radius: 14px;
 
-    border:
-        1px solid rgba(229, 231, 235, 0.9);
+box-shadow: var(--shadow);
 
-    border-radius: 14px;
+overflow: hidden;
 
-    box-shadow: var(--shadow);
+
 }
 
-
 /* =========================================================
-   NAVIGATION
-   ========================================================= */
+NAVIGATION
+========================================================= */
 
 #navigation {
-    margin: 0;
+padding: 0;
 
-    padding: 0;
+background: var(--nav);
 
-    background: #111827;
+color: #ffffff;
 
-    color: #ffffff;
+text-align: left;
 
-    text-align: left;
+overflow: hidden;
 
-    overflow: hidden;
+
 }
 
 #navigation ul {
-    display: flex;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
 
-    align-items: center;
+margin: 0;
+padding: 7px 8px;
 
-    gap: 3px;
+list-style: none;
 
-    margin: 0;
+gap: 3px;
 
-    padding: 7px 10px;
 
-    list-style: none;
-
-    font-weight: bold;
 }
 
 #navigation li {
-    display: inline-block;
+display: inline-block;
 
-    margin: 0;
+margin: 0;
+padding: 0;
 
-    padding: 0;
+border-radius: 8px;
 
-    border-radius: 7px;
+font-weight: 500;
 
-    color: #ffffff;
+transition:
+    background-color 0.18s ease,
+    transform 0.18s ease;
 
-    font-weight: 500;
 
-    cursor: pointer;
-
-    transition:
-        background 0.18s ease,
-        color 0.18s ease;
 }
 
 #navigation li a {
-    display: block;
+display: block;
 
-    padding: 10px 14px;
+padding: 11px 14px;
 
-    color: #ffffff !important;
+color: #e5e7eb !important;
 
-    font-size: 14px;
+font-size: 14px;
+font-weight: 600;
 
-    white-space: nowrap;
+white-space: nowrap;
+
+
 }
 
-#navigation li.element:hover {
-    background: #292f3d;
+#navigation li:hover {
+background: var(--nav-hover);
+
+transform: translateY(-1px);
+
+
 }
+
+#navigation li:hover a {
+color: #ffffff !important;
+}
+
+/* Current page */
 
 #navigation li.current {
-    background: var(--blue-main) !important;
+background: var(--primary) !important;
 
-    color: #ffffff !important;
+box-shadow:
+    0 2px 8px rgba(85, 85, 255, 0.28);
+
+
 }
 
-#navigation li.current a {
-    color: #ffffff !important;
+#navigation li.current a,
+#navigation li.current a:link,
+#navigation li.current a:visited,
+#navigation li.current a:hover {
+color: #ffffff !important;
 }
-
-#navigation li.element:hover a {
-    color: #ffffff !important;
-}
-
-#navigation li.element a,
-#navigation li.current a {
-    text-decoration: none !important;
-}
-
 
 /* =========================================================
-   FOLDER TREE / BREADCRUMBS
-   ========================================================= */
+FOLDER / BREADCRUMB BAR
+========================================================= */
 
 #folder-tree {
-    display: flex;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
 
-    align-items: center;
+min-height: 43px;
 
-    flex-wrap: wrap;
+margin: 0;
+padding: 10px 18px;
 
-    gap: 3px;
+background: #fafbff;
 
-    padding: 10px 18px 11px;
+border-top: 1px solid rgba(255,255,255,0.04);
+border-bottom: 1px solid var(--border);
 
-    background: #fafbff;
+color: var(--text-light);
 
-    border-top: 1px solid rgba(255,255,255,0.04);
-    border-bottom: 1px solid var(--border);
+font-size: 13px;
 
-    color: var(--muted);
 
-    font-size: 13px;
 }
 
+#folder-tree a,
 #folder-tree a:link,
 #folder-tree a:visited {
-    background: transparent !important;
+color: #6b7280 !important;
 
-    color: #7777cc !important;
+text-decoration: none !important;
 
-    text-decoration: none !important;
+
 }
 
 #folder-tree a:hover,
 #folder-tree a:active {
-    color: var(--orange) !important;
-
-    text-decoration: none !important;
+color: var(--link-hover) !important;
 }
 
 #folder-tree .current {
-    color: var(--text) !important;
-
-    font-weight: 700;
+color: var(--text) !important;
+font-weight: 700;
 }
 
 #folder-tree .reverse {
-    margin-left: auto;
+margin-left: auto;
 
-    float: none;
+color: var(--link) !important;
 
-    padding: 4px 8px;
+font-weight: 600;
 
-    border-radius: 6px;
 
-    background: transparent;
 }
-
-#folder-tree .reverse:hover {
-    background: var(--blue-soft);
-}
-
 
 /* =========================================================
-   MAIN CONTENT
-   ========================================================= */
+CONTENT AREA
+========================================================= */
 
 #content-all {
-    min-height: 515px;
+padding: 30px 30px 35px;
 
-    padding:
-        26px 25px 25px;
+min-height: 515px;
+
+
 }
 
+/* =========================================================
+PAGE HEADINGS
+========================================================= */
+
+h2 {
+margin: 0 0 14px;
+
+padding: 0;
+
+color: var(--text);
+
+font-size: 22px;
+font-weight: 700;
+
+
+}
+
+h3 {
+margin: 0 0 22px;
+
+padding: 0 !important;
+
+color: var(--text);
+
+font-size: 22px;
+font-weight: 700;
+
+line-height: 1.3;
+
+
+}
+
+h4 {
+margin: 0 0 18px !important;
+
+padding: 0 !important;
+
+color: var(--text);
+
+font-size: 20px;
+
+line-height: 1.3;
+
+
+}
+
+h5 {
+display: inline-block;
+
+width: 100%;
+
+margin: 0 0 8px;
+
+padding: 4px 0 7px !important;
+
+border-bottom: 2px solid var(--primary);
+
+color: var(--primary);
+
+font-size: 16px;
+font-weight: 600;
+
+
+}
+
+h5.grey {
+width: 100%;
+
+margin-bottom: 8px;
+
+padding: 5px 8px !important;
+
+border: 1px solid var(--border);
+border-bottom: 2px solid #9ca3af;
+
+border-radius: 6px 6px 0 0;
+
+background: #f8fafc;
+
+color: var(--text);
+
+font-size: 16px;
+font-weight: 700;
+
+
+}
 
 /* =========================================================
-   CONTENT LINKS
-   ========================================================= */
+GENERAL LINKS
 
+IMPORTANT:
+Same behaviour as your original:
+NO UNDERLINES.
+========================================================= */
+
+a,
+a:link,
+a:visited {
+text-decoration: none !important;
+}
+
+#content-all a,
 #content-all a:link,
 #content-all a:visited {
-    color: var(--blue) !important;
-
-    text-decoration: none !important;
+color: var(--link) !important;
+text-decoration: none !important;
 }
 
 #content-all a:hover,
 #content-all a:active {
-    color: var(--orange) !important;
-
-    text-decoration: none !important;
+color: var(--link-hover) !important;
+text-decoration: none !important;
 }
-
 
 /* =========================================================
-   PAGE TITLE
-   ========================================================= */
-
-#content-all > h3 {
-    margin:
-        0 0 17px;
-
-    color: var(--text);
-
-    font-size: 23px;
-
-    font-weight: 700;
-}
-
-#content-all > h3 .title {
-    position: relative;
-
-    display: inline-block;
-
-    padding-bottom: 8px;
-}
-
-#content-all > h3 .title::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 3px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--blue-main),
-            var(--blue-light)
-        );
-
-    border-radius: 3px;
-}
-
-
-/* =========================================================
-   TABLES
-   ========================================================= */
-
-td {
-    vertical-align: top;
-}
-
-#content-all table.listing {
-    width: 100%;
-
-    margin-top: 12px;
-
-    border-collapse: separate;
-
-    border-spacing: 0 9px;
-}
-
-#content-all table.listing td {
-    font-weight: 700;
-}
-
-#content-all table.listing tr.content td {
-    font-weight: normal !important;
-}
-
-#content-all table.listing td span.content {
-    display: inline-block;
-
-    padding-left: 15px;
-    padding-bottom: 12px;
-
-    font-weight: normal !important;
-}
-
-
-/* =========================================================
-   WEB GRID
-   ========================================================= */
-
-#web-grid,
-#web-grid > div {
-    overflow: auto;
-
-    margin-top: 4px;
-}
-
-#web-grid > div {
-    display: table;
-
-    width: 100%;
-}
-
-#web-grid > div > div {
-    display: table-row;
-}
-
-#web-grid > div > div > div {
-    display: table-cell;
-
-    position: relative;
-
-    width: 200px;
-    height: 95px;
-
-    padding: 5px;
-}
-
-
-/* =========================================================
-   SUBJECT CARDS
-   ========================================================= */
-
-#web-grid > div > div > div > a {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    color: var(--text) !important;
-
-    text-decoration: none !important;
-}
-
-#web-grid > div > div > div > a > span,
-#web-grid > div > div > div > a > span > span {
-    display: inline-block;
-
-    position: absolute;
-}
-
-#web-grid > div > div > div > a > span {
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    margin: 0;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #fafaff 100%
-        );
-
-    border:
-        1px solid var(--border-blue);
-
-    border-radius: 9px;
-
-    color: var(--text);
-
-    font-size: 14px !important;
-
-    box-shadow: var(--shadow-small);
-
-    transition:
-        transform 0.18s ease,
-        border-color 0.18s ease,
-        box-shadow 0.18s ease,
-        background 0.18s ease;
-}
-
-#web-grid > div > div > div > a > span:hover {
-    background: #ffffff !important;
-
-    border-color: #bfc0ff;
-
-    color: var(--text) !important;
-
-    box-shadow:
-        0 8px 22px rgba(85, 85, 255, 0.12);
-
-    transform: translateY(-2px);
-}
-
-
-/*
-   Icon remains exactly where the existing HTML places it.
-*/
-
-#web-grid > div > div > div > a > span img {
-    margin-left: 7px;
-    margin-top: 7px;
-
-    vertical-align: top;
-}
-
-
-/*
-   Subject name strip.
-
-   This is deliberately NOT a large blue block.
-*/
-
-#web-grid > div > div > div > a > span > span {
-    left: 0;
-    bottom: 0 !important;
-
-    width: 100%;
-
-    min-height: 27px;
-
-    padding:
-        4px 8px 5px;
-
-    background:
-        #f4f4ff !important;
-
-    border-top:
-        1px solid #e5e5ff;
-
-    color: #25256b !important;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    line-height: 1.35;
-
-    transition:
-        background 0.18s ease,
-        color 0.18s ease;
-}
-
-#web-grid > div > div > div > a > span:hover > span {
-    background:
-        #eeeeff !important;
-
-    color:
-        var(--blue) !important;
-}
-
-#web-grid > div > div > div > a > span:hover > span.inactive {
-    background: #eeeeee !important;
-
-    color: #555555 !important;
-}
-
-
-/* =========================================================
-   WEB LIST / MOBILE
-   ========================================================= */
-
-#web-list > div {
-    display: table;
-
-    width: 100%;
-}
-
-#web-list > div > div {
-    display: table-row;
-
-    overflow: hidden;
-}
-
-#web-list > div > div > div {
-    display: table-row;
-
-    width: 435px;
-
-    float: left;
-}
-
-#web-list > div > div > div > span > span {
-    color: #7777cc;
-
-    font-size: 80%;
-
-    padding-left: 40px !important;
-}
-
-#web-list a {
-    color: var(--blue) !important;
-
-    text-decoration: none !important;
-}
-
-#web-list a:hover {
-    color: var(--orange) !important;
-}
-
-
-/* =========================================================
-   SMALL SCREEN MENU
-   ========================================================= */
-
-.smallscreen {
-    padding: 13px 15px;
-
-    margin-bottom: 14px;
-
-    background: var(--blue-pale);
-
-    border: 1px solid var(--border-blue);
-
-    border-radius: 8px;
-}
-
-.smallscreen a {
-    color: var(--blue) !important;
-
-    font-weight: 600;
-
-    text-decoration: none !important;
-}
-
-.smallscreen a:hover {
-    color: var(--orange) !important;
-}
-
-
-/* =========================================================
-   SEARCH
-   ========================================================= */
+SEARCH
+========================================================= */
 
 .search {
-    padding: 14px;
+margin-bottom: 18px;
 
-    margin-bottom: 18px;
+padding: 14px;
 
-    background: #fafbff;
+background: #f8f9ff;
 
-    border: 1px solid var(--border);
+border: 1px solid var(--border);
 
-    border-radius: 9px;
+border-radius: 10px;
+
+
 }
 
 #search-bar {
-    width: 98%;
+width: 100%;
 
-    padding: 10px 12px;
+padding: 11px 13px;
 
-    background: #ffffff;
+background: #ffffff;
 
-    border:
-        1px solid #d1d5db;
+border: 1px solid #d8deea;
 
-    border-radius: 7px;
+border-radius: 8px;
 
-    color: var(--text);
+color: var(--text);
 
-    font-size: 14px;
+font-family: inherit;
+font-size: 14px;
 
-    outline: none;
+outline: none;
 
-    transition:
-        border-color 0.18s ease,
-        box-shadow 0.18s ease;
+transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+
+
+}
+
+#search-bar::placeholder {
+color: #9aa4b2;
 }
 
 #search-bar:focus {
-    border-color: var(--blue-main);
+border-color: #8585ff;
 
-    box-shadow:
-        0 0 0 3px rgba(85, 85, 255, 0.10);
+box-shadow:
+    0 0 0 3px rgba(85, 85, 255, 0.10);
+
+
 }
-
-#search-message {
-    margin-top: 5px;
-
-    color: #d97706;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-input {
-    border-radius: 6px;
-}
-
-input[type="button"],
-input[type="submit"] {
-    margin-top: 10px;
-
-    padding: 8px 15px;
-
-    background: var(--blue-main) !important;
-
-    border: none;
-
-    border-radius: 7px;
-
-    color: #ffffff !important;
-
-    cursor: pointer;
-
-    font-size: 14px;
-
-    transition:
-        background 0.18s ease,
-        transform 0.12s ease,
-        box-shadow 0.18s ease;
-}
-
-input[type="button"]:hover,
-input[type="submit"]:hover {
-    background: #4444dd !important;
-
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 4px 12px rgba(85, 85, 255, 0.22);
-}
-
-input[type="button"]:active,
-input[type="submit"]:active {
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   CHECKBOX / LABEL
-   ========================================================= */
 
 label {
-    display: inline-flex;
+display: inline-flex;
+align-items: center;
 
-    align-items: center;
+margin-top: 9px;
 
-    margin-top: 10px;
+color: var(--text-secondary);
 
-    color: var(--muted);
-
-    font-size: 14px;
-
-    font-weight: normal !important;
-}
-
-input[type="checkbox"] {
-    margin-right: 8px;
-
-    accent-color: var(--blue-main);
-}
-
-
-/* =========================================================
-   REMARK
-   ========================================================= */
-
-span.remark {
-    padding: 2px 5px;
-
-    background: #e4e4ff !important;
-
-    border-radius: 5px;
-
-    color: #252550 !important;
-
-    font-size: 10px;
-
-    text-decoration: none;
-
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   OVERLAY BAR
-   ========================================================= */
-
-/*
-   This retains the colours you specifically liked
-   from the original stylesheet.
-*/
-
-#overlaybar {
-    position: absolute;
-
-    top: 0;
-
-    width: 100%;
-
-    padding: 5px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #5555ff 0%,
-            #5b5be8 50%,
-            #4d4dcc 100%
-        );
-
-    color: #ffffff;
-
-    z-index: 2;
-
-    box-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.18);
-}
-
-#overlaybar a:link,
-#overlaybar a:visited {
-    padding: 2px 6px;
-
-    background: #0000ff;
-
-    border-radius: 5px;
-
-    color: #ffffff;
-
-    text-decoration: none !important;
-}
-
-#overlaybar a:hover,
-#overlaybar a:active {
-    background: #222222;
-
-    color: #ffffff;
-
-    text-decoration: none !important;
-}
-
-#overlaybar #overlayinsert {
-    float: right;
-}
-
-
-/* =========================================================
-   PDF POPUP
-   ========================================================= */
-
-.pdf-popup {
-    position: absolute;
-
-    z-index: 999999;
-
-    min-width: 260px;
-    max-width: 320px;
-
-    padding: 12px;
-
-    background: #eeeeff;
-
-    border:
-        1px solid #ccccff;
-
-    border-radius: 9px;
-
-    color: #555555;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.18);
-
-    font-family: Arial, sans-serif;
-}
-
-.pdf-popup a {
-    display: block;
-
-    margin: 6px 0;
-
-    color: var(--blue) !important;
-
-    text-decoration: none !important;
-}
-
-.pdf-popup a:hover {
-    color: var(--orange) !important;
-}
-
-.pdf-progress {
-    height: 6px;
-
-    margin-top: 10px;
-
-    overflow: hidden;
-
-    background: #333333;
-
-    border-radius: 4px;
-}
-
-.pdf-progress-bar {
-    width: 100%;
-    height: 100%;
-
-    background: #22c55e;
-
-    transform:
-        scaleX(1);
-
-    transform-origin: right;
-
-    transition: transform linear;
-}
-
-.pdf-popup button {
-    margin-top: 8px;
-
-    padding: 6px 10px;
-
-    background: #444444;
-
-    border: none;
-
-    border-radius: 6px;
-
-    color: #ffffff;
-
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-#footer {
-    padding: 0;
-
-    background: #fafbff;
-
-    border-top:
-        1px solid var(--border);
-
-    color: var(--muted);
-
-    font-size: 12px;
-}
-
-#footer #folder-tree {
-    border: 0;
-
-    background: transparent;
-}
-
-
-/* =========================================================
-   VIEWER
-   ========================================================= */
-
-#viewer {
-    width: 100%;
-
-    height: 95%;
-
-    margin-top: 3px;
-}
-
-#openFile,
-#viewBookmark,
-#secondaryOpenFile,
-#secondaryViewBookmark {
-    display: none !important;
-
-    width: 0 !important;
-    height: 0 !important;
-}
-
-
-/* =========================================================
-   IE / LEGACY GRID SUPPORT
-   ========================================================= */
-
-@media screen and (min-width: 0\0) {
-
-    #web-grid > div > div > div {
-        display: inline-block !important;
-    }
-}
-
-@media all and (-ms-high-contrast: none),
-       (-ms-high-contrast: active) {
-
-    #web-grid > div > div > div {
-        display: inline-block !important;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media screen and (max-width: 1095px) {
-
-    .reducible {
-        display: none !important;
-    }
-
-    #page-wrapper {
-        width: calc(100% - 50px);
-    }
-}
-
-
-@media screen and (max-width: 995px) {
-
-    .layout-searchbox {
-        display: none !important;
-    }
-}
-
-
-@media screen and (max-width: 840px) {
-
-    #web-list {
-        display: inherit !important;
-    }
-
-    .smallscreen {
-        display: block !important;
-    }
-
-    #web-grid,
-    #folder-tree {
-        display: none !important;
-    }
-
-    #content-all {
-        padding:
-            22px 18px;
-    }
-}
-
-
-@media screen and (max-width: 795px) {
-
-    .reverse-element,
-    .reverse-wedge {
-        display: none;
-    }
-
-    body #page-title-navigation {
-        font-size: 22px !important;
-    }
-
-    body #everything h4 {
-        font-size: 16px !important;
-    }
-
-    body > h1 {
-        padding-left: 25px;
-    }
-}
-
-
-@media screen and (max-width: 745px) {
-
-    #web-list > div > div > div {
-        display: table-row;
-    }
-
-    #page-wrapper {
-        width: calc(100% - 30px);
-    }
-}
-
-
-@media screen and (max-width: 695px) {
-
-    #navigation {
-        display: none !important;
-    }
-
-    #page-wrapper {
-        margin-left: 15px !important;
-        margin-right: 15px !important;
-
-        width: calc(100% - 30px);
-    }
-
-    #content-all {
-        padding:
-            20px 15px;
-    }
-
-    body > h1 {
-        padding-left: 18px;
-
-        font-size: 24px;
-    }
-
-    a {
-        max-width: 100%;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-    }
-}
-
-
-@media screen and (max-width: 445px) {
-
-    #content-all {
-        overflow: hidden;
-    }
-
-    #page-wrapper {
-        margin-left: 8px !important;
-        margin-right: 8px !important;
-
-        width: calc(100% - 16px);
-
-        min-width: 0 !important;
-    }
-
-    body {
-        min-width: 0;
-    }
-
-    body > h1 {
-        padding-left: 12px;
-
-        font-size: 22px;
-    }
-
-    #web-list > div > div > div {
-        width: 100%;
-        float: none;
-    }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
-
-a:focus-visible,
-input:focus-visible,
-button:focus-visible {
-    outline:
-        3px solid rgba(85, 85, 255, 0.25);
-
-    outline-offset: 2px;
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        transition: none !important;
-    }
-}
+font-size: 13px
