@@ -1936,29 +1936,16 @@ table.listing span.content a:hover {
    Overlay bar
    --------------------------------------------------------- */
 
-#overlaybar {
-    position: absolute;
 
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    padding: 4px 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #5555ff,
-            #0000ff
-        );
-
-    color: #ffffff;
-
-    z-index: 2;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,100,0.18);
+#overlaybar
+{
+	position:absolute;
+	top:0px;
+	width:100%;
+	background-color: #5555FF;
+	z-index: 2;
+	padding: 3px 0px 3px;
+	color:#FFFFFF;
 }
 
 #overlaybar a,
