@@ -1,98 +1,107 @@
 /* =========================================================
-   THSC Online — Modern Responsive Stylesheet
-   Original HTML compatible
+   THSC Online — Modern stylesheet
+   Compatible with original THSC XHTML structure
+   No HTML/JS changes required
    ========================================================= */
 
-/* ---------------------------------------------------------
-   Design tokens
-   --------------------------------------------------------- */
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
 
 :root {
     --bg: #f4f6ff;
     --surface: #ffffff;
-    --surface-soft: #f5f5ff;
+    --surface-soft: #f7f8ff;
 
-    --border: #d9dcf5;
-    --border-hover: #aeb4ee;
+    --border: #d9ddf2;
+    --border-hover: #b9c1ee;
 
-    --text: #15152f;
-    --text-muted: #5f6180;
+    --text: #111827;
+    --text-soft: #273252;
+    --text-muted: #5d6680;
 
     --primary: #0000ff;
-    --primary-dark: #0000cc;
-    --primary-deep: #17176b;
+    --primary-dark: #0000c7;
+    --primary-deep: #00008f;
     --primary-soft: #eeeeff;
 
-    --indigo: #5555ff;
-    --indigo-dark: #3030d9;
-    --indigo-soft: #e9e9ff;
+    /*
+       High-contrast orange retained from the original design,
+       but darkened slightly so it remains readable on white.
+    */
+    --accent: #c24100;
+    --accent-bright: #e04b00;
+    --accent-soft: #fff1e8;
 
-    --hover: #ffaa00;
+    --success: #15803d;
 
-    --success: #22c55e;
+    --nav: #11144d;
+    --nav-dark: #080a31;
 
     --radius: 12px;
     --radius-sm: 8px;
+    --radius-xs: 6px;
 
     --shadow-sm:
-        0 1px 2px rgba(20, 20, 90, 0.05),
-        0 2px 6px rgba(20, 20, 90, 0.06);
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 2px 5px rgba(15, 23, 42, 0.05);
 
     --shadow-md:
-        0 12px 30px rgba(20, 20, 100, 0.12);
+        0 10px 30px rgba(31, 41, 110, 0.10);
 
     --shadow-lg:
-        0 20px 50px rgba(20, 20, 100, 0.15);
+        0 18px 50px rgba(31, 41, 110, 0.14);
 }
 
 
-/* ---------------------------------------------------------
-   Reset / base
-   --------------------------------------------------------- */
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
 html {
+    min-height: 100%;
     margin: 0;
     padding: 0;
-    min-height: 100%;
+
     background: var(--bg);
+
+    direction: ltr;
 }
 
 body {
+    min-height: 100vh;
+
     margin: 0;
     padding: 0;
 
-    min-height: 100vh;
-
-    direction: ltr;
-
     background:
         radial-gradient(
-            circle at 10% 0%,
-            rgba(85, 85, 255, 0.12),
-            transparent 34%
+            circle at top left,
+            rgba(0, 0, 255, 0.07),
+            transparent 36%
         ),
         linear-gradient(
             180deg,
-            #f8f8ff 0%,
-            var(--bg) 45%,
-            #eef0ff 100%
+            #f7f8ff 0%,
+            var(--bg) 100%
         );
 
     color: var(--text);
 
     font-family:
-        Arial,
-        "Segoe UI",
         Inter,
+        "Segoe UI",
         "Helvetica Neue",
+        Arial,
         sans-serif;
 
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.6;
 
     font-stretch: normal;
 
@@ -100,12 +109,29 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+iframe {
+    border: 0;
+}
 
-/* ---------------------------------------------------------
-   Global links
-   --------------------------------------------------------- */
+img {
+    max-width: 100%;
+}
 
-a,
+a img {
+    border: 0 !important;
+}
+
+
+/* =========================================================
+   GLOBAL LINKS
+   ========================================================= */
+
+/*
+   Keep the original THSC link behaviour:
+   blue normally, orange on hover/active,
+   and no underline.
+*/
+
 a:link,
 a:visited {
     color: var(--primary);
@@ -114,18 +140,22 @@ a:visited {
 
 a:hover,
 a:active {
-    color: var(--hover);
+    color: var(--accent) !important;
     text-decoration: none;
 }
 
-a img {
-    border: 0 !important;
+a {
+    transition:
+        color 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
 }
 
 
-/* ---------------------------------------------------------
-   Headings
-   --------------------------------------------------------- */
+/* =========================================================
+   HEADINGS
+   ========================================================= */
 
 h1,
 h2,
@@ -133,30 +163,40 @@ h3,
 h4,
 h5 {
     font-family:
-        Arial,
-        "Segoe UI",
         Inter,
+        "Segoe UI",
         "Helvetica Neue",
+        Arial,
         sans-serif;
+
+    font-stretch: normal;
 }
 
 h1 {
+    /*
+       Masthead deliberately has NO background.
+       The original cool underline is retained.
+    */
+
     position: relative;
     display: inline-block;
 
     margin: 0;
-    padding: 25px 0 0 max(28px, calc((100vw - 1320px) / 2));
 
-    background: transparent;
-    color: #11112f;
+    padding:
+        24px
+        max(28px, calc((100vw - 1280px) / 2))
+        10px;
+
+    color: #111827;
 
     font-size: 28px;
     font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.025em;
-}
 
-/* The original cool underline, modernised */
+    line-height: 1.15;
+
+    letter-spacing: -0.035em;
+}
 
 h1::after {
     content: "";
@@ -168,28 +208,28 @@ h1::after {
 
     margin-top: 7px;
 
-    border-radius: 3px;
-
     background:
         linear-gradient(
             90deg,
-            #0000ff 0%,
-            #5555ff 55%,
-            #7777ff 100%
+            #0000ff,
+            #4444ff
         );
 
+    border-radius: 3px;
+
     box-shadow:
-        0 2px 8px rgba(0, 0, 255, 0.22);
+        0 2px 7px rgba(0, 0, 255, 0.20);
 }
 
 h2 {
-    margin: 0 0 12px;
-    padding-top: 14px;
+    margin: 22px 0 10px;
 
-    color: #555555;
+    color: var(--text-soft);
 
     font-size: 22px;
     font-weight: 750;
+
+    line-height: 1.3;
 }
 
 h3 {
@@ -198,21 +238,24 @@ h3 {
 
     color: var(--text);
 
-    font-size: 26px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 780;
+
     line-height: 1.25;
+
     letter-spacing: -0.025em;
 }
 
 h4 {
-    margin: 0 0 18px;
+    margin: 24px 0 10px;
     padding: 0;
 
-    color: var(--text);
+    color: var(--text-soft);
 
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 1.25;
+    font-size: 18px;
+    font-weight: 750;
+
+    line-height: 1.35;
 }
 
 h5 {
@@ -220,36 +263,40 @@ h5 {
 
     width: 100%;
 
-    margin: 0 0 8px;
+    margin: 8px 0 8px;
     padding: 4px 0 5px;
 
-    border-bottom: 2px solid var(--indigo);
+    border-bottom: 2px solid var(--primary);
 
     color: var(--primary);
 
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 650;
 }
 
 
-/* ---------------------------------------------------------
-   Main page wrapper
-   --------------------------------------------------------- */
+/* =========================================================
+   MASTHEAD / PAGE WRAPPER
+   ========================================================= */
 
 #page-wrapper {
     position: relative;
 
-    width: min(1480px, calc(100% - 48px));
+    width: calc(100% - 48px);
 
-    min-width: 0;
+    max-width: 1400px;
 
-    margin: 28px auto 55px;
+    min-width: 440px;
+
+    margin:
+        10px auto
+        50px;
 
     background: var(--surface);
 
     border: 1px solid var(--border);
 
-    border-radius: 16px;
+    border-radius: 14px;
 
     overflow: hidden;
 
@@ -257,11 +304,16 @@ h5 {
 }
 
 
-/* ---------------------------------------------------------
-   Navigation
-   --------------------------------------------------------- */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 #navigation {
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
     margin: 0;
 
     padding: 0;
@@ -269,58 +321,55 @@ h5 {
     background:
         linear-gradient(
             135deg,
-            #11115f 0%,
-            #1717a8 48%,
-            #0000ff 100%
+            var(--nav-dark),
+            var(--nav)
         );
 
     color: #ffffff;
 
-    font-size: 14px;
-
-    text-align: left;
-
-    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
     box-shadow:
-        inset 0 -1px 0 rgba(255,255,255,0.12);
+        0 5px 20px rgba(5, 8, 50, 0.15);
 }
 
-#navigation > ul {
+#navigation ul {
     display: flex;
     align-items: center;
 
-    gap: 4px;
+    width: 100%;
 
     margin: 0;
-    padding: 8px 12px;
+    padding: 7px 10px;
 
     list-style: none;
+
+    font-weight: 650;
 }
 
-#navigation > ul li {
+#navigation li {
     display: block;
 
-    margin: 0;
+    margin: 0 2px;
     padding: 0;
 
     border-radius: 8px;
 
     color: #ffffff;
 
-    font-weight: 600;
+    font-size: 14px;
 
     cursor: pointer;
 
     transition:
-        background 0.16s ease,
-        transform 0.16s ease;
+        background 0.15s ease,
+        transform 0.15s ease;
 }
 
-#navigation > ul li a,
-#navigation > ul li a:link,
-#navigation > ul li a:visited {
+#navigation li a {
     display: block;
+
+    width: 100%;
 
     padding: 10px 14px;
 
@@ -328,75 +377,78 @@ h5 {
 
     text-decoration: none;
 
-    white-space: nowrap;
+    border-radius: 8px;
 }
 
-#navigation > ul li.element:hover,
-#navigation > ul li.current {
-    background: rgba(255, 255, 255, 0.16);
-
-    box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.12);
-
-    transform: translateY(-1px);
-}
-
-#navigation > ul li.current {
+#navigation li.element:hover,
+#navigation li.current {
     background: #0000ff;
 
     box-shadow:
-        0 4px 12px rgba(0, 0, 80, 0.25);
+        0 3px 12px rgba(0, 0, 255, 0.28);
 }
 
-#navigation > ul li.element:hover a,
-#navigation > ul li.current a {
+#navigation li.element:hover {
+    transform: translateY(-1px);
+}
+
+#navigation li.current a,
+#navigation li.current a:link,
+#navigation li.current a:visited,
+#navigation li.current a:hover,
+#navigation li.current a:active {
+    color: #ffffff !important;
+}
+
+#navigation li.element a:link,
+#navigation li.element a:visited,
+#navigation li.element a:hover,
+#navigation li.element a:active {
     color: #ffffff !important;
 }
 
 
-/* ---------------------------------------------------------
-   Breadcrumb / folder tree
-   --------------------------------------------------------- */
+/* =========================================================
+   FOLDER TREE / BREADCRUMB
+   ========================================================= */
 
 #folder-tree {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 3px;
 
-    min-height: 44px;
+    min-height: 42px;
 
-    padding: 9px 18px;
+    padding: 9px 16px;
 
     background: #fafaff;
 
-    border-top: 1px solid rgba(85, 85, 255, 0.08);
     border-bottom: 1px solid var(--border);
 
-    color: #7777aa;
+    color: var(--text-muted);
 
     font-size: 13px;
 }
 
-#folder-tree a,
 #folder-tree a:link,
 #folder-tree a:visited {
-    color: #7777aa !important;
-
     background: transparent !important;
+
+    color: var(--text-muted) !important;
 
     text-decoration: none;
 }
 
 #folder-tree a:hover,
 #folder-tree a:active {
-    color: var(--hover) !important;
+    background: var(--accent-soft) !important;
 
-    background: transparent !important;
+    color: var(--accent) !important;
 }
 
 #folder-tree .current {
-    color: var(--primary) !important;
+    color: var(--text) !important;
 
     font-weight: 700;
 }
@@ -404,25 +456,25 @@ h5 {
 #folder-tree .reverse {
     margin-left: auto;
 
-    padding: 5px 10px;
+    padding: 5px 9px;
 
-    border-radius: 7px;
+    border-radius: 6px;
 
-    background: var(--primary-soft) !important;
+    background: #f0f2ff !important;
 
     color: var(--primary) !important;
-
-    font-weight: 600;
 }
 
 #folder-tree .reverse:hover {
-    background: var(--indigo-soft) !important;
+    background: var(--accent-soft) !important;
+
+    color: var(--accent) !important;
 }
 
 
-/* ---------------------------------------------------------
-   Main content
-   --------------------------------------------------------- */
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 
 #content-all {
     width: 100%;
@@ -431,27 +483,446 @@ h5 {
 
     margin: 0;
 
-    padding: 28px 28px 24px;
+    padding:
+        30px
+        30px
+        35px;
 }
 
-#content-all > h3,
-#content-all > h4 {
-    position: relative;
+#content-all > h3 {
+    display: flex;
+    align-items: center;
 
-    margin-bottom: 22px;
+    min-height: 34px;
+
+    margin: 0 0 20px;
 }
 
 #content-all > h3 .title {
-    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#content-all > h3 img {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
 }
 
 
-/* ---------------------------------------------------------
-   Intro / content table
-   --------------------------------------------------------- */
+/* =========================================================
+   GENERAL CONTENT
+   ========================================================= */
 
-tr.content td {
-    padding: 18px 22px;
+#content-all p {
+    color: var(--text-muted);
+}
+
+#content-all ul {
+    color: var(--text-muted);
+}
+
+#content-all table {
+    max-width: 100%;
+}
+
+td {
+    vertical-align: top;
+}
+
+
+/* =========================================================
+   WEB GRID
+   ========================================================= */
+
+/*
+   Original dimensions:
+       width  = 200px
+       height = 90px
+
+   They are now MINIMUM dimensions.
+
+   This means:
+   - desktop keeps the original visual proportions
+   - columns can grow when there is more space
+   - long text can breathe
+   - the layout does not become cramped
+*/
+
+#web-grid {
+    width: 100%;
+
+    margin-top: 4px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#web-grid > div {
+    display: table;
+
+    width: 100%;
+
+    min-width: 800px;
+
+    margin-top: 4px;
+}
+
+#web-grid > div > div {
+    display: table-row;
+}
+
+#web-grid > div > div > div {
+    display: table-cell;
+
+    position: relative;
+
+    width: 25%;
+
+    min-width: 200px;
+    min-height: 90px;
+
+    height: 90px;
+
+    padding: 5px;
+
+    vertical-align: top;
+}
+
+
+/*
+   Grid card anchor.
+*/
+
+#web-grid > div > div > div > a {
+    display: block;
+
+    position: relative;
+
+    width: 100%;
+    min-width: 190px;
+
+    height: 80px;
+
+    color: var(--text);
+
+    text-decoration: none;
+}
+
+
+/*
+   Outer icon/card span.
+
+   The old HTML contains:
+       <a>
+           <span>
+               <img>
+               <span>Text</span>
+           </span>
+       </a>
+*/
+
+#web-grid > div > div > div > a > span {
+    display: flex;
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    align-items: center;
+
+    width: 100%;
+    min-width: 190px;
+
+    min-height: 80px;
+
+    height: 80px;
+
+    margin: 0;
+
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    color: var(--text);
+
+    font-size: 14px !important;
+    font-weight: 650;
+
+    text-align: left;
+
+    box-shadow: var(--shadow-sm);
+
+    overflow: hidden;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+/*
+   Subject icon.
+*/
+
+#web-grid > div > div > div > a > span > img {
+    flex: 0 0 auto;
+
+    width: 18px;
+    height: 18px;
+
+    margin: 0 8px 0 0;
+
+    object-fit: contain;
+}
+
+
+/*
+   Inner text span.
+
+   Override the old inline:
+       bottom: 5px;
+       height: 21px;
+
+   so the legacy inline styles don't force weird positioning.
+*/
+
+#web-grid > div > div > div > a > span > span {
+    position: static !important;
+
+    display: flex !important;
+    align-items: center;
+
+    width: auto !important;
+    min-width: 0;
+
+    height: auto !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    color: var(--text) !important;
+
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+
+/*
+   Hover state.
+
+   Original orange is used for the text.
+*/
+
+#web-grid > div > div > div > a:hover > span {
+    background: var(--accent-soft);
+
+    border-color: #f2b28e;
+
+    color: var(--accent);
+
+    box-shadow:
+        0 8px 22px rgba(194, 65, 0, 0.12);
+
+    transform: translateY(-2px);
+}
+
+#web-grid > div > div > div > a:hover > span > span {
+    background: transparent !important;
+
+    color: var(--accent) !important;
+}
+
+
+/* =========================================================
+   WEB LIST
+   ========================================================= */
+
+#web-list {
+    width: 100%;
+}
+
+#web-list > div {
+    display: table;
+
+    width: 100%;
+}
+
+#web-list > div > div {
+    display: table-row;
+
+    width: 100%;
+}
+
+#web-list > div > div > div {
+    display: table-row;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/*
+   Legacy list entries are spans containing an icon and link.
+*/
+
+#web-list span {
+    color: var(--text-soft);
+}
+
+#web-list span > img {
+    vertical-align: middle;
+
+    margin-right: 5px;
+}
+
+#web-list span > a {
+    color: var(--primary);
+
+    font-weight: 600;
+
+    line-height: 1.6;
+}
+
+#web-list span > a:hover {
+    color: var(--accent) !important;
+}
+
+
+/*
+   Statistics such as:
+       179 papers online, 163 w. sol
+
+   These are nested spans in the original HTML.
+*/
+
+#web-list span span {
+    display: inline-block;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SMALL SCREEN NAVIGATION
+   ========================================================= */
+
+.smallscreen {
+    display: block;
+
+    margin: 0 0 15px;
+
+    padding: 14px 16px;
+
+    background: var(--surface-soft);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.smallscreen span {
+    display: block;
+
+    padding: 4px 0;
+}
+
+.smallscreen img {
+    vertical-align: middle;
+}
+
+.smallscreen a {
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.smallscreen a:hover {
+    color: var(--accent) !important;
+}
+
+
+/* =========================================================
+   LISTING TABLES
+   ========================================================= */
+
+#content-all table.listing {
+    width: 100%;
+
+    margin: 18px 0 0;
+
+    border-collapse: separate;
+
+    border-spacing: 0 10px;
+
+    table-layout: fixed;
+}
+
+
+/*
+   Generic listing rows.
+
+   :has() is supported by modern browsers and provides
+   a useful enhancement while legacy browsers simply
+   receive the fallback styling below.
+*/
+
+#content-all table.listing td {
+    font-weight: 700;
+
+    vertical-align: top;
+}
+
+#content-all table.listing tr.content td {
+    font-weight: 400 !important;
+}
+
+
+/*
+   Intro/content block.
+*/
+
+#content-all table.listing tr.content td {
+    padding: 18px 20px;
+
+    background: var(--surface-soft);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    color: var(--text-muted);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/*
+   School / category cards.
+*/
+
+#content-all table.listing tr:not(.content) td {
+    padding: 18px 20px;
 
     background: var(--surface);
 
@@ -462,28 +933,112 @@ tr.content td {
     color: var(--text);
 
     box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
 }
 
-tr.content ul {
-    margin: 0;
-    padding-left: 20px;
+#content-all table.listing tr:not(.content) td:hover {
+    border-color: var(--border-hover);
 
-    color: var(--text-muted);
+    box-shadow: var(--shadow-md);
+
+    transform: translateY(-1px);
 }
 
-tr.content li + li {
-    margin-top: 5px;
+
+/*
+   Paper/link container.
+
+   Modern grid, but retains enough width for existing
+   paper names.
+*/
+
+#content-all table.listing td span.content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(185px, 1fr)
+        );
+
+    gap: 8px;
+
+    margin-top: 14px;
+
+    padding: 0;
+
+    font-weight: 400 !important;
 }
 
-tr.content a {
+
+/*
+   Legacy <br> separators become unnecessary once
+   the content is represented as a grid.
+*/
+
+#content-all table.listing td span.content br {
+    display: none;
+}
+
+
+/*
+   Individual paper links.
+*/
+
+#content-all table.listing td span.content a {
+    display: block;
+
+    min-width: 0;
+
+    padding: 9px 11px;
+
+    background: var(--surface-soft);
+
+    border: 1px solid #e0e4f2;
+
+    border-radius: 8px;
+
     color: var(--primary);
+
+    font-size: 13px;
+
     font-weight: 600;
+
+    line-height: 1.35;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+#content-all table.listing td span.content a:hover {
+    background: var(--accent-soft);
+
+    border-color: #f0a67c;
+
+    color: var(--accent) !important;
+
+    box-shadow:
+        0 4px 12px rgba(194, 65, 0, 0.10);
+
+    transform: translateY(-1px);
 }
 
 
-/* ---------------------------------------------------------
-   Search
-   --------------------------------------------------------- */
+/* =========================================================
+   SEARCH
+   ========================================================= */
 
 .search {
     padding: 15px;
@@ -494,7 +1049,7 @@ tr.content a {
 
     border: 1px solid var(--border);
 
-    border-radius: var(--radius);
+    border-radius: 10px;
 
     box-shadow: var(--shadow-sm);
 }
@@ -516,20 +1071,21 @@ tr.content a {
 
     padding: 12px 14px;
 
-    border: 1px solid #c9cdf2;
+    background: #ffffff;
+
+    border: 1px solid var(--border);
 
     border-radius: 9px;
-
-    background: #ffffff;
 
     color: var(--text);
 
     font-family: inherit;
+
     font-size: 14px;
 
     outline: none;
 
-    box-shadow: 0 1px 3px rgba(20,20,100,0.05);
+    box-shadow: var(--shadow-sm);
 
     transition:
         border-color 0.15s ease,
@@ -537,30 +1093,29 @@ tr.content a {
 }
 
 #search-bar::placeholder {
-    color: #8b8daf;
+    color: #8a93aa;
 }
 
 #search-bar:focus {
-    border-color: var(--primary);
+    border-color: #6666ff;
 
     box-shadow:
         0 0 0 3px rgba(0, 0, 255, 0.10),
-        0 3px 10px rgba(0, 0, 120, 0.06);
+        var(--shadow-sm);
 }
 
 #search-row label,
 label {
     display: inline-flex;
-
     align-items: center;
 
-    margin-top: 7px;
+    margin-top: 8px;
 
     color: var(--text-muted);
 
     font-size: 13px;
 
-    font-weight: normal !important;
+    font-weight: 400 !important;
 
     cursor: pointer;
 }
@@ -574,61 +1129,65 @@ input[type="checkbox"] {
 #search-message {
     display: inline-block;
 
-    margin-top: 6px;
+    margin-top: 7px;
 
-    color: #ff5500;
+    color: var(--accent);
 
-    font-size: 12px;
+    font-size: 13px;
+
+    font-weight: 600;
 }
 
 
-/* ---------------------------------------------------------
-   Buttons
-   --------------------------------------------------------- */
+/* =========================================================
+   BUTTONS / INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+input {
+    border-radius: 7px;
+}
 
 input[type="button"],
 input[type="submit"] {
     margin-top: 10px;
 
-    padding: 9px 16px;
+    padding: 8px 16px;
+
+    background: var(--primary);
 
     border: 0;
 
     border-radius: 8px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #0000ff,
-            #5555ff
-        ) !important;
-
     color: #ffffff !important;
 
-    font-family: inherit;
-    font-weight: 600;
+    font-weight: 650;
 
     cursor: pointer;
 
     box-shadow:
-        0 4px 10px rgba(0,0,255,0.18);
+        0 3px 8px rgba(0, 0, 255, 0.18);
 
     transition:
         background 0.15s ease,
-        transform 0.12s ease,
+        transform 0.1s ease,
         box-shadow 0.15s ease;
 }
 
 input[type="button"]:hover,
 input[type="submit"]:hover {
-    background: #0000cc !important;
-
-    color: #ffffff !important;
+    background: var(--primary-dark);
 
     transform: translateY(-1px);
 
     box-shadow:
-        0 6px 14px rgba(0,0,180,0.22);
+        0 5px 12px rgba(0, 0, 255, 0.24);
 }
 
 input[type="button"]:active,
@@ -637,513 +1196,59 @@ input[type="submit"]:active {
 }
 
 
-/* ---------------------------------------------------------
-   Modern subject grid
-   ---------------------------------------------------------
-
-   IMPORTANT:
-   Original dimensions were:
-
-       width:  200px
-       height: 90px
-
-   These are now MINIMUM dimensions.
-
-   The cells may therefore grow when there is room, rather
-   than remaining locked at 200 x 90.
-   --------------------------------------------------------- */
-
-#web-grid {
-    width: 100%;
-
-    margin-top: 4px;
-
-    overflow-x: auto;
-    overflow-y: visible;
-
-    scrollbar-width: thin;
-}
-
-#web-grid > div {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(200px, 1fr));
-
-    gap: 12px;
-
-    width: 100%;
-
-    margin: 0;
-
-    overflow: visible;
-}
-
-/*
-   Flatten the original table-like structure.
-
-   The HTML has:
-       outer
-         row
-           cell
-           cell
-           cell
-           cell
-
-   We turn the cells into responsive grid items.
-*/
-
-#web-grid > div > div {
-    display: contents;
-}
-
-#web-grid > div > div > div {
-    position: relative;
-
-    display: block;
-
-    width: auto;
-    min-width: 200px;
-
-    height: auto;
-    min-height: 90px;
-
-    padding: 0;
-}
-
-
-/* Subject card */
-
-#web-grid > div > div > div > a {
-    display: block;
-
-    width: 100%;
-    min-width: 200px;
-
-    height: 100%;
-    min-height: 90px;
-
-    color: var(--text);
-
-    text-decoration: none;
-}
-
-
-/* Outer coloured card */
-
-#web-grid > div > div > div > a > span {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    width: 100%;
-    min-width: 200px;
-
-    min-height: 90px;
-
-    margin: 0;
-
-    padding: 12px 14px;
-
-    overflow: hidden;
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #fafaff 100%
-        );
-
-    color: var(--text);
-
-    font-size: 14px !important;
-    font-weight: 650;
-
-    box-shadow: var(--shadow-sm);
-
-    transition:
-        border-color 0.16s ease,
-        background 0.16s ease,
-        box-shadow 0.16s ease,
-        transform 0.16s ease;
-}
-
-
-/* Subject icon */
-
-#web-grid > div > div > div > a > span > img {
-    flex: 0 0 auto;
-
-    width: 28px;
-    height: 28px;
-
-    margin: 0 8px 0 0;
-
-    object-fit: contain;
-}
-
-
-/*
-   The nested span contains the text.
-
-   Override the old inline positioning without requiring
-   any HTML changes.
-*/
-
-#web-grid > div > div > div > a > span > span {
-    position: static !important;
-
-    display: flex !important;
-
-    align-items: center;
-
-    width: auto !important;
-    height: auto !important;
-
-    min-height: 0 !important;
-
-    padding: 0 !important;
-
-    background: transparent !important;
-
-    color: inherit !important;
-
-    line-height: 1.35;
-
-    overflow-wrap: anywhere;
-}
-
-
-/* Card hover */
-
-#web-grid > div > div > div > a > span:hover {
-    border-color: #9999ff;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f4f4ff,
-            #e9e9ff
-        );
-
-    color: var(--primary);
-
-    box-shadow: var(--shadow-md);
-
-    transform: translateY(-2px);
-}
-
-
-/*
-   Preserve the original orange hover/active link colour
-   while making the card itself indigo.
-*/
-
-#web-grid a:hover,
-#web-grid a:active {
-    color: var(--hover);
-}
-
-#web-grid > div > div > div > a:hover > span {
-    border-color: var(--indigo);
-
-    box-shadow:
-        0 10px 24px rgba(0,0,180,0.14);
-}
-
-
-/* ---------------------------------------------------------
-   Responsive grid scaling
-   --------------------------------------------------------- */
-
-/*
-   Large screens:
-   Four columns, but each cell can grow beyond 200px.
-*/
-
-@media (min-width: 1150px) {
-    #web-grid > div {
-        grid-template-columns:
-            repeat(4, minmax(200px, 1fr));
-    }
-}
-
-
-/*
-   Medium screens:
-   Three columns, still respecting 200px minimum.
-*/
-
-@media (max-width: 1149px) {
-    #web-grid > div {
-        grid-template-columns:
-            repeat(3, minmax(200px, 1fr));
-    }
-}
-
-
-/*
-   Smaller desktop/tablet:
-   Two columns.
-*/
-
-@media (max-width: 850px) {
-    #web-grid > div {
-        grid-template-columns:
-            repeat(2, minmax(200px, 1fr));
-    }
-}
-
-
-/*
-   Phones:
-   One column.
-
-   The 200px minimum is retained, but the actual card can
-   become wider than 200px.
-*/
-
-@media (max-width: 500px) {
-    #web-grid > div {
-        grid-template-columns:
-            minmax(200px, 1fr);
-    }
-
-    #web-grid > div > div > div > a,
-    #web-grid > div > div > div > a > span {
-        min-width: 200px;
-    }
-}
-
-
-/* ---------------------------------------------------------
-   Web list / mobile list view
-   --------------------------------------------------------- */
-
-#web-list {
-    width: 100%;
-}
-
-#web-list > div {
-    display: block;
-
-    width: 100%;
-}
-
-#web-list > div > div {
-    display: block;
-
-    width: 100%;
-}
-
-#web-list > div > div > div {
-    display: block;
-
-    width: 100%;
-
-    padding: 0;
-    margin: 0;
-}
-
-#web-list .smallscreen {
-    margin-bottom: 16px;
-}
-
-
-/* Individual list links */
-
-#web-list > div > div > div > img {
-    vertical-align: middle;
-
-    margin-right: 5px;
-}
-
-#web-list > div > div > div > a {
+/* =========================================================
+   REMARKS
+   ========================================================= */
+
+span.remark {
     display: inline-block;
 
-    padding: 5px 0;
+    padding: 2px 6px;
 
-    color: var(--primary);
+    background: #eeeeff;
 
-    font-weight: 550;
-}
+    border: 1px solid #cacaFF;
 
-#web-list > div > div > div > a:hover {
-    color: var(--hover);
-}
+    border-radius: 5px;
 
+    color: #141400 !important;
 
-/* ---------------------------------------------------------
-   Small-screen navigation
-   --------------------------------------------------------- */
+    font-size: 10px;
 
-.smallscreen {
-    padding: 15px;
-
-    margin-bottom: 15px;
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    background: var(--surface-soft);
-
-    box-shadow: var(--shadow-sm);
-}
-
-.smallscreen img {
-    vertical-align: middle;
-}
-
-.smallscreen a {
-    color: var(--primary);
-
-    font-weight: 600;
-
-    text-decoration: none;
-}
-
-.smallscreen a:hover {
-    color: var(--hover);
+    cursor: pointer;
 }
 
 
-/* ---------------------------------------------------------
-   Tables / paper listings
-   --------------------------------------------------------- */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
-#content-all table.listing {
-    width: 100%;
+#footer {
+    padding: 15px 20px;
 
-    margin: 18px 0 0;
+    background: #f7f8ff;
 
-    border-collapse: separate;
+    border-top: 1px solid var(--border);
 
-    border-spacing: 0 10px;
+    color: var(--text-muted);
 
-    table-layout: auto;
+    font-size: 12px;
 }
 
-#content-all table.listing td {
-    vertical-align: top;
-}
-
-
-/* School / category row */
-
-table.listing > tbody > tr:not(.search):not(.content) > td {
-    padding: 18px 20px;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    color: var(--text);
-
-    font-size: 16px;
-
-    font-weight: 750;
-
-    box-shadow: var(--shadow-sm);
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
-}
-
-table.listing > tbody > tr:not(.search):not(.content) > td:hover {
-    border-color: var(--border-hover);
-
-    box-shadow: var(--shadow-md);
-}
-
-
-/* Paper links */
-
-table.listing span.content {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fill, minmax(185px, 1fr));
-
-    gap: 8px;
-
-    margin-top: 13px;
+#footer #folder-tree {
+    min-height: auto;
 
     padding: 0;
 
-    font-weight: normal !important;
-}
+    background: transparent;
 
-table.listing span.content br {
-    display: none;
-}
-
-table.listing span.content a {
-    display: block;
-
-    min-width: 0;
-
-    padding: 9px 11px;
-
-    border: 1px solid #e1e3f5;
-
-    border-radius: 8px;
-
-    background: var(--surface-soft);
-
-    color: #33335f;
-
-    font-size: 13px;
-
-    font-weight: 550;
-
-    line-height: 1.35;
-
-    text-decoration: none;
-
-    overflow: hidden;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease,
-        color 0.15s ease,
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-}
-
-table.listing span.content a:hover {
-    background: var(--indigo-soft);
-
-    border-color: #9999ff;
-
-    color: var(--hover);
-
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 4px 10px rgba(0,0,150,0.08);
+    border: 0;
 }
 
 
-/* Intro rows */
-
-#content-all table.listing tr.content td {
-    font-weight: normal !important;
-}
-
-
-/* ---------------------------------------------------------
-   PDF viewer
-   --------------------------------------------------------- */
+/* =========================================================
+   PDF VIEWER
+   ========================================================= */
 
 #viewer {
     width: 100%;
@@ -1162,16 +1267,12 @@ table.listing span.content a:hover {
     height: 0 !important;
 }
 
-
-/* ---------------------------------------------------------
-   Overlay bar
-   --------------------------------------------------------- */
-
 #overlaybar {
     position: absolute;
 
     top: 0;
-    left: 0;
+
+    z-index: 2;
 
     width: 100%;
 
@@ -1180,37 +1281,36 @@ table.listing span.content a:hover {
     background:
         linear-gradient(
             90deg,
-            #5555ff,
+            #0000c7,
             #0000ff
         );
 
     color: #ffffff;
 
-    z-index: 2;
-
     box-shadow:
-        0 4px 12px rgba(0,0,100,0.18);
+        0 4px 12px rgba(0, 0, 120, 0.25);
 }
 
-#overlaybar a,
 #overlaybar a:link,
 #overlaybar a:visited {
-    padding: 2px 5px;
+    display: inline-block;
+
+    padding: 2px 6px;
+
+    background: #00008f;
 
     border-radius: 5px;
 
-    background: #0000cc;
-
-    color: #ffffff;
+    color: #ffffff !important;
 
     text-decoration: none;
 }
 
 #overlaybar a:hover,
 #overlaybar a:active {
-    background: #222222;
+    background: var(--accent-bright);
 
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 #overlaybar #overlayinsert {
@@ -1218,32 +1318,35 @@ table.listing span.content a:hover {
 }
 
 
-/* ---------------------------------------------------------
-   PDF popup
-   --------------------------------------------------------- */
+/* =========================================================
+   PDF POPUP
+   ========================================================= */
 
 .pdf-popup {
     position: absolute;
+
+    z-index: 999999;
 
     min-width: 260px;
     max-width: 320px;
 
     padding: 12px;
 
-    background: #eeeeff;
+    background: #ffffff;
 
-    border: 1px solid #aaaaff;
+    border: 1px solid var(--border);
 
     border-radius: 10px;
 
-    color: #333355;
+    color: var(--text);
 
     box-shadow:
-        0 15px 35px rgba(0,0,0,0.25);
+        0 15px 35px rgba(0, 0, 0, 0.25);
 
-    z-index: 999999;
-
-    font-family: Arial, sans-serif;
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
 }
 
 .pdf-popup a {
@@ -1257,7 +1360,7 @@ table.listing span.content a:hover {
 }
 
 .pdf-popup a:hover {
-    color: var(--hover);
+    color: var(--accent) !important;
 }
 
 .pdf-progress {
@@ -1265,7 +1368,7 @@ table.listing span.content a:hover {
 
     margin-top: 10px;
 
-    background: #333333;
+    background: #252525;
 
     border-radius: 4px;
 
@@ -1276,7 +1379,7 @@ table.listing span.content a:hover {
     width: 100%;
     height: 100%;
 
-    background: var(--success);
+    background: #22c55e;
 
     transform-origin: right;
     transform: scaleX(1);
@@ -1289,71 +1392,276 @@ table.listing span.content a:hover {
 
     padding: 6px 10px;
 
+    background: #111827;
+
     border: 0;
 
     border-radius: 6px;
-
-    background: #444444;
 
     color: white;
 
     cursor: pointer;
 }
 
-
-/* ---------------------------------------------------------
-   Footer
-   --------------------------------------------------------- */
-
-#footer {
-    padding: 0;
-
-    background: #fafaff;
-
-    border-top: 1px solid var(--border);
-
-    font-size: 12px;
-
-    color: #7777aa;
-}
-
-#footer #folder-tree {
-    border: 0;
-
-    background: transparent;
+.pdf-popup button:hover {
+    background: var(--primary);
 }
 
 
-/* ---------------------------------------------------------
-   Accessibility
-   --------------------------------------------------------- */
+/* =========================================================
+   DARK MODE
+   ========================================================= */
 
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-    outline: 3px solid rgba(0, 0, 255, 0.25);
+body.dark-mode {
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(0, 0, 255, 0.14),
+            transparent 35%
+        ),
+        #080a1c !important;
 
-    outline-offset: 2px;
+    color: #e8eaff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+    color: #f4f5ff;
+}
+
+body.dark-mode h1::after {
+    background:
+        linear-gradient(
+            90deg,
+            #5555ff,
+            #8888ff
+        );
+}
+
+body.dark-mode #page-wrapper {
+    background: #0f122b;
+
+    border-color: #292e5d;
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.55);
+}
+
+body.dark-mode #navigation {
+    background:
+        linear-gradient(
+            135deg,
+            #05061e,
+            #0a0d36
+        );
+}
+
+body.dark-mode #navigation li.element:hover,
+body.dark-mode #navigation li.current {
+    background: #0000cc;
+}
+
+body.dark-mode #folder-tree {
+    background: #111532;
+
+    border-color: #292e5d;
+
+    color: #aeb5d5;
+}
+
+body.dark-mode #folder-tree a:link,
+body.dark-mode #folder-tree a:visited {
+    color: #aeb5d5 !important;
+}
+
+body.dark-mode #folder-tree a:hover,
+body.dark-mode #folder-tree a:active {
+    color: #ff8a55 !important;
+    background: rgba(224, 75, 0, 0.12) !important;
+}
+
+body.dark-mode #folder-tree .current {
+    color: #f1f3ff !important;
+}
+
+body.dark-mode #content-all {
+    background: #0f122b;
+}
+
+body.dark-mode #content-all a {
+    color: #7f8cff;
+}
+
+body.dark-mode #content-all a:hover,
+body.dark-mode #content-all a:active {
+    color: #ff8a55 !important;
+}
+
+body.dark-mode #web-grid > div > div > div > a > span {
+    background: #171b3c;
+
+    border-color: #2d3263;
+
+    color: #eef0ff;
+}
+
+body.dark-mode #web-grid > div > div > div > a > span > span {
+    color: #eef0ff !important;
+}
+
+body.dark-mode #web-grid > div > div > div > a:hover > span {
+    background: #261b1a;
+
+    border-color: #a94d25;
+
+    color: #ff9b6c;
+}
+
+body.dark-mode #web-grid > div > div > div > a:hover > span > span {
+    color: #ff9b6c !important;
+}
+
+body.dark-mode #content-all table.listing tr:not(.content) td {
+    background: #171b3c;
+
+    border-color: #2d3263;
+
+    color: #eef0ff;
+}
+
+body.dark-mode #content-all table.listing tr.content td {
+    background: #141832;
+
+    border-color: #2d3263;
+
+    color: #b9bfda;
+}
+
+body.dark-mode #content-all table.listing td span.content a {
+    background: #111532;
+
+    border-color: #2d3263;
+
+    color: #8490ff;
+}
+
+body.dark-mode #content-all table.listing td span.content a:hover {
+    background: #291b17;
+
+    border-color: #a94d25;
+
+    color: #ff9b6c !important;
+}
+
+body.dark-mode #search-bar,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #111532;
+
+    border-color: #343a70;
+
+    color: #f8f9ff;
+}
+
+body.dark-mode #search-bar:focus {
+    border-color: #7777ff;
+
+    box-shadow:
+        0 0 0 3px rgba(85, 85, 255, 0.18);
+}
+
+body.dark-mode .search {
+    background: #141832;
+
+    border-color: #2d3263;
+}
+
+body.dark-mode #footer {
+    background: #0c0f25;
+
+    border-color: #292e5d;
+
+    color: #858cae;
+}
+
+body.dark-mode .smallscreen {
+    background: #141832;
+
+    border-color: #2d3263;
+}
+
+body.dark-mode .pdf-popup {
+    background: #171b3c;
+
+    border-color: #343a70;
+
+    color: #f3f4ff;
+}
+
+body.dark-mode #overlaybar {
+    background:
+        linear-gradient(
+            90deg,
+            #00008f,
+            #0000dd
+        );
 }
 
 
-/* ---------------------------------------------------------
-   Responsive page layout
-   --------------------------------------------------------- */
+/* =========================================================
+   RESPONSIVE — 1095px
+   ========================================================= */
 
-@media (max-width: 1095px) {
-    #navigation > ul .reducible {
-        display: none;
+@media screen and (max-width: 1095px) {
+
+    #navigation li.reducible {
+        display: none !important;
+    }
+
+    #content-all {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 }
 
-@media (max-width: 995px) {
+
+/* =========================================================
+   RESPONSIVE — 995px
+   ========================================================= */
+
+@media screen and (max-width: 995px) {
+
     .layout-searchbox {
         display: none !important;
     }
+
+    #page-wrapper {
+        width: calc(100% - 32px);
+
+        margin-top: 6px;
+    }
+
+    #web-grid > div {
+        min-width: 800px;
+    }
 }
 
-@media (max-width: 840px) {
+
+/* =========================================================
+   RESPONSIVE — 840px
+   ========================================================= */
+
+@media screen and (max-width: 840px) {
+
+    /*
+       Switch from the four-column grid to the original
+       list representation.
+    */
+
     #web-grid {
         display: none !important;
     }
@@ -1369,305 +1677,217 @@ input:focus-visible {
     #folder-tree {
         display: none !important;
     }
+
+    #content-all {
+        padding: 22px 20px 30px;
+    }
 }
 
-@media (max-width: 795px) {
+
+/* =========================================================
+   RESPONSIVE — 795px
+   ========================================================= */
+
+@media screen and (max-width: 795px) {
+
     .reverse-element,
     .reverse-wedge {
         display: none;
     }
 
-    #content-all {
-        padding: 24px 20px 20px;
-    }
-
-    #content-all h3 {
-        font-size: 23px;
+    #content-all h4 {
+        font-size: 17px !important;
     }
 }
 
-@media (max-width: 695px) {
+
+/* =========================================================
+   RESPONSIVE — 745px
+   ========================================================= */
+
+@media screen and (max-width: 745px) {
+
+    #web-list > div > div > div {
+        display: table-row;
+
+        width: 100%;
+    }
+
+    #content-all table.listing td span.content {
+        grid-template-columns:
+            repeat(
+                auto-fill,
+                minmax(165px, 1fr)
+            );
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 695px
+   ========================================================= */
+
+@media screen and (max-width: 695px) {
+
     #navigation {
         display: none !important;
     }
 
     #page-wrapper {
-        width: calc(100% - 28px);
+        width: calc(100% - 24px);
 
-        margin: 18px auto 35px;
+        min-width: 0;
 
-        border-radius: 13px;
+        margin:
+            5px 12px
+            30px;
     }
 
     #content-all {
-        padding: 22px 16px 18px;
+        padding: 20px 15px 25px;
     }
 
     h1 {
-        padding-left: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
 
-        font-size: 24px;
+        font-size: 23px;
+    }
+
+    #content-all table.listing td span.content {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 500px) {
+
+/* =========================================================
+   RESPONSIVE — 500px
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 14px;
+    }
+
     #page-wrapper {
         width: calc(100% - 16px);
 
-        margin: 12px auto 25px;
-
-        border-radius: 11px;
+        margin:
+            4px 8px
+            20px;
     }
 
     #content-all {
-        padding: 20px 12px 16px;
+        padding:
+            18px 12px
+            25px;
     }
 
-    #content-all h3 {
-        margin-bottom: 16px;
+    h1 {
+        padding:
+            18px
+            14px
+            8px;
 
         font-size: 21px;
     }
 
-    table.listing {
+    h1::after {
+        height: 3px;
+    }
+
+    #content-all > h3 {
+        font-size: 21px;
+    }
+
+    #content-all table.listing {
         border-spacing: 0 8px;
     }
 
-    table.listing > tbody > tr:not(.search):not(.content) > td {
-        padding: 15px;
+    #content-all table.listing tr:not(.content) td {
+        padding: 14px;
     }
 
-    table.listing span.content {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    #content-all table.listing td span.content {
+        grid-template-columns: 1fr 1fr;
 
         gap: 6px;
     }
 
-    table.listing span.content a {
+    #content-all table.listing td span.content a {
         padding: 8px 9px;
 
         font-size: 12px;
     }
 
-    tr.content td {
-        padding: 15px;
+    #web-list span > a {
+        font-size: 14px;
     }
 }
 
 
-/* ---------------------------------------------------------
-   Reduced motion
-   --------------------------------------------------------- */
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media screen and (max-width: 445px) {
+
+    /*
+       The old site required 440px minimum width.
+       Modern layout allows the page itself to shrink,
+       avoiding horizontal overflow on phones.
+    */
+
+    #page-wrapper {
+        width: calc(100% - 10px);
+
+        min-width: 0;
+
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #content-all {
+        overflow-wrap: anywhere;
+    }
+
+    #content-all table.listing td span.content {
+        grid-template-columns: 1fr;
+    }
+
+    .smallscreen {
+        padding: 12px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(0, 0, 255, 0.28);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
         scroll-behavior: auto !important;
 
         transition: none !important;
-    }
-}
-
-
-/* ---------------------------------------------------------
-   Dark mode
-   --------------------------------------------------------- */
-
-body.dark-mode {
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(85,85,255,0.16),
-            transparent 35%
-        ),
-        #080819 !important;
-
-    color: #eeeeff;
-}
-
-body.dark-mode #page-wrapper {
-    background: #10102a;
-
-    border-color: #29295c;
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.55);
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5 {
-    color: #f4f4ff;
-}
-
-body.dark-mode h1::after {
-    background:
-        linear-gradient(
-            90deg,
-            #5555ff,
-            #aaaaff
-        );
-}
-
-body.dark-mode h5 {
-    border-color: #5555ff;
-}
-
-body.dark-mode #navigation {
-    background:
-        linear-gradient(
-            135deg,
-            #05051e,
-            #101080,
-            #0000cc
-        );
-}
-
-body.dark-mode #navigation > ul li:hover,
-body.dark-mode #navigation > ul li.current {
-    background: #0000aa;
-}
-
-body.dark-mode #folder-tree,
-body.dark-mode #footer {
-    background: #0d0d25;
-    border-color: #29295c;
-}
-
-body.dark-mode #folder-tree a,
-body.dark-mode #folder-tree a:link,
-body.dark-mode #folder-tree a:visited {
-    color: #aaaaff !important;
-}
-
-body.dark-mode #content-all a {
-    color: #9999ff;
-}
-
-body.dark-mode #content-all a:hover,
-body.dark-mode #content-all a:active {
-    color: #ffaa00;
-}
-
-body.dark-mode #search-bar,
-body.dark-mode input,
-body.dark-mode textarea,
-body.dark-mode select {
-    background: #17173b;
-
-    border-color: #41417a;
-
-    color: #ffffff;
-}
-
-body.dark-mode .search {
-    background: #151533;
-
-    border-color: #29295c;
-}
-
-body.dark-mode table.listing > tbody > tr:not(.search):not(.content) > td {
-    background: #151533;
-
-    border-color: #29295c;
-
-    color: #eeeeff;
-}
-
-body.dark-mode table.listing span.content a {
-    background: #1b1b45;
-
-    border-color: #303064;
-
-    color: #ccccff;
-}
-
-body.dark-mode table.listing span.content a:hover {
-    background: #24245d;
-
-    border-color: #6666ff;
-
-    color: #ffaa00;
-}
-
-body.dark-mode #web-grid
-    > div
-    > div
-    > div
-    > a
-    > span {
-    background:
-        linear-gradient(
-            135deg,
-            #151533,
-            #1b1b45
-        );
-
-    border-color: #303064;
-
-    color: #eeeeff;
-}
-
-body.dark-mode #web-grid
-    > div
-    > div
-    > div
-    > a
-    > span:hover {
-    background:
-        linear-gradient(
-            135deg,
-            #20204f,
-            #292966
-        );
-
-    border-color: #6666ff;
-
-    color: #ffaa00;
-}
-
-body.dark-mode .pdf-popup {
-    background: #19193d;
-
-    border-color: #45457d;
-
-    color: #eeeeff;
-}
-
-body.dark-mode #overlaybar {
-    background:
-        linear-gradient(
-            90deg,
-            #3030cc,
-            #0000ff
-        );
-}
-
-
-/* ---------------------------------------------------------
-   Legacy compatibility
-   --------------------------------------------------------- */
-
-/*
-   Keeps the old fixed-width behaviour only as a minimum
-   constraint where legacy code expects it.
-*/
-
-@media (max-width: 445px) {
-    #content-all {
-        overflow-x: auto;
-    }
-
-    #page-wrapper {
-        width: calc(100% - 16px);
-
-        min-width: 0;
-
-        margin-left: 8px;
-        margin-right: 8px;
     }
 }
