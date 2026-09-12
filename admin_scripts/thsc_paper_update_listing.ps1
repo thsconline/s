@@ -121,7 +121,7 @@ $Schools | % {
 	}
 	else
 	{
-	$PapersetA = "<tr><td>$($SchoolName)<br />`r`n<span class=`"content`">`r`n";
+	$PapersetA = "<tr><td><details><summary>$($SchoolName)</summary><br />`r`n<span class=`"content`">`r`n";
 	$PapersetB = ($Paperset -replace "^(.*)", '<a>$1</a>' -replace "<a>", "<a href=`"#v`" onClick=`"pdf(this, $PDFTemplateCode)`">") -join "<br />" -replace "<br />", "<br />`r`n";
 	# Override for English and general maths and stadnard maths
 	switch($PDFTemplateCode)
@@ -135,7 +135,7 @@ $Schools | % {
 		default {break;}
 		
 	}
-	$PapersetC = "`r`n</span></td></tr>`r`n"
+	$PapersetC = "`r`n</span></details></td></tr>`r`n"
 	
 	$PapersetHTMLCode = $PapersetA + $PapersetB + $PapersetC
 	

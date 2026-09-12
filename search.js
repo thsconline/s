@@ -7,10 +7,12 @@
 	"JR": ["James Ruse", "JR"],	 
 	"NSB": ["North Sydney Boys", "NSB"],
 	"NSG": ["North Sydney Girls", "NSG"],
+	"PLC": ["Pymble", "Presbyterian", "PLC"],
 	"SGGHS": ["St George Girls", "SGGHS"],
 	"SBHS": ["Sydney Boys", "SBHS"],
 	"SGS": ["Sydney Grammar", "SGS"],
-	"STHS": ["Sydney Tech", "STHS"],
+	"SGHS": ["Sydney Girls", "SGHS"],
+	"STHS": ["Sydney Tech", "STHS"]
 	   
        
         // Add more mappings as needed
@@ -27,6 +29,10 @@ function toggleSearchBar() {
     searchRow.style.display = "table-row";  // Show the search bar
   } else {
     searchRow.style.display = "none";  // Hide the search bar
+	
+	document.querySelectorAll("details").forEach(function(detail) {
+		detail.removeAttribute("open");
+	})
   }
 }
 
@@ -277,6 +283,18 @@ function filterTable() {
     } else {
         resultMessage.innerHTML = "No results found.";  // In case no results match
     }
+	
+	resultMessage.toggleAttribute(
+    "data-active",
+    resultCount > 0);
+	
+	var hasSearch = input.value.trim() !== "";
+	var shouldExpand = hasSearch && resultCount > 0;
+
+	document.querySelectorAll("#search-row ~ tr details").forEach(function(detail) {
+		detail.open = false;
+		detail.open = shouldExpand;
+	});
 }
 
 function getUrlParameter(name) {

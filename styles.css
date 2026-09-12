@@ -25,9 +25,11 @@
 
     --indigo: #5555ff;
     --indigo-dark: #3030d9;
-    --indigo-soft: #e9e9ff;
+    --indigo-soft: #f3f3ff;
+	--indigo-vsoft: #f9f9ff;
+	
 
-    --hover: #ffaa00;
+    --hover: #FF4500;
 
     --success: #22c55e;
 
@@ -84,12 +86,8 @@ body {
 
     color: var(--text);
 
-    font-family:
-        Arial,
-        "Segoe UI",
-        Inter,
-        "Helvetica Neue",
-        sans-serif;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+           
 
     font-size: 14px;
     line-height: 1.5;
@@ -127,31 +125,17 @@ a img {
    Headings
    --------------------------------------------------------- */
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family:
-        Arial,
-        "Segoe UI",
-        Inter,
-        "Helvetica Neue",
-        sans-serif;
-}
-
 h1 {
     position: relative;
     display: inline-block;
 
     margin: 0;
-    padding: 25px 0 0 max(28px, calc((100vw - 1320px) / 2));
+    padding: 25px 0 0 max(28px, calc((100vw - 1920px) / 2));
 
     background: transparent;
-    color: #11112f;
-
+    color: #11112f;	
     font-size: 28px;
-    font-weight: 800;
+    font-weight: bold;
     line-height: 1.2;
     letter-spacing: -0.025em;
 }
@@ -166,7 +150,7 @@ h1::after {
     width: 100%;
     height: 4px;
 
-    margin-top: 7px;
+    margin-top:7px;
 
     border-radius: 3px;
 
@@ -178,8 +162,7 @@ h1::after {
             #7777ff 100%
         );
 
-    box-shadow:
-        0 2px 8px rgba(0, 0, 255, 0.22);
+
 }
 
 h2 {
@@ -189,7 +172,7 @@ h2 {
     color: #555555;
 
     font-size: 22px;
-    font-weight: 750;
+    font-weight: bold;
 }
 
 h3 {
@@ -199,7 +182,7 @@ h3 {
     color: var(--text);
 
     font-size: 26px;
-    font-weight: 800;
+    font-weight: bold;
     line-height: 1.25;
     letter-spacing: -0.025em;
 }
@@ -211,7 +194,7 @@ h4 {
     color: var(--text);
 
     font-size: 24px;
-    font-weight: 800;
+    font-weight: bold;
     line-height: 1.25;
 }
 
@@ -228,7 +211,61 @@ h5 {
     color: var(--primary);
 
     font-size: 16px;
-    font-weight: 600;
+    font-weight: bold;
+}
+
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 14px 0px 0px;
+	color: #555555;
+	text-decoration: none !important;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+h3 {
+	font-size: 20px;
+	padding-top: 3px !important;
+	padding-bottom: 1px !important;
+	padding-bottom: 3px !important;
+}
+
+h4 {
+	font-size: 20px;
+	padding-top: 3px !important;
+	padding-bottom: 0px !important;
+	margin-bottom: 10px !important;
+}
+#web-list h4
+{
+	margin-top: 20px;
+}
+h5 {
+	font-size: 16px;
+	padding-top: 3px !important;	
+	/*border: 0.5px solid #0000FF;*/
+	border-bottom: 1px solid #5555FF;
+	font-weight: normal;
+	color: #5555FF;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
+	
+}
+
+h5.grey
+{
+	font-size: 16px;
+	padding-left: 4px !important;
+	border: 0.5px solid #AAAAAA;
+	border-bottom: 2.5px solid #AAAAAA;
+	font-weight: bold;
+	color: black;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
 }
 
 
@@ -239,7 +276,7 @@ h5 {
 #page-wrapper {
     position: relative;
 
-    width: min(1480px, calc(100% - 48px));
+    width: min(1920px, calc(100% - 48px));
 
     min-width: 0;
 
@@ -299,7 +336,7 @@ h5 {
 }
 
 #navigation > ul li {
-    display: block;
+    display: inline-block;
 
     margin: 0;
     padding: 0;
@@ -308,7 +345,7 @@ h5 {
 
     color: #ffffff;
 
-    font-weight: 600;
+    font-weight: bold;
 
     cursor: pointer;
 
@@ -320,7 +357,7 @@ h5 {
 #navigation > ul li a,
 #navigation > ul li a:link,
 #navigation > ul li a:visited {
-    display: block;
+    display: inline-block;
 
     padding: 10px 14px;
 
@@ -342,10 +379,14 @@ h5 {
 }
 
 #navigation > ul li.current {
-    background: #0000ff;
+    /*background: #111111;*/
+    background: rgba(255, 255, 255, 0.32);
+	box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.12);
 
-    box-shadow:
-        0 4px 12px rgba(0, 0, 80, 0.25);
+
+/*    box-shadow:
+        0 4px 12px rgba(0, 0, 80, 0.25);*/
 }
 
 #navigation > ul li.element:hover a,
@@ -360,8 +401,7 @@ h5 {
 
 #folder-tree {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+	align-items: center;
     gap: 6px;
 
     min-height: 44px;
@@ -373,37 +413,42 @@ h5 {
     border-top: 1px solid rgba(85, 85, 255, 0.08);
     border-bottom: 1px solid var(--border);
 
-    color: #7777aa;
+    color: #5555aa;
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 #folder-tree a,
 #folder-tree a:link,
 #folder-tree a:visited {
-    color: #7777aa !important;
-
-    background: transparent !important;
+    color: #5555aa !important;    
 
     text-decoration: none;
+	padding: 5px 10px;
+
+    border-radius: 7px;
+
+
 }
 
 #folder-tree a:hover,
 #folder-tree a:active {
     color: var(--hover) !important;
 
-    background: transparent !important;
+    background: var(--primary-soft) !important;
 }
 
 #folder-tree .current {
     color: var(--primary) !important;
+    background: var(--primary-soft) !important;    
+}
 
-    font-weight: 700;
+#folder-tree .reverse:nth-last-of-type(2) {
+	margin-left: auto;
 }
 
 #folder-tree .reverse {
-    margin-left: auto;
-
+	margin-left: 6px;
     padding: 5px 10px;
 
     border-radius: 7px;
@@ -411,8 +456,7 @@ h5 {
     background: var(--primary-soft) !important;
 
     color: var(--primary) !important;
-
-    font-weight: 600;
+    
 }
 
 #folder-tree .reverse:hover {
@@ -480,56 +524,58 @@ tr.content a {
     font-weight: 600;
 }
 
-
-/* ---------------------------------------------------------
+/* =========================================
    Search
-   --------------------------------------------------------- */
+   ========================================= */
 
 .search {
-    padding: 15px;
+    margin: 0;
+    padding: 0;
 
-    margin-bottom: 20px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
 
-    background: var(--surface-soft);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow-sm);
+#search-row {
+    position: relative;
 }
 
 #search-row td {
-    padding: 0 0 18px;
+    position: relative;
 
+    padding: 0;
     border: 0;
 
     background: transparent;
 }
 
+
+/* -----------------------------------------
+   Search input
+   ----------------------------------------- */
+
 #search-bar {
+    box-sizing: border-box;
+
     display: block;
 
     width: 100%;
 
-    margin: 0 0 10px;
+    margin: 0;
+    padding: 9px 12px;
 
-    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
 
-    border: 1px solid #c9cdf2;
-
-    border-radius: 9px;
-
-    background: #ffffff;
-
+    background: var(--surface);
     color: var(--text);
 
     font-family: inherit;
     font-size: 14px;
+    line-height: 1.4;
 
     outline: none;
-
-    box-shadow: 0 1px 3px rgba(20,20,100,0.05);
 
     transition:
         border-color 0.15s ease,
@@ -537,48 +583,187 @@ tr.content a {
 }
 
 #search-bar::placeholder {
-    color: #8b8daf;
+    color: var(--text-muted);
+    opacity: 0.7;
 }
 
 #search-bar:focus {
     border-color: var(--primary);
 
     box-shadow:
-        0 0 0 3px rgba(0, 0, 255, 0.10),
-        0 3px 10px rgba(0, 0, 120, 0.06);
+        0 0 0 3px rgba(0, 0, 255, 0.08);
 }
 
-#search-row label,
-label {
-    display: inline-flex;
 
+/* -----------------------------------------
+   Search options
+   ----------------------------------------- */
+
+#search-row label {
+    display: inline-flex;
     align-items: center;
 
-    margin-top: 7px;
+    margin: 0 0 0 14px;
+    padding: 0;
 
     color: var(--text-muted);
 
-    font-size: 13px;
+    font-size: 11px;
+    line-height: 1;
 
-    font-weight: normal !important;
+    font-weight: 400 !important;
 
     cursor: pointer;
+    white-space: nowrap;
+
+    transition:
+        color 0.15s ease,
+        opacity 0.2s ease;
 }
 
-input[type="checkbox"] {
-    margin-right: 8px;
+#search-row label:hover {
+    color: var(--text);
+}
+
+
+/* -----------------------------------------
+   Checkboxes
+   ----------------------------------------- */
+
+#search-row input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+
+    margin: 0 4px 0 0;
 
     accent-color: var(--primary);
 }
 
+
+/* -----------------------------------------
+   Search message
+   ----------------------------------------- */
+
 #search-message {
+    display: block;
+
+    margin: 3px 0 0;
+
+    color: #e04416;
+
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   Wide screens
+   ========================================= */
+
+@media (min-width: 700px) {
+
+    /*
+     * Float the options into the top-right
+     * of the search field.
+     */
+
+    #search-row label {
+        position: relative;
+
+        top: -27px;
+
+        float: right;
+
+        margin-left: 16px;
+
+        color: color-mix(
+            in srgb,
+            var(--text-muted) 70%,
+            transparent
+        );
+
+        opacity: 0.65;
+    }
+
+    #search-row label:hover {
+        color: var(--text);
+        opacity: 1;
+    }
+
+    #search-row td:focus-within label {
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================================
+   Search result state
+   ========================================= */
+
+#search-message:empty {
+    display: none;
+}
+
+
+/* =========================================
+   Search → automatically expand details
+   ========================================= */
+
+#search-row:has(#search-message[data-active]) ~ tr details .content {
     display: inline-block;
+}
 
-    margin-top: 6px;
+#search-row:has(#search-message[data-active]) ~ tr details > summary {
+    list-style: none;
+}
 
-    color: #ff5500;
+#search-row:has(#search-message[data-active]) ~ tr details > summary::-webkit-details-marker {
+    display: none;
+}
 
-    font-size: 12px;
+
+/* =========================================
+   Reduced motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #search-bar,
+    #search-row label {
+        transition: none;
+    }
+}
+
+
+
+
+/* =========================================
+   Very wide screens
+   ========================================= */
+
+@media (min-width: 1100px) {
+
+    #search-row label {
+        font-size: 11px;
+        opacity: 0.45;
+    }
+
+    #search-row td:focus-within label {
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================================
+   Reduced motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #search-bar,
+    #search-row label {
+        transition: none;
+    }
 }
 
 
@@ -656,7 +841,7 @@ input[type="submit"]:active {
 #web-grid {
     width: 100%;
 
-    margin-top: 4px;
+    margin-top: 20px;
 
     overflow-x: auto;
     overflow-y: visible;
@@ -677,6 +862,7 @@ input[type="submit"]:active {
     margin: 0;
 
     overflow: visible;
+	margin-top: 3px;
 }
 
 /*
@@ -700,7 +886,7 @@ input[type="submit"]:active {
 #web-grid > div > div > div {
     position: relative;
 
-    display: block;
+    display: inline-block;
 
     width: auto;
     min-width: 200px;
@@ -715,7 +901,7 @@ input[type="submit"]:active {
 /* Subject card */
 
 #web-grid > div > div > div > a {
-    display: block;
+    display: inline-block;
 
     width: 100%;
     min-width: 200px;
@@ -762,8 +948,7 @@ input[type="submit"]:active {
 
     color: var(--text);
 
-    font-size: 14px !important;
-    font-weight: 650;
+    font-size: 14px !important;   
 
     box-shadow: var(--shadow-sm);
 
@@ -779,9 +964,8 @@ input[type="submit"]:active {
 
 #web-grid > div > div > div > a > span > img {
     flex: 0 0 auto;
-
-    width: 28px;
-    height: 28px;
+    
+    height: 14px;
 
     margin: 0 8px 0 0;
 
@@ -922,6 +1106,297 @@ input[type="submit"]:active {
 }
 
 
+/* =========================================================
+   WEB GRID — SUBJECT COLOUR OVERRIDES
+   Scoped ONLY to #web-grid
+   ========================================================= */
+
+/*
+   The existing HTML already tells us the subject colour through
+   the icon filename, so we can colour the cards without changing
+   the HTML.
+*/
+
+#web-grid > div > div > div > a > span {
+    --subject-colour: #4f46e5;
+    --subject-soft: #eef2ff;
+    --subject-border: #c7d2fe;
+
+    border-left: 4px solid var(--subject-colour);
+}
+
+/* ---------------------------------------------------------
+   Aqua
+   Agriculture / Engineering Studies
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_aqua"]
+) {
+    --subject-colour: #0891b2;
+    --subject-soft: #ecfeff;
+    --subject-border: #67e8f9;
+}
+
+/* ---------------------------------------------------------
+   Forest
+   Ancient History / History Extension / Modern History
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_forest"]
+) {
+    --subject-colour: #15803d;
+    --subject-soft: #f0fdf4;
+    --subject-border: #86efac;
+}
+
+/* ---------------------------------------------------------
+   Purple
+   Biology / Chemistry / Physics / Investigating Science
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_purple"]
+) {
+    --subject-colour: #7c3aed;
+    --subject-soft: #f5f3ff;
+    --subject-border: #c4b5fd;
+}
+
+/* ---------------------------------------------------------
+   Green
+   Business / Economics / Legal / Studies of Religion
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_green"]
+) {
+    --subject-colour: #16a34a;
+    --subject-soft: #f0fdf4;
+    --subject-border: #86efac;
+}
+
+/* ---------------------------------------------------------
+   Yellow
+   English
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_yellow"]
+) {
+    --subject-colour: #ca8a04;
+    --subject-soft: #fefce8;
+    --subject-border: #fde047;
+}
+
+/* ---------------------------------------------------------
+   Blue
+   IPT / Software Engineering
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_blue"]
+) {
+    --subject-colour: #2563eb;
+    --subject-soft: #eff6ff;
+    --subject-border: #93c5fd;
+}
+
+/* ---------------------------------------------------------
+   Pink
+   LOTE
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_pink"]
+) {
+    --subject-colour: #db2777;
+    --subject-soft: #fdf2f8;
+    --subject-border: #f9a8d4;
+}
+
+/* ---------------------------------------------------------
+   Red
+   Maths
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_red"]
+) {
+    --subject-colour: #dc2626;
+    --subject-soft: #fef2f2;
+    --subject-border: #fca5a5;
+}
+
+/* ---------------------------------------------------------
+   Orange
+   PDHPE / Society & Culture
+   High-contrast orange
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_orange"]
+) {
+    --subject-colour: #ea580c;
+    --subject-soft: #fff7ed;
+    --subject-border: #fdba74;
+}
+
+/* ---------------------------------------------------------
+   Rose
+   Visual Arts
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_rose"]
+) {
+    --subject-colour: #e11d48;
+    --subject-soft: #fff1f2;
+    --subject-border: #fda4af;
+}
+
+
+/* =========================================================
+   CARD APPEARANCE
+   ========================================================= */
+
+#web-grid > div > div > div > a > span {
+    background: #ffffff;
+    border-top-color: var(--subject-border);
+    border-right-color: var(--subject-border);
+    border-bottom-color: var(--subject-border);
+
+    transition:
+        background-color 0.16s ease,
+        border-color 0.16s ease,
+        box-shadow 0.16s ease,
+        transform 0.16s ease;
+		
+	
+}
+
+
+/* The text portion of the card */
+
+#web-grid > div > div > div > a > span > span:before
+{
+	padding-left:10px;
+}
+
+#web-grid > div > div > div > a > span > span {
+ /*   background: var(--subject-soft) !important;*/
+    color: var(--subject-colour) !important;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.16s ease,
+        color 0.16s ease;
+	
+}
+
+
+/* Hover */
+
+#web-grid > div > div > div > a > span:hover {
+    background: var(--subject-soft) !important;
+    border-color: var(--subject-colour) !important;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.10);
+
+    transform: translateY(-2px);
+}
+
+
+/* Strong coloured label on hover */
+
+
+/*
+#web-grid > div > div > div > a > span:hover > span {
+    background: var(--subject-colour) !important;
+    color: #ffffff !important;
+}*/
+
+
+/* Keep the icon clean */
+
+#web-grid > div > div > div > a > span img {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   GRID DIMENSIONS
+   Original 200 × 90 becomes the MINIMUM.
+   Cards can grow with the available space.
+   ========================================================= */
+
+#web-grid > div > div > div {
+    min-width: 200px;
+
+    height: 90px;
+    min-height: 90px;
+
+    position: relative;
+}
+
+
+/*
+   Let the actual grid expand naturally when there is more room.
+*/
+
+#web-grid > div {
+    width: 100%;
+}
+
+
+/* =========================================================
+   DARK MODE
+   Still scoped exclusively to the grid.
+   ========================================================= */
+
+body.dark-mode #web-grid > div > div > div > a > span {
+    background: #111827;
+    border-top-color: color-mix(
+        in srgb,
+        var(--subject-colour) 55%,
+        #374151
+    );
+    border-right-color: color-mix(
+        in srgb,
+        var(--subject-colour) 55%,
+        #374151
+    );
+    border-bottom-color: color-mix(
+        in srgb,
+        var(--subject-colour) 55%,
+        #374151
+    );
+}
+
+body.dark-mode #web-grid > div > div > div > a > span > span {
+    background: color-mix(
+        in srgb,
+        var(--subject-colour) 18%,
+        #111827
+    ) !important;
+
+    color: color-mix(
+        in srgb,
+        var(--subject-colour) 75%,
+        #ffffff
+    ) !important;
+}
+
+body.dark-mode #web-grid > div > div > div > a > span:hover > span {
+    background: var(--subject-colour) !important;
+    color: #ffffff !important;
+}
+
+
 /* ---------------------------------------------------------
    Web list / mobile list view
    --------------------------------------------------------- */
@@ -931,19 +1406,19 @@ input[type="submit"]:active {
 }
 
 #web-list > div {
-    display: block;
+    display: inline-block;
 
     width: 100%;
 }
 
 #web-list > div > div {
-    display: block;
+    display: inline-block;
 
     width: 100%;
 }
 
 #web-list > div > div > div {
-    display: block;
+    display: inline-block;
 
     width: 100%;
 
@@ -970,8 +1445,11 @@ input[type="submit"]:active {
     padding: 5px 0;
 
     color: var(--primary);
+    
+}
 
-    font-weight: 550;
+#web-list > div > div > div:has(span) {
+	line-height:1.9
 }
 
 #web-list > div > div > div > a:hover {
@@ -982,37 +1460,336 @@ input[type="submit"]:active {
 /* ---------------------------------------------------------
    Small-screen navigation
    --------------------------------------------------------- */
+/* =========================================================
+   MOBILE QUICK NAVIGATION
+   ========================================================= */
 
 .smallscreen {
-    padding: 15px;
+    display: block;
 
-    margin-bottom: 15px;
+    width: 100%;
+
+    margin: 0 0 18px;
+    padding: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fafaff 0%,
+            #f3f3ff 100%
+        );
 
     border: 1px solid var(--border);
+    border-radius: 12px;
 
-    border-radius: var(--radius);
-
-    background: var(--surface-soft);
-
-    box-shadow: var(--shadow-sm);
+    box-shadow:
+        0 2px 8px rgba(20, 20, 90, 0.06);
 }
 
-.smallscreen img {
-    vertical-align: middle;
+
+/* ---------------------------------------------------------
+   Individual navigation rows
+   --------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------
+   Hamburger container
+   --------------------------------------------------------- */
+/* ---------------------------------------------------------
+   Closed state — tiny hamburger button
+   --------------------------------------------------------- */
+
+.smallscreen {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    z-index: 1000;
+
+    display: none;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0;
+    padding: 0;
 }
 
-.smallscreen a {
+
+/* ---------------------------------------------------------
+   Hamburger button
+   --------------------------------------------------------- */
+
+.smallscreen > summary {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--surface);
+
     color: var(--primary);
 
-    font-weight: 600;
+    cursor: pointer;
+
+    list-style: none;
+
+    box-shadow:
+        0 1px 4px rgba(20,20,90,0.08);
+
+    font-size: 0;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+/* Remove native disclosure triangle */
+
+.smallscreen > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Hamburger icon */
+
+.smallscreen > summary::before {
+    content: "☰";
+
+    font-size: 17px;
+
+    line-height: 1;
+
+    font-weight: normal;
+}
+
+
+/* Hover */
+
+.smallscreen > summary:hover {
+    background: var(--primary-soft);
+
+    border-color: var(--border-hover);
+}
+
+
+/* ---------------------------------------------------------
+   OPEN STATE
+   --------------------------------------------------------- */
+
+.smallscreen[open] {
+    width: 260px;
+    height: auto;
+
+    padding: 7px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    background: rgba(255,255,255,0.98);
+
+    box-shadow:
+        0 12px 30px rgba(20,20,90,0.16),
+        0 3px 8px rgba(20,20,90,0.08);
+}
+
+
+/* Keep hamburger in the top-right of popup */
+
+.smallscreen[open] > summary {
+    position: absolute;
+
+    top: 6px;
+    right: 6px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+
+/* Change hamburger to × when open */
+
+.smallscreen[open] > summary::before {
+    content: "×";
+
+    font-size: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   Menu items
+   --------------------------------------------------------- */
+
+.smallscreen > span {
+    display: flex;
+    align-items: center;
+
+    min-height: 42px;
+
+    margin: 0;
+
+    padding: 7px 9px;
+
+    border-radius: 7px;
+}
+
+.smallscreen[open] > span:first-of-type {
+    margin-top: 38px;
+}
+
+.smallscreen > span img {
+    flex: 0 0 auto;
+
+    width: 17px;
+    height: 17px;
+
+    margin-right: 9px;
+
+    object-fit: contain;
+
+    opacity: 0.7;
+}
+
+.smallscreen > span a {
+    flex: 1;
+
+    color: var(--text) !important;
+
+    font-size: 13px;
+    font-weight: 500;
 
     text-decoration: none;
 }
 
-.smallscreen a:hover {
-    color: var(--hover);
+.smallscreen > span:hover {
+    background: var(--primary-soft);
 }
 
+.smallscreen > span:hover a {
+    color: var(--primary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Remove the HTML <br> elements
+   --------------------------------------------------------- */
+
+.smallscreen > br {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------
+   Separator before Search
+   --------------------------------------------------------- */
+
+.smallscreen > span:last-of-type {
+    margin-top: 4px;
+
+    padding-top: 11px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* ---------------------------------------------------------
+   Mobile only
+   --------------------------------------------------------- */
+
+@media (max-width: 840px) {
+
+    .smallscreen {
+        display: block !important;
+    }
+
+    /*
+     * Give the heading a little breathing room from
+     * the hamburger without moving the button.
+     */
+
+    #content-all > h4 {
+        padding-right: 42px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Small phones
+   --------------------------------------------------------- */
+
+@media (max-width: 500px) {
+
+    .smallscreen {
+        top: 6px;
+        right: 6px;
+    }
+
+    .smallscreen[open] {
+        width: min(260px, calc(100vw - 28px));
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Dark mode
+   --------------------------------------------------------- */
+
+body.dark-mode .smallscreen[open] {
+    background: rgba(21,21,51,0.98);
+
+    border-color: #29295c;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.45);
+}
+
+body.dark-mode .smallscreen > summary {
+    background: #151533;
+
+    border-color: #29295c;
+
+    color: #aaaaff;
+}
+
+body.dark-mode .smallscreen[open] > summary {
+    background: transparent;
+
+    border-color: transparent;
+}
+
+body.dark-mode .smallscreen > span:hover {
+    background: #20204f;
+}
+
+body.dark-mode .smallscreen > span a {
+    color: #eeeeff !important;
+}
+
+body.dark-mode .smallscreen > span:hover a {
+    color: #aaaaff !important;
+}
+
+body.dark-mode .smallscreen > span:last-of-type {
+    border-color: #29295c;
+}
 
 /* ---------------------------------------------------------
    Tables / paper listings
@@ -1028,6 +1805,7 @@ input[type="submit"]:active {
     border-spacing: 0 10px;
 
     table-layout: auto;
+	
 }
 
 #content-all table.listing td {
@@ -1037,20 +1815,17 @@ input[type="submit"]:active {
 
 /* School / category row */
 
-table.listing > tbody > tr:not(.search):not(.content) > td {
+table.listing > tbody > tr:not(.search):not(.content):not(:has(h5)) > td
+ {
     padding: 18px 20px;
 
     background: var(--surface);
-
-    border: 1px solid var(--border);
 
     border-radius: var(--radius);
 
     color: var(--text);
 
-    font-size: 16px;
-
-    font-weight: 750;
+    font-weight: bold;
 
     box-shadow: var(--shadow-sm);
 
@@ -1059,27 +1834,24 @@ table.listing > tbody > tr:not(.search):not(.content) > td {
         box-shadow 0.15s ease;
 }
 
-table.listing > tbody > tr:not(.search):not(.content) > td:hover {
-    border-color: var(--border-hover);
+table.listing > tbody > tr > td > details > summary {
+  cursor: pointer;  
+}
 
-    box-shadow: var(--shadow-md);
+table.listing > tbody > tr > td > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+table.listing > tbody > tr > td > details > summary::after {
+  content: "＋";
+  float: right;
 }
 
 
 /* Paper links */
 
-table.listing span.content {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fill, minmax(185px, 1fr));
-
-    gap: 8px;
-
-    margin-top: 13px;
-
+table.listing span.content {       
     padding: 0;
-
     font-weight: normal !important;
 }
 
@@ -1088,23 +1860,20 @@ table.listing span.content br {
 }
 
 table.listing span.content a {
-    display: block;
+    display: inline-block;
 
-    min-width: 0;
+    min-width: 200px;
 
     padding: 9px 11px;
-
-    border: 1px solid #e1e3f5;
-
+	
     border-radius: 8px;
 
-    background: var(--surface-soft);
+    background: var(--indigo-vsoft);
 
-    color: #33335f;
+    color: #0000ff;
 
-    font-size: 13px;
-
-    font-weight: 550;
+    font-size: 12px;
+    
 
     line-height: 1.35;
 
@@ -1129,8 +1898,6 @@ table.listing span.content a:hover {
 
     transform: translateY(-1px);
 
-    box-shadow:
-        0 4px 10px rgba(0,0,150,0.08);
 }
 
 
@@ -1242,12 +2009,11 @@ table.listing span.content a:hover {
         0 15px 35px rgba(0,0,0,0.25);
 
     z-index: 999999;
-
-    font-family: Arial, sans-serif;
+    
 }
 
 .pdf-popup a {
-    display: block;
+    display: inline-block;
 
     margin: 6px 0;
 
@@ -1369,6 +2135,10 @@ input:focus-visible {
     #folder-tree {
         display: none !important;
     }
+	
+	#content-all {
+		position: relative;
+	}
 }
 
 @media (max-width: 795px) {
@@ -1670,4 +2440,34 @@ body.dark-mode #overlaybar {
         margin-left: 8px;
         margin-right: 8px;
     }
+}
+
+table.listing > tbody > tr > td > details {
+  interpolate-size: allow-keywords;
+}
+
+table.listing > tbody > tr > td > details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+table.listing > tbody > tr > td > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+table.listing > tbody > tr > td > details > summary::after {
+  content: "＋";
+}
+
+table.listing > tbody > tr > td > details[open] > summary::after {
+  content: "−";
+}
+
+table.listing > tbody > tr > td > details .content {
+  display: inline-block;  
+  transition: height 300ms ease;
+}
+
+table.listing > tbody > tr > td > details[open] .content {
+  height: auto;
 }
