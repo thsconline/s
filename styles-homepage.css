@@ -1,91 +1,153 @@
+/* ============================================================================
+   THSC Online — Homepage stylesheet
+   Adds the premium hero treatment to /s/index.html on top of styles.css tokens.
+   ========================================================================== */
+
 #homepage {
-    -webkit-text-size-adjust: none;
-}
-#homepage a.button
-{
-    color:white !important;
-}
-#homepage ol, #homepage  ul {
-	list-style: none;
-}
-#homepage span, #homepage div, #homepage h3, #homepage h4, #homepage h5, #homepage h6, #homepage p, #homepage blockquote, #homepage pre, #homepage a, #homepage abbr, #homepage acronym, #homepage address, #homepage big, #homepage cite, #homepage code, #homepage del, #homepage dfn, #homepage em, #homepage img, #homepage  ul, #homepage  li {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-#homepage, #homepage *::before, #homepage  *::after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#homepage {
-	line-height: 1;
-}
-#homepage, #homepage  input, #homepage  textarea, #homepage  select {
-	font-family: "XITS", sans-serif;
-color:rgb(41,140,202) !important;
-	font-weight: 300;
-	line-height: 1.75em;
-	font-size: 15pt;
-}
-.homepage #header-wrapper {
-	padding: 10em 0 0 0;
-	background-size: 440px 440px, #homepage				100% 100%, #homepage					auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  -webkit-text-size-adjust: none;
 }
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	margin-bottom: 3em;
-}
-.container:last-child, #homepage article:last-child {
-	margin-bottom: 0px;
-}
-#links {
-	position: relative;
-	color: black;
-	text-align: left;
-	left:20%;
-	z-index: 1;
-	max-width:786px;
+#skel-layers-wrapper,
+#header-wrapper { width: 100%; }
+
+.container#links {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
 }
 
-#homepage section > :last-child, #homepage article > :last-child {
-	margin-bottom: 0px;
-}
-#homepage ul.actions {
-	padding-top: 16px;
-}
-#homepage ul.actions li {
-	display: inline-block;
-	margin-left: 16px;
-}
-#homepage ul.actions li:first-child {
-	margin-left: 0px;
+/* --- Hero --- */
+.hero { max-width: 720px; }
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 26px;
+  color: #fff;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--violet));
+  box-shadow: 0 10px 30px var(--accent-glow), 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
-#links h2 {
-	color: #222222;
-	font-size: 48px;
-}
-#logo {
-	position: absolute;
-	z-index: 1;
-	top: 0px;
-	text-align:center;
-	width: 150px;
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 14px;
 }
 
-.homepage a:link, .homepage a:visited {
-	text-decoration: none !important;
-	color: #0000FF !important;
+.hero h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.1rem, 5.4vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(100deg, var(--accent-strong), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-.homepage a:hover, .homepage a:active {
-	text-decoration: none !important;
-	color: #FF5500 !important;
+.hero .lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--fg-muted);
+  max-width: 58ch;
+}
+
+/* --- Year tiles --- */
+.year-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), var(--violet));
+  opacity: 0.45;
+  transition: opacity 0.18s ease;
+}
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--accent-soft), 0 0 26px var(--accent-glow);
+}
+.tile:hover::before { opacity: 1; }
+
+.tile-num {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  line-height: 1;
+  background: linear-gradient(120deg, var(--accent-strong), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.tile-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+/* --- Meta links --- */
+.meta-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--fg-muted);
+}
+.meta-links a {
+  color: var(--accent-strong);
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+.meta-links a:hover { color: var(--violet); }
+.meta-links .dot { color: var(--fg-faint); }
+
+/* --- Responsive --- */
+@media screen and (max-width: 560px) {
+  #homepage { align-items: flex-start; padding: 34px 16px; }
+  .container#links { gap: 30px; }
+  .year-tiles { grid-template-columns: 1fr 1fr; }
+  .tile { padding: 16px; }
+  .tile-num { font-size: 1.8rem; }
 }
