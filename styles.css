@@ -443,8 +443,8 @@ h5.grey
     background: var(--primary-soft) !important;    
 }
 
-#folder-tree .reverse:nth-last-of-type(2) {
-	margin-left: auto;
+#folder-tree .reverse:first-of-type {
+    margin-left: auto;
 }
 
 #folder-tree .reverse {
