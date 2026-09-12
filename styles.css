@@ -1,106 +1,98 @@
 /* =========================================================
-   THSC Online — Modern stylesheet
-   Rebuilt for the existing XHTML structure
-   No HTML / JS changes required
+   THSC Online — Modern Responsive Stylesheet
+   Original HTML compatible
    ========================================================= */
 
-
-/* =========================================================
-   DESIGN TOKENS
-   ========================================================= */
+/* ---------------------------------------------------------
+   Design tokens
+   --------------------------------------------------------- */
 
 :root {
-    --bg: #f5f7fb;
+    --bg: #f4f6ff;
     --surface: #ffffff;
-    --surface-soft: #f8fafc;
-    --surface-hover: #f1f5f9;
+    --surface-soft: #f5f5ff;
 
-    --border: #e2e8f0;
-    --border-hover: #cbd5e1;
+    --border: #d9dcf5;
+    --border-hover: #aeb4ee;
 
-    --text: #172033;
-    --text-soft: #334155;
-    --text-muted: #64748b;
-    --text-faint: #94a3b8;
+    --text: #15152f;
+    --text-muted: #5f6180;
 
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --primary-soft: #eff6ff;
-    --primary-border: #bfdbfe;
+    --primary: #0000ff;
+    --primary-dark: #0000cc;
+    --primary-deep: #17176b;
+    --primary-soft: #eeeeff;
 
-    --success: #16a34a;
-    --warning: #f59e0b;
+    --indigo: #5555ff;
+    --indigo-dark: #3030d9;
+    --indigo-soft: #e9e9ff;
 
-    --nav: #0f172a;
-    --nav-dark: #020617;
+    --hover: #ffaa00;
+
+    --success: #22c55e;
 
     --radius: 12px;
     --radius-sm: 8px;
-    --radius-xs: 6px;
 
     --shadow-sm:
-        0 1px 2px rgba(15, 23, 42, 0.04),
-        0 1px 3px rgba(15, 23, 42, 0.06);
+        0 1px 2px rgba(20, 20, 90, 0.05),
+        0 2px 6px rgba(20, 20, 90, 0.06);
 
     --shadow-md:
-        0 10px 30px rgba(15, 23, 42, 0.08);
+        0 12px 30px rgba(20, 20, 100, 0.12);
 
     --shadow-lg:
-        0 20px 50px rgba(15, 23, 42, 0.12);
-
-    --content-width: 1180px;
+        0 20px 50px rgba(20, 20, 100, 0.15);
 }
 
 
-/* =========================================================
-   RESET / BASE
-   ========================================================= */
+/* ---------------------------------------------------------
+   Reset / base
+   --------------------------------------------------------- */
 
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
 }
 
 html {
-    min-height: 100%;
     margin: 0;
     padding: 0;
-
+    min-height: 100%;
     background: var(--bg);
-
-    direction: ltr;
 }
 
 body {
-    min-height: 100vh;
-
     margin: 0;
     padding: 0;
 
+    min-height: 100vh;
+
+    direction: ltr;
+
     background:
         radial-gradient(
-            circle at top left,
-            rgba(37, 99, 235, 0.06),
-            transparent 35%
+            circle at 10% 0%,
+            rgba(85, 85, 255, 0.12),
+            transparent 34%
         ),
-        var(--bg);
+        linear-gradient(
+            180deg,
+            #f8f8ff 0%,
+            var(--bg) 45%,
+            #eef0ff 100%
+        );
 
     color: var(--text);
 
     font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
         Arial,
+        "Segoe UI",
+        Inter,
+        "Helvetica Neue",
         sans-serif;
 
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
 
     font-stretch: normal;
 
@@ -108,152 +100,12 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-iframe {
-    border: 0;
-}
 
-img {
-    max-width: 100%;
-}
+/* ---------------------------------------------------------
+   Global links
+   --------------------------------------------------------- */
 
-a img {
-    border: 0 !important;
-}
-
-
-/* =========================================================
-   TYPOGRAPHY
-   ========================================================= */
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin-top: 0;
-
-    color: var(--text);
-
-    font-weight: 750;
-
-    font-stretch: normal;
-}
-
-h1 {
-    /*
-       Site masthead.
-
-       The underline intentionally remains part of the
-       visual identity from the original stylesheet.
-    */
-
-    display: inline-block;
-
-    margin: 0;
-    padding: 22px max(24px, calc((100vw - var(--content-width)) / 2));
-
-    background: var(--nav);
-    color: #ffffff;
-
-    font-size: 21px;
-    line-height: 1.25;
-
-    letter-spacing: -0.025em;
-
-    position: relative;
-}
-
-h1::after {
-    content: "";
-
-    display: block;
-
-    height: 4px;
-    width: 100%;
-
-    margin-top: 7px;
-
-    background: var(--primary);
-
-    border-radius: 999px;
-}
-
-
-/*
-   The XHTML uses h3 for the main page title on resource
-   pages, while some older pages use h4.
-*/
-
-#content-all > h3,
-#content-all > h4 {
-    margin: 0 0 20px;
-
-    color: var(--text);
-
-    font-size: 27px;
-    font-weight: 750;
-
-    line-height: 1.25;
-    letter-spacing: -0.035em;
-}
-
-#content-all > h3 {
-    padding-top: 2px;
-}
-
-h2 {
-    padding-top: 14px;
-
-    color: var(--text-soft);
-
-    font-size: 22px;
-}
-
-h4 {
-    font-size: 20px;
-}
-
-h5 {
-    display: inline-block;
-
-    width: 100%;
-
-    margin: 0 0 8px;
-    padding: 3px 0 6px;
-
-    border-bottom: 1px solid var(--primary);
-
-    color: var(--primary);
-
-    font-size: 16px;
-    font-weight: 600;
-}
-
-h5.grey {
-    padding-left: 8px;
-
-    border: 1px solid var(--border);
-    border-bottom: 2px solid var(--border-hover);
-
-    border-radius: var(--radius-xs);
-
-    color: var(--text);
-
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   GLOBAL LINKS
-   ========================================================= */
-
-/*
-   Preserve the old site's fundamental behaviour:
-   links are not underlined by default.
-
-   The colour is modernised but remains clearly interactive.
-*/
-
+a,
 a:link,
 a:visited {
     color: var(--primary);
@@ -262,197 +114,315 @@ a:visited {
 
 a:hover,
 a:active {
-    color: var(--primary-dark);
+    color: var(--hover);
     text-decoration: none;
 }
 
+a img {
+    border: 0 !important;
+}
 
-/* =========================================================
-   SITE HEADER / PAGE WRAPPER
-   ========================================================= */
+
+/* ---------------------------------------------------------
+   Headings
+   --------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family:
+        Arial,
+        "Segoe UI",
+        Inter,
+        "Helvetica Neue",
+        sans-serif;
+}
+
+h1 {
+    position: relative;
+    display: inline-block;
+
+    margin: 0;
+    padding: 25px 0 0 max(28px, calc((100vw - 1320px) / 2));
+
+    background: transparent;
+    color: #11112f;
+
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+/* The original cool underline, modernised */
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 4px;
+
+    margin-top: 7px;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0000ff 0%,
+            #5555ff 55%,
+            #7777ff 100%
+        );
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 255, 0.22);
+}
+
+h2 {
+    margin: 0 0 12px;
+    padding-top: 14px;
+
+    color: #555555;
+
+    font-size: 22px;
+    font-weight: 750;
+}
+
+h3 {
+    margin: 0 0 20px;
+    padding: 0;
+
+    color: var(--text);
+
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+}
+
+h4 {
+    margin: 0 0 18px;
+    padding: 0;
+
+    color: var(--text);
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+h5 {
+    display: inline-block;
+
+    width: 100%;
+
+    margin: 0 0 8px;
+    padding: 4px 0 5px;
+
+    border-bottom: 2px solid var(--indigo);
+
+    color: var(--primary);
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   Main page wrapper
+   --------------------------------------------------------- */
 
 #page-wrapper {
     position: relative;
 
-    width: min(
-        var(--content-width),
-        calc(100% - 40px)
-    );
+    width: min(1480px, calc(100% - 48px));
 
     min-width: 0;
 
-    margin: 28px auto 60px;
+    margin: 28px auto 55px;
 
     background: var(--surface);
 
     border: 1px solid var(--border);
-    border-radius: 14px;
+
+    border-radius: 16px;
 
     overflow: hidden;
 
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
 }
 
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+/* ---------------------------------------------------------
+   Navigation
+   --------------------------------------------------------- */
 
 #navigation {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
     margin: 0;
+
     padding: 0;
 
     background:
         linear-gradient(
-            180deg,
-            rgba(15, 23, 42, 1),
-            rgba(15, 23, 42, 0.98)
+            135deg,
+            #11115f 0%,
+            #1717a8 48%,
+            #0000ff 100%
         );
 
     color: #ffffff;
 
     font-size: 14px;
 
+    text-align: left;
+
     overflow: hidden;
+
+    box-shadow:
+        inset 0 -1px 0 rgba(255,255,255,0.12);
 }
 
 #navigation > ul {
     display: flex;
     align-items: center;
+
     gap: 4px;
 
-    max-width: var(--content-width);
-
-    margin: 0 auto;
-    padding: 10px 14px;
+    margin: 0;
+    padding: 8px 12px;
 
     list-style: none;
 }
 
-#navigation li {
+#navigation > ul li {
+    display: block;
+
     margin: 0;
     padding: 0;
 
-    list-style: none;
-}
+    border-radius: 8px;
 
-#navigation li a,
-#navigation li.element a,
-#navigation li.current a {
-    display: block;
+    color: #ffffff;
 
-    padding: 9px 13px;
-
-    border-radius: var(--radius-sm);
-
-    color: #cbd5e1 !important;
-
-    font-size: 14px;
     font-weight: 600;
 
-    text-decoration: none !important;
-
-    white-space: nowrap;
+    cursor: pointer;
 
     transition:
-        color 0.15s ease,
-        background 0.15s ease,
-        transform 0.15s ease;
+        background 0.16s ease,
+        transform 0.16s ease;
 }
 
-#navigation li.element a:hover,
-#navigation li:hover a {
-    background: rgba(255, 255, 255, 0.07);
+#navigation > ul li a,
+#navigation > ul li a:link,
+#navigation > ul li a:visited {
+    display: block;
 
+    padding: 10px 14px;
+
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+#navigation > ul li.element:hover,
+#navigation > ul li.current {
+    background: rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.12);
+
+    transform: translateY(-1px);
+}
+
+#navigation > ul li.current {
+    background: #0000ff;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 80, 0.25);
+}
+
+#navigation > ul li.element:hover a,
+#navigation > ul li.current a {
     color: #ffffff !important;
 }
 
-#navigation li.current a,
-#navigation li.current:hover a {
-    background: var(--primary);
 
-    color: #ffffff !important;
-}
-
-#navigation li.current a:hover {
-    background: var(--primary-dark);
-}
-
-
-/* =========================================================
-   FOLDER TREE / BREADCRUMBS
-   ========================================================= */
+/* ---------------------------------------------------------
+   Breadcrumb / folder tree
+   --------------------------------------------------------- */
 
 #folder-tree {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 6px;
 
-    min-height: 43px;
+    min-height: 44px;
 
-    padding: 9px 20px;
+    padding: 9px 18px;
 
-    background: var(--surface);
+    background: #fafaff;
 
-    border-top: 1px solid rgba(226, 232, 240, 0.8);
+    border-top: 1px solid rgba(85, 85, 255, 0.08);
     border-bottom: 1px solid var(--border);
 
-    color: var(--text-muted);
+    color: #7777aa;
 
     font-size: 13px;
 }
 
+#folder-tree a,
 #folder-tree a:link,
 #folder-tree a:visited {
-    padding: 3px 5px;
+    color: #7777aa !important;
 
     background: transparent !important;
 
-    color: var(--text-muted) !important;
-
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 #folder-tree a:hover,
 #folder-tree a:active {
+    color: var(--hover) !important;
+
+    background: transparent !important;
+}
+
+#folder-tree .current {
     color: var(--primary) !important;
 
-    text-decoration: none !important;
+    font-weight: 700;
 }
 
-#folder-tree a.current {
-    color: var(--text) !important;
-
-    font-weight: 650;
-}
-
-#folder-tree a.reverse {
+#folder-tree .reverse {
     margin-left: auto;
 
-    padding: 5px 9px;
+    padding: 5px 10px;
 
-    background: var(--surface-soft) !important;
+    border-radius: 7px;
 
-    border-radius: var(--radius-xs);
-
-    color: var(--text-muted) !important;
-}
-
-#folder-tree a.reverse:hover {
     background: var(--primary-soft) !important;
 
     color: var(--primary) !important;
+
+    font-weight: 600;
+}
+
+#folder-tree .reverse:hover {
+    background: var(--indigo-soft) !important;
 }
 
 
-/* =========================================================
-   MAIN CONTENT
-   ========================================================= */
+/* ---------------------------------------------------------
+   Main content
+   --------------------------------------------------------- */
 
 #content-all {
     width: 100%;
@@ -460,25 +430,25 @@ a:active {
     min-height: 515px;
 
     margin: 0;
-    padding: 30px 24px 28px;
+
+    padding: 28px 28px 24px;
 }
 
-#content-all a:link,
-#content-all a:visited {
-    color: var(--primary);
-    text-decoration: none;
+#content-all > h3,
+#content-all > h4 {
+    position: relative;
+
+    margin-bottom: 22px;
 }
 
-#content-all a:hover,
-#content-all a:active {
-    color: var(--primary-dark);
-    text-decoration: none;
+#content-all > h3 .title {
+    color: var(--text);
 }
 
 
-/* =========================================================
-   GENERAL CONTENT
-   ========================================================= */
+/* ---------------------------------------------------------
+   Intro / content table
+   --------------------------------------------------------- */
 
 tr.content td {
     padding: 18px 22px;
@@ -486,20 +456,19 @@ tr.content td {
     background: var(--surface);
 
     border: 1px solid var(--border);
+
     border-radius: var(--radius);
 
-    color: var(--text-muted);
+    color: var(--text);
 
     box-shadow: var(--shadow-sm);
-}
-
-tr.content td {
-    font-weight: normal !important;
 }
 
 tr.content ul {
     margin: 0;
     padding-left: 20px;
+
+    color: var(--text-muted);
 }
 
 tr.content li + li {
@@ -507,499 +476,14 @@ tr.content li + li {
 }
 
 tr.content a {
+    color: var(--primary);
     font-weight: 600;
 }
 
 
-/* =========================================================
-   HSC SUBJECT GRID
-   =========================================================
-
-   The original grid is intentionally retained at:
-
-       200px wide
-       90px high
-
-   This means existing subject names continue to fit the
-   dimensions they were designed for.
-   ========================================================= */
-
-#web-grid {
-    width: 100%;
-
-    margin-top: 4px;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    -webkit-overflow-scrolling: touch;
-}
-
-#web-grid > div {
-    /*
-       Preserve the original four-column table-like
-       structure without requiring the old table layout.
-    */
-
-    display: table;
-
-    width: 100%;
-
-    table-layout: fixed;
-
-    margin: 0;
-    padding: 0;
-
-    border-collapse: separate;
-}
-
-#web-grid > div > div {
-    display: table-row;
-}
-
-#web-grid > div > div > div {
-    display: table-cell;
-
-    position: relative;
-
-    width: 200px;
-    height: 90px;
-
-    padding: 5px;
-}
-
-
-/* =========================================================
-   SUBJECT CARDS
-   ========================================================= */
-
-#web-grid > div > div > div > a {
-    display: block;
-
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    color: var(--text) !important;
-
-    text-decoration: none !important;
-}
-
-#web-grid > div > div > div > a > span {
-    display: flex;
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 100%;
-
-    margin-top: 0;
-
-    align-items: flex-end;
-
-    overflow: hidden;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    color: var(--text);
-
-    box-shadow: var(--shadow-sm);
-
-    font-size: 14px !important;
-    font-weight: 650;
-
-    transition:
-        border-color 0.15s ease,
-        background 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.15s ease;
-}
-
-
-/*
-   The nested span contains the subject label.
-
-   We deliberately override the old inline positioning
-   so the labels behave consistently.
-*/
-
-#web-grid > div > div > div > a > span > span {
-    display: flex;
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    align-items: center;
-
-    width: 100%;
-    height: auto !important;
-
-    min-height: 30px;
-
-    padding: 6px 9px;
-
-    margin: 0;
-
-    overflow: hidden;
-
-    background: var(--surface-soft) !important;
-
-    border-top: 1px solid var(--border);
-
-    color: var(--text-soft);
-
-    font-size: 13px;
-    font-weight: 650;
-
-    line-height: 1.3;
-
-    transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        border-color 0.15s ease;
-}
-
-
-/*
-   Preserve the subject icon.
-
-   The original images are small colour indicators, so
-   don't allow them to become distorted.
-*/
-
-#web-grid > div > div > div > a > span > img {
-    position: absolute;
-
-    top: 8px;
-    left: 8px;
-
-    width: auto;
-    height: auto;
-
-    max-width: 24px;
-    max-height: 24px;
-
-    margin: 0;
-}
-
-
-/* Subject card hover */
-
-#web-grid > div > div > div > a:hover > span {
-    background: var(--surface);
-
-    border-color: var(--primary-border);
-
-    box-shadow: var(--shadow-md);
-
-    transform: translateY(-2px);
-}
-
-#web-grid > div > div > div > a:hover > span > span {
-    background: var(--primary) !important;
-
-    border-color: var(--primary);
-
-    color: #ffffff;
-}
-
-
-/*
-   Make room for the icon when the label is displayed.
-*/
-
-#web-grid > div > div > div > a > span > span {
-    padding-left: 38px;
-}
-
-
-/* =========================================================
-   RESOURCE LIST VIEW
-   ========================================================= */
-
-#web-list {
-    width: 100%;
-}
-
-#web-list > div {
-    display: table;
-
-    width: 100%;
-}
-
-#web-list > div > div {
-    display: table-row;
-}
-
-#web-list > div > div > div {
-    display: table-cell;
-
-    width: 50%;
-
-    padding: 0 18px 20px 0;
-
-    vertical-align: top;
-}
-
-
-/*
-   The original list uses images followed by links and
-   <br> elements. Turn those into comfortable list rows.
-*/
-
-#web-list > div > div > div > img {
-    width: 12px;
-    height: 12px;
-
-    margin-right: 7px;
-
-    vertical-align: -1px;
-}
-
-#web-list > div > div > div > a {
-    display: inline-block;
-
-    padding: 4px 0;
-
-    color: var(--text-soft);
-
-    font-size: 14px;
-    font-weight: 550;
-
-    text-decoration: none;
-}
-
-#web-list > div > div > div > a:hover {
-    color: var(--primary);
-
-    text-decoration: none;
-}
-
-
-/* =========================================================
-   SMALLSCREEN / MOBILE LIST
-   ========================================================= */
-
-.smallscreen {
-    margin-bottom: 14px;
-    padding: 14px 15px;
-
-    background: var(--surface-soft);
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-
-    box-shadow: var(--shadow-sm);
-}
-
-.smallscreen span {
-    display: block;
-
-    padding: 5px 0;
-}
-
-.smallscreen img {
-    vertical-align: middle;
-}
-
-.smallscreen a {
-    color: var(--text-soft);
-
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.smallscreen a:hover {
-    color: var(--primary);
-}
-
-
-/* =========================================================
-   LISTS
-   ========================================================= */
-
-ul,
-ol {
-    color: var(--text-soft);
-}
-
-li + li {
-    margin-top: 4px;
-}
-
-
-/* =========================================================
-   TABLES
-   ========================================================= */
-
-table {
-    max-width: 100%;
-
-    border-collapse: separate;
-    border-spacing: 0;
-}
-
-td,
-th {
-    vertical-align: top;
-}
-
-
-/*
-   Listing tables are used heavily throughout THSC Online.
-*/
-
-#content-all table.listing {
-    width: 100%;
-
-    margin: 18px 0 0;
-
-    border-collapse: separate;
-
-    border-spacing: 0 10px;
-
-    table-layout: fixed;
-}
-
-
-/*
-   Search/content rows should not receive card styling.
-*/
-
-#content-all table.listing tr.search td,
-#content-all table.listing tr.content td {
-    background: transparent;
-
-    border: 0;
-
-    box-shadow: none;
-}
-
-
-/*
-   Main school / category row.
-
-   The original CSS used :has(). This version avoids it so
-   the stylesheet remains broadly compatible.
-*/
-
-#content-all table.listing tr:not(.search):not(.content) > td {
-    padding: 18px 22px;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-
-    color: var(--text);
-
-    font-size: 16px;
-    font-weight: 750;
-
-    box-shadow: var(--shadow-sm);
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.15s ease;
-}
-
-#content-all table.listing tr:not(.search):not(.content) > td:hover {
-    border-color: var(--border-hover);
-
-    box-shadow: var(--shadow-md);
-}
-
-
-/* =========================================================
-   PAPER / RESOURCE LINKS
-   ========================================================= */
-
-#content-all table.listing td span.content {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fill, minmax(185px, 1fr));
-
-    gap: 8px;
-
-    width: 100%;
-
-    margin-top: 14px;
-    padding: 0;
-
-    color: var(--text-soft);
-
-    font-weight: normal !important;
-}
-
-
-/*
-   Old markup uses <br> between links.
-   Grid layout makes those redundant.
-*/
-
-#content-all table.listing td span.content br {
-    display: none;
-}
-
-#content-all table.listing td span.content a {
-    display: block;
-
-    min-width: 0;
-
-    padding: 9px 11px;
-
-    overflow: hidden;
-
-    background: var(--surface-soft);
-
-    border: 1px solid #e8edf3;
-    border-radius: var(--radius-sm);
-
-    color: var(--text-soft) !important;
-
-    font-size: 13px;
-    font-weight: 550;
-
-    line-height: 1.35;
-
-    text-decoration: none !important;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease,
-        color 0.15s ease,
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-}
-
-#content-all table.listing td span.content a:hover {
-    background: var(--primary-soft);
-
-    border-color: var(--primary-border);
-
-    color: var(--primary) !important;
-
-    box-shadow: var(--shadow-sm);
-
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   SEARCH
-   ========================================================= */
+/* ---------------------------------------------------------
+   Search
+   --------------------------------------------------------- */
 
 .search {
     padding: 15px;
@@ -1018,9 +502,9 @@ th {
 #search-row td {
     padding: 0 0 18px;
 
-    background: transparent;
-
     border: 0;
+
+    background: transparent;
 }
 
 #search-bar {
@@ -1030,21 +514,22 @@ th {
 
     margin: 0 0 10px;
 
-    padding: 13px 15px;
+    padding: 12px 14px;
 
-    background: var(--surface);
+    border: 1px solid #c9cdf2;
 
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 9px;
+
+    background: #ffffff;
 
     color: var(--text);
 
-    font: inherit;
+    font-family: inherit;
     font-size: 14px;
 
     outline: none;
 
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 3px rgba(20,20,100,0.05);
 
     transition:
         border-color 0.15s ease,
@@ -1052,15 +537,15 @@ th {
 }
 
 #search-bar::placeholder {
-    color: var(--text-faint);
+    color: #8b8daf;
 }
 
 #search-bar:focus {
-    border-color: #93c5fd;
+    border-color: var(--primary);
 
     box-shadow:
-        0 0 0 3px rgba(37, 99, 235, 0.1),
-        var(--shadow-sm);
+        0 0 0 3px rgba(0, 0, 255, 0.10),
+        0 3px 10px rgba(0, 0, 120, 0.06);
 }
 
 #search-row label,
@@ -1069,7 +554,7 @@ label {
 
     align-items: center;
 
-    margin-top: 8px;
+    margin-top: 7px;
 
     color: var(--text-muted);
 
@@ -1089,171 +574,582 @@ input[type="checkbox"] {
 #search-message {
     display: inline-block;
 
-    margin-top: 7px;
+    margin-top: 6px;
 
-    color: var(--text-muted);
+    color: #ff5500;
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
-/* =========================================================
-   FORM CONTROLS
-   ========================================================= */
+/* ---------------------------------------------------------
+   Buttons
+   --------------------------------------------------------- */
 
-input,
-textarea,
-select {
-    font: inherit;
+input[type="button"],
+input[type="submit"] {
+    margin-top: 10px;
+
+    padding: 9px 16px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0000ff,
+            #5555ff
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,255,0.18);
+
+    transition:
+        background 0.15s ease,
+        transform 0.12s ease,
+        box-shadow 0.15s ease;
 }
 
-input {
-    border-radius: var(--radius-xs);
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background: #0000cc !important;
+
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 14px rgba(0,0,180,0.22);
 }
 
-input[type="text"],
-input[type="search"],
-input[type="email"],
-input[type="password"],
-textarea,
-select {
-    max-width: 100%;
+input[type="button"]:active,
+input[type="submit"]:active {
+    transform: translateY(0);
+}
 
-    padding: 9px 11px;
+
+/* ---------------------------------------------------------
+   Modern subject grid
+   ---------------------------------------------------------
+
+   IMPORTANT:
+   Original dimensions were:
+
+       width:  200px
+       height: 90px
+
+   These are now MINIMUM dimensions.
+
+   The cells may therefore grow when there is room, rather
+   than remaining locked at 200 x 90.
+   --------------------------------------------------------- */
+
+#web-grid {
+    width: 100%;
+
+    margin-top: 4px;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    scrollbar-width: thin;
+}
+
+#web-grid > div {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(200px, 1fr));
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin: 0;
+
+    overflow: visible;
+}
+
+/*
+   Flatten the original table-like structure.
+
+   The HTML has:
+       outer
+         row
+           cell
+           cell
+           cell
+           cell
+
+   We turn the cells into responsive grid items.
+*/
+
+#web-grid > div > div {
+    display: contents;
+}
+
+#web-grid > div > div > div {
+    position: relative;
+
+    display: block;
+
+    width: auto;
+    min-width: 200px;
+
+    height: auto;
+    min-height: 90px;
+
+    padding: 0;
+}
+
+
+/* Subject card */
+
+#web-grid > div > div > div > a {
+    display: block;
+
+    width: 100%;
+    min-width: 200px;
+
+    height: 100%;
+    min-height: 90px;
+
+    color: var(--text);
+
+    text-decoration: none;
+}
+
+
+/* Outer coloured card */
+
+#web-grid > div > div > div > a > span {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+    min-width: 200px;
+
+    min-height: 90px;
+
+    margin: 0;
+
+    padding: 12px 14px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fafaff 100%
+        );
+
+    color: var(--text);
+
+    font-size: 14px !important;
+    font-weight: 650;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color 0.16s ease,
+        background 0.16s ease,
+        box-shadow 0.16s ease,
+        transform 0.16s ease;
+}
+
+
+/* Subject icon */
+
+#web-grid > div > div > div > a > span > img {
+    flex: 0 0 auto;
+
+    width: 28px;
+    height: 28px;
+
+    margin: 0 8px 0 0;
+
+    object-fit: contain;
+}
+
+
+/*
+   The nested span contains the text.
+
+   Override the old inline positioning without requiring
+   any HTML changes.
+*/
+
+#web-grid > div > div > div > a > span > span {
+    position: static !important;
+
+    display: flex !important;
+
+    align-items: center;
+
+    width: auto !important;
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    color: inherit !important;
+
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* Card hover */
+
+#web-grid > div > div > div > a > span:hover {
+    border-color: #9999ff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f4ff,
+            #e9e9ff
+        );
+
+    color: var(--primary);
+
+    box-shadow: var(--shadow-md);
+
+    transform: translateY(-2px);
+}
+
+
+/*
+   Preserve the original orange hover/active link colour
+   while making the card itself indigo.
+*/
+
+#web-grid a:hover,
+#web-grid a:active {
+    color: var(--hover);
+}
+
+#web-grid > div > div > div > a:hover > span {
+    border-color: var(--indigo);
+
+    box-shadow:
+        0 10px 24px rgba(0,0,180,0.14);
+}
+
+
+/* ---------------------------------------------------------
+   Responsive grid scaling
+   --------------------------------------------------------- */
+
+/*
+   Large screens:
+   Four columns, but each cell can grow beyond 200px.
+*/
+
+@media (min-width: 1150px) {
+    #web-grid > div {
+        grid-template-columns:
+            repeat(4, minmax(200px, 1fr));
+    }
+}
+
+
+/*
+   Medium screens:
+   Three columns, still respecting 200px minimum.
+*/
+
+@media (max-width: 1149px) {
+    #web-grid > div {
+        grid-template-columns:
+            repeat(3, minmax(200px, 1fr));
+    }
+}
+
+
+/*
+   Smaller desktop/tablet:
+   Two columns.
+*/
+
+@media (max-width: 850px) {
+    #web-grid > div {
+        grid-template-columns:
+            repeat(2, minmax(200px, 1fr));
+    }
+}
+
+
+/*
+   Phones:
+   One column.
+
+   The 200px minimum is retained, but the actual card can
+   become wider than 200px.
+*/
+
+@media (max-width: 500px) {
+    #web-grid > div {
+        grid-template-columns:
+            minmax(200px, 1fr);
+    }
+
+    #web-grid > div > div > div > a,
+    #web-grid > div > div > div > a > span {
+        min-width: 200px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Web list / mobile list view
+   --------------------------------------------------------- */
+
+#web-list {
+    width: 100%;
+}
+
+#web-list > div {
+    display: block;
+
+    width: 100%;
+}
+
+#web-list > div > div {
+    display: block;
+
+    width: 100%;
+}
+
+#web-list > div > div > div {
+    display: block;
+
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+#web-list .smallscreen {
+    margin-bottom: 16px;
+}
+
+
+/* Individual list links */
+
+#web-list > div > div > div > img {
+    vertical-align: middle;
+
+    margin-right: 5px;
+}
+
+#web-list > div > div > div > a {
+    display: inline-block;
+
+    padding: 5px 0;
+
+    color: var(--primary);
+
+    font-weight: 550;
+}
+
+#web-list > div > div > div > a:hover {
+    color: var(--hover);
+}
+
+
+/* ---------------------------------------------------------
+   Small-screen navigation
+   --------------------------------------------------------- */
+
+.smallscreen {
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: var(--surface-soft);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.smallscreen img {
+    vertical-align: middle;
+}
+
+.smallscreen a {
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.smallscreen a:hover {
+    color: var(--hover);
+}
+
+
+/* ---------------------------------------------------------
+   Tables / paper listings
+   --------------------------------------------------------- */
+
+#content-all table.listing {
+    width: 100%;
+
+    margin: 18px 0 0;
+
+    border-collapse: separate;
+
+    border-spacing: 0 10px;
+
+    table-layout: auto;
+}
+
+#content-all table.listing td {
+    vertical-align: top;
+}
+
+
+/* School / category row */
+
+table.listing > tbody > tr:not(.search):not(.content) > td {
+    padding: 18px 20px;
 
     background: var(--surface);
 
     border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
+
+    border-radius: var(--radius);
 
     color: var(--text);
 
-    outline: none;
+    font-size: 16px;
+
+    font-weight: 750;
+
+    box-shadow: var(--shadow-sm);
 
     transition:
         border-color 0.15s ease,
         box-shadow 0.15s ease;
 }
 
-input[type="text"]:focus,
-input[type="search"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-    border-color: #93c5fd;
+table.listing > tbody > tr:not(.search):not(.content) > td:hover {
+    border-color: var(--border-hover);
 
-    box-shadow:
-        0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: var(--shadow-md);
 }
 
 
-/* =========================================================
-   BUTTONS
-   ========================================================= */
+/* Paper links */
 
-input[type="submit"],
-input[type="button"],
-button {
-    margin-top: 10px;
+table.listing span.content {
+    display: grid;
 
-    padding: 8px 15px;
+    grid-template-columns:
+        repeat(auto-fill, minmax(185px, 1fr));
 
-    background: var(--primary);
+    gap: 8px;
 
-    border: 0;
-    border-radius: var(--radius-sm);
+    margin-top: 13px;
 
-    color: #ffffff;
+    padding: 0;
 
-    font: inherit;
-    font-size: 14px;
-    font-weight: 650;
+    font-weight: normal !important;
+}
 
-    cursor: pointer;
+table.listing span.content br {
+    display: none;
+}
+
+table.listing span.content a {
+    display: block;
+
+    min-width: 0;
+
+    padding: 9px 11px;
+
+    border: 1px solid #e1e3f5;
+
+    border-radius: 8px;
+
+    background: var(--surface-soft);
+
+    color: #33335f;
+
+    font-size: 13px;
+
+    font-weight: 550;
+
+    line-height: 1.35;
+
+    text-decoration: none;
+
+    overflow: hidden;
 
     transition:
         background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
         transform 0.15s ease,
         box-shadow 0.15s ease;
 }
 
-input[type="submit"]:hover,
-input[type="button"]:hover,
-button:hover {
-    background: var(--primary-dark);
+table.listing span.content a:hover {
+    background: var(--indigo-soft);
 
-    box-shadow: var(--shadow-sm);
+    border-color: #9999ff;
+
+    color: var(--hover);
 
     transform: translateY(-1px);
-}
 
-input[type="submit"]:active,
-input[type="button"]:active,
-button:active {
-    transform: translateY(0);
+    box-shadow:
+        0 4px 10px rgba(0,0,150,0.08);
 }
 
 
-/* =========================================================
-   REMARKS
-   ========================================================= */
+/* Intro rows */
 
-span.remark {
-    display: inline-block;
-
-    padding: 2px 7px;
-
-    background: #eff6ff;
-
-    border: 1px solid #dbeafe;
-
-    border-radius: var(--radius-xs);
-
-    color: #1e40af;
-
-    font-size: 10px;
-
-    cursor: pointer;
+#content-all table.listing tr.content td {
+    font-weight: normal !important;
 }
 
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-#footer {
-    padding: 0;
-
-    background: var(--surface-soft);
-
-    border-top: 1px solid var(--border);
-
-    color: var(--text-muted);
-
-    font-size: 12px;
-}
-
-#footer #folder-tree {
-    min-height: auto;
-
-    border: 0;
-
-    background: transparent;
-}
-
-
-/* =========================================================
-   PDF VIEWER
-   ========================================================= */
+/* ---------------------------------------------------------
+   PDF viewer
+   --------------------------------------------------------- */
 
 #viewer {
     width: 100%;
     height: 95%;
 
     margin-top: 3px;
-
-    border: 0;
 }
 
 #openFile,
@@ -1267,9 +1163,9 @@ span.remark {
 }
 
 
-/* =========================================================
-   VIEWER OVERLAY
-   ========================================================= */
+/* ---------------------------------------------------------
+   Overlay bar
+   --------------------------------------------------------- */
 
 #overlaybar {
     position: absolute;
@@ -1279,37 +1175,42 @@ span.remark {
 
     width: 100%;
 
-    padding: 5px 10px;
+    padding: 4px 0;
 
-    background: var(--primary);
+    background:
+        linear-gradient(
+            90deg,
+            #5555ff,
+            #0000ff
+        );
 
     color: #ffffff;
 
-    z-index: 999;
+    z-index: 2;
 
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0,0,100,0.18);
 }
 
+#overlaybar a,
 #overlaybar a:link,
 #overlaybar a:visited {
-    display: inline-block;
+    padding: 2px 5px;
 
-    padding: 2px 7px;
+    border-radius: 5px;
 
-    background: var(--primary-dark);
+    background: #0000cc;
 
-    border-radius: var(--radius-xs);
-
-    color: #ffffff !important;
+    color: #ffffff;
 
     text-decoration: none;
 }
 
 #overlaybar a:hover,
 #overlaybar a:active {
-    background: var(--nav);
+    background: #222222;
 
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 #overlaybar #overlayinsert {
@@ -1317,38 +1218,32 @@ span.remark {
 }
 
 
-/* =========================================================
-   PDF POPUP
-   ========================================================= */
+/* ---------------------------------------------------------
+   PDF popup
+   --------------------------------------------------------- */
 
 .pdf-popup {
     position: absolute;
 
-    z-index: 999999;
-
     min-width: 260px;
     max-width: 320px;
 
-    padding: 14px;
+    padding: 12px;
 
-    background: var(--surface);
+    background: #eeeeff;
 
-    border: 1px solid var(--border);
+    border: 1px solid #aaaaff;
 
-    border-radius: var(--radius);
+    border-radius: 10px;
 
-    color: var(--text);
+    color: #333355;
 
-    box-shadow: var(--shadow-lg);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25);
 
-    font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+    z-index: 999999;
+
+    font-family: Arial, sans-serif;
 }
 
 .pdf-popup a {
@@ -1358,13 +1253,11 @@ span.remark {
 
     color: var(--primary);
 
-    font-weight: 600;
-
     text-decoration: none;
 }
 
 .pdf-popup a:hover {
-    color: var(--primary-dark);
+    color: var(--hover);
 }
 
 .pdf-progress {
@@ -1372,11 +1265,11 @@ span.remark {
 
     margin-top: 10px;
 
+    background: #333333;
+
+    border-radius: 4px;
+
     overflow: hidden;
-
-    background: #e2e8f0;
-
-    border-radius: 999px;
 }
 
 .pdf-progress-bar {
@@ -1396,37 +1289,176 @@ span.remark {
 
     padding: 6px 10px;
 
-    background: var(--nav);
-
     border: 0;
-    border-radius: var(--radius-xs);
 
-    color: #ffffff;
+    border-radius: 6px;
+
+    background: #444444;
+
+    color: white;
+
+    cursor: pointer;
 }
 
-.pdf-popup button:hover {
-    background: var(--primary);
+
+/* ---------------------------------------------------------
+   Footer
+   --------------------------------------------------------- */
+
+#footer {
+    padding: 0;
+
+    background: #fafaff;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 12px;
+
+    color: #7777aa;
+}
+
+#footer #folder-tree {
+    border: 0;
+
+    background: transparent;
 }
 
 
-/* =========================================================
-   FOCUS / ACCESSIBILITY
-   ========================================================= */
+/* ---------------------------------------------------------
+   Accessibility
+   --------------------------------------------------------- */
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-    outline: 3px solid rgba(37, 99, 235, 0.25);
+input:focus-visible {
+    outline: 3px solid rgba(0, 0, 255, 0.25);
 
     outline-offset: 2px;
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+/* ---------------------------------------------------------
+   Responsive page layout
+   --------------------------------------------------------- */
+
+@media (max-width: 1095px) {
+    #navigation > ul .reducible {
+        display: none;
+    }
+}
+
+@media (max-width: 995px) {
+    .layout-searchbox {
+        display: none !important;
+    }
+}
+
+@media (max-width: 840px) {
+    #web-grid {
+        display: none !important;
+    }
+
+    #web-list {
+        display: block !important;
+    }
+
+    .smallscreen {
+        display: block !important;
+    }
+
+    #folder-tree {
+        display: none !important;
+    }
+}
+
+@media (max-width: 795px) {
+    .reverse-element,
+    .reverse-wedge {
+        display: none;
+    }
+
+    #content-all {
+        padding: 24px 20px 20px;
+    }
+
+    #content-all h3 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 695px) {
+    #navigation {
+        display: none !important;
+    }
+
+    #page-wrapper {
+        width: calc(100% - 28px);
+
+        margin: 18px auto 35px;
+
+        border-radius: 13px;
+    }
+
+    #content-all {
+        padding: 22px 16px 18px;
+    }
+
+    h1 {
+        padding-left: 20px;
+
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    #page-wrapper {
+        width: calc(100% - 16px);
+
+        margin: 12px auto 25px;
+
+        border-radius: 11px;
+    }
+
+    #content-all {
+        padding: 20px 12px 16px;
+    }
+
+    #content-all h3 {
+        margin-bottom: 16px;
+
+        font-size: 21px;
+    }
+
+    table.listing {
+        border-spacing: 0 8px;
+    }
+
+    table.listing > tbody > tr:not(.search):not(.content) > td {
+        padding: 15px;
+    }
+
+    table.listing span.content {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 6px;
+    }
+
+    table.listing span.content a {
+        padding: 8px 9px;
+
+        font-size: 12px;
+    }
+
+    tr.content td {
+        padding: 15px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -1439,473 +1471,203 @@ select:focus-visible {
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media screen and (max-width: 1095px) {
-
-    #navigation li.reducible {
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 995px) {
-
-    .layout-searchbox {
-        display: none !important;
-    }
-
-    #content-all {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE RESOURCE VIEW
-   ========================================================= */
-
-@media screen and (max-width: 840px) {
-
-    /*
-       The original site switches to the list view here.
-       Keep that behaviour because the XHTML already provides
-       both representations.
-    */
-
-    #web-grid {
-        display: none !important;
-    }
-
-    #folder-tree {
-        display: none !important;
-    }
-
-    #web-list {
-        display: block !important;
-    }
-
-    .smallscreen {
-        display: block !important;
-    }
-
-    #web-list > div > div > div {
-        display: table-row;
-    }
-}
-
-
-/* =========================================================
-   NARROW TABLET
-   ========================================================= */
-
-@media screen and (max-width: 795px) {
-
-    .reverse-element,
-    .reverse-wedge {
-        display: none;
-    }
-
-    #content-all > h3,
-    #content-all > h4 {
-        font-size: 23px;
-    }
-
-    #content-all table.listing td span.content {
-        grid-template-columns:
-            repeat(auto-fill, minmax(150px, 1fr));
-    }
-}
-
-
-/* =========================================================
-   MOBILE NAV
-   ========================================================= */
-
-@media screen and (max-width: 695px) {
-
-    #navigation {
-        position: relative;
-    }
-
-    #navigation > ul {
-        overflow-x: auto;
-
-        padding: 8px 10px;
-
-        scrollbar-width: none;
-    }
-
-    #navigation > ul::-webkit-scrollbar {
-        display: none;
-    }
-
-    #navigation li a {
-        white-space: nowrap;
-    }
-
-    #page-wrapper {
-        width: calc(100% - 24px);
-
-        min-width: 0;
-
-        margin: 12px auto 35px;
-
-        border-radius: 12px;
-    }
-
-    #content-all {
-        padding: 22px 14px 24px;
-    }
-
-    #content-all table.listing td span.content {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #web-list > div > div > div {
-        width: 100%;
-
-        padding-right: 0;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL SCREENS
-   ========================================================= */
-
-@media screen and (max-width: 500px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    h1 {
-        display: block;
-
-        padding: 18px 16px;
-
-        font-size: 19px;
-    }
-
-    #page-wrapper {
-        width: calc(100% - 16px);
-
-        margin-top: 8px;
-
-        border-radius: 10px;
-    }
-
-    #content-all {
-        padding: 20px 10px 22px;
-    }
-
-    #content-all > h3,
-    #content-all > h4 {
-        margin-bottom: 16px;
-
-        font-size: 21px;
-    }
-
-    #content-all table.listing {
-        border-spacing: 0 8px;
-    }
-
-    #content-all table.listing tr:not(.search):not(.content) > td {
-        padding: 15px;
-    }
-
-    #content-all table.listing td span.content {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 6px;
-    }
-
-    #content-all table.listing td span.content a {
-        padding: 8px 9px;
-
-        font-size: 12px;
-    }
-
-    tr.content td {
-        padding: 15px;
-    }
-
-    #web-list > div > div > div {
-        font-size: 13px;
-    }
-}
-
-
-/* =========================================================
-   DARK MODE
-   ========================================================= */
+/* ---------------------------------------------------------
+   Dark mode
+   --------------------------------------------------------- */
 
 body.dark-mode {
-    --bg: #0b1120;
-    --surface: #111827;
-    --surface-soft: #172033;
-    --surface-hover: #1e293b;
-
-    --border: #263449;
-    --border-hover: #3b4b63;
-
-    --text: #f3f4f6;
-    --text-soft: #d1d5db;
-    --text-muted: #94a3b8;
-    --text-faint: #64748b;
-
-    --primary: #60a5fa;
-    --primary-dark: #93c5fd;
-    --primary-soft: #172554;
-    --primary-border: #1d4ed8;
-
-    --nav: #020617;
-    --nav-dark: #000000;
-
     background:
         radial-gradient(
             circle at top left,
-            rgba(37, 99, 235, 0.12),
+            rgba(85,85,255,0.16),
             transparent 35%
         ),
-        var(--bg);
+        #080819 !important;
 
-    color: var(--text);
+    color: #eeeeff;
 }
-
-
-/* Dark mode wrapper */
 
 body.dark-mode #page-wrapper {
-    background: var(--surface);
+    background: #10102a;
 
-    border-color: var(--border);
+    border-color: #29295c;
 
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.45);
+        0 20px 50px rgba(0,0,0,0.55);
 }
-
-
-/* Dark mode headings */
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode h4,
 body.dark-mode h5 {
-    color: var(--text);
-}
-
-body.dark-mode h1 {
-    background: #020617;
+    color: #f4f4ff;
 }
 
 body.dark-mode h1::after {
-    background: #60a5fa;
+    background:
+        linear-gradient(
+            90deg,
+            #5555ff,
+            #aaaaff
+        );
 }
 
 body.dark-mode h5 {
-    border-color: #60a5fa;
+    border-color: #5555ff;
 }
-
-
-/* Dark navigation */
 
 body.dark-mode #navigation {
-    background: #020617;
+    background:
+        linear-gradient(
+            135deg,
+            #05051e,
+            #101080,
+            #0000cc
+        );
 }
 
-body.dark-mode #navigation li.current a {
-    background: #1d4ed8;
+body.dark-mode #navigation > ul li:hover,
+body.dark-mode #navigation > ul li.current {
+    background: #0000aa;
 }
 
-body.dark-mode #navigation li.element a:hover,
-body.dark-mode #navigation li:hover a {
-    background: #172033;
+body.dark-mode #folder-tree,
+body.dark-mode #footer {
+    background: #0d0d25;
+    border-color: #29295c;
 }
 
-
-/* Dark breadcrumbs */
-
-body.dark-mode #folder-tree {
-    background: var(--surface);
-
-    border-color: var(--border);
-}
-
+body.dark-mode #folder-tree a,
 body.dark-mode #folder-tree a:link,
 body.dark-mode #folder-tree a:visited {
-    color: #94a3b8 !important;
+    color: #aaaaff !important;
 }
 
-body.dark-mode #folder-tree a:hover,
-body.dark-mode #folder-tree a:active {
-    color: #93c5fd !important;
-}
-
-body.dark-mode #folder-tree a.current {
-    color: #f3f4f6 !important;
-}
-
-body.dark-mode #folder-tree a.reverse {
-    background: #172033 !important;
-}
-
-
-/* Dark general links */
-
-body.dark-mode #content-all a:link,
-body.dark-mode #content-all a:visited {
-    color: #60a5fa;
+body.dark-mode #content-all a {
+    color: #9999ff;
 }
 
 body.dark-mode #content-all a:hover,
 body.dark-mode #content-all a:active {
-    color: #93c5fd;
+    color: #ffaa00;
 }
 
+body.dark-mode #search-bar,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #17173b;
 
-/* Dark cards */
-
-body.dark-mode tr.content td,
-body.dark-mode #content-all table.listing tr:not(.search):not(.content) > td {
-    background: var(--surface);
-
-    border-color: var(--border);
-
-    color: var(--text);
-}
-
-body.dark-mode #content-all table.listing tr:not(.search):not(.content) > td:hover {
-    border-color: var(--border-hover);
-}
-
-
-/* Dark paper links */
-
-body.dark-mode #content-all table.listing td span.content a {
-    background: #172033;
-
-    border-color: #263449;
-
-    color: #d1d5db !important;
-}
-
-body.dark-mode #content-all table.listing td span.content a:hover {
-    background: #172554;
-
-    border-color: #3b82f6;
-
-    color: #93c5fd !important;
-}
-
-
-/* Dark subject cards */
-
-body.dark-mode #web-grid > div > div > div > a > span {
-    background: var(--surface);
-
-    border-color: var(--border);
-}
-
-body.dark-mode #web-grid > div > div > div > a > span > span {
-    background: #172033 !important;
-
-    border-color: var(--border);
-
-    color: #d1d5db;
-}
-
-body.dark-mode #web-grid > div > div > div > a:hover > span {
-    background: #111827;
-
-    border-color: #3b82f6;
-}
-
-body.dark-mode #web-grid > div > div > div > a:hover > span > span {
-    background: #1d4ed8 !important;
-
-    border-color: #1d4ed8;
+    border-color: #41417a;
 
     color: #ffffff;
 }
 
-
-/* Dark search */
-
 body.dark-mode .search {
-    background: #172033;
+    background: #151533;
 
-    border-color: var(--border);
+    border-color: #29295c;
 }
 
-body.dark-mode #search-bar {
-    background: #0f172a;
+body.dark-mode table.listing > tbody > tr:not(.search):not(.content) > td {
+    background: #151533;
 
-    border-color: #334155;
+    border-color: #29295c;
 
-    color: #f9fafb;
+    color: #eeeeff;
 }
 
-body.dark-mode #search-bar::placeholder {
-    color: #64748b;
+body.dark-mode table.listing span.content a {
+    background: #1b1b45;
+
+    border-color: #303064;
+
+    color: #ccccff;
 }
 
+body.dark-mode table.listing span.content a:hover {
+    background: #24245d;
 
-/* Dark controls */
+    border-color: #6666ff;
 
-body.dark-mode input[type="text"],
-body.dark-mode input[type="search"],
-body.dark-mode input[type="email"],
-body.dark-mode input[type="password"],
-body.dark-mode textarea,
-body.dark-mode select {
-    background: #172033;
-
-    border-color: #334155;
-
-    color: #f9fafb;
+    color: #ffaa00;
 }
 
+body.dark-mode #web-grid
+    > div
+    > div
+    > div
+    > a
+    > span {
+    background:
+        linear-gradient(
+            135deg,
+            #151533,
+            #1b1b45
+        );
 
-/* Dark footer */
+    border-color: #303064;
 
-body.dark-mode #footer {
-    background: #0f172a;
-
-    border-color: var(--border);
-
-    color: #94a3b8;
+    color: #eeeeff;
 }
 
+body.dark-mode #web-grid
+    > div
+    > div
+    > div
+    > a
+    > span:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #20204f,
+            #292966
+        );
 
-/* Dark PDF popup */
+    border-color: #6666ff;
+
+    color: #ffaa00;
+}
 
 body.dark-mode .pdf-popup {
-    background: #172033;
+    background: #19193d;
 
-    border-color: #334155;
+    border-color: #45457d;
 
-    color: #f3f4f6;
+    color: #eeeeff;
 }
 
-body.dark-mode .pdf-progress {
-    background: #334155;
+body.dark-mode #overlaybar {
+    background:
+        linear-gradient(
+            90deg,
+            #3030cc,
+            #0000ff
+        );
 }
 
 
-/* =========================================================
-   LEGACY / COMPATIBILITY
-   ========================================================= */
+/* ---------------------------------------------------------
+   Legacy compatibility
+   --------------------------------------------------------- */
 
 /*
-   Old IE-specific hacks removed intentionally.
+   Keeps the old fixed-width behaviour only as a minimum
+   constraint where legacy code expects it.
+*/
 
-   Modern browsers now handle the grid/list layouts directly.
-   The XHTML remains untouched, so the stylesheet can replace
-   the original stylesheet without requiring markup changes.
-   ========================================================= */
+@media (max-width: 445px) {
+    #content-all {
+        overflow-x: auto;
+    }
+
+    #page-wrapper {
+        width: calc(100% - 16px);
+
+        min-width: 0;
+
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
