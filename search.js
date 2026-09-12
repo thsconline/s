@@ -23,11 +23,11 @@
 
 function toggleSearchBar() {
   var searchRow = document.getElementById("search-row");
-  if (searchRow.style.display === "none") {
-    searchRow.style.display = "table-row";  // Show the search bar
-  } else {
-    searchRow.style.display = "none";  // Hide the search bar
-  }
+  if (!searchRow) return;
+  // Class owns the hidden state; CSS keeps the row visible by default.
+  // Clear any stale inline style from older generator output.
+  searchRow.style.display = "";
+  searchRow.classList.toggle("thsc-search-hidden");
 }
 
 // Helper function to check if the filter contains numeric data
@@ -58,7 +58,7 @@ function matchNumericRange(value, filter) {
 }
 
 function filterTable() {
-    var input, filter, table, rows, cells, links, i, j, k, link, br, matchFound, resultCount, isExactMatch, debounceTimeout;
+    var input, filter, table, rows, cells, links, i, j, k, link, br, matchFound, resultCount, isExactMatch;
 
     // Predefined dictionary for keyword mapping (STHS -> ["Sydney Tech", "STHS"])
  
@@ -174,23 +174,7 @@ function filterTable() {
         var resultMessage = document.getElementById("search-message");
         resultMessage.innerHTML = "";
 		
-		clearTimeout(debounceTimeout);  // Clear any previous timeout to avoid multiple triggers
-
-    // Set a new timeout to wait 2 seconds after the input is cleared
-    debounceTimeout = setTimeout(function() {
-      if (document.getElementById("search-bar").value == "") {
-		 // Hide the search bar row and clear the search input
-		var searchRow = document.getElementById("search-row");
-		searchRow.style.display = "none";  // Hide the search bar row
-
-		// Clear the search input
-		document.getElementById("search-bar").value = "";  // Empty the search input field
-
-		// Uncheck the exact match checkbox (if applicable)
-		document.getElementById("search-exact").checked = false;
-      }
-    }, 3000);  // Wait 3 seconds before hiding the search bar
-	
+	// Search stays visible by default: just reset the message and exit.
 	return;  // Exit the function early since no filtering is needed
   } /*else {
 	var searchRow = document.getElementById("search-row");
@@ -285,18 +269,20 @@ function getUrlParameter(name) {
     return urlParams.get(name);  // Get value of the parameter 'name'
 }
 
-window.onload = function() {
-    // Check if the 'search' parameter exists in the URL
+function initFilterFromUrl() {
+    // Check if the 'filter' parameter exists in the URL
     var searchQuery = getUrlParameter('filter');
-    if (searchQuery) {
-        var searchInput = document.getElementById("search-bar");
-		
-		var exactMatchCheckbox = document.getElementById("search-exact");
-        
-        
-		if(searchQuery=="new-syllabus"){searchQuery = "2019-24"}
-        searchInput.value = searchQuery;  // Set the input value to the search query from the URL
-		exactMatchCheckbox.checked = true;
-        filterTable();  // Trigger the table filtering function
-    }
+    if (!searchQuery) return;
+    var searchInput = document.getElementById("search-bar");
+    if (!searchInput) return;
+    var exactMatchCheckbox = document.getElementById("search-exact");
+    if (searchQuery == "new-syllabus") { searchQuery = "2019-24"; }
+    searchInput.value = searchQuery;  // Set the input value to the search query from the URL
+    if (exactMatchCheckbox) exactMatchCheckbox.checked = true;
+    if (typeof filterTable === "function") filterTable();  // Trigger the table filtering function
+}
+if (typeof window.addEventListener === "function") {
+    window.addEventListener("load", initFilterFromUrl);
+} else {
+    window.onload = initFilterFromUrl;
 }
