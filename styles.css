@@ -1,543 +1,1911 @@
 /* =========================================================
-THSC ONLINE — REDESIGNED STYLESHEET
+   THSC Online — Modern stylesheet
+   Rebuilt for the existing XHTML structure
+   No HTML / JS changes required
+   ========================================================= */
 
-HTML / JS compatible with existing site
-Theme: Indigo / Blue / Clean Academic
-========================================================= */
 
 /* =========================================================
-COLOUR SYSTEM
-========================================================= */
+   DESIGN TOKENS
+   ========================================================= */
 
 :root {
---page-bg: #f4f6fb;
---surface: #ffffff;
---surface-soft: #f8f9ff;
+    --bg: #f5f7fb;
+    --surface: #ffffff;
+    --surface-soft: #f8fafc;
+    --surface-hover: #f1f5f9;
 
---nav: #111827;
---nav-hover: #1f2937;
+    --border: #e2e8f0;
+    --border-hover: #cbd5e1;
 
---primary: #5555ff;
---primary-dark: #3f3fd9;
---primary-light: #eeeeff;
+    --text: #172033;
+    --text-soft: #334155;
+    --text-muted: #64748b;
+    --text-faint: #94a3b8;
 
---link: #3333cc;
---link-hover: #f05a00;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-soft: #eff6ff;
+    --primary-border: #bfdbfe;
 
---text: #172033;
---text-secondary: #596579;
---text-light: #7b8798;
+    --success: #16a34a;
+    --warning: #f59e0b;
 
---border: #e4e8f1;
---border-strong: #d5daE6;
+    --nav: #0f172a;
+    --nav-dark: #020617;
 
---success: #22a06b;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --radius-xs: 6px;
 
---radius: 12px;
---radius-small: 8px;
+    --shadow-sm:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 1px 3px rgba(15, 23, 42, 0.06);
 
---shadow:
-    0 2px 5px rgba(15, 23, 42, 0.04),
-    0 8px 24px rgba(15, 23, 42, 0.06);
+    --shadow-md:
+        0 10px 30px rgba(15, 23, 42, 0.08);
 
---shadow-hover:
-    0 8px 24px rgba(15, 23, 42, 0.10),
-    0 3px 8px rgba(85, 85, 255, 0.08);
+    --shadow-lg:
+        0 20px 50px rgba(15, 23, 42, 0.12);
 
-
+    --content-width: 1180px;
 }
 
-/* =========================================================
-RESET / BASE
-========================================================= */
 
-{
-box-sizing: border-box;
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html {
-margin: 0;
-padding: 0;
-min-height: 100%;
-background: var(--page-bg);
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: var(--bg);
+
+    direction: ltr;
 }
 
 body {
-margin: 0;
-padding: 0;
+    min-height: 100vh;
 
-min-height: 100vh;
+    margin: 0;
+    padding: 0;
 
-background:
-    radial-gradient(
-        circle at 10% 0%,
-        rgba(85, 85, 255, 0.055),
-        transparent 30%
-    ),
-    var(--page-bg);
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.06),
+            transparent 35%
+        ),
+        var(--bg);
 
-color: var(--text);
+    color: var(--text);
 
-font-family:
-    "Arial",
-    "Inter",
-    "Helvetica Neue",
-    Arial,
-    sans-serif !important;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
 
-font-size: 14px;
-line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.6;
 
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
+    font-stretch: normal;
 
-
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 iframe {
-border: 0;
+    border: 0;
 }
 
 img {
-max-width: 100%;
-}
-
-a,
-a:link,
-a:visited,
-a:hover,
-a:active {
-text-decoration: none !important;
+    max-width: 100%;
 }
 
 a img {
-border: 0 !important;
+    border: 0 !important;
 }
 
-td {
-vertical-align: top;
-}
 
 /* =========================================================
-SITE TITLE
+   TYPOGRAPHY
+   ========================================================= */
 
-Deliberately NO background.
-========================================================= */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-top: 0;
 
-body > h1 {
-margin: 0;
-padding: 28px 50px 17px;
+    color: var(--text);
 
-background: transparent;
+    font-weight: 750;
 
-color: #111827;
-
-font-family:
-    "Arial",
-    "Inter",
-    "Helvetica Neue",
-    Arial,
-    sans-serif !important;
-
-font-size: 28px;
-font-weight: 700;
-
-line-height: 1.2;
-letter-spacing: -0.6px;
-
-position: relative;
-display: inline-block;
-
-
+    font-stretch: normal;
 }
 
-/* The underline you liked */
+h1 {
+    /*
+       Site masthead.
 
-body > h1::after {
-content: "";
+       The underline intentionally remains part of the
+       visual identity from the original stylesheet.
+    */
 
-display: block;
+    display: inline-block;
 
-width: 100%;
-height: 4px;
+    margin: 0;
+    padding: 22px max(24px, calc((100vw - var(--content-width)) / 2));
 
-margin-top: 7px;
+    background: var(--nav);
+    color: #ffffff;
 
-background: linear-gradient(
-    90deg,
-    #5555ff 0%,
-    #6666ff 65%,
-    #8585ff 100%
-);
+    font-size: 21px;
+    line-height: 1.25;
 
-border-radius: 4px;
+    letter-spacing: -0.025em;
 
-
+    position: relative;
 }
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    height: 4px;
+    width: 100%;
+
+    margin-top: 7px;
+
+    background: var(--primary);
+
+    border-radius: 999px;
+}
+
+
+/*
+   The XHTML uses h3 for the main page title on resource
+   pages, while some older pages use h4.
+*/
+
+#content-all > h3,
+#content-all > h4 {
+    margin: 0 0 20px;
+
+    color: var(--text);
+
+    font-size: 27px;
+    font-weight: 750;
+
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+}
+
+#content-all > h3 {
+    padding-top: 2px;
+}
+
+h2 {
+    padding-top: 14px;
+
+    color: var(--text-soft);
+
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    display: inline-block;
+
+    width: 100%;
+
+    margin: 0 0 8px;
+    padding: 3px 0 6px;
+
+    border-bottom: 1px solid var(--primary);
+
+    color: var(--primary);
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h5.grey {
+    padding-left: 8px;
+
+    border: 1px solid var(--border);
+    border-bottom: 2px solid var(--border-hover);
+
+    border-radius: var(--radius-xs);
+
+    color: var(--text);
+
+    font-weight: 700;
+}
+
 
 /* =========================================================
-MAIN PAGE CONTAINER
-========================================================= */
+   GLOBAL LINKS
+   ========================================================= */
+
+/*
+   Preserve the old site's fundamental behaviour:
+   links are not underlined by default.
+
+   The colour is modernised but remains clearly interactive.
+*/
+
+a:link,
+a:visited {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SITE HEADER / PAGE WRAPPER
+   ========================================================= */
 
 #page-wrapper {
-position: relative;
+    position: relative;
 
-margin: 0 50px 50px;
+    width: min(
+        var(--content-width),
+        calc(100% - 40px)
+    );
 
-min-width: 440px !important;
+    min-width: 0;
 
-background: var(--surface);
+    margin: 28px auto 60px;
 
-border: 1px solid var(--border);
+    background: var(--surface);
 
-border-radius: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
 
-box-shadow: var(--shadow);
+    overflow: hidden;
 
-overflow: hidden;
-
-
+    box-shadow: var(--shadow-md);
 }
+
 
 /* =========================================================
-NAVIGATION
-========================================================= */
+   NAVIGATION
+   ========================================================= */
 
 #navigation {
-padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
-background: var(--nav);
+    margin: 0;
+    padding: 0;
 
-color: #ffffff;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15, 23, 42, 1),
+            rgba(15, 23, 42, 0.98)
+        );
 
-text-align: left;
+    color: #ffffff;
 
-overflow: hidden;
+    font-size: 14px;
 
-
+    overflow: hidden;
 }
 
-#navigation ul {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
+#navigation > ul {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
-margin: 0;
-padding: 7px 8px;
+    max-width: var(--content-width);
 
-list-style: none;
+    margin: 0 auto;
+    padding: 10px 14px;
 
-gap: 3px;
-
-
+    list-style: none;
 }
 
 #navigation li {
-display: inline-block;
+    margin: 0;
+    padding: 0;
 
-margin: 0;
-padding: 0;
-
-border-radius: 8px;
-
-font-weight: 500;
-
-transition:
-    background-color 0.18s ease,
-    transform 0.18s ease;
-
-
+    list-style: none;
 }
 
-#navigation li a {
-display: block;
+#navigation li a,
+#navigation li.element a,
+#navigation li.current a {
+    display: block;
 
-padding: 11px 14px;
+    padding: 9px 13px;
 
-color: #e5e7eb !important;
+    border-radius: var(--radius-sm);
 
-font-size: 14px;
-font-weight: 600;
+    color: #cbd5e1 !important;
 
-white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
 
+    text-decoration: none !important;
 
+    white-space: nowrap;
+
+    transition:
+        color 0.15s ease,
+        background 0.15s ease,
+        transform 0.15s ease;
 }
 
-#navigation li:hover {
-background: var(--nav-hover);
-
-transform: translateY(-1px);
-
-
-}
-
+#navigation li.element a:hover,
 #navigation li:hover a {
-color: #ffffff !important;
-}
+    background: rgba(255, 255, 255, 0.07);
 
-/* Current page */
-
-#navigation li.current {
-background: var(--primary) !important;
-
-box-shadow:
-    0 2px 8px rgba(85, 85, 255, 0.28);
-
-
+    color: #ffffff !important;
 }
 
 #navigation li.current a,
-#navigation li.current a:link,
-#navigation li.current a:visited,
-#navigation li.current a:hover {
-color: #ffffff !important;
+#navigation li.current:hover a {
+    background: var(--primary);
+
+    color: #ffffff !important;
 }
+
+#navigation li.current a:hover {
+    background: var(--primary-dark);
+}
+
 
 /* =========================================================
-FOLDER / BREADCRUMB BAR
-========================================================= */
+   FOLDER TREE / BREADCRUMBS
+   ========================================================= */
 
 #folder-tree {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
 
-min-height: 43px;
+    min-height: 43px;
 
-margin: 0;
-padding: 10px 18px;
+    padding: 9px 20px;
 
-background: #fafbff;
+    background: var(--surface);
 
-border-top: 1px solid rgba(255,255,255,0.04);
-border-bottom: 1px solid var(--border);
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+    border-bottom: 1px solid var(--border);
 
-color: var(--text-light);
+    color: var(--text-muted);
 
-font-size: 13px;
-
-
+    font-size: 13px;
 }
 
-#folder-tree a,
 #folder-tree a:link,
 #folder-tree a:visited {
-color: #6b7280 !important;
+    padding: 3px 5px;
 
-text-decoration: none !important;
+    background: transparent !important;
 
+    color: var(--text-muted) !important;
 
+    text-decoration: none !important;
 }
 
 #folder-tree a:hover,
 #folder-tree a:active {
-color: var(--link-hover) !important;
+    color: var(--primary) !important;
+
+    text-decoration: none !important;
 }
 
-#folder-tree .current {
-color: var(--text) !important;
-font-weight: 700;
+#folder-tree a.current {
+    color: var(--text) !important;
+
+    font-weight: 650;
 }
 
-#folder-tree .reverse {
-margin-left: auto;
+#folder-tree a.reverse {
+    margin-left: auto;
 
-color: var(--link) !important;
+    padding: 5px 9px;
 
-font-weight: 600;
+    background: var(--surface-soft) !important;
 
+    border-radius: var(--radius-xs);
 
+    color: var(--text-muted) !important;
 }
+
+#folder-tree a.reverse:hover {
+    background: var(--primary-soft) !important;
+
+    color: var(--primary) !important;
+}
+
 
 /* =========================================================
-CONTENT AREA
-========================================================= */
+   MAIN CONTENT
+   ========================================================= */
 
 #content-all {
-padding: 30px 30px 35px;
+    width: 100%;
 
-min-height: 515px;
+    min-height: 515px;
 
-
+    margin: 0;
+    padding: 30px 24px 28px;
 }
 
-/* =========================================================
-PAGE HEADINGS
-========================================================= */
-
-h2 {
-margin: 0 0 14px;
-
-padding: 0;
-
-color: var(--text);
-
-font-size: 22px;
-font-weight: 700;
-
-
-}
-
-h3 {
-margin: 0 0 22px;
-
-padding: 0 !important;
-
-color: var(--text);
-
-font-size: 22px;
-font-weight: 700;
-
-line-height: 1.3;
-
-
-}
-
-h4 {
-margin: 0 0 18px !important;
-
-padding: 0 !important;
-
-color: var(--text);
-
-font-size: 20px;
-
-line-height: 1.3;
-
-
-}
-
-h5 {
-display: inline-block;
-
-width: 100%;
-
-margin: 0 0 8px;
-
-padding: 4px 0 7px !important;
-
-border-bottom: 2px solid var(--primary);
-
-color: var(--primary);
-
-font-size: 16px;
-font-weight: 600;
-
-
-}
-
-h5.grey {
-width: 100%;
-
-margin-bottom: 8px;
-
-padding: 5px 8px !important;
-
-border: 1px solid var(--border);
-border-bottom: 2px solid #9ca3af;
-
-border-radius: 6px 6px 0 0;
-
-background: #f8fafc;
-
-color: var(--text);
-
-font-size: 16px;
-font-weight: 700;
-
-
-}
-
-/* =========================================================
-GENERAL LINKS
-
-IMPORTANT:
-Same behaviour as your original:
-NO UNDERLINES.
-========================================================= */
-
-a,
-a:link,
-a:visited {
-text-decoration: none !important;
-}
-
-#content-all a,
 #content-all a:link,
 #content-all a:visited {
-color: var(--link) !important;
-text-decoration: none !important;
+    color: var(--primary);
+    text-decoration: none;
 }
 
 #content-all a:hover,
 #content-all a:active {
-color: var(--link-hover) !important;
-text-decoration: none !important;
+    color: var(--primary-dark);
+    text-decoration: none;
 }
 
+
 /* =========================================================
-SEARCH
-========================================================= */
+   GENERAL CONTENT
+   ========================================================= */
+
+tr.content td {
+    padding: 18px 22px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    color: var(--text-muted);
+
+    box-shadow: var(--shadow-sm);
+}
+
+tr.content td {
+    font-weight: normal !important;
+}
+
+tr.content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+tr.content li + li {
+    margin-top: 5px;
+}
+
+tr.content a {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HSC SUBJECT GRID
+   =========================================================
+
+   The original grid is intentionally retained at:
+
+       200px wide
+       90px high
+
+   This means existing subject names continue to fit the
+   dimensions they were designed for.
+   ========================================================= */
+
+#web-grid {
+    width: 100%;
+
+    margin-top: 4px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+#web-grid > div {
+    /*
+       Preserve the original four-column table-like
+       structure without requiring the old table layout.
+    */
+
+    display: table;
+
+    width: 100%;
+
+    table-layout: fixed;
+
+    margin: 0;
+    padding: 0;
+
+    border-collapse: separate;
+}
+
+#web-grid > div > div {
+    display: table-row;
+}
+
+#web-grid > div > div > div {
+    display: table-cell;
+
+    position: relative;
+
+    width: 200px;
+    height: 90px;
+
+    padding: 5px;
+}
+
+
+/* =========================================================
+   SUBJECT CARDS
+   ========================================================= */
+
+#web-grid > div > div > div > a {
+    display: block;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--text) !important;
+
+    text-decoration: none !important;
+}
+
+#web-grid > div > div > div > a > span {
+    display: flex;
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: 0;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    color: var(--text);
+
+    box-shadow: var(--shadow-sm);
+
+    font-size: 14px !important;
+    font-weight: 650;
+
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+/*
+   The nested span contains the subject label.
+
+   We deliberately override the old inline positioning
+   so the labels behave consistently.
+*/
+
+#web-grid > div > div > div > a > span > span {
+    display: flex;
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    align-items: center;
+
+    width: 100%;
+    height: auto !important;
+
+    min-height: 30px;
+
+    padding: 6px 9px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background: var(--surface-soft) !important;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-soft);
+
+    font-size: 13px;
+    font-weight: 650;
+
+    line-height: 1.3;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+/*
+   Preserve the subject icon.
+
+   The original images are small colour indicators, so
+   don't allow them to become distorted.
+*/
+
+#web-grid > div > div > div > a > span > img {
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    width: auto;
+    height: auto;
+
+    max-width: 24px;
+    max-height: 24px;
+
+    margin: 0;
+}
+
+
+/* Subject card hover */
+
+#web-grid > div > div > div > a:hover > span {
+    background: var(--surface);
+
+    border-color: var(--primary-border);
+
+    box-shadow: var(--shadow-md);
+
+    transform: translateY(-2px);
+}
+
+#web-grid > div > div > div > a:hover > span > span {
+    background: var(--primary) !important;
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+}
+
+
+/*
+   Make room for the icon when the label is displayed.
+*/
+
+#web-grid > div > div > div > a > span > span {
+    padding-left: 38px;
+}
+
+
+/* =========================================================
+   RESOURCE LIST VIEW
+   ========================================================= */
+
+#web-list {
+    width: 100%;
+}
+
+#web-list > div {
+    display: table;
+
+    width: 100%;
+}
+
+#web-list > div > div {
+    display: table-row;
+}
+
+#web-list > div > div > div {
+    display: table-cell;
+
+    width: 50%;
+
+    padding: 0 18px 20px 0;
+
+    vertical-align: top;
+}
+
+
+/*
+   The original list uses images followed by links and
+   <br> elements. Turn those into comfortable list rows.
+*/
+
+#web-list > div > div > div > img {
+    width: 12px;
+    height: 12px;
+
+    margin-right: 7px;
+
+    vertical-align: -1px;
+}
+
+#web-list > div > div > div > a {
+    display: inline-block;
+
+    padding: 4px 0;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+    font-weight: 550;
+
+    text-decoration: none;
+}
+
+#web-list > div > div > div > a:hover {
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SMALLSCREEN / MOBILE LIST
+   ========================================================= */
+
+.smallscreen {
+    margin-bottom: 14px;
+    padding: 14px 15px;
+
+    background: var(--surface-soft);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.smallscreen span {
+    display: block;
+
+    padding: 5px 0;
+}
+
+.smallscreen img {
+    vertical-align: middle;
+}
+
+.smallscreen a {
+    color: var(--text-soft);
+
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.smallscreen a:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
+    color: var(--text-soft);
+}
+
+li + li {
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+    max-width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+td,
+th {
+    vertical-align: top;
+}
+
+
+/*
+   Listing tables are used heavily throughout THSC Online.
+*/
+
+#content-all table.listing {
+    width: 100%;
+
+    margin: 18px 0 0;
+
+    border-collapse: separate;
+
+    border-spacing: 0 10px;
+
+    table-layout: fixed;
+}
+
+
+/*
+   Search/content rows should not receive card styling.
+*/
+
+#content-all table.listing tr.search td,
+#content-all table.listing tr.content td {
+    background: transparent;
+
+    border: 0;
+
+    box-shadow: none;
+}
+
+
+/*
+   Main school / category row.
+
+   The original CSS used :has(). This version avoids it so
+   the stylesheet remains broadly compatible.
+*/
+
+#content-all table.listing tr:not(.search):not(.content) > td {
+    padding: 18px 22px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    color: var(--text);
+
+    font-size: 16px;
+    font-weight: 750;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+}
+
+#content-all table.listing tr:not(.search):not(.content) > td:hover {
+    border-color: var(--border-hover);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   PAPER / RESOURCE LINKS
+   ========================================================= */
+
+#content-all table.listing td span.content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(185px, 1fr));
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin-top: 14px;
+    padding: 0;
+
+    color: var(--text-soft);
+
+    font-weight: normal !important;
+}
+
+
+/*
+   Old markup uses <br> between links.
+   Grid layout makes those redundant.
+*/
+
+#content-all table.listing td span.content br {
+    display: none;
+}
+
+#content-all table.listing td span.content a {
+    display: block;
+
+    min-width: 0;
+
+    padding: 9px 11px;
+
+    overflow: hidden;
+
+    background: var(--surface-soft);
+
+    border: 1px solid #e8edf3;
+    border-radius: var(--radius-sm);
+
+    color: var(--text-soft) !important;
+
+    font-size: 13px;
+    font-weight: 550;
+
+    line-height: 1.35;
+
+    text-decoration: none !important;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+#content-all table.listing td span.content a:hover {
+    background: var(--primary-soft);
+
+    border-color: var(--primary-border);
+
+    color: var(--primary) !important;
+
+    box-shadow: var(--shadow-sm);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
 
 .search {
-margin-bottom: 18px;
+    padding: 15px;
 
-padding: 14px;
+    margin-bottom: 20px;
 
-background: #f8f9ff;
+    background: var(--surface-soft);
 
-border: 1px solid var(--border);
+    border: 1px solid var(--border);
 
-border-radius: 10px;
+    border-radius: var(--radius);
 
+    box-shadow: var(--shadow-sm);
+}
 
+#search-row td {
+    padding: 0 0 18px;
+
+    background: transparent;
+
+    border: 0;
 }
 
 #search-bar {
-width: 100%;
+    display: block;
 
-padding: 11px 13px;
+    width: 100%;
 
-background: #ffffff;
+    margin: 0 0 10px;
 
-border: 1px solid #d8deea;
+    padding: 13px 15px;
 
-border-radius: 8px;
+    background: var(--surface);
 
-color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
 
-font-family: inherit;
-font-size: 14px;
+    color: var(--text);
 
-outline: none;
+    font: inherit;
+    font-size: 14px;
 
-transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
+    outline: none;
 
+    box-shadow: var(--shadow-sm);
 
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
 #search-bar::placeholder {
-color: #9aa4b2;
+    color: var(--text-faint);
 }
 
 #search-bar:focus {
-border-color: #8585ff;
+    border-color: #93c5fd;
 
-box-shadow:
-    0 0 0 3px rgba(85, 85, 255, 0.10);
-
-
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1),
+        var(--shadow-sm);
 }
 
+#search-row label,
 label {
-display: inline-flex;
-align-items: center;
+    display: inline-flex;
 
-margin-top: 9px;
+    align-items: center;
 
-color: var(--text-secondary);
+    margin-top: 8px;
 
-font-size: 13px
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    font-weight: normal !important;
+
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+
+    accent-color: var(--primary);
+}
+
+#search-message {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM CONTROLS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+input {
+    border-radius: var(--radius-xs);
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    max-width: 100%;
+
+    padding: 9px 11px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+
+    color: var(--text);
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+input[type="submit"],
+input[type="button"],
+button {
+    margin-top: 10px;
+
+    padding: 8px 15px;
+
+    background: var(--primary);
+
+    border: 0;
+    border-radius: var(--radius-sm);
+
+    color: #ffffff;
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    background: var(--primary-dark);
+
+    box-shadow: var(--shadow-sm);
+
+    transform: translateY(-1px);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   REMARKS
+   ========================================================= */
+
+span.remark {
+    display: inline-block;
+
+    padding: 2px 7px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: var(--radius-xs);
+
+    color: #1e40af;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#footer {
+    padding: 0;
+
+    background: var(--surface-soft);
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+#footer #folder-tree {
+    min-height: auto;
+
+    border: 0;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   PDF VIEWER
+   ========================================================= */
+
+#viewer {
+    width: 100%;
+    height: 95%;
+
+    margin-top: 3px;
+
+    border: 0;
+}
+
+#openFile,
+#viewBookmark,
+#secondaryOpenFile,
+#secondaryViewBookmark {
+    display: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* =========================================================
+   VIEWER OVERLAY
+   ========================================================= */
+
+#overlaybar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 5px 10px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    z-index: 999;
+
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+}
+
+#overlaybar a:link,
+#overlaybar a:visited {
+    display: inline-block;
+
+    padding: 2px 7px;
+
+    background: var(--primary-dark);
+
+    border-radius: var(--radius-xs);
+
+    color: #ffffff !important;
+
+    text-decoration: none;
+}
+
+#overlaybar a:hover,
+#overlaybar a:active {
+    background: var(--nav);
+
+    color: #ffffff !important;
+}
+
+#overlaybar #overlayinsert {
+    float: right;
+}
+
+
+/* =========================================================
+   PDF POPUP
+   ========================================================= */
+
+.pdf-popup {
+    position: absolute;
+
+    z-index: 999999;
+
+    min-width: 260px;
+    max-width: 320px;
+
+    padding: 14px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    color: var(--text);
+
+    box-shadow: var(--shadow-lg);
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+.pdf-popup a {
+    display: block;
+
+    margin: 6px 0;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.pdf-popup a:hover {
+    color: var(--primary-dark);
+}
+
+.pdf-progress {
+    height: 6px;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+
+    background: #e2e8f0;
+
+    border-radius: 999px;
+}
+
+.pdf-progress-bar {
+    width: 100%;
+    height: 100%;
+
+    background: var(--success);
+
+    transform-origin: right;
+    transform: scaleX(1);
+
+    transition: transform linear;
+}
+
+.pdf-popup button {
+    margin-top: 8px;
+
+    padding: 6px 10px;
+
+    background: var(--nav);
+
+    border: 0;
+    border-radius: var(--radius-xs);
+
+    color: #ffffff;
+}
+
+.pdf-popup button:hover {
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   FOCUS / ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1095px) {
+
+    #navigation li.reducible {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 995px) {
+
+    .layout-searchbox {
+        display: none !important;
+    }
+
+    #content-all {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE RESOURCE VIEW
+   ========================================================= */
+
+@media screen and (max-width: 840px) {
+
+    /*
+       The original site switches to the list view here.
+       Keep that behaviour because the XHTML already provides
+       both representations.
+    */
+
+    #web-grid {
+        display: none !important;
+    }
+
+    #folder-tree {
+        display: none !important;
+    }
+
+    #web-list {
+        display: block !important;
+    }
+
+    .smallscreen {
+        display: block !important;
+    }
+
+    #web-list > div > div > div {
+        display: table-row;
+    }
+}
+
+
+/* =========================================================
+   NARROW TABLET
+   ========================================================= */
+
+@media screen and (max-width: 795px) {
+
+    .reverse-element,
+    .reverse-wedge {
+        display: none;
+    }
+
+    #content-all > h3,
+    #content-all > h4 {
+        font-size: 23px;
+    }
+
+    #content-all table.listing td span.content {
+        grid-template-columns:
+            repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+@media screen and (max-width: 695px) {
+
+    #navigation {
+        position: relative;
+    }
+
+    #navigation > ul {
+        overflow-x: auto;
+
+        padding: 8px 10px;
+
+        scrollbar-width: none;
+    }
+
+    #navigation > ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    #navigation li a {
+        white-space: nowrap;
+    }
+
+    #page-wrapper {
+        width: calc(100% - 24px);
+
+        min-width: 0;
+
+        margin: 12px auto 35px;
+
+        border-radius: 12px;
+    }
+
+    #content-all {
+        padding: 22px 14px 24px;
+    }
+
+    #content-all table.listing td span.content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #web-list > div > div > div {
+        width: 100%;
+
+        padding-right: 0;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        display: block;
+
+        padding: 18px 16px;
+
+        font-size: 19px;
+    }
+
+    #page-wrapper {
+        width: calc(100% - 16px);
+
+        margin-top: 8px;
+
+        border-radius: 10px;
+    }
+
+    #content-all {
+        padding: 20px 10px 22px;
+    }
+
+    #content-all > h3,
+    #content-all > h4 {
+        margin-bottom: 16px;
+
+        font-size: 21px;
+    }
+
+    #content-all table.listing {
+        border-spacing: 0 8px;
+    }
+
+    #content-all table.listing tr:not(.search):not(.content) > td {
+        padding: 15px;
+    }
+
+    #content-all table.listing td span.content {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 6px;
+    }
+
+    #content-all table.listing td span.content a {
+        padding: 8px 9px;
+
+        font-size: 12px;
+    }
+
+    tr.content td {
+        padding: 15px;
+    }
+
+    #web-list > div > div > div {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode {
+    --bg: #0b1120;
+    --surface: #111827;
+    --surface-soft: #172033;
+    --surface-hover: #1e293b;
+
+    --border: #263449;
+    --border-hover: #3b4b63;
+
+    --text: #f3f4f6;
+    --text-soft: #d1d5db;
+    --text-muted: #94a3b8;
+    --text-faint: #64748b;
+
+    --primary: #60a5fa;
+    --primary-dark: #93c5fd;
+    --primary-soft: #172554;
+    --primary-border: #1d4ed8;
+
+    --nav: #020617;
+    --nav-dark: #000000;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.12),
+            transparent 35%
+        ),
+        var(--bg);
+
+    color: var(--text);
+}
+
+
+/* Dark mode wrapper */
+
+body.dark-mode #page-wrapper {
+    background: var(--surface);
+
+    border-color: var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Dark mode headings */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+    color: var(--text);
+}
+
+body.dark-mode h1 {
+    background: #020617;
+}
+
+body.dark-mode h1::after {
+    background: #60a5fa;
+}
+
+body.dark-mode h5 {
+    border-color: #60a5fa;
+}
+
+
+/* Dark navigation */
+
+body.dark-mode #navigation {
+    background: #020617;
+}
+
+body.dark-mode #navigation li.current a {
+    background: #1d4ed8;
+}
+
+body.dark-mode #navigation li.element a:hover,
+body.dark-mode #navigation li:hover a {
+    background: #172033;
+}
+
+
+/* Dark breadcrumbs */
+
+body.dark-mode #folder-tree {
+    background: var(--surface);
+
+    border-color: var(--border);
+}
+
+body.dark-mode #folder-tree a:link,
+body.dark-mode #folder-tree a:visited {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode #folder-tree a:hover,
+body.dark-mode #folder-tree a:active {
+    color: #93c5fd !important;
+}
+
+body.dark-mode #folder-tree a.current {
+    color: #f3f4f6 !important;
+}
+
+body.dark-mode #folder-tree a.reverse {
+    background: #172033 !important;
+}
+
+
+/* Dark general links */
+
+body.dark-mode #content-all a:link,
+body.dark-mode #content-all a:visited {
+    color: #60a5fa;
+}
+
+body.dark-mode #content-all a:hover,
+body.dark-mode #content-all a:active {
+    color: #93c5fd;
+}
+
+
+/* Dark cards */
+
+body.dark-mode tr.content td,
+body.dark-mode #content-all table.listing tr:not(.search):not(.content) > td {
+    background: var(--surface);
+
+    border-color: var(--border);
+
+    color: var(--text);
+}
+
+body.dark-mode #content-all table.listing tr:not(.search):not(.content) > td:hover {
+    border-color: var(--border-hover);
+}
+
+
+/* Dark paper links */
+
+body.dark-mode #content-all table.listing td span.content a {
+    background: #172033;
+
+    border-color: #263449;
+
+    color: #d1d5db !important;
+}
+
+body.dark-mode #content-all table.listing td span.content a:hover {
+    background: #172554;
+
+    border-color: #3b82f6;
+
+    color: #93c5fd !important;
+}
+
+
+/* Dark subject cards */
+
+body.dark-mode #web-grid > div > div > div > a > span {
+    background: var(--surface);
+
+    border-color: var(--border);
+}
+
+body.dark-mode #web-grid > div > div > div > a > span > span {
+    background: #172033 !important;
+
+    border-color: var(--border);
+
+    color: #d1d5db;
+}
+
+body.dark-mode #web-grid > div > div > div > a:hover > span {
+    background: #111827;
+
+    border-color: #3b82f6;
+}
+
+body.dark-mode #web-grid > div > div > div > a:hover > span > span {
+    background: #1d4ed8 !important;
+
+    border-color: #1d4ed8;
+
+    color: #ffffff;
+}
+
+
+/* Dark search */
+
+body.dark-mode .search {
+    background: #172033;
+
+    border-color: var(--border);
+}
+
+body.dark-mode #search-bar {
+    background: #0f172a;
+
+    border-color: #334155;
+
+    color: #f9fafb;
+}
+
+body.dark-mode #search-bar::placeholder {
+    color: #64748b;
+}
+
+
+/* Dark controls */
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="search"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #172033;
+
+    border-color: #334155;
+
+    color: #f9fafb;
+}
+
+
+/* Dark footer */
+
+body.dark-mode #footer {
+    background: #0f172a;
+
+    border-color: var(--border);
+
+    color: #94a3b8;
+}
+
+
+/* Dark PDF popup */
+
+body.dark-mode .pdf-popup {
+    background: #172033;
+
+    border-color: #334155;
+
+    color: #f3f4f6;
+}
+
+body.dark-mode .pdf-progress {
+    background: #334155;
+}
+
+
+/* =========================================================
+   LEGACY / COMPATIBILITY
+   ========================================================= */
+
+/*
+   Old IE-specific hacks removed intentionally.
+
+   Modern browsers now handle the grid/list layouts directly.
+   The XHTML remains untouched, so the stylesheet can replace
+   the original stylesheet without requiring markup changes.
+   ========================================================= */
