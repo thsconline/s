@@ -70,12 +70,14 @@
     font-weight: bold !important;
     line-height: 1.15 !important;
     letter-spacing: -0.025em !important;
+	width: fit-content !important;
 }
 
 #homepage h1, #homepage h2
 {
 	margin-bottom: 15px !important;
 }
+
 
 /* ============================================================================
    HEADINGS
