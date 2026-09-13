@@ -1,6 +1,6 @@
 
    var dictionary = {
-	"Solutions": ["w. sol", "solutions"],       
+	"SOLUTIONS": ["w. sol", "solutions"],       
 	"BHHS": ["Baulkham Hills", "BHHS"],	   
 	"FSHS": ["Fort St", "FSHS"],	   
 	"HAHS": ["Hurlstone", "HAHS"],	 
@@ -64,13 +64,19 @@ function matchNumericRange(value, filter) {
 }
 
 function filterTable() {
-    var input, filter, table, rows, cells, links, i, j, k, link, br, matchFound, resultCount, isExactMatch, debounceTimeout;
+    var input, filter;
 
     // Predefined dictionary for keyword mapping (STHS -> ["Sydney Tech", "STHS"])
  
 
     input = document.getElementById("search-bar");
-    filter = input.value.toUpperCase();  // Convert search term to uppercase
+	filter = input.value.toUpperCase();  // Convert search term to uppercase
+	return filterTableA(input,filter);
+}
+
+function filterTableA(input,filter)
+{   
+	var table, rows, cells, links, i, j, k, link, br, matchFound, resultCount, isExactMatch, debounceTimeout; 
     isExactMatch = document.getElementById("search-exact").checked;  // Get the checkbox state (checked or unchecked)
 
     // Check if the filter is numeric and set isExactMatch to false if true
@@ -148,11 +154,11 @@ function filterTable() {
 
     table = document.querySelector("table.listing"); // Assuming the links are in a <table>
     rows = table.getElementsByTagName("tr");
-
+	
     resultCount = 0;  // Variable to keep track of matching links
 
     // If the search input is empty, show all rows and links and reset result message
-    if (filter === "" || input.value === "") {
+    if (filter === "") {
         for (i = 0; i < rows.length; i++) {
             if (rows[i].classList.contains("search")) {
 				continue; // Ignore the searchbar
@@ -208,6 +214,8 @@ function filterTable() {
 	
     // Loop through all rows and apply the search filter
     for (i = 0; i < rows.length; i++) {
+		
+		
 		if (rows[i].classList.contains("search")) {
 			// no change
 			continue;
@@ -229,18 +237,20 @@ function filterTable() {
 
         // Loop through all cells in the row
         for (j = 0; j < cells.length; j++) {
+			
             links = cells[j].getElementsByTagName("a");
-
+			
             // Loop through all links in the current cell
             for (k = 0; k < links.length; k++) {
-                link = links[k];
-                br = link.nextElementSibling;
-
+                link = links[k];				
+                br = link.nextElementSibling;				
+				
                 // If the link matches the regex (either exact match or wildcard search)
-                if (regex.test(link.innerText.toUpperCase()) || matchNumericRange(link.innerText, filter)) {
+				if(k == 0){console.log(link.textContent.toUpperCase()) + "a"}
+                if (regex.test(link.textContent.toUpperCase()) || matchNumericRange(link.textContent, filter)) {
 				
 					// Hide rows that don't have "w. sol"
-					if (showWithSolution && !link.innerText.includes("w. sol")) {
+					if (showWithSolution && !link.textContent.includes("w. sol")) {
 						link.style.display = "none";  // Hide non-matching link
 
 						if (br && br.tagName === "BR") {
@@ -313,7 +323,8 @@ function initFilterFromUrl() {
     if (searchQuery == "new-syllabus") { searchQuery = "2019-24"; }
     searchInput.value = searchQuery;  // Set the input value to the search query from the URL
     if (exactMatchCheckbox) exactMatchCheckbox.checked = true;
-    if (typeof filterTable === "function") filterTable();  // Trigger the table filtering function
+    toggleSearchBar()
+	filterTableA(searchInput,searchQuery.toUpperCase());  // Trigger the table filtering function
 }
 if (typeof window.addEventListener === "function") {
     window.addEventListener("load", initFilterFromUrl);
