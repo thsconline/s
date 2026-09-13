@@ -1,91 +1,838 @@
+/* ============================================================================
+   THSC Online — Homepage
+   ========================================================================== */
+
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --blue: #1769e0;
+      --blue-dark: #0d47a1;
+      --border: #e1e5ea;
+      --yellow: #fbbc04;
+      --green: #188038;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    }
+
+/* ============================================================================
+   HOMEPAGE LAYOUT
+   ========================================================================== */
+
 #homepage {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 48px 24px;
+
+    background: transparent;
+
     -webkit-text-size-adjust: none;
 }
-#homepage a.button
+
+#skel-layers-wrapper,
+#header-wrapper {
+    width: 100%;
+}
+
+
+/* ============================================================================
+   CONTENT
+   ========================================================================== */
+
+.container#links {
+    width: min(100%, 1040px);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+
+/* ============================================================================
+   TITLE
+   ========================================================================== */
+
+#homepage h1 {
+    position: relative !important;
+    display: inline-block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    color: #11112f !important;
+
+    font-size: 42px !important;
+    font-weight: bold !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+}
+
+#homepage h1, #homepage h2
 {
-    color:white !important;
-}
-#homepage ol, #homepage  ul {
-	list-style: none;
-}
-#homepage span, #homepage div, #homepage h3, #homepage h4, #homepage h5, #homepage h6, #homepage p, #homepage blockquote, #homepage pre, #homepage a, #homepage abbr, #homepage acronym, #homepage address, #homepage big, #homepage cite, #homepage code, #homepage del, #homepage dfn, #homepage em, #homepage img, #homepage  ul, #homepage  li {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-#homepage, #homepage *::before, #homepage  *::after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#homepage {
-	line-height: 1;
-}
-#homepage, #homepage  input, #homepage  textarea, #homepage  select {
-	font-family: "XITS", sans-serif;
-color:rgb(41,140,202) !important;
-	font-weight: 300;
-	line-height: 1.75em;
-	font-size: 15pt;
-}
-.homepage #header-wrapper {
-	padding: 10em 0 0 0;
-	background-size: 440px 440px, #homepage				100% 100%, #homepage					auto;
+	margin-bottom: 15px !important;
 }
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	margin-bottom: 3em;
-}
-.container:last-child, #homepage article:last-child {
-	margin-bottom: 0px;
-}
-#links {
-	position: relative;
-	color: black;
-	text-align: left;
-	left:20%;
-	z-index: 1;
-	max-width:786px;
+/* ============================================================================
+   HEADINGS
+   ========================================================================== */
+
+.container#links > h2 {
+    grid-column: 1 / -1;
+
+    margin: 0;
+    padding: 0;
+
+    color: #555555;
+
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
-#homepage section > :last-child, #homepage article > :last-child {
-	margin-bottom: 0px;
-}
-#homepage ul.actions {
-	padding-top: 16px;
-}
-#homepage ul.actions li {
-	display: inline-block;
-	margin-left: 16px;
-}
-#homepage ul.actions li:first-child {
-	margin-left: 0px;
+.container#links > h2:nth-of-type(2) {
+    margin-top: 6px;
+    margin-bottom: 30px;
+
+    color: #5555ff !important;
+
+    font-size: clamp(25px, 4vw, 34px) !important;
+    line-height: 1.15;
 }
 
-#links h2 {
-	color: #222222;
-	font-size: 48px;
-}
-#logo {
-	position: absolute;
-	z-index: 1;
-	top: 0px;
-	text-align:center;
-	width: 150px;
+
+/* ============================================================================
+   LEGACY MARKUP CLEANUP
+   ========================================================================== */
+
+.container#links > span > img,
+.container#links > br {
+    display: none !important;
 }
 
-.homepage a:link, .homepage a:visited {
-	text-decoration: none !important;
-	color: #0000FF !important;
+
+/* ============================================================================
+   LINK WRAPPERS
+   ========================================================================== */
+
+.container#links > span {
+    display: block;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.homepage a:hover, .homepage a:active {
-	text-decoration: none !important;
-	color: #FF5500 !important;
+
+/* ============================================================================
+   YEAR TILES
+   ========================================================================== */
+
+.container#links > span > a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 82px;
+
+    padding: 16px 42px 16px 18px;
+
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--indigo);
+    border-radius: var(--radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--surface) 0%,
+            var(--indigo-vsoft) 100%
+        );
+
+    color: var(--text) !important;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+
+    text-decoration: none;
+
+    box-shadow: var(--shadow-sm);
+
+    overflow: hidden;
+
+    transform: translateY(0);
+
+    transition:
+        transform 0.16s ease,
+        border-color 0.16s ease,
+        background 0.16s ease,
+        box-shadow 0.16s ease,
+        color 0.16s ease;
 }
+
+
+/* ============================================================================
+   YEAR TILE ARROW
+   ========================================================================== */
+
+.container#links > span > a::after {
+    content: "›";
+
+    position: absolute;
+    top: 50%;
+    right: 17px;
+
+    color: var(--indigo);
+
+    font-size: 23px;
+    font-weight: 400;
+
+    opacity: 0.35;
+
+    transform:
+        translateY(-50%)
+        translateX(-4px);
+
+    transition:
+        transform 0.16s ease,
+        opacity 0.16s ease,
+        color 0.16s ease;
+}
+
+
+/* ============================================================================
+   YEAR TILE HOVER
+   ========================================================================== */
+
+.container#links > span > a:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f4ff 0%,
+            #e9e9ff 100%
+        );
+
+    border-color: #9999ff;
+    border-left-color: #5555ff;
+
+    color: var(--primary) !important;
+
+    box-shadow:
+        0 10px 24px rgba(20, 20, 100, 0.12),
+        0 0 0 1px rgba(85, 85, 255, 0.08);
+}
+
+.container#links > span > a:hover::after {
+    color: #5555ff;
+    opacity: 1;
+
+    transform:
+        translateY(-50%)
+        translateX(0);
+}
+
+.container#links > span > a:active {
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================================
+   YEAR ACCENTS
+   ========================================================================== */
+
+.container#links > span:has(a[href="yr9/"]) > a,
+.container#links > span:has(a[href="yr10/"]) > a,
+.container#links > span:has(a[href="yr11/"]) > a {
+    border-left-color: #5555ff;
+}
+
+.container#links > span:has(a[href="yr12/"]) > a {
+    border-left-color: #0000ff;
+}
+/* ============================================================================
+   HOMEPAGE FOOTER
+   ========================================================================== */
+
+.homepage-footer {
+    width: min(100%, 1040px);
+
+    margin: 28px auto 0;
+    padding-top: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    border-top: 1px solid var(--border);
+
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ============================================================================
+   FOOTER GROUPS
+   ========================================================================== */
+
+.homepage-footer-left {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+}
+
+.homepage-footer-right {
+    display: flex;
+    align-items: center;
+}
+
+
+/* ============================================================================
+   FOOTER LINKS
+   ========================================================================== */
+
+.homepage-footer a,
+.homepage-footer summary {
+    display: inline-flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 5px 10px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #5555aa !important;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.15s ease,
+        background 0.15s ease;
+}
+
+.homepage-footer a:hover,
+.homepage-footer summary:hover {
+    background: var(--primary-soft);
+
+    color: var(--hover) !important;
+
+    text-decoration: none;
+}
+
+
+
+/* ============================================================================
+   FOOTER ICONS
+   ========================================================================== */
+
+/* About */
+
+.homepage-footer a[href="about.html"]::before {
+    content: "\2139";
+
+    margin-right: 6px;
+
+    font-size: 14px;
+    line-height: 1;
+
+    opacity: 0.8;
+}
+
+
+/* Upload */
+
+.homepage-footer a[href="/upload"]::before {
+    content: "↑";
+
+    margin-right: 6px;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+
+    opacity: 0.85;
+}
+
+
+/* Back */
+
+.homepage-footer a[href="../"]::before {
+    content: "‹";
+
+    margin-right: 6px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 0;
+
+    vertical-align: -1px;
+}
+
+
+/* ============================================================================
+   MIRROR SITES
+   ========================================================================== */
+
+.homepage-footer .mirror-sites {
+    position: relative;
+}
+
+
+/* Summary */
+
+.homepage-footer .mirror-sites summary {
+    list-style: none;
+}
+
+.homepage-footer .mirror-sites summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Duplicate / mirror icon */
+
+.homepage-footer .mirror-sites summary::before {
+    content: "⧉";
+
+    margin-right: 6px;
+
+    font-size: 14px;
+    line-height: 1;
+
+    opacity: 0.85;
+}
+
+
+/* Dropdown arrow */
+
+.homepage-footer .mirror-sites summary::after {
+    content: "⌄";
+
+    margin-left: 6px;
+
+    font-size: 11px;
+    line-height: 1;
+
+    opacity: 0.6;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+
+/* Rotate arrow when open */
+
+.homepage-footer .mirror-sites[open] summary::after {
+    transform: rotate(180deg);
+    opacity: 0.9;
+}
+
+
+/* ============================================================================
+   MIRROR DROPDOWN
+   ========================================================================== */
+
+.homepage-footer .mirror-links {
+    position: absolute;
+
+    z-index: 20;
+
+    right: 0;
+    bottom: calc(100% + 8px);
+
+    min-width: 170px;
+
+    padding: 6px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.homepage-footer .mirror-links {
+    counter-reset: mirror;
+}
+
+.homepage-footer .mirror-links a {
+    counter-increment: mirror;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 7px 9px;
+
+    border-radius: 6px;
+
+    white-space: nowrap;
+}
+
+.homepage-footer .mirror-links a::before {
+    content: counter(mirror);
+
+    width: 20px;
+
+    margin-right: 8px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+
+    opacity: 0.7;
+}
+
+.homepage-footer .mirror-links a:hover::before {
+    opacity: 1;
+}
+
+
+
+/* ============================================================================
+   DARK MODE
+   ========================================================================== */
+
+body.dark-mode .homepage-footer {
+    border-top-color: #303064;
+}
+
+body.dark-mode .homepage-footer a,
+body.dark-mode .homepage-footer summary {
+    background: transparent;
+
+    color: #aaaacc !important;
+}
+
+body.dark-mode .homepage-footer a:hover,
+body.dark-mode .homepage-footer summary:hover {
+    background: #20204f;
+
+    color: #aaaaff !important;
+}
+
+
+/* Dark mirror dropdown */
+
+body.dark-mode .homepage-footer .mirror-links {
+    background: #151533;
+
+    border-color: #303064;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .homepage-footer .mirror-links a:hover {
+    background: #20204f;
+}
+
+
+/* ============================================================================
+   RESPONSIVE — TABLET
+   ========================================================================== */
+
+@media (max-width: 760px) {
+
+    .homepage-footer {
+        margin-top: 24px;
+
+        padding-top: 12px;
+    }
+}
+
+
+/* ============================================================================
+   RESPONSIVE — PHONE
+   ========================================================================== */
+
+@media (max-width: 500px) {
+
+    .homepage-footer {
+        margin-top: 20px;
+        padding-top: 10px;
+
+        gap: 4px;
+    }
+
+    .homepage-footer a,
+    .homepage-footer summary {
+        padding: 5px 7px;
+
+        font-size: 11px;
+    }
+
+    .homepage-footer .mirror-links {
+        right: 0;
+        bottom: calc(100% + 7px);
+
+        min-width: 160px;
+    }
+}
+
+
+/* ============================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .homepage-footer a,
+    .homepage-footer summary,
+    .homepage-footer .mirror-sites summary::after {
+        transition: none !important;
+    }
+}
+
+
+
+/* ============================================================================
+   DARK MODE
+   ========================================================================== */
+
+body.dark-mode #homepage h1 {
+    color: #eeeeff !important;
+}
+
+body.dark-mode .container#links > h2 {
+    color: #f4f4ff;
+}
+
+body.dark-mode .container#links > h2:nth-of-type(2) {
+    color: #aaaaff !important;
+}
+
+
+/* Dark year tiles */
+
+body.dark-mode .container#links > span > a {
+    background:
+        linear-gradient(
+            135deg,
+            #151533 0%,
+            #1b1b45 100%
+        );
+
+    border-color: #303064;
+    border-left-color: #5555ff;
+
+    color: #eeeeff !important;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+
+/* Dark tile hover */
+
+body.dark-mode .container#links > span > a:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #20204f 0%,
+            #292966 100%
+        );
+
+    border-color: #6666ff;
+    border-left-color: #7777ff;
+
+    color: #aaaaff !important;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.38),
+        0 0 24px rgba(85, 85, 255, 0.16);
+}
+
+body.dark-mode .container#links > span > a:hover::after {
+    color: #aaaaff;
+    opacity: 1;
+}
+
+
+/* Dark footer */
+
+body.dark-mode .homepage-footer {
+    border-top-color: #303064;
+}
+
+body.dark-mode .homepage-footer a {
+    background: transparent;
+    color: #aaaacc !important;
+}
+
+body.dark-mode .homepage-footer a:hover {
+    background: #20204f;
+    color: #aaaaff !important;
+}
+
+
+/* ============================================================================
+   RESPONSIVE — TABLET
+   ========================================================================== */
+
+@media (max-width: 760px) {
+
+    #homepage {
+        align-items: flex-start;
+        padding: 34px 18px;
+    }
+
+    .container#links {
+        gap: 12px;
+    }
+
+    .container#links > h2:nth-of-type(2) {
+        margin-bottom: 20px;
+        font-size: 28px !important;
+    }
+
+    .container#links > span > a {
+        min-height: 76px;
+        padding: 15px 40px 15px 16px;
+        font-size: 14px;
+    }
+
+    .homepage-footer {
+        margin-top: 24px;
+        padding-top: 12px;
+    }
+}
+
+
+/* ============================================================================
+   RESPONSIVE — PHONE
+   ========================================================================== */
+
+@media (max-width: 500px) {
+
+    #homepage {
+        padding: 25px 12px;
+    }
+
+    .container#links {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .container#links > h2 {
+        font-size: 21px;
+    }
+
+    .container#links > h2:nth-of-type(2) {
+        margin-bottom: 16px;
+        font-size: 25px !important;
+    }
+
+    .container#links > span > a {
+        min-height: 68px;
+        padding: 14px 38px 14px 16px;
+        font-size: 14px;
+    }
+
+    .homepage-footer {
+        margin-top: 20px;
+        padding-top: 10px;
+
+        gap: 6px;
+    }
+
+    .homepage-footer a {
+        padding: 5px 7px;
+        font-size: 12px;
+    }
+
+    .homepage-footer .mirror-links {
+        gap: 0;
+    }
+}
+
+
+/* ============================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .container#links > span > a,
+    .container#links > span > a::after,
+    .homepage-footer a {
+        transition: none !important;
+    }
+}
+
+
+/* ============================================================================
+   CUSTOM CARDS
+   ========================================================================== */
+
+    /* Maintenance notice */
+
+	.notice-page-wrapper 
+	{
+		width: min(100%, 1040px);
+		margin: 0 auto;
+		display: grid;		
+		gap: 14px;
+	}
+    .notice {
+	  margin-top: 30px;	  
+      margin-bottom: 24px;
+      padding: 22px 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--yellow);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .notice-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 8px;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      flex: 0 0 10px;
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 0 0 0 4px rgba(251, 188, 4, 0.15);
+    }
+
+    .notice p {
+      margin: 0;
+    }

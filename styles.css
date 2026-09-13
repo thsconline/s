@@ -2235,6 +2235,7 @@ input:focus-visible {
    --------------------------------------------------------- */
 
 body.dark-mode {
+	--hover: #aaaaff;
     background:
         radial-gradient(
             circle at top left,
