@@ -366,7 +366,7 @@
 
 /* Upload */
 
-.homepage-footer a[href="/upload"]::before {
+.homepage-footer a[href="/s/upload"]::before {
     content: "↑";
 
     margin-right: 6px;
