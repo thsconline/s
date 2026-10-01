@@ -135,7 +135,7 @@ function loadshell()
 			"<div id=\"overlaybar\" style=\"z-index:1000;width:100%;\">" +
 			unescape(titlex) +
 			"<span style=\"float:right\">" +
-			"<a target=\"_blank\" download href=\"https://thsconline.github.io" + embedUrl + "\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
+//			"<a target=\"_blank\" download href=\"https://thsconline.github.io" + embedUrl + "\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" onclick=\"window.close()\">Close ×</a>" +
 			"</span></div><br>"
 		);
@@ -412,9 +412,7 @@ function loadshell()
 			"<div id=\"overlaybar\" style=\"z-index:1000; width:100%;\">" +
 			unescape(titlex) +
 			"<span id=\"overlayinsert\" style=\"float:right !important\">" +
-			"<a target=\"blank\" href=\"https://thsconline.github.io/s/d/" +
-			viewno + "/" + titlex +
-			"\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
+			//"<a target=\"blank\" href=\"https://thsconline.github.io/s/d/" + viewno + "/" + titlex + "\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</a>" +
 			"</span></div><br>"
 		);
