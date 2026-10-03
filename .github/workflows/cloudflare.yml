@@ -1,14 +1,37 @@
-name: Deploy to Cloudflare Pages thsconline.net
+name: Production Deployment Pipeline
 
 on:
   push:
     branches:
       - thsconline-website
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+permissions:
+  contents: read
 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - name: Trigger Cloudflare Deploy Hook
-        run: curl -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
+      - name: Checkout Source Context
+        uses: actions/checkout@v4
+
+      - name: Configure Modern Runtime Node Env
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # STEP 1: Process Atom feed items in-memory and upload fragments to Backblaze
+      - name: Execute Native In-Memory JavaScript Pipeline
+        env:
+          GAS_SECRET_PASSWORD: ${{ secrets.GAS_WEBAPP_PASSWORD }}
+          RC4_METADATA_KEY: ${{ secrets.RC4_METADATA_KEY }}
+          B2_APPLICATION_KEY_ID: ${{ secrets.B2_APPLICATION_KEY_ID }}
+          B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
+          B2_BUCKET_ID: ${{ secrets.B2_BUCKET_ID }}
+        run: |
+          node staging.js
+
+      # STEP 2: Instantly poke Cloudflare Pages to rebuild and publish your frontend
+      - name: Trigger Cloudflare Pages Deploy Hook
+        run: |
+          curl -f -s -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"

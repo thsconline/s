@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://w3.org">
+  <title>THSC Online Change Log</title>
+  <updated>2026-10-03T23:26:00Z</updated>
+  <id>urn:uuid:thsconline-papers-root</id>
+
+  <!-- Entry 1 (Newest Paper) -->
+  <entry>
+    <title>Abbotsleigh 2024 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-03T23:26:00Z</updated>
+  </entry>
+
+  <!-- Entry 2 (Older Paper) -->
+  <entry>
+    <title>Abbotsleigh 2025 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-09-25T08:30:00Z</updated>
+  </entry>
+</feed>
