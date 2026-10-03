@@ -463,7 +463,7 @@ async function main() {
      * Request an upload target for the bucket.
      */
     const b2Upload = await getB2UploadUrl(
-      data.apiInfo.storageApi.apiUrl,
+      baseAuth.apiInfo.storageApi.apiUrl,
       baseAuth.authorizationToken
     );
 
