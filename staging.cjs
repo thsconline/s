@@ -10,19 +10,13 @@ const fs = require("fs");
 const zlib = require("zlib");
 const crypto = require("crypto");
 
-const { SHA256, selectworker } = require("./viewer.js");
-
-console.log("viewer.js exports:", {
-  SHA256,
-  SHA256Type: typeof SHA256,
-  selectworkerType: typeof selectworker
-});
-
 // -----------------------------------------------------------------------------
 // 1. Structural Environment Mapping Configurations
 // -----------------------------------------------------------------------------
 
 const PASSWORD = process.env.GAS_SECRET_PASSWORD;
+const GAS_HASH_URL = process.env.GAS_HASH_URL;
+
 const ATOM_FILE = "./feed.atom";
 
 // Backblaze Authorization Coordinates
@@ -245,36 +239,130 @@ function parseAtomFeed(xmlString) {
 }
 
 
-async function processPaper(viewNo, title, b2Session) {
-  /*
-   * Replicate viewer.js hashing signature rules to determine
-   * the exact file name used for Backblaze.
-   */
-  const hashTemplate = `${viewNo}_${title}`;
+// -----------------------------------------------------------------------------
+// GAS Worker Selection
+// -----------------------------------------------------------------------------
 
+function selectWorker(includeFallback = true) {
+  const workers = [
+    "AKfycbzwc57zmEK1Vm9Q5L1n1my3dxRafZRfNhCZ24zSLIa9H7MhySFhNahvPfW4R3uq753_",
+    "AKfycbxCi8vsX-_l5a0JP-mG1RXIbSeiuZOfteumnk96oZCgQMR9nHjikpDqpknUHp-K5hg",
+    "AKfycbz0Jc62sHl3IKUJNpqYZp6FGf85aERQKg4SITYgb0pbOJXGvo7CVshdIhN3AEbEBkQmww",
+    "AKfycbwMElTU5QdXoUEc4yWj8mUbF-753lHMFAafJn7GuaV8WpACWy16DWhXS8KfJA_HKEZ03Q",
+    "AKfycbwafzfiazfcLyo4MPomtJV8j8P3Ys5Y5Z5dlbo6X_Ddll40NQyylFotiGP4RmlNEPNFpg",
+    "AKfycbz2OkJ8-2GbIVWOAOAP0Qp37Sts2tclovMTtGEIfqWRkePvz1G1Ag3YywZNyDxeBtYkjg",
+    "AKfycbyMS8xD-tK6wRe7wc3fyKAX7MmLiLOU5CTLHVV_HLNImZFx8SsPA2Cvhcc0Ml2TUeas",
+    "AKfycbyOERxQbjmX6cmaY9txazA2MFY7y66ylYHyGG1FeGFHARXk36jLvIOGJUsUoy8VmOrp",
+    "AKfycbx0LmnTURBcvLI1I4hASnAOTOkqsNEWToguRNAkypoIiGorRQr6YyqFlbOaZjtnWBjx",
+    "AKfycbyaAQFka8STu0Fupxt333SW2T-7InSqmY6moyRs8-YGHucSiFqqpyCE4vktadLziRPe",
+    "AKfycbxBXfKvsLNcAoiD1usgXLJejnVbGJ4Q0c9WYdufoHoIsuC4bbLKPlQ4XsLPNHRFAzilow",
+    "AKfycbw3FjfIIds8UpY4GE_Jdu9hF8Mf58govLZcdpVdHOqb6IbF_A8F2cgtkvv--iEgOEzm",
+    "AKfycbyzcBH0M5Np7XQf4aaGktd0zgHt5Sa0CRAXiG-XiUyWd5jzEN1qLDcjXbpVgu0LKQbJ",
+    "AKfycbxq4Pi15A7VI2PQGJBnCU0OL0K08gfqbl1dRQEwQc5dcELs1BUoGBw8s9cGQHQncmjh",
+    "AKfycbwYhBoXMfdf0QisZrOiUqr27DwE5Hf9hIYAeXV9SfYce-j5VrdwXkJp_wKSwV70yOe6TQ"
+  ];
+
+  const fallback =
+    "AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-";
+
+  // When fallback is disabled, only select from the 15 workers.
+  if (!includeFallback) {
+    return workers[
+      Math.floor(Math.random() * workers.length)
+    ];
+  }
+
+  // Preserve the original 15/16 worker-to-fallback distribution.
+  return Math.random() < 15 / 16
+    ? workers[Math.floor(Math.random() * workers.length)]
+    : fallback;
+}
+
+
+// -----------------------------------------------------------------------------
+// GAS Hash Generation
+// -----------------------------------------------------------------------------
+
+async function getFileHash(viewNo, title) {
+  const hashUrl = new URL(GAS_HASH_URL);
+
+  hashUrl.searchParams.set("base", viewNo);
+  hashUrl.searchParams.set("field", title);
+  hashUrl.searchParams.set("export", "encode");
+
+  console.log(
+    `   🔐 Generating filehash for file: ${title}`
+  );
+
+  const response = await fetch(hashUrl.toString(), {
+    method: "GET"
+  });
+
+  if (!response.ok) {
+    const details = await response.text();
+
+    throw new Error(
+      `GAS hash request failed ` +
+      `(${response.status} ${response.statusText}): ${details}`
+    );
+  }
+
+  const hash = (await response.text()).trim();
+
+  if (!hash) {
+    throw new Error(
+      `GAS returned an empty hash for '${title}'`
+    );
+  }
+
+  return hash;
+}
+
+
+// -----------------------------------------------------------------------------
+// Process Paper
+// -----------------------------------------------------------------------------
+
+async function processPaper(viewNo, title, b2Session) {
   let filehash;
 
   try {
-   console.log(
+    /*
+     * Ask the dedicated GAS hash endpoint to generate the canonical
+     * file hash used by the viewer.
+     */
+    console.log(
       `📡 Generating filehash for file: ${title}`
     );
-    filehash = SHA256(hashTemplate);
+
+    filehash = await getFileHash(
+      viewNo,
+      title
+    );
+
+    console.log(
+      `   🔐 Generated filehash: ${filehash}`
+    );
+
   } catch (err) {
     console.error(
-      `❌ Cryptographic execution error on string template: ${hashTemplate}`,
-      err
+      `❌ Filehash generation failed for '${title}':`,
+      err.message
     );
 
     return;
   }
 
-  /*
-   * Select a valid operational Google Apps Script cluster endpoint.
-   */
-  const workerToken = selectworker(false);
 
   /*
-   * Map legacy parameter targets using structured URL search parameters.
+   * Select a valid operational Google Apps Script worker.
+   *
+   * false = never use the fallback deployment.
+   */
+  const workerToken = selectWorker(false);
+
+  /*
+   * Map legacy parameter targets using the structured URL API.
    */
   const legacyGasUrl = new URL(
     `https://script.google.com/macros/s/${workerToken}/exec`
@@ -285,6 +373,7 @@ async function processPaper(viewNo, title, b2Session) {
   legacyGasUrl.searchParams.set("field", title);
   legacyGasUrl.searchParams.set("hash", PASSWORD);
 
+
   try {
     console.log(
       `📡 Fetching from endpoint [${workerToken}] ` +
@@ -294,10 +383,14 @@ async function processPaper(viewNo, title, b2Session) {
     /*
      * Debug GAS request details.
      *
-     * Password is deliberately redacted from the logged URL.
+     * Password is deliberately redacted.
      */
     const debugGasUrl = new URL(legacyGasUrl);
-    debugGasUrl.searchParams.set("hash", "***REDACTED***");
+
+    debugGasUrl.searchParams.set(
+      "hash",
+      "***REDACTED***"
+    );
 
     console.log(
       `   🌐 GAS URL: ${debugGasUrl.toString()}`
@@ -305,7 +398,10 @@ async function processPaper(viewNo, title, b2Session) {
 
     console.log(
       `   📋 GAS parameters: ` +
-      `export=view, base=${viewNo}, field="${title}", password=${PASSWORD ? "SET" : "MISSING"}`
+      `export=view, ` +
+      `base=${viewNo}, ` +
+      `field="${title}", ` +
+      `password=${PASSWORD ? "SET" : "MISSING"}`
     );
 
     console.log(
@@ -315,7 +411,7 @@ async function processPaper(viewNo, title, b2Session) {
     const gasRequestStarted = Date.now();
 
     /*
-     * Fetch handles Google 302 redirects natively.
+     * Fetch follows Google's redirects automatically.
      */
     const response = await fetch(
       legacyGasUrl.toString(),
@@ -324,14 +420,17 @@ async function processPaper(viewNo, title, b2Session) {
       }
     );
 
-    const gasRequestDuration = Date.now() - gasRequestStarted;
+    const gasRequestDuration =
+      Date.now() - gasRequestStarted;
 
     console.log(
-      `   📥 GAS response received after ${gasRequestDuration} ms`
+      `   📥 GAS response received after ` +
+      `${gasRequestDuration} ms`
     );
 
     console.log(
-      `   📊 Status: ${response.status} ${response.statusText}`
+      `   📊 Status: ` +
+      `${response.status} ${response.statusText}`
     );
 
     console.log(
@@ -343,7 +442,8 @@ async function processPaper(viewNo, title, b2Session) {
     );
 
     console.log(
-      `   📄 Content-Type: ${response.headers.get("content-type")}`
+      `   📄 Content-Type: ` +
+      `${response.headers.get("content-type")}`
     );
 
     if (!response.ok) {
@@ -354,7 +454,8 @@ async function processPaper(viewNo, title, b2Session) {
       );
 
       throw new Error(
-        `HTTP Error Status: ${response.status} ${response.statusText}`
+        `HTTP Error Status: ` +
+        `${response.status} ${response.statusText}`
       );
     }
 
@@ -368,24 +469,31 @@ async function processPaper(viewNo, title, b2Session) {
       `   ✅ GAS JSON response parsed successfully.`
     );
 
+
     /*
      * Validate the expected GAS payload.
      */
     if (
-      gasData.fileref !== "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" ||
+      gasData.fileref !==
+        "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" ||
       !gasData.base64Data
     ) {
       console.warn(
         `   ⚠️ GAS node failed to supply matching data stream. ` +
-        `Message: ${gasData.error || "No payload content data string"}`
+        `Message: ${
+          gasData.error ||
+          "No payload content data string"
+        }`
       );
 
       console.warn(
-        `   🔎 GAS response keys: ${Object.keys(gasData).join(", ")}`
+        `   🔎 GAS response keys: ` +
+        `${Object.keys(gasData).join(", ")}`
       );
 
       return;
     }
+
 
     /*
      * Convert Base64 directly into a Buffer.
@@ -399,20 +507,22 @@ async function processPaper(viewNo, title, b2Session) {
       `   📦 Received ${pdfBuffer.length} bytes from GAS.`
     );
 
+
     /*
      * Apply in-memory GZIP compression.
-     *
-     * No temporary PDF or gzip files are written to disk.
      */
     console.log(
       `   🗜️ Applying in-memory GZIP compression...`
     );
 
-    const gzippedBuffer = zlib.gzipSync(pdfBuffer);
+    const gzippedBuffer =
+      zlib.gzipSync(pdfBuffer);
 
     console.log(
-      `   📦 Compressed payload: ${gzippedBuffer.length} bytes.`
+      `   📦 Compressed payload: ` +
+      `${gzippedBuffer.length} bytes.`
     );
+
 
     /*
      * Binary fragmentation router.
@@ -427,7 +537,9 @@ async function processPaper(viewNo, title, b2Session) {
     let offset = 0;
     let fragmentIndex = 0;
 
-    while (offset < gzippedBuffer.length) {
+    while (
+      offset < gzippedBuffer.length
+    ) {
       const bytesLeft =
         gzippedBuffer.length - offset;
 
@@ -436,25 +548,28 @@ async function processPaper(viewNo, title, b2Session) {
         bytesLeft
       );
 
-      const chunkSlice = gzippedBuffer.subarray(
-        offset,
-        offset + lengthToWrite
-      );
+      const chunkSlice =
+        gzippedBuffer.subarray(
+          offset,
+          offset + lengthToWrite
+        );
 
       const fragmentName =
         `${filehash}.${fragmentIndex}`;
 
       console.log(
-        `      ☁️ Uploading segment: ${fragmentName} ` +
+        `      ☁️ Uploading segment: ` +
+        `${fragmentName} ` +
         `(${lengthToWrite} bytes)...`
       );
 
-      const uploadResult = await uploadBufferToB2(
-        b2Session.uploadUrl,
-        b2Session.uploadToken,
-        fragmentName,
-        chunkSlice
-      );
+      const uploadResult =
+        await uploadBufferToB2(
+          b2Session.uploadUrl,
+          b2Session.uploadToken,
+          fragmentName,
+          chunkSlice
+        );
 
       console.log(
         `      ✅ Uploaded ${fragmentName} ` +
@@ -467,12 +582,14 @@ async function processPaper(viewNo, title, b2Session) {
 
     console.log(
       `✅ File processing loop successful. ` +
-      `Uploaded ${fragmentIndex} blocks for filehash: ${filehash}`
+      `Uploaded ${fragmentIndex} blocks ` +
+      `for filehash: ${filehash}`
     );
 
   } catch (err) {
     console.error(
-      `❌ Thread exception handling paper index mapping [${title}]:`,
+      `❌ Thread exception handling paper index mapping ` +
+      `[${title}]:`,
       err.message
     );
   }

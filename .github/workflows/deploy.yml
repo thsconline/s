@@ -29,6 +29,7 @@ jobs:
       - name: Execute Native In-Memory JavaScript Pipeline
         env:
           GAS_SECRET_PASSWORD: ${{ secrets.GAS_WEBAPP_PASSWORD }}
+          GAS_HASH_URL: ${{ secrets.GAS_HASH_URL }}         
           B2_APPLICATION_KEY_ID: ${{ secrets.B2_APPLICATION_KEY_ID }}
           B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
           B2_BUCKET_ID: ${{ secrets.B2_BUCKET_ID }}
