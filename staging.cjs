@@ -255,7 +255,7 @@ async function processPaper(viewNo, title, b2Session) {
   let filehash;
 
   try {
-    filehash = await SHA256(hashTemplate);
+    filehash = SHA256(hashTemplate);
   } catch (err) {
     console.error(
       `❌ Cryptographic execution error on string template: ${hashTemplate}`,
