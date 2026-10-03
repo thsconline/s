@@ -50,7 +50,7 @@ function loadshell()
 
 	let cleanString = decodedPath.replace(/&/g, '_');
 
-	const whitelistRegex = /[^A-Za-z0-9._\-\/]/g;
+	const whitelistRegex = /[^A-Za-z0-9._\-\/ ]/g;
 	cleanString = cleanString.replace(whitelistRegex, '');
 
 	const initialSegments = cleanString.split('/').filter(Boolean);
@@ -473,7 +473,7 @@ function pdf(input, _viewno, event)
 	var _titlex = input.textContent.trim();
 
 	const viewno = String(_viewno ?? '').replace(/[^A-Za-z0-9]/g, '');
-	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\-]/g, '');
+	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\- ]/g, '');
 
 	var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
@@ -491,7 +491,7 @@ async function pdfa(input, _viewno, event)
 {
 	var _titlex = input.textContent.trim();
 	const viewno = String(_viewno ?? '').replace(/[^A-Za-z0-9]/g, '');
-	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\-]/g, '');
+	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\- ]/g, '');
 	
 	const viewerUrl = new URL(`/s/v/${viewno}/${titlex}`, "https://thsconline.github.io");
     //const downloaderUrl = new URL(`/s/d/${viewno}/${titlex}`, "https://thsconline.github.io");
@@ -663,9 +663,9 @@ function jumpToCollection() {
     const rawSearchIdx = document.getElementById("serve")?.value || "";
     const qx = document.getElementById("selector")?.value || "";
     const rawKey = document.getElementById("dkey")?.value || "";
-    const safeKey = rawKey.replace(/[^A-Za-z0-9._\-\/]/g, '');
+    const safeKey = rawKey.replace(/[^A-Za-z0-9._\-\/ ]/g, '');
 
-    let safeSearchIdx = rawSearchIdx.replace(/[^A-Za-z0-9._\-\/]/g, '');
+    let safeSearchIdx = rawSearchIdx.replace(/[^A-Za-z0-9._\-\/ ]/g, '');
 
     if (qx == "1") {
         safeSearchIdx = "drive/" + safeSearchIdx;
@@ -676,7 +676,7 @@ function jumpToCollection() {
 
 function passwordentry() {
     const rawKey = document.getElementById("dkey")?.value || "";
-    const safeKey = rawKey.replace(/[^A-Za-z0-9._\-\/]/g, '');
+    const safeKey = rawKey.replace(/[^A-Za-z0-9._\-\/ ]/g, '');
     const destinationUrl = new URL(`/s/fz/${safeKey}/home/`, "https://thsconline.github.io");
     window.location.href = destinationUrl.href;
 }

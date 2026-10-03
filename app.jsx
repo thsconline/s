@@ -65,11 +65,11 @@ function Embed({ standalone = false }) {
         const parts = raw.split("/");
         const file = parts.pop();
 
-        const cleanFile = file.replace(/&/g, '_').replace(/[^A-Za-z0-9._\-]/g, '');
+        const cleanFile = file.replace(/&/g, '_').replace(/[^A-Za-z0-9._\- ]/g, '');
         titlex = cleanFile.replace(/\.pdf$/i, "");
 
         const cleanPathSegments = parts
-            .map(segment => segment.replace(/&/g, '_').replace(/[^A-Za-z0-9._\-]/g, ''))
+            .map(segment => segment.replace(/&/g, '_').replace(/[^A-Za-z0-9._\- ]/g, ''))
             .filter(Boolean);
         
         const path = cleanPathSegments.join("/");
@@ -151,7 +151,7 @@ function Viewer({ standalone = false }) {
     const [_endpoint] = useState(writeworker);
 
     const viewno = (_viewno || "").replace(/[^A-Za-z0-9]/g, '');
-    const titlex = (_titlex || "").replace(/&/g, '_').replace(/[^A-Za-z0-9._\-]/g, '');
+    const titlex = (_titlex || "").replace(/&/g, '_').replace(/[^A-Za-z0-9._\- ]/g, '');
     const endpoint = (_endpoint || "").replace(/[^A-Za-z0-9_\-]/g, '');
 
     useEffect(() => {
