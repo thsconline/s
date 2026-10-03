@@ -318,7 +318,6 @@ async function getFileHash(viewNo, title) {
   return hash;
 }
 
-
 // -----------------------------------------------------------------------------
 // Process Paper
 // -----------------------------------------------------------------------------
@@ -353,7 +352,6 @@ async function processPaper(viewNo, title, b2Session) {
     return;
   }
 
-
   /*
    * Select a valid operational Google Apps Script worker.
    *
@@ -364,15 +362,14 @@ async function processPaper(viewNo, title, b2Session) {
   /*
    * Map legacy parameter targets using the structured URL API.
    */
-  const legacyGasUrl = new URL(
+  const dataGasUrl = new URL(
     `https://script.google.com/macros/s/${workerToken}/exec`
   );
 
-  legacyGasUrl.searchParams.set("export", "view");
-  legacyGasUrl.searchParams.set("base", viewNo);
-  legacyGasUrl.searchParams.set("field", title);
-  legacyGasUrl.searchParams.set("hash", PASSWORD);
-
+  dataGasUrl.searchParams.set("export", "view");
+  dataGasUrl.searchParams.set("base", viewNo);
+  dataGasUrl.searchParams.set("field", title);
+  dataGasUrl.searchParams.set("hash", PASSWORD);
 
   try {
     console.log(
@@ -385,7 +382,7 @@ async function processPaper(viewNo, title, b2Session) {
      *
      * Password is deliberately redacted.
      */
-    const debugGasUrl = new URL(legacyGasUrl);
+    const debugGasUrl = new URL(dataGasUrl);
 
     debugGasUrl.searchParams.set(
       "hash",
@@ -414,7 +411,7 @@ async function processPaper(viewNo, title, b2Session) {
      * Fetch follows Google's redirects automatically.
      */
     const response = await fetch(
-      legacyGasUrl.toString(),
+      dataGasUrl.toString(),
       {
         method: "GET"
       }
