@@ -283,39 +283,16 @@ function selectWorker(includeFallback = true) {
 // GAS Hash Generation
 // -----------------------------------------------------------------------------
 
-async function getFileHash(viewNo, title) {
-  const hashUrl = new URL(GAS_HASH_URL);
+function buildFileBaseName(viewNo, title) {
+  let normalizedTitle = title
+    .toLowerCase()
+    .replace(/\s*w\.\s*sol\s*$/i, "")
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 
-  hashUrl.searchParams.set("base", viewNo);
-  hashUrl.searchParams.set("field", title);
-  hashUrl.searchParams.set("export", "encode");
-
-  console.log(
-    `   🔐 Generating filehash for file: ${title}`
-  );
-
-  const response = await fetch(hashUrl.toString(), {
-    method: "GET"
-  });
-
-  if (!response.ok) {
-    const details = await response.text();
-
-    throw new Error(
-      `GAS hash request failed ` +
-      `(${response.status} ${response.statusText}): ${details}`
-    );
-  }
-
-  const hash = (await response.text()).trim();
-
-  if (!hash) {
-    throw new Error(
-      `GAS returned an empty hash for '${title}'`
-    );
-  }
-
-  return hash;
+  return `${viewNo}-${normalizedTitle}`;
 }
 
 // -----------------------------------------------------------------------------
@@ -323,34 +300,16 @@ async function getFileHash(viewNo, title) {
 // -----------------------------------------------------------------------------
 
 async function processPaper(viewNo, title, b2Session) {
-  let filehash;
+ 
 
-  try {
-    /*
-     * Ask the dedicated GAS hash endpoint to generate the canonical
-     * file hash used by the viewer.
-     */
-    console.log(
-      `📡 Generating filehash for file: ${title}`
-    );
+  const fileBaseName = buildFileBaseName(
+    viewNo,
+    title
+  );
 
-    filehash = await getFileHash(
-      viewNo,
-      title
-    );
-
-    console.log(
-      `   🔐 Generated filehash: ${filehash}`
-    );
-
-  } catch (err) {
-    console.error(
-      `❌ Filehash generation failed for '${title}':`,
-      err.message
-    );
-
-    return;
-  }
+  console.log(
+    `📁 Generated file base name: ${fileBaseName}`
+  );
 
   /*
    * Select a valid operational Google Apps Script worker.
@@ -373,8 +332,7 @@ async function processPaper(viewNo, title, b2Session) {
 
   try {
     console.log(
-      `📡 Fetching from endpoint [${workerToken}] ` +
-      `for target filehash: ${filehash}`
+      `📡 Fetching from endpoint [${workerToken}] ` 
     );
 
     /*
@@ -526,9 +484,9 @@ async function processPaper(viewNo, title, b2Session) {
      *
      * Each fragment is uploaded as:
      *
-     *   filehash.0
-     *   filehash.1
-     *   filehash.2
+     *   fileBaseName.0
+     *   fileBaseName.1
+     *   fileBaseName.2
      *   ...
      */
     let offset = 0;
@@ -552,7 +510,7 @@ async function processPaper(viewNo, title, b2Session) {
         );
 
       const fragmentName =
-        `${filehash}.${fragmentIndex}`;
+        `${fileBaseName}.${fragmentIndex}`;
 
       console.log(
         `      ☁️ Uploading segment: ` +
@@ -580,7 +538,7 @@ async function processPaper(viewNo, title, b2Session) {
     console.log(
       `✅ File processing loop successful. ` +
       `Uploaded ${fragmentIndex} blocks ` +
-      `for filehash: ${filehash}`
+      `for file: ${fileBaseName}`
     );
 
   } catch (err) {
