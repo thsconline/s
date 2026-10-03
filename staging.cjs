@@ -10,7 +10,7 @@ const fs = require("fs");
 const zlib = require("zlib");
 const crypto = require("crypto");
 
-const { SHA256, writeworker } = require("./viewer.js");
+const { SHA256, selectworker } = require("./viewer.js");
 
 // -----------------------------------------------------------------------------
 // 1. Structural Environment Mapping Configurations
@@ -60,15 +60,18 @@ async function getB2AuthTokens() {
 
   if (!response.ok) {
     const details = await response.text();
-
+	
     throw new Error(
       `B2 authorization failed (${response.status} ${response.statusText}): ${details}`
     );
   }
 
   const data = await response.json();
-
+  const responseText = await response.text();
+  
+  
   if (!data.apiUrl || !data.authorizationToken) {
+	console.error("B2 authorization response:", responseText);
     throw new Error(
       "B2 authorization response is missing apiUrl or authorizationToken."
     );
@@ -262,7 +265,7 @@ async function processPaper(viewNo, title, b2Session) {
   /*
    * Select a valid operational Google Apps Script cluster endpoint.
    */
-  const workerToken = writeworker(false);
+  const workerToken = selectworker(false);
 
   /*
    * Map legacy parameter targets using structured URL search parameters.
