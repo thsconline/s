@@ -28,7 +28,7 @@ jobs:
           B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
           B2_BUCKET_ID: ${{ secrets.B2_BUCKET_ID }}
         run: |
-          node staging.js
+          node staging.cjs
 
       # STEP 2: Instantly poke Cloudflare Pages to rebuild and publish your frontend
       - name: Trigger Cloudflare Pages Deploy Hook
