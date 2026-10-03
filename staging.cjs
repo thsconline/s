@@ -71,7 +71,7 @@ async function getB2AuthTokens() {
   const data = JSON.parse(responseText);
   
   
-  if (!data.apiUrl || !data.authorizationToken) {
+  if (!data.apiInfo.storageApi.apiUrl || !data.authorizationToken) {
 	console.error("B2 authorization response:", responseText);
     throw new Error(
       "B2 authorization response is missing apiUrl or authorizationToken."
@@ -463,7 +463,7 @@ async function main() {
      * Request an upload target for the bucket.
      */
     const b2Upload = await getB2UploadUrl(
-      baseAuth.apiUrl,
+      data.apiInfo.storageApi.apiUrl,
       baseAuth.authorizationToken
     );
 
