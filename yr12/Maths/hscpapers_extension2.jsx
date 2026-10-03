@@ -26,11 +26,11 @@ export default function Page() {
 <h4>HSC Maths Ext 2 Papers</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a><br>
+<a href="../">Back to Year 12 - HSC</a><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </span></details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -40,263 +40,263 @@ export default function Page() {
 <li>Sample answers or marking guidelines included with most papers.</li>
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
-<tr><td>1916, 1961-1962<br>
+<tr><td>1916, 1961-1962<br />
 <span className="content">
-<a href="#v" onClick="pdf(this, '5340X')">1916 Maths Honours Leaving Certificate</a><br>
-<a href="#v" onClick="pdf(this, '5340X')">1961 Maths Honours Leaving Certificate</a><br>
+<a href="#v" onClick="pdf(this, '5340X')">1916 Maths Honours Leaving Certificate</a><br />
+<a href="#v" onClick="pdf(this, '5340X')">1961 Maths Honours Leaving Certificate</a><br />
 <a href="#v" onClick="pdf(this, '5340X')">1962 Maths Honours Leaving Certificate</a> 
 </span></td></tr>  
-<tr><td>1967-2000<br>
+<tr><td>1967-2000<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1967 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1968 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1969 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1970 HSC</a><br>
-<br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1971 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1972 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1973 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1974 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1975 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1976 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1977 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1978 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1979 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1980 HSC</a><br>
-<br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1981 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1982 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1983 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1984 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1985 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1986 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1987 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1988 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1989 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1990 HSC</a><br>
-<br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1991 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1992 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1993 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1994 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1995 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1996 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1997 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1998 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1999 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2000 HSC</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1967 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1968 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1969 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1970 HSC</a><br />
+<br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1971 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1972 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1973 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1974 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1975 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1976 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1977 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1978 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1979 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1980 HSC</a><br />
+<br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1981 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1982 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1983 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1984 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1985 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1986 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1987 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1988 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1989 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1990 HSC</a><br />
+<br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1991 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1992 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1993 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1994 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1995 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1996 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1997 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1998 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1999 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2000 HSC</a><br />
 </span></td></tr>
-<tr><td>2001<br>
+<tr><td>2001<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2002<br>
+<tr><td>2002<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2003<br>
+<tr><td>2003<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2004<br>
+<tr><td>2004<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2005<br>
+<tr><td>2005<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2006<br>
+<tr><td>2006<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2007<br>
+<tr><td>2007<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2008<br>
+<tr><td>2008<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 Marking Guidelines</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 Marking Guidelines</a><br />
 </span></td></tr>
-<tr><td>2009<br>
+<tr><td>2009<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Sample Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Sample Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2010<br>
+<tr><td>2010<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Sample Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Sample Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2011<br>
+<tr><td>2011<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Sample Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Sample Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2012<br>
+<tr><td>2012<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Sample Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Sample Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2013<br>
+<tr><td>2013<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2014<br>
+<tr><td>2014<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2015<br>
+<tr><td>2015<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2016<br>
+<tr><td>2016<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2017<br>
+<tr><td>2017<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 Marking Feedback</a><br />
 </span></td></tr>
-<tr><td>2018<br>
+<tr><td>2018<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2018 HSC</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2018 Marking Guidelines</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2018 Marking Feedback</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2018 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2018 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2018 Marking Feedback</a><br />
 </span></td></tr>
 <tr><td><h5>Solutions</h5></td></tr>
-<tr><td>1967-2000<br>
+<tr><td>1967-2000<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1991 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1992 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1993 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1994 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1995 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1996 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1997 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1998 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1999 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2000 Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1991 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1992 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1993 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1994 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1995 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1996 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1997 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1998 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>1999 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2000 Solutions</a><br />
 </span></td></tr>
-<tr><td>2001<br>
+<tr><td>2001<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 Quick Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 Quick Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2001 Solutions</a><br />
 </span></td></tr>
-<tr><td>2002<br>
+<tr><td>2002<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 Quick Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 Quick Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2002 Solutions</a><br />
 </span></td></tr>
-<tr><td>2003<br>
+<tr><td>2003<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Derek Buchanan's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Quick Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Derek Buchanan's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Quick Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2003 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2004<br>
+<tr><td>2004<br />
 <span className="content">  
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 Quick Answers</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 Terry Lee's Solutions</a><br>  
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 Quick Answers</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2004 Terry Lee's Solutions</a><br />  
 </span></td></tr>
-<tr><td>2005<br>
+<tr><td>2005<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Derek Buchanan's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Jan Hansen's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Terry Lee's Solutions</a><br>  
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Derek Buchanan's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Jan Hansen's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2005 Terry Lee's Solutions</a><br />  
 </span></td></tr>
-<tr><td>2006<br>
+<tr><td>2006<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2006 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2007<br>
+<tr><td>2007<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 Terry Lee's Solutions</a><br>    
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2007 Terry Lee's Solutions</a><br />    
 </span></td></tr>
-<tr><td>2008<br>
+<tr><td>2008<br />
 <span className="content">  
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 Jan Hansen's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 Jan Hansen's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2008 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2009<br>
+<tr><td>2009<br />
 <span className="content">  
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Jan Hansen's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Jan Hansen's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2009 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2010<br>
+<tr><td>2010<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2010 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2011<br>
+<tr><td>2011<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2011 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2012<br>
+<tr><td>2012<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2012 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2013<br>
+<tr><td>2013<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Jonathan Le's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Jonathan Le's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2013 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2014<br>
+<tr><td>2014<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Jonathan Le's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Jonathan Le's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2014 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2015<br>
+<tr><td>2015<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2015 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2016<br>
+<tr><td>2016<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Jonathan Le's Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Terry Lee's Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Jonathan Le's Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2016 Terry Lee's Solutions</a><br />
 </span></td></tr>
-<tr><td>2017<br>
+<tr><td>2017<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 iTute.com Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 Jonathan Le's Solutions</a><br>
-</span></td></tr><tr><td>2018<br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 iTute.com Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5340)}>2017 Jonathan Le's Solutions</a><br />
+</span></td></tr><tr><td>2018<br />
 <span className="content">
 No files
 </span></td></tr>

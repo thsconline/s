@@ -26,11 +26,11 @@ export default function Page() {
 <h4>HSC English Trial Paper 2 Advanced</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -318,9 +318,9 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Trinity Grammar 2019 P2 (Adv.)</a>
 </span></details></td></tr>
 
-<tr><td>Additional Practice (Mock Trial Exams)<br>
+<tr><td>Additional Practice (Mock Trial Exams)<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2015 P2 (Adv.) Practice Exam 1</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2015 P2 (Adv.) Practice Exam 1</a><br />
 </span></td></tr>
 </tbody></table>
 </div>

@@ -26,11 +26,11 @@ export default function Page() {
 <h4>HSC Investigating Science Trial Papers</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -41,33 +41,33 @@ export default function Page() {
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
 <tr id="Investigating_science"><td><h5>Investigating Science (2019 onwards)</h5></td></tr>
-<tr><td>Caringbah<br>
+<tr><td>Caringbah<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Caringbah 2024</a>
 </span></td></tr>
-<tr><td>Fort St<br>
+<tr><td>Fort St<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Fort St 2023 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Fort St 2024 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Fort St 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Fort St 2024 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Fort St 2025 w. sol</a>
 </span></td></tr>
-<tr><td>Pymble<br>
+<tr><td>Pymble<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2019</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2019</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2022</a>
 </span></td></tr>
-<tr><td>SSC Blackwattle Bay<br>
+<tr><td>SSC Blackwattle Bay<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>SSC Blackwattle Bay 2020 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>SSC Blackwattle Bay 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>SSC Blackwattle Bay 2023 w. sol</a>
 </span></td></tr>
 <tr id="senior_science"><td><h5>Senior Science (2001-2018)</h5></td></tr>
-<tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>HSC Senior Science was replaced by Investigating Science &amp; Science Extension in 2019.<br><br></td></tr>
-<tr><td>Pymble<br>
+<tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>HSC Senior Science was replaced by Investigating Science &amp; Science Extension in 2019.<br /><br /></td></tr>
+<tr><td>Pymble<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2006</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2007</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2013 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2007</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2013 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2014 w. sol</a>
 </span></td></tr>
 </tbody></table>

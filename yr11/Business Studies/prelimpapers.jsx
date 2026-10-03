@@ -26,11 +26,11 @@ export default function Page() {
 <h4>Year 11 Business Studies Yearly Exams</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 11 - Preliminary</a></span><br>
+<a href="../">Back to Year 11 - Preliminary</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -40,20 +40,20 @@ export default function Page() {
 <li>Sample answers or marking guidelines included with most papers.</li>
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
-<tr><td>Hornsby Girls<br>
+<tr><td>Hornsby Girls<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Hornsby Girls 2021</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Hornsby Girls 2021</a><br />
 </span></td></tr>
-<tr><td>Moriah<br>
+<tr><td>Moriah<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Moriah 2004</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Moriah 2005 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Moriah 2006 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Moriah 2004</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Moriah 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Moriah 2006 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Moriah 2007 w. sol</a>
 </span></td></tr>
-<tr><td>Shore<br>
+<tr><td>Shore<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Shore 2022 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1568)}>Shore 2022 w. sol</a><br />
 </span></td></tr>
 </tbody></table>
 </div>

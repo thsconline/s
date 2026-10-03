@@ -26,11 +26,11 @@ export default function Page() {
 <h4>HSC Economics Assessment Tasks</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -41,27 +41,27 @@ export default function Page() {
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
 <tr><td><h5>Half-Yearly Exams</h5></td></tr>
-<tr><td>Abbotsleigh<br>
+<tr><td>Abbotsleigh<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Abbotsleigh 2016</a>
 </span></td></tr>
-<tr><td>Fort St<br>
+<tr><td>Fort St<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2010 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2011 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2012 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2013 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Fort St 2013 w. sol</a><br />
 </span></td></tr>
-<tr><td>Macquarie Fields<br>
+<tr><td>Macquarie Fields<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2006</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2007</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2010</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2012</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2007</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2010</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Macquarie Fields 2012</a><br />
 </span></td></tr>
-<tr><td>Sydney Tech<br>
+<tr><td>Sydney Tech<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Sydney Tech 2012</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Sydney Tech 2012</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2476)}>Sydney Tech 2013 w. sol</a>
 </span></td></tr>
 </tbody></table>

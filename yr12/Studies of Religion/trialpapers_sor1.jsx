@@ -26,11 +26,11 @@ export default function Page() {
 <h4>HSC Studies of Religion 21 Trial Papers</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td>
@@ -38,9 +38,9 @@ export default function Page() {
 <li>Sample answers or marking guidelines included with most papers.</li>
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
-<tr><td>Newington<br>
+<tr><td>Newington<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 7718)}>Newington 2003</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 7718)}>Newington 2003</a><br />
 </span></td></tr>
 </tbody></table>
 </div>

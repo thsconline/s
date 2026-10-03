@@ -27,11 +27,11 @@ export default function Page() {
 <h4>HSC Japanese Continuers Assessment Tasks</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td>
@@ -40,16 +40,16 @@ export default function Page() {
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
 <tr><td><h5>Half-Yearly Exams</h5></td></tr>
-<tr><td><br>
+<tr><td><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4626)}>2011 Japanese Continuers HY</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4626)}>2011 Japanese Continuers HY</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4626)}>2013 Japanese Continuers HY</a>
 </span></td></tr>
-<tr><td>Blue Mountains Grammar<br>
+<tr><td>Blue Mountains Grammar<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4626)}>Blue Mountains Grammar 2010</a>
 </span></td></tr>
-<tr><td>Sydney Tech<br>
+<tr><td>Sydney Tech<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4626)}>Sydney Tech 2014 w. sol</a>
 </span></td></tr>

@@ -28,16 +28,16 @@ export default function Page() {
 <div className="tr"><div className="td">
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 11 - Preliminary</a></span><br>
+<a href="../">Back to Year 11 - Preliminary</a></span><br />
 </details>
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="prelimpapers.html">Biology Year 11 Yearly Papers</a><br>
-<span style="padding-left:29px;">32 papers online, 18 w. sol</span></span><br>
+<a href="prelimpapers.html">Biology Year 11 Yearly Papers</a><br />
+<span style="padding-left:29px;">32 papers online, 18 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="assessment-tasks.html">Biology Year 11 Internal Assessment Tasks</a><br>
-<span style="padding-left:29px;">2 papers online, 1 w. sol</span></span><br>
+<a href="assessment-tasks.html">Biology Year 11 Internal Assessment Tasks</a><br />
+<span style="padding-left:29px;">2 papers online, 1 w. sol</span></span><br />
 </div></div></div></div>
 </div>
         </>

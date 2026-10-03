@@ -26,11 +26,11 @@ export default function Page() {
 <h4>HSC Earth &amp; Environmental Science Trial Papers</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -40,32 +40,32 @@ export default function Page() {
 <li>Sample answers or marking guidelines included with most papers.</li>
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
-<tr><td>Abbotsleigh<br>
+<tr><td>Abbotsleigh<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Abbotsleigh 2020 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Abbotsleigh 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Abbotsleigh 2021</a>
 </span></td></tr>
-<tr><td>Barker<br>
+<tr><td>Barker<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Barker 2013</a>
 </span></td></tr>
-<tr><td>Cranbrook<br>
+<tr><td>Cranbrook<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Cranbrook 2019</a>
 </span></td></tr>
-<tr><td>Fort St<br>
+<tr><td>Fort St<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Fort St 2023 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Fort St 2024 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Fort St 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Fort St 2024 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Fort St 2025 w. sol</a>
 </span></td></tr>
-<tr><td>Pymble<br>
+<tr><td>Pymble<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Pymble 2004</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Pymble 2005</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Pymble 2004</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Pymble 2005</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Pymble 2006</a>
 </span></td></tr>
-<tr><td>Sydney Grammar<br>
+<tr><td>Sydney Grammar<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2428)}>Sydney Grammar 2024</a>
 </span></td></tr>

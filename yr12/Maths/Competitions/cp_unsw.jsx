@@ -27,64 +27,64 @@ export default function Page() {
 <h4>UNSW Maths Competition</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
-<tr><td> <br>
+<tr><td> <br />
 <span className="content">  
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1968 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1971 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1972 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1973 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1974 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1975 w. sol</a><br>  
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1976 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1977 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1978 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1979 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1980 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1981 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1982 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1983 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1984 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1985 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1986 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1987 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1988 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1989 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1990 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1991 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1992 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1993 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1994 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1995 w. sol</a><br>
-<br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1996 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1997 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1998 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1999 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2000 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2001 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2002 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2003 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2004 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2005 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2006 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2007 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2008 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2009 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2010 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2011 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2012 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2013 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2014 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2015 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2016 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2017 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1968 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1971 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1972 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1973 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1974 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1975 w. sol</a><br />  
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1976 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1977 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1978 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1979 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1980 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1981 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1982 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1983 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1984 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1985 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1986 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1987 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1988 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1989 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1990 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1991 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1992 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1993 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1994 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1995 w. sol</a><br />
+<br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1996 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1997 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1998 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 1999 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2000 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2001 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>UNSW Maths Competition 2017 w. sol</a><br />
 </span></td></tr>
 </tbody></table>
 </div>

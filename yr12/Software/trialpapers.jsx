@@ -26,11 +26,11 @@ export default function Page() {
 <h4>HSC Software Trial Papers</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -40,24 +40,24 @@ export default function Page() {
 <li>Sample answers or marking guidelines included with most papers.</li>
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
-<tr><td>Asquith Girls<br>
+<tr><td>Asquith Girls<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>Asquith Girls 2001</a>
 </span></td></tr>
-<tr><td>Barker<br>
+<tr><td>Barker<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>Barker 2001 w. sol</a>
 </span></td></tr>
-<tr><td>James Ruse<br>
+<tr><td>James Ruse<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>James Ruse 2008 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>James Ruse 2014 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>James Ruse 2021 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>James Ruse 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>James Ruse 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>James Ruse 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>James Ruse 2022 w. sol</a>
 </span></td></tr>
-<tr><td>Scots<br>
+<tr><td>Scots<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>Scots 2012</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>Scots 2012</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 7478)}>Scots 2013 w. sol</a>
 </span></td></tr>
 </tbody></table>

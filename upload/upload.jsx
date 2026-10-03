@@ -25,21 +25,21 @@ export default function Page() {
 <h3><span className="title">Upload Files to thsc</span></h3>
 <div id="web-list">
 <div><div><div>
-All submissions of past papers or practice questions (TEX/PDF files preferred) are welcome.<br><br>
+All submissions of past papers or practice questions (TEX/PDF files preferred) are welcome.<br /><br />
 <ins style="color:#777;text-decoration:none"><span id="redirect">Please fill in a title and attach the file</span></ins>
 <div id="output"></div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
-<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/" dir="ltr">Exit App</a></span><br>
-<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/upload/">Back to Uploader Selector Screen</a></span><br>
+<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/" dir="ltr">Exit App</a></span><br />
+<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/upload/">Back to Uploader Selector Screen</a></span><br />
 </details>
-<br>
+<br />
 <form id="myForm" action="https://script.google.com/macros/s/AKfycbzF1ydtQ_i2DefJv_OZ2jbYCav4HQTChR8Ya4LU4QUPkDpQ1QlX/exec" method="POST">
-                          <label for="resname" className="goog-tree-item-label">Title of File</label><br>
-    <input width="1000" type="text" id="qtitle" name="restitle"><br><br>
-                      <label for="resname" className="goog-tree-item-label">File</label><br>
-<input width="1000" style="width:100% !important;" id="qfile" type="file" name="fileUpload"><br><br>
-                      <label for="resname" className="goog-tree-item-label">Reply to Email Address</label><br>
-    <input width="1000" value="" type="text" id="qname" name="resname"><br><br>
+                          <label for="resname" className="goog-tree-item-label">Title of File</label><br />
+    <input width="1000" type="text" id="qtitle" name="restitle"><br /><br />
+                      <label for="resname" className="goog-tree-item-label">File</label><br />
+<input width="1000" style="width:100% !important;" id="qfile" type="file" name="fileUpload"><br /><br />
+                      <label for="resname" className="goog-tree-item-label">Reply to Email Address</label><br />
+    <input width="1000" value="" type="text" id="qname" name="resname"><br /><br />
                          <input type="submit" value="Upload File" onClick="this.value='Uploading..';">
                      <input type="reset" value="Cancel">
 For multiple file uploads, please email to thsconline@gmail.com or use the thsconline cmdline upload tool (Windows only)</form>

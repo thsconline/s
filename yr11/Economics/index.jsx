@@ -27,16 +27,16 @@ export default function Page() {
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 11 - Preliminary</a></span><br>
+<a href="../">Back to Year 11 - Preliminary</a></span><br />
 </details>
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="prelimpapers.html">Economics Year 11 Yearly Papers</a><br>
-<span style="padding-left:29px;">13 papers online, 10 w. sol</span></span><br>
+<a href="prelimpapers.html">Economics Year 11 Yearly Papers</a><br />
+<span style="padding-left:29px;">13 papers online, 10 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="assessment-tasks.html">Economics Year 11 Internal Assessment Tasks</a><br>
-<span style="padding-left:29px;">2 papers online, 2 w. sol</span></span><br>
+<a href="assessment-tasks.html">Economics Year 11 Internal Assessment Tasks</a><br />
+<span style="padding-left:29px;">2 papers online, 2 w. sol</span></span><br />
 </div></div></div></div>
 </div>
         </>

@@ -27,39 +27,39 @@ export default function Page() {
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br><br>
+<a href="../">Back to Year 12 - HSC</a></span><br /><br />
 </details>
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="hscpapers.html">English HSC Papers</a></span><br>
-<br>
+<a href="hscpapers.html">English HSC Papers</a></span><br />
+<br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers_paper1.html">English Trial Paper 1 (Texts &amp; Human Experience)</a><br>
-<span style="padding-left:29px;">127 papers online + 13 additional practice papers</span></span><br>
+<a href="trialpapers_paper1.html">English Trial Paper 1 (Texts &amp; Human Experience)</a><br />
+<span style="padding-left:29px;">127 papers online + 13 additional practice papers</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers_paper1.html#AOS Discovery">English Trial Paper 1 (AOS Discovery)</a><br>
-<span style="padding-left:29px;">26 papers online + 24 additional practice papers</span></span><br>
+<a href="trialpapers_paper1.html#AOS Discovery">English Trial Paper 1 (AOS Discovery)</a><br />
+<span style="padding-left:29px;">26 papers online + 24 additional practice papers</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers_paper1.html#AOS Belonging">English Trial Paper 1 (AOS Belonging)</a><br>
-<span style="padding-left:29px;">52 papers online</span></span><br>
+<a href="trialpapers_paper1.html#AOS Belonging">English Trial Paper 1 (AOS Belonging)</a><br />
+<span style="padding-left:29px;">52 papers online</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers_paper1.html#AOS Journeys">English Trial Paper 1 (AOS Journeys)</a><br>
-<span style="padding-left:29px;">1 paper online</span></span><br>
+<a href="trialpapers_paper1.html#AOS Journeys">English Trial Paper 1 (AOS Journeys)</a><br />
+<span style="padding-left:29px;">1 paper online</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers_paper1.html#AOS Change">English Trial Paper 1 (AOS Change)</a><br>
-<span style="padding-left:29px;">2 papers online</span></span><br>
-<br>
+<a href="trialpapers_paper1.html#AOS Change">English Trial Paper 1 (AOS Change)</a><br />
+<span style="padding-left:29px;">2 papers online</span></span><br />
+<br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers_paper2_advanced.html">English Trial Paper 2 Advanced</a><br>
-<span style="padding-left:29px;">147 papers online + 1 additional practice resource</span></span><br>
+<a href="trialpapers_paper2_advanced.html">English Trial Paper 2 Advanced</a><br />
+<span style="padding-left:29px;">147 papers online + 1 additional practice resource</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers_paper2_standard.html">English Trial Paper 2 Standard</a><br>
-<span style="padding-left:29px;">19 papers online</span></span><br>
-<br>
+<a href="trialpapers_paper2_standard.html">English Trial Paper 2 Standard</a><br />
+<span style="padding-left:29px;">19 papers online</span></span><br />
+<br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="assessment-tasks.html">English Internal Assessment Tasks</a><br>
-<span style="padding-left:29px;">5 papers online</span></span><br>
+<a href="assessment-tasks.html">English Internal Assessment Tasks</a><br />
+<span style="padding-left:29px;">5 papers online</span></span><br />
 </div></div></div></div>
 </div>
         </>

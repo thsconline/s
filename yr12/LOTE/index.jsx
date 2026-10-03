@@ -27,23 +27,23 @@ export default function Page() {
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br><br>
+<a href="../">Back to Year 12 - HSC</a></span><br /><br />
 </details>
 <span><img src="/s/images/colours/icon_lavender.png">&nbsp;&nbsp;
-<a href="Japanese/">Japanese <small>(Beginners, Continuers, Extension)</small></a></span><br>
+<a href="Japanese/">Japanese <small>(Beginners, Continuers, Extension)</small></a></span><br />
 <span><img src="/s/images/colours/icon_cloudy.png">&nbsp;&nbsp;
-<a href="Latin/">Latin <small>(Continuers, Extension)</small></a></span><br>
+<a href="Latin/">Latin <small>(Continuers, Extension)</small></a></span><br />
 
-<br>
-<span><b>General Resources for All Languages</b></span><br>
+<br />
+<span><b>General Resources for All Languages</b></span><br />
 <span><img src="/s/images/icon_pdf2.png">&nbsp;&nbsp;
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4200)}>Character Grid for Asian Languages (A5 Size)</a></span><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4200)}>Character Grid for Asian Languages (A5 Size)</a></span><br />
 <span><img src="/s/images/icon_pdf2.png">&nbsp;&nbsp;
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4200)}>Practice Questions - Short Writing Tasks</a></span><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4200)}>Practice Questions - Short Writing Tasks</a></span><br />
 <span><img src="/s/images/icon_pdf2.png">&nbsp;&nbsp;
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 4200)}>Practice Questions - Extended Writing Tasks</a></span><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4200)}>Practice Questions - Extended Writing Tasks</a></span><br />
 </div></div></div></div>
 </div>
         </>

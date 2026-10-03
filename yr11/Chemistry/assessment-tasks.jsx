@@ -26,11 +26,11 @@ export default function Page() {
 <h4>Year 11 Chemistry Assessment Tasks</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 11 - Preliminary</a></span><br>
+<a href="../">Back to Year 11 - Preliminary</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
@@ -41,44 +41,44 @@ export default function Page() {
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
 </ul></td></tr>
 <tr><td><h5>Half-Yearly Exams</h5></td></tr>
-<tr><td>Baulkham Hills<br>
+<tr><td>Baulkham Hills<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Baulkham Hills 2008 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Baulkham Hills 2009</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Baulkham Hills 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Baulkham Hills 2009</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Baulkham Hills 2010</a>
 </span></td></tr>
-<tr><td>Fort St<br>
+<tr><td>Fort St<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Fort St 2008</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Fort St 2008</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Fort St 2009</a>
 </span></td></tr>
-<tr><td>James Ruse<br>
+<tr><td>James Ruse<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2002</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2003 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2004 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2005 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2006 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2007 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2008 w. sol</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2009 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2002</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2009 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>James Ruse 2010 w. sol</a>
 </span></td></tr>
-<tr><td>Penrith<br>
+<tr><td>Penrith<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Penrith 2010</a>
 </span></td></tr>
-<tr><td>Sydney Boys<br>
+<tr><td>Sydney Boys<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Sydney Boys 2004</a>
 </span></td></tr>
-<tr><td>Sydney Girls<br>
+<tr><td>Sydney Girls<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Sydney Girls 2004</a>
 </span></td></tr>
-<tr><td>Sydney Grammar<br>
+<tr><td>Sydney Grammar<br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Sydney Grammar 2014 w. sol</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Sydney Grammar 2014 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1816)}>Sydney Grammar 2015 w. sol</a>
 </span></td></tr>  
 </tbody></table>

@@ -26,12 +26,12 @@ export default function Page() {
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a><br><br>
+<a href="/s/">Home Page</a><br /><br />
 </details>
 <img src="/s/images/colours/icon_red.png">&nbsp;&nbsp;
-<a href="Maths/">Maths</a><br>
+<a href="Maths/">Maths</a><br />
 <img src="/s/images/colours/icon_purple.png">&nbsp;&nbsp;
-<a href="Science/">Science</a><br>
+<a href="Science/">Science</a><br />
 
 </div></div></div></div>
 </div>

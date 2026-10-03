@@ -26,14 +26,14 @@ export default function Page() {
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
-<br>
+<a href="/s/">Home Page</a></span><br />
+<br />
 </details>
-All submissions of past papers or practice questions (TEX/PDF files preferred) are welcome.<br><br>
+All submissions of past papers or practice questions (TEX/PDF files preferred) are welcome.<br /><br />
 
-<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform">Upload Files Here</a><br><br>
-<a target="_blank" href="https://github.com/thsconline/s/issues">Report an Issue with any of the HTML pages here</a><br><br>
-<a href="mailto:thsconline@gmail.com">Feedback and Suggestions</a><br><br>
+<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdvUNKUsrj_1GRCvu7izKoTQJOck57HAfCY62cbSnPTDiYm7A/viewform">Upload Files Here</a><br /><br />
+<a target="_blank" href="https://github.com/thsconline/s/issues">Report an Issue with any of the HTML pages here</a><br /><br />
+<a href="mailto:thsconline@gmail.com">Feedback and Suggestions</a><br /><br />
 <b>Note: </b>If uploading multiple files, create a google drive folder and email the link to thsconline@gmail.com
 </div></div></div></div> 
 </div>

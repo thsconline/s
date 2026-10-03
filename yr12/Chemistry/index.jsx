@@ -27,18 +27,18 @@ export default function Page() {
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br><br>
+<a href="../">Back to Year 12 - HSC</a></span><br /><br />
 </details>
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="hscpapers.html">Chemistry HSC Papers</a></span><br>
+<a href="hscpapers.html">Chemistry HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="trialpapers.html">Chemistry Trial Papers</a><br>
-<span style="padding-left: 29px;">184 papers online, 143 w. sol</span></span><br>
+<a href="trialpapers.html">Chemistry Trial Papers</a><br />
+<span style="padding-left: 29px;">184 papers online, 143 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="assessment-tasks.html">Chemistry Internal Assessment Tasks</a><br>
-<span style="padding-left: 29px;">107 papers online, 72 w. sol</span></span><br>
+<a href="assessment-tasks.html">Chemistry Internal Assessment Tasks</a><br />
+<span style="padding-left: 29px;">107 papers online, 72 w. sol</span></span><br />
 </div></div></div></div>
 </div>
         </>

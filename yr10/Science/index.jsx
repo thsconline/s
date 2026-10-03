@@ -27,16 +27,16 @@ export default function Page() {
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 10</a></span><br><br>
+<a href="../">Back to Year 10</a></span><br /><br />
 </details>
 <span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
-<a href="yr10papers.html">Science Year 10 Yearly Papers </a><br>
-<span style="padding-left:29px;">6 current syllabus papers online, 5 w. sol</span><br>
-<span style="padding-left:29px;">4 previous syllabus papers online, 2 w. sol</span></span><br>
+<a href="yr10papers.html">Science Year 10 Yearly Papers </a><br />
+<span style="padding-left:29px;">6 current syllabus papers online, 5 w. sol</span><br />
+<span style="padding-left:29px;">4 previous syllabus papers online, 2 w. sol</span></span><br />
 
-<br>
+<br />
 </div></div></div></div>
 </div>
         </>

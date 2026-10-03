@@ -27,62 +27,62 @@ export default function Page() {
 <h4>Putnam Competition</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
-<tr><td> <br>
+<tr><td> <br />
 <span className="content">  
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1985-1994</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1995</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1995 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1996</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1996 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1997</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1997 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1998</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1998 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1999</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1999 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2000</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2000 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2001</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2001 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2002</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2002 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2003</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2003 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2004</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2004 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2005</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2005 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2006</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2006 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2007</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2007 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2008</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2008 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2009</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2009 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2010</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2010 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2011</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2011 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2012</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2012 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2013</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2013 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2014</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2014 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2015</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2015 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2016</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2016 Solutions</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2017</a><br>
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2017 Solutions</a><br>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1985-1994</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1995</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1995 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1996</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1996 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1997</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1997 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1998</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1998 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1999</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 1999 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2000</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2000 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2001</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2001 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2002</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2002 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2003</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2003 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2004</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2004 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2005</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2005 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2006 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2007</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2007 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2008</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2008 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2009</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2009 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2010</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2010 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2011</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2011 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2012</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2012 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2013</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2013 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2014</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2014 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2015</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2015 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2016</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2016 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2017</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Putnam 2017 Solutions</a><br />
 </span></td></tr>
 </tbody></table>
 </div>

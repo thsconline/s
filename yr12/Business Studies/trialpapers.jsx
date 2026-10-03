@@ -27,18 +27,18 @@ export default function Page() {
 <h4>HSC Business Studies Trial Papers</h4>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
-<a href="/s/">Home Page</a></span><br>
+<a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="../">Back to Year 12 - HSC</a></span><br>
+<a href="../">Back to Year 12 - HSC</a></span><br />
 <span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
-<a href="index.html">Up One Folder</a></span><br><br>
+<a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="search" id="search-row" style="display: none;"><td>
 <input type="text" id="search-bar" onKeyUp={filterTable} placeholder="Search this page...">
 <label><input type="checkbox" id="search-exact" onClick="filterTable()"> Show exact matches only</label>&nbsp;&nbsp;
 <label><input type="checkbox" id="search-wsol-only" onClick="filterTable()"> Show only papers that have solutions</label>
-<br>
+<br />
 <span id="search-message"></span>
 </td></tr>
 <tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
