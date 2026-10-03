@@ -473,7 +473,7 @@ async function processPaper(viewNo, title, b2Session) {
     if (
       gasData.fileref !==
         "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" ||
-      !gasData.base64Data
+      !gasData.data
     ) {
       console.warn(
         `   ⚠️ GAS node failed to supply matching data stream. ` +
@@ -496,7 +496,7 @@ async function processPaper(viewNo, title, b2Session) {
      * Convert Base64 directly into a Buffer.
      */
     const pdfBuffer = Buffer.from(
-      gasData.base64Data,
+      gasData.data,
       "base64"
     );
 
