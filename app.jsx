@@ -256,13 +256,7 @@
 		return null;
 	}
 
-	function PageRoute({ Component, title }) {
-		React.useEffect(() => {
-			document.title = title;
-		}, [title]);
 
-		return <Component />;
-	}
 
 	/*
 	 * React router.
@@ -302,7 +296,7 @@
 							<Route
 								key={path}
 								path={path}
-								element={<PageRoute Component={Component} title={title} />}
+								element={<Component />}
 							/>
 						)
 					)}
