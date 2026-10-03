@@ -22,16 +22,16 @@ export default function Page() {
 <a className="reverse" href="../">↖ [<i>Up One Folder</i>]</a>
 </div></div>
 <div id="content-all">
-<h3><span className="title"><img src="/s/images/colours/icon_orange.png">&nbsp;&nbsp;HSC PDHPE Resources</span></h3>
+<h3><span className="title"><img src="/s/images/colours/icon_orange.png" />&nbsp;&nbsp;HSC PDHPE Resources</span></h3>
 <div id="web-list">
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
-<span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
+<span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
-<span><img src="/s/images/icon_back.png">&nbsp;&nbsp;
+<span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
 <a href="../">Back to Year 12 - HSC</a></span><br />
 </details>
-<span><img src="/s/images/icon_folder.png">&nbsp;&nbsp;
+<span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers.html">PDHPE Trial Papers</a><br />
 <span style="padding-left:29px;">19 papers online, 10 w. sol</span></span><br />
 </div></div></div></div>

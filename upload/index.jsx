@@ -25,7 +25,7 @@ export default function Page() {
 <div id="web-list">
 <div><div><div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
-<span><img src="/s/images/icon_home.png">&nbsp;&nbsp;
+<span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <br />
 </details>

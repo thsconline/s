@@ -29,8 +29,8 @@ All submissions of past papers or practice questions (TEX/PDF files preferred) a
 <ins style="color:#777;text-decoration:none"><span id="redirect">Please fill in a title and attach the file</span></ins>
 <div id="output"></div>
 <details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
-<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/" dir="ltr">Exit App</a></span><br />
-<span><img src="https://thsconline.github.io/s/images/icon_back.png">&nbsp;&nbsp;<a href="https://thsconline.github.io/s/upload/">Back to Uploader Selector Screen</a></span><br />
+<span><img src="https://thsconline.github.io/s/images/icon_back.png" />&nbsp;&nbsp;<a href="https://thsconline.github.io/s/" dir="ltr">Exit App</a></span><br />
+<span><img src="https://thsconline.github.io/s/images/icon_back.png" />&nbsp;&nbsp;<a href="https://thsconline.github.io/s/upload/">Back to Uploader Selector Screen</a></span><br />
 </details>
 <br />
 <form id="myForm" action="https://script.google.com/macros/s/AKfycbzF1ydtQ_i2DefJv_OZ2jbYCav4HQTChR8Ya4LU4QUPkDpQ1QlX/exec" method="POST">
