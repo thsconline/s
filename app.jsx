@@ -322,6 +322,8 @@ function App() {
  * Mount React into the existing page wrapper
  * supplied by header.html / 404.html.
  */
+const root = document.getElementById("page-wrapper"); 
+ 
 if (root) {
     const currentPath = window.location.pathname;
 
