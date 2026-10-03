@@ -1,213 +1,543 @@
 /**
- * staging.js
+ * staging.cjs
+ *
  * Parses feed.atom timeframes, generates deterministic file hashes,
  * pulls Base64 streams from GAS via legacy URL mapping parameters,
  * and streams 4 MiB chunks directly into a private Backblaze B2 bucket.
  */
 
-const fs = require('fs');
-const path = require('path');
-const zlib = require('zlib');
-const { SHA256, selectworker } = require('./viewer.js');
+const fs = require("fs");
+const zlib = require("zlib");
+const crypto = require("crypto");
 
+const { SHA256, writeworker } = require("./viewer.js");
+
+// -----------------------------------------------------------------------------
 // 1. Structural Environment Mapping Configurations
-const PASSWORD  = process.env.GAS_SECRET_PASSWORD; // Injected securely via GitHub Action secrets
-const ATOM_FILE = "./feed.atom"; 
+// -----------------------------------------------------------------------------
+
+const PASSWORD = process.env.GAS_SECRET_PASSWORD;
+const ATOM_FILE = "./feed.atom";
 
 // Backblaze Authorization Coordinates
-const B2_KEY_ID    = process.env.B2_APPLICATION_KEY_ID;
-const B2_APP_KEY   = process.env.B2_APPLICATION_KEY;
-const B2_BUCKET_ID = process.env.B2_BUCKET_ID; 
+const B2_KEY_ID = process.env.B2_APPLICATION_KEY_ID;
+const B2_APP_KEY = process.env.B2_APPLICATION_KEY;
+const B2_BUCKET_ID = process.env.B2_BUCKET_ID;
 
 const CHUNK_SIZE = 4 * 1024 * 1024; // Exactly 4 MiB (4,194,304 bytes)
 
-/** Native Backblaze B2 Storage API Handshakes */
+
+// -----------------------------------------------------------------------------
+// 2. Backblaze B2 Authorization
+// -----------------------------------------------------------------------------
+
 async function getB2AuthTokens() {
-  const base64Credentials = Buffer.from(`${B2_KEY_ID}:${B2_APP_KEY}`).toString('base64');
-  const res = await fetch("https://backblazeb2.com", {
-    headers: { "Authorization": `Basic ${base64Credentials}` }
-  });
-  if (!res.ok) throw new Error(`B2 Authorization handshake failed: ${res.statusText}`);
-  return await res.json();
+  if (!B2_KEY_ID) {
+    throw new Error("Missing B2_APPLICATION_KEY_ID environment variable.");
+  }
+
+  if (!B2_APP_KEY) {
+    throw new Error("Missing B2_APPLICATION_KEY environment variable.");
+  }
+
+  if (!B2_BUCKET_ID) {
+    throw new Error("Missing B2_BUCKET_ID environment variable.");
+  }
+
+  const base64Credentials = Buffer
+    .from(`${B2_KEY_ID}:${B2_APP_KEY}`)
+    .toString("base64");
+
+  const response = await fetch(
+    "https://api.backblazeb2.com/b2api/v4/b2_authorize_account",
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Basic ${base64Credentials}`
+      }
+    }
+  );
+
+  if (!response.ok) {
+    const details = await response.text();
+
+    throw new Error(
+      `B2 authorization failed (${response.status} ${response.statusText}): ${details}`
+    );
+  }
+
+  const data = await response.json();
+
+  if (!data.apiUrl || !data.authorizationToken) {
+    throw new Error(
+      "B2 authorization response is missing apiUrl or authorizationToken."
+    );
+  }
+
+  return data;
 }
+
+
+// -----------------------------------------------------------------------------
+// 3. Obtain B2 Upload URL
+// -----------------------------------------------------------------------------
 
 async function getB2UploadUrl(apiUrl, authToken) {
-  const res = await fetch(`${apiUrl}/b2api/v4/b2_get_upload_url`, {
-    method: "POST",
-    headers: { "Authorization": authToken, "Content-Type": "application/json" },
-    body: JSON.stringify({ bucketId: B2_BUCKET_ID })
-  });
-  if (!res.ok) throw new Error(`B2 Get Upload Target path mapping crashed: ${res.statusText}`);
-  return await res.json();
+  const response = await fetch(
+    `${apiUrl}/b2api/v4/b2_get_upload_url`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: authToken,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        bucketId: B2_BUCKET_ID
+      })
+    }
+  );
+
+  if (!response.ok) {
+    const details = await response.text();
+
+    throw new Error(
+      `B2 get_upload_url failed (${response.status} ${response.statusText}): ${details}`
+    );
+  }
+
+  const data = await response.json();
+
+  if (!data.uploadUrl || !data.authorizationToken) {
+    throw new Error(
+      "B2 upload URL response is missing uploadUrl or authorizationToken."
+    );
+  }
+
+  return data;
 }
 
-async function uploadBufferToB2(uploadUrl, uploadAuthToken, filename, dataBuffer) {
-  const percentEncodedName = encodeURIComponent(filename).replace(/%20/g, '+');
+
+// -----------------------------------------------------------------------------
+// 4. Upload One Binary Fragment to B2
+// -----------------------------------------------------------------------------
+
+async function uploadBufferToB2(
+  uploadUrl,
+  uploadAuthToken,
+  filename,
+  dataBuffer
+) {
+  /*
+   * B2 expects the SHA-1 digest of the exact bytes being uploaded.
+   */
+  const contentSha1 = crypto
+    .createHash("sha1")
+    .update(dataBuffer)
+    .digest("hex");
+
+  /*
+   * X-Bz-File-Name must contain a URL-encoded file name.
+   */
+  const encodedFilename = encodeURIComponent(filename);
+
   const response = await fetch(uploadUrl, {
     method: "POST",
+
     headers: {
-      "Authorization": uploadAuthToken,
-      "X-Bz-File-Name": percentEncodedName,
+      Authorization: uploadAuthToken,
+      "X-Bz-File-Name": encodedFilename,
       "Content-Type": "application/octet-stream",
-      "Content-Length": dataBuffer.length.toString(),
-      "X-Bz-Content-Sha1": "do_not_verify"
+      "Content-Length": String(dataBuffer.length),
+      "X-Bz-Content-Sha1": contentSha1
     },
+
     body: dataBuffer
   });
+
   if (!response.ok) {
     const errorDetails = await response.text();
-    throw new Error(`Cloud chunk deployment payload rejected: ${errorDetails}`);
+
+    throw new Error(
+      `B2 upload failed for ${filename} ` +
+      `(${response.status} ${response.statusText}): ${errorDetails}`
+    );
   }
+
+  const result = await response.json();
+
+  if (!result.fileId) {
+    throw new Error(
+      `B2 accepted ${filename}, but no fileId was returned.`
+    );
+  }
+
+  return result;
 }
 
-/** Parses XML structured entry blocks out of your simplified Atom Feed structure */
+
+// -----------------------------------------------------------------------------
+// 5. Parse XML Structured Entry Blocks
+// -----------------------------------------------------------------------------
+
 function parseAtomFeed(xmlString) {
   const entries = [];
-  
-  // Extract the root/global feed updated timestamp first
-  const rootUpdatedMatch = xmlString.match(/<feed[\s\S]*?<updated>([\s\S]*?)<\/updated>/);
-  const globalFeedUpdatedTime = rootUpdatedMatch ? new Date(rootUpdatedMatch[1].trim()).getTime() : null;
 
+  /*
+   * Extract the root/global feed updated timestamp first.
+   */
+  const rootUpdatedMatch = xmlString.match(
+    /<feed[\s\S]*?<updated>([\s\S]*?)<\/updated>/
+  );
+
+  const globalFeedUpdatedTime = rootUpdatedMatch
+    ? new Date(rootUpdatedMatch[1].trim()).getTime()
+    : null;
+
+  /*
+   * Extract individual <entry> blocks.
+   */
   const entryRegex = /<entry>([\s\S]*?)<\/entry>/g;
+
   let match;
 
   while ((match = entryRegex.exec(xmlString)) !== null) {
     const entryBlock = match[1];
 
-    const titleMatch      = entryBlock.match(/<title>([\s\S]*?)<\/title>/);
-    const collectionMatch = entryBlock.match(/<collection>([\s\S]*?)<\/collection>/);
-    const updatedMatch    = entryBlock.match(/<updated>([\s\S]*?)<\/updated>/);
+    const titleMatch = entryBlock.match(
+      /<title>([\s\S]*?)<\/title>/
+    );
+
+    const collectionMatch = entryBlock.match(
+      /<collection>([\s\S]*?)<\/collection>/
+    );
+
+    const updatedMatch = entryBlock.match(
+      /<updated>([\s\S]*?)<\/updated>/
+    );
 
     if (titleMatch && collectionMatch && updatedMatch) {
+      const updatedTime = new Date(
+        updatedMatch[1].trim()
+      ).getTime();
+
       entries.push({
         viewNo: collectionMatch[1].trim(),
         title: titleMatch[1].trim(),
-        updatedTime: new Date(updatedMatch[1].trim()).getTime()
+        updatedTime
       });
     }
   }
-  
-  return { entries, globalFeedUpdatedTime };
+
+  return {
+    entries,
+    globalFeedUpdatedTime
+  };
 }
 
-/** Connects to GAS utilizing legacy query schemas and performs in-memory storage chunk streams */
+
+// -----------------------------------------------------------------------------
+// 6. Process One Paper
+// -----------------------------------------------------------------------------
+
 async function processPaper(viewNo, title, b2Session) {
-  // 1. Replicate viewer.js hashing signature rules to determine the exact name of the file for Backblaze
+  /*
+   * Replicate viewer.js hashing signature rules to determine
+   * the exact file name used for Backblaze.
+   */
   const hashTemplate = `${viewNo}_${title}`;
+
   let filehash;
-  
+
   try {
     filehash = await SHA256(hashTemplate);
   } catch (err) {
-    console.error(`❌ Cryptographic execution error on string template: ${hashTemplate}`, err);
+    console.error(
+      `❌ Cryptographic execution error on string template: ${hashTemplate}`,
+      err
+    );
+
     return;
   }
 
-  // 2. Select a valid operational Google Apps Script cluster endpoint skipping the fallback
-  const workerToken = selectworker(false);
-  
-  // 3. Map legacy parameter targets using the structured URL search parameters layout
-  const legacyGasUrl = new URL('https://script.google.com/macros/s/' + workerToken + '/exec');
+  /*
+   * Select a valid operational Google Apps Script cluster endpoint.
+   */
+  const workerToken = writeworker(false);
+
+  /*
+   * Map legacy parameter targets using structured URL search parameters.
+   */
+  const legacyGasUrl = new URL(
+    `https://script.google.com/macros/s/${workerToken}/exec`
+  );
+
   legacyGasUrl.searchParams.set("export", "view");
   legacyGasUrl.searchParams.set("base", viewNo);
   legacyGasUrl.searchParams.set("field", title);
-  legacyGasUrl.searchParams.set("hash", PASSWORD); // Injects your password secret into the legacy hash string parameter
+  legacyGasUrl.searchParams.set("hash", PASSWORD);
 
   try {
-    console.log(`📡 Fetching from endpoint [${workerToken}] for target filehash: ${filehash}`);
-    
-    // Fire connection parameter requests. Fetch handles Google 302 redirects natively over the wire
-    const response = await fetch(legacyGasUrl.toString(), { method: "GET" });
+    console.log(
+      `📡 Fetching from endpoint [${workerToken}] ` +
+      `for target filehash: ${filehash}`
+    );
 
-    if (!response.ok) throw new Error(`HTTP Error Status: ${response.status}`);
+    /*
+     * Fetch handles Google 302 redirects natively.
+     */
+    const response = await fetch(
+      legacyGasUrl.toString(),
+      {
+        method: "GET"
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `HTTP Error Status: ${response.status} ${response.statusText}`
+      );
+    }
+
     const gasData = await response.json();
 
-    if (gasData.fileref != "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" || !gasData.data) {
-      console.warn(`   ⚠️ GAS node failed to supply matching data stream. Message: ${gasData.error || 'No payload content data string'}`);
+    /*
+     * Validate the expected GAS payload.
+     */
+    if (
+      gasData.fileref !== "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" ||
+      !gasData.base64Data
+    ) {
+      console.warn(
+        `   ⚠️ GAS node failed to supply matching data stream. ` +
+        `Message: ${gasData.error || "No payload content data string"}`
+      );
+
       return;
     }
 
-    // 4. In-Memory conversion operations (0 files touch runner disk sectors)
-    const pdfBuffer = Buffer.from(gasData.base64Data, 'base64');
-    console.log(`   🗜️ Applying in-memory GZIP optimization payload matrices...`);
+    /*
+     * Convert Base64 directly into a Buffer.
+     */
+    const pdfBuffer = Buffer.from(
+      gasData.base64Data,
+      "base64"
+    );
+
+    console.log(
+      `   📦 Received ${pdfBuffer.length} bytes from GAS.`
+    );
+
+    /*
+     * Apply in-memory GZIP compression.
+     *
+     * No temporary PDF or gzip files are written to disk.
+     */
+    console.log(
+      `   🗜️ Applying in-memory GZIP compression...`
+    );
+
     const gzippedBuffer = zlib.gzipSync(pdfBuffer);
 
-    // 5. Binary Fragmentation Router: Slice and push filehash.0, filehash.1, etc.
+    console.log(
+      `   📦 Compressed payload: ${gzippedBuffer.length} bytes.`
+    );
+
+    /*
+     * Binary fragmentation router.
+     *
+     * Each fragment is uploaded as:
+     *
+     *   filehash.0
+     *   filehash.1
+     *   filehash.2
+     *   ...
+     */
     let offset = 0;
     let fragmentIndex = 0;
-    
+
     while (offset < gzippedBuffer.length) {
-      const bytesLeft = gzippedBuffer.length - offset;
-      const lengthToWrite = Math.min(CHUNK_SIZE, bytesLeft);
-      const chunkSlice = gzippedBuffer.subarray(offset, offset + lengthToWrite);
-      
-      // Filename nomenclature mapping format requirement matches: filehash.index
-      const fragmentName = `${filehash}.${fragmentIndex}`;
-      console.log(`      ☁️ Streaming direct segment over the wire: ${fragmentName} (${lengthToWrite} bytes)...`);
-      
-      // Upload straight into your Backblaze B2 storage container
-      await uploadBufferToB2(b2Session.uploadUrl, b2Session.uploadToken, fragmentName, chunkSlice);
-      
+      const bytesLeft =
+        gzippedBuffer.length - offset;
+
+      const lengthToWrite = Math.min(
+        CHUNK_SIZE,
+        bytesLeft
+      );
+
+      const chunkSlice = gzippedBuffer.subarray(
+        offset,
+        offset + lengthToWrite
+      );
+
+      const fragmentName =
+        `${filehash}.${fragmentIndex}`;
+
+      console.log(
+        `      ☁️ Uploading segment: ${fragmentName} ` +
+        `(${lengthToWrite} bytes)...`
+      );
+
+      const uploadResult = await uploadBufferToB2(
+        b2Session.uploadUrl,
+        b2Session.uploadToken,
+        fragmentName,
+        chunkSlice
+      );
+
+      console.log(
+        `      ✅ Uploaded ${fragmentName} ` +
+        `(fileId: ${uploadResult.fileId})`
+      );
+
       offset += lengthToWrite;
       fragmentIndex++;
     }
 
-    console.log(`✅ File processing loop successful. Uploaded ${fragmentIndex} blocks for filehash: ${filehash}`);
+    console.log(
+      `✅ File processing loop successful. ` +
+      `Uploaded ${fragmentIndex} blocks for filehash: ${filehash}`
+    );
 
   } catch (err) {
-    console.error(`❌ Thread exception handling paper index mapping [${title}]:`, err.message);
+    console.error(
+      `❌ Thread exception handling paper index mapping [${title}]:`,
+      err.message
+    );
   }
 }
 
-/** Loop Orchestration Entry point */
+
+// -----------------------------------------------------------------------------
+// 7. Main Orchestration Entry Point
+// -----------------------------------------------------------------------------
+
 async function main() {
   if (!fs.existsSync(ATOM_FILE)) {
-    console.error(`❌ Execution Aborted: Target source feed cannot be found at path: ${ATOM_FILE}`);
+    console.error(
+      `❌ Execution Aborted: Target source feed cannot be found at path: ${ATOM_FILE}`
+    );
+
     process.exit(1);
   }
 
   try {
-    console.log(`📖 Loading and parsing database records from source: ${ATOM_FILE}...`);
-    const feedXmlContent = fs.readFileSync(ATOM_FILE, 'utf8');
-    
-    // Extract items lists along with the root feed timeline metrics parameters
-    const { entries, globalFeedUpdatedTime } = parseAtomFeed(feedXmlContent);
+    /*
+     * Load and parse feed.
+     */
+    console.log(
+      `📖 Loading and parsing database records from source: ${ATOM_FILE}...`
+    );
+
+    const feedXmlContent = fs.readFileSync(
+      ATOM_FILE,
+      "utf8"
+    );
+
+    const {
+      entries,
+      globalFeedUpdatedTime
+    } = parseAtomFeed(feedXmlContent);
 
     if (entries.length === 0) {
-      console.warn("⚠️ Warning: No valid items extracted out of the feed file tags.");
+      console.warn(
+        "⚠️ Warning: No valid items extracted out of the feed file tags."
+      );
+
       process.exit(0);
     }
 
-    console.log("🔒 Connecting auth links to Backblaze B2 networks...");
+    /*
+     * Authenticate against Backblaze.
+     */
+    console.log(
+      "🔒 Connecting auth links to Backblaze B2 networks..."
+    );
+
     const baseAuth = await getB2AuthTokens();
-    const b2UploadEndpoints = await getB2UploadUrl(baseAuth.apiUrl, baseAuth.authorizationToken);
-    
+
+    /*
+     * Request an upload target for the bucket.
+     */
+    const b2Upload = await getB2UploadUrl(
+      baseAuth.apiUrl,
+      baseAuth.authorizationToken
+    );
+
+    /*
+     * Important:
+     *
+     * b2_get_upload_url returns:
+     *
+     *   uploadUrl
+     *   authorizationToken
+     *
+     * The token is NOT named uploadAuthorizationToken.
+     */
     const b2Session = {
-      uploadUrl: b2UploadEndpoints.uploadUrl,
-      uploadToken: b2UploadEndpoints.uploadAuthorizationToken
+      uploadUrl: b2Upload.uploadUrl,
+      uploadToken: b2Upload.authorizationToken
     };
 
-    console.log(`📝 Discovered ${entries.length} active records inside feed. Beginning processing timelines...`);
+    console.log(
+      `☁️ B2 upload target acquired successfully.`
+    );
 
-    // Iterate through items found in the XML feed sequentially
+    console.log(
+      `📝 Discovered ${entries.length} active records inside feed. ` +
+      `Beginning processing timelines...`
+    );
+
+    /*
+     * Iterate through items found in the XML feed sequentially.
+     */
     for (const paper of entries) {
-      console.log(`\n🔎 Evaluating entry timeline status for: "${paper.title}"`);
-      
-      // Condition matching verification logic targets specific modified files [INDEX]
-      if (globalFeedUpdatedTime && paper.updatedTime === globalFeedUpdatedTime) {
-        console.log(`🚀 Match! Item has a current batch timestamp. Launching execution pipeline...`);
-        await processPaper(paper.viewNo, paper.title, b2Session);
+      console.log(
+        `\n🔎 Evaluating entry timeline status for: "${paper.title}"`
+      );
+
+      /*
+       * Only process entries whose updated timestamp matches
+       * the global feed timestamp.
+       */
+      if (
+        globalFeedUpdatedTime &&
+        paper.updatedTime === globalFeedUpdatedTime
+      ) {
+        console.log(
+          `🚀 Match! Item has a current batch timestamp. ` +
+          `Launching execution pipeline...`
+        );
+
+        await processPaper(
+          paper.viewNo,
+          paper.title,
+          b2Session
+        );
       } else {
-        console.log(`⏩ Skipped: Entry timestamp indicates this item belongs to a historic change layer.`);
+        console.log(
+          `⏩ Skipped: Entry timestamp indicates this item ` +
+          `belongs to a historic change layer.`
+        );
       }
     }
 
-    console.log("\n🏁 Execution complete. All data streams safely written to Backblaze.");
+    console.log(
+      "\n🏁 Execution complete. All data streams safely written to Backblaze."
+    );
 
   } catch (err) {
-    console.error("❌ Fatal System Initialization Failure:", err.message);
+    console.error(
+      "❌ Fatal System Initialization Failure:",
+      err.message
+    );
+
     process.exit(1);
   }
 }
+
+
+// -----------------------------------------------------------------------------
+// 8. Execute
+// -----------------------------------------------------------------------------
 
 main();
