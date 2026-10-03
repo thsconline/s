@@ -108,7 +108,7 @@ async function processPaper(viewNo, title, b2Session) {
   
   // 3. Map legacy parameter targets using the structured URL search parameters layout
   const legacyGasUrl = new URL('https://script.google.com/macros/s/' + workerToken + '/exec');
-  legacyGasUrl.searchParams.set("export", "data");
+  legacyGasUrl.searchParams.set("export", "view");
   legacyGasUrl.searchParams.set("base", viewNo);
   legacyGasUrl.searchParams.set("field", title);
   legacyGasUrl.searchParams.set("hash", PASSWORD); // Injects your password secret into the legacy hash string parameter
@@ -122,8 +122,8 @@ async function processPaper(viewNo, title, b2Session) {
     if (!response.ok) throw new Error(`HTTP Error Status: ${response.status}`);
     const gasData = await response.json();
 
-    if (gasData.status !== "success" || !gasData.base64Data) {
-      console.warn(`   ⚠️ GAS node failed to supply matching data stream. Message: ${gasData.msg || 'No payload content data string'}`);
+    if (gasData.fileref != "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" || !gasData.data) {
+      console.warn(`   ⚠️ GAS node failed to supply matching data stream. Message: ${gasData.error || 'No payload content data string'}`);
       return;
     }
 
