@@ -245,10 +245,6 @@ function parseAtomFeed(xmlString) {
 }
 
 
-// -----------------------------------------------------------------------------
-// 6. Process One Paper
-// -----------------------------------------------------------------------------
-
 async function processPaper(viewNo, title, b2Session) {
   /*
    * Replicate viewer.js hashing signature rules to determine
@@ -293,6 +289,29 @@ async function processPaper(viewNo, title, b2Session) {
     );
 
     /*
+     * Debug GAS request details.
+     *
+     * Password is deliberately redacted from the logged URL.
+     */
+    const debugGasUrl = new URL(legacyGasUrl);
+    debugGasUrl.searchParams.set("hash", "***REDACTED***");
+
+    console.log(
+      `   🌐 GAS URL: ${debugGasUrl.toString()}`
+    );
+
+    console.log(
+      `   📋 GAS parameters: ` +
+      `export=view, base=${viewNo}, field="${title}", password=${PASSWORD ? "SET" : "MISSING"}`
+    );
+
+    console.log(
+      `   ⏳ Sending GET request to script.google.com...`
+    );
+
+    const gasRequestStarted = Date.now();
+
+    /*
      * Fetch handles Google 302 redirects natively.
      */
     const response = await fetch(
@@ -302,13 +321,49 @@ async function processPaper(viewNo, title, b2Session) {
       }
     );
 
+    const gasRequestDuration = Date.now() - gasRequestStarted;
+
+    console.log(
+      `   📥 GAS response received after ${gasRequestDuration} ms`
+    );
+
+    console.log(
+      `   📊 Status: ${response.status} ${response.statusText}`
+    );
+
+    console.log(
+      `   🔀 Redirected: ${response.redirected}`
+    );
+
+    console.log(
+      `   🌐 Final URL: ${response.url}`
+    );
+
+    console.log(
+      `   📄 Content-Type: ${response.headers.get("content-type")}`
+    );
+
     if (!response.ok) {
+      const errorBody = await response.text();
+
+      console.error(
+        `   ❌ GAS response body: ${errorBody}`
+      );
+
       throw new Error(
         `HTTP Error Status: ${response.status} ${response.statusText}`
       );
     }
 
+    console.log(
+      `   📦 Parsing GAS JSON response...`
+    );
+
     const gasData = await response.json();
+
+    console.log(
+      `   ✅ GAS JSON response parsed successfully.`
+    );
 
     /*
      * Validate the expected GAS payload.
@@ -320,6 +375,10 @@ async function processPaper(viewNo, title, b2Session) {
       console.warn(
         `   ⚠️ GAS node failed to supply matching data stream. ` +
         `Message: ${gasData.error || "No payload content data string"}`
+      );
+
+      console.warn(
+        `   🔎 GAS response keys: ${Object.keys(gasData).join(", ")}`
       );
 
       return;
@@ -415,6 +474,7 @@ async function processPaper(viewNo, title, b2Session) {
     );
   }
 }
+
 
 
 // -----------------------------------------------------------------------------
