@@ -66,8 +66,9 @@ async function getB2AuthTokens() {
     );
   }
 
-  const data = await response.json();
+
   const responseText = await response.text();
+  const data = JSON.parse(responseText);
   
   
   if (!data.apiUrl || !data.authorizationToken) {
