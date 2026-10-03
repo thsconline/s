@@ -472,9 +472,8 @@ function pdf(input, _viewno, event)
 	var legacymode = urlParams.get("legacy");
 	var _titlex = input.textContent.trim();
 
-	const viewno = (_viewno || '').replace(/[^A-Za-z0-9]/g, '');
-
-	const titlex = (_titlex || '').replace(/[^A-Za-z0-9._\-]/g, '');
+	const viewno = String(_viewno ?? '').replace(/[^A-Za-z0-9]/g, '');
+	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\-]/g, '');
 
 	var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
@@ -491,10 +490,8 @@ function pdf(input, _viewno, event)
 async function pdfa(input, _viewno, event)
 {
 	var _titlex = input.textContent.trim();
-	const viewno = (_viewno || '').replace(/[^A-Za-z0-9]/g, '');
-
-	const titlex = (_titlex || '').replace(/[^A-Za-z0-9._\-]/g, '');
-	
+	const viewno = String(_viewno ?? '').replace(/[^A-Za-z0-9]/g, '');
+	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\-]/g, '');
 	
 	const viewerUrl = new URL(`/s/v/${viewno}/${titlex}`, "https://thsconline.github.io");
     //const downloaderUrl = new URL(`/s/d/${viewno}/${titlex}`, "https://thsconline.github.io");
