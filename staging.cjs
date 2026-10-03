@@ -429,10 +429,7 @@ async function processPaper(viewNo, title, b2Session) {
      * Validate the expected GAS payload.
      */
     if (
-      gasData.fileref !==
-        "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" ||
-      !gasData.data
-    ) {
+      gasData.fileref != "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" || !gasData.data ) {
       console.warn(
         `   ⚠️ GAS node failed to supply matching data stream. ` +
         `Message: ${
