@@ -36,9 +36,9 @@ export default function Page() {
 </details>
 <table className="listing" id="papers-by-school"><tbody>
 <tr className="search" id="search-row" style="display: none;"><td>
-<input type="text" id="search-bar" onKeyUp={filterTable} placeholder="Search this page...">
-<label><input type="checkbox" id="search-exact" onClick="filterTable()"> Show exact matches only</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="search-wsol-only" onClick="filterTable()"> Show only papers that have solutions</label>
+<input type="text" id="search-bar" onKeyUp={filterTable} placeholder="Search this page..." />
+<label><input type="checkbox" id="search-exact" onClick={filterTable} /> Show exact matches only</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="search-wsol-only" onClick={filterTable} /> Show only papers that have solutions</label>
 <br />
 <span id="search-message"></span>
 </td></tr>
