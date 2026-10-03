@@ -255,6 +255,9 @@ async function processPaper(viewNo, title, b2Session) {
   let filehash;
 
   try {
+   console.log(
+      `📡 Generating filehash for file: ${title}`
+    );
     filehash = SHA256(hashTemplate);
   } catch (err) {
     console.error(
