@@ -125,7 +125,8 @@ function loadshell()
 			win = window.open("about:blank","_self");
 			if(window.focus) { win.focus(); }
 		}
-		win.document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
+		var titlexSafe = String(titlex).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+		win.document.write("<html><head><title>"+titlexSafe+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
 		win.document.write("<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"https://thsconline.github.io/s/images/icon_pdf2.png\">");
 		win.document.write("<link href=\"/s/styles.css\" rel=\"stylesheet\" type=\"text/css\">");
 		win.document.write("<style>html, body {height:100% !important;}</style>");
@@ -133,7 +134,7 @@ function loadshell()
 		win.document.write("</head><body>");
 		win.document.write(
 			"<div id=\"overlaybar\" style=\"z-index:1000;width:100%;\">" +
-			unescape(titlex) +
+			titlexSafe +
 			"<span style=\"float:right\">" +
 //			"<a target=\"_blank\" download href=\"https://thsconline.github.io" + embedUrl + "\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" onclick=\"window.close()\">Close ×</a>" +
