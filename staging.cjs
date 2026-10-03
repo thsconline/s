@@ -12,6 +12,12 @@ const crypto = require("crypto");
 
 const { SHA256, selectworker } = require("./viewer.js");
 
+console.log("viewer.js exports:", {
+  SHA256,
+  SHA256Type: typeof SHA256,
+  selectworkerType: typeof selectworker
+});
+
 // -----------------------------------------------------------------------------
 // 1. Structural Environment Mapping Configurations
 // -----------------------------------------------------------------------------
