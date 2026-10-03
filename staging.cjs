@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
-const { SHA256, writeworker } = require('./viewer.js');
+const { SHA256, selectworker } = require('./viewer.js');
 
 // 1. Structural Environment Mapping Configurations
 const PASSWORD  = process.env.GAS_SECRET_PASSWORD; // Injected securely via GitHub Action secrets
@@ -104,7 +104,7 @@ async function processPaper(viewNo, title, b2Session) {
   }
 
   // 2. Select a valid operational Google Apps Script cluster endpoint skipping the fallback
-  const workerToken = writeworker(false);
+  const workerToken = selectworker(false);
   
   // 3. Map legacy parameter targets using the structured URL search parameters layout
   const legacyGasUrl = new URL('https://script.google.com/macros/s/' + workerToken + '/exec');
