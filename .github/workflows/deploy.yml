@@ -18,7 +18,12 @@ jobs:
       - name: Configure Modern Runtime Node Env
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
+
+      # STEP 2: Instantly poke Cloudflare Pages to rebuild and publish your frontend
+      - name: Trigger Cloudflare Pages Deploy Hook
+        run: |
+          curl -f -s -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
 
       # STEP 1: Process Atom feed items in-memory and upload fragments to Backblaze
       - name: Execute Native In-Memory JavaScript Pipeline
@@ -30,7 +35,4 @@ jobs:
         run: |
           node staging.cjs
 
-      # STEP 2: Instantly poke Cloudflare Pages to rebuild and publish your frontend
-      - name: Trigger Cloudflare Pages Deploy Hook
-        run: |
-          curl -f -s -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
+
