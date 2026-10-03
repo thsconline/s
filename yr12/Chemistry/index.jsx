@@ -25,7 +25,7 @@ export default function Page() {
 <h3><span className="title"><img src="/s/images/colours/icon_purple.png" />&nbsp;&nbsp;HSC Chemistry Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -35,10 +35,10 @@ export default function Page() {
 <a href="hscpapers.html">Chemistry HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers.html">Chemistry Trial Papers</a><br />
-<span style="padding-left: 29px;">184 papers online, 143 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>184 papers online, 143 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks.html">Chemistry Internal Assessment Tasks</a><br />
-<span style="padding-left: 29px;">107 papers online, 72 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>107 papers online, 72 w. sol</span></span><br />
 </div></div></div></div>
 </div>
         </>

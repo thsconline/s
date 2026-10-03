@@ -24,42 +24,42 @@ export default function Page() {
 <h3><span className="title">HSC Resources</span></h3>
 <div id="web-grid">
 <div><div>
-<div><a href="Agriculture/"><span><img src="/s/images/colours/icon_aqua.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Agriculture</span></span></a></div>
-<div><a href="Ancient History/"><span><img src="/s/images/colours/icon_forest.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Ancient History</span></span></a></div>
-<div><a href="Biology/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Biology</span></span></a></div>
-<div><a href="Business Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Business Studies</span></span></a></div>
-<div><a href="Chemistry/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Chemistry</span></span></a></div>
-<div><a href="Earth &amp; Environmental Science/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 42px;">&nbsp;&nbsp; Earth &amp;<br />&nbsp;&nbsp; Environmental Science</span></span></a></div>
-<div><a href="Economics/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Economics</span></span></a></div>
+<div><a href="Agriculture/"><span><img src="/s/images/colours/icon_aqua.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Agriculture</span></span></a></div>
+<div><a href="Ancient History/"><span><img src="/s/images/colours/icon_forest.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Ancient History</span></span></a></div>
+<div><a href="Biology/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Biology</span></span></a></div>
+<div><a href="Business Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Business Studies</span></span></a></div>
+<div><a href="Chemistry/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Chemistry</span></span></a></div>
+<div><a href="Earth &amp; Environmental Science/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '42px' }}>&nbsp;&nbsp; Earth &amp;<br />&nbsp;&nbsp; Environmental Science</span></span></a></div>
+<div><a href="Economics/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Economics</span></span></a></div>
 </div><div>
-<div><a href="Engineering Studies/"><span><img src="/s/images/colours/icon_aqua.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Engineering Studies</span></span></a></div>
-<div><a href="English/"><span><img src="/s/images/colours/icon_yellow.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; English Advanced</span></span></a></div>
-<div><a href="English/"><span><img src="/s/images/colours/icon_yellow.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; English Standard</span></span></a></div>
-<div><a href="English Ext 1/"><span><img src="/s/images/colours/icon_yellow.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; English Ext 1</span></span></a></div>
-<div><a href="History Extension/"><span><img src="/s/images/colours/icon_forest.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; History Extension</span></span></a></div>
-<div><a href="Investigating Science/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Investigating Science</span></span></a></div>
-<div><a href="IPT/"><span><img src="/s/images/colours/icon_blue.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; IPT</span></span></a></div>
+<div><a href="Engineering Studies/"><span><img src="/s/images/colours/icon_aqua.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Engineering Studies</span></span></a></div>
+<div><a href="English/"><span><img src="/s/images/colours/icon_yellow.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; English Advanced</span></span></a></div>
+<div><a href="English/"><span><img src="/s/images/colours/icon_yellow.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; English Standard</span></span></a></div>
+<div><a href="English Ext 1/"><span><img src="/s/images/colours/icon_yellow.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; English Ext 1</span></span></a></div>
+<div><a href="History Extension/"><span><img src="/s/images/colours/icon_forest.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; History Extension</span></span></a></div>
+<div><a href="Investigating Science/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Investigating Science</span></span></a></div>
+<div><a href="IPT/"><span><img src="/s/images/colours/icon_blue.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; IPT</span></span></a></div>
 </div><div>
-<div><a href="Legal Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Legal Studies</span></span></a></div>
-<div><a href="LOTE/"><span><img src="/s/images/colours/icon_pink.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; LOTE (Languages)</span></span></a></div>
-<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Maths (2U)</span></span></a></div>
-<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Maths Ext 1</span></span></a></div>
-<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Maths Ext 2</span></span></a></div>
-<div><a href="Modern History/"><span><img src="/s/images/colours/icon_forest.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Modern History</span></span></a></div>
-<div><a href="PDHPE/"><span><img src="/s/images/colours/icon_orange.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; PDHPE</span></span></a></div>
+<div><a href="Legal Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Legal Studies</span></span></a></div>
+<div><a href="LOTE/"><span><img src="/s/images/colours/icon_pink.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; LOTE (Languages)</span></span></a></div>
+<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Maths (2U)</span></span></a></div>
+<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Maths Ext 1</span></span></a></div>
+<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Maths Ext 2</span></span></a></div>
+<div><a href="Modern History/"><span><img src="/s/images/colours/icon_forest.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Modern History</span></span></a></div>
+<div><a href="PDHPE/"><span><img src="/s/images/colours/icon_orange.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; PDHPE</span></span></a></div>
 </div><div>
-<div><a href="Physics/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Physics</span></span></a></div>
-<div><a href="Society &amp; Culture/"><span><img src="/s/images/colours/icon_orange.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Society &amp; Culture</span></span></a></div>
-<div><a href="Software/"><span><img src="/s/images/colours/icon_blue.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Software Engineering</span></span></a></div>
-<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Standard Maths</span></span></a></div>
-<div><a href="Studies of Religion/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Studies of Religion 1</span></span></a></div>
-<div><a href="Studies of Religion/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Studies of Religion 2</span></span></a></div>
-<div><a href="Visual Arts/"><span><img src="/s/images/colours/icon_rose.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Visual Arts</span></span></a></div>
+<div><a href="Physics/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Physics</span></span></a></div>
+<div><a href="Society &amp; Culture/"><span><img src="/s/images/colours/icon_orange.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Society &amp; Culture</span></span></a></div>
+<div><a href="Software/"><span><img src="/s/images/colours/icon_blue.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Software Engineering</span></span></a></div>
+<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Standard Maths</span></span></a></div>
+<div><a href="Studies of Religion/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Studies of Religion 1</span></span></a></div>
+<div><a href="Studies of Religion/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Studies of Religion 2</span></span></a></div>
+<div><a href="Visual Arts/"><span><img src="/s/images/colours/icon_rose.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Visual Arts</span></span></a></div>
 
 </div></div></div>
-<div id="web-list" style="display: none;">
+<div id="web-list" style={{ display: 'none' }}>
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a><br /><br />
 </details>

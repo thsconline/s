@@ -25,7 +25,7 @@ export default function Page() {
 <h3><span className="title"><img src="/s/images/colours/icon_green.png" />&nbsp;&nbsp;HSC Legal Studies Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -35,7 +35,7 @@ export default function Page() {
 <a href="hscpapers.html">Legal Studies HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers.html">Legal Studies Trial Papers</a><br />
-<span style="padding-left:29px;">45 papers online, 16 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>45 papers online, 16 w. sol</span></span><br />
 </div></div></div></div>
 </div>
         </>

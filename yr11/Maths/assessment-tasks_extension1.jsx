@@ -24,7 +24,7 @@ export default function Page() {
 </div></div>
 <div id="content-all">
 <h4>Year 11 Maths Ext 1 Assessment Tasks</h4>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -37,7 +37,7 @@ export default function Page() {
 <ul>
 <li>Sample answers or marking guidelines included with most papers.</li>
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
-<li><span style="color:#0000FF;"><b>Note: </b></span>Papers are grouped by when they were held in the calendar year.</li>
+<li><span style={{ color: '#0000FF' }}><b>Note: </b></span>Papers are grouped by when they were held in the calendar year.</li>
 </ul></td></tr>
 <tr><td><h5 id="half-yearly-exams">Half-Yearly Exams</h5></td></tr>
 

@@ -20,12 +20,12 @@ export default function Page() {
 <a href="/s/yr12/">Year 12 - HSC →</a>&nbsp;
 <a href="/s/yr12/Maths/">Maths Ext 2 →</a>&nbsp;
 <a className="current" href="/s/yr12/Maths/trialpapers_extension2.html">Past Trials →</a>&nbsp;
-<a className="reverse" href="#v" onClick="toggleSearchBar()">&nbsp;&nbsp;🔎︎ [<i>Search</i>]</a>
+<a className="reverse" href="#v" onClick={toggleSearchBar}>&nbsp;&nbsp;🔎︎ [<i>Search</i>]</a>
 <a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
 </div></div>
 <div id="content-all">
 <h4>HSC Maths Ext 2 Trial Papers</h4>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -36,7 +36,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => { toggleSearchBar(); e.currentTarget.closest('details').open = false; }}>Search</a></span><br /><br />
 </details>
 <table className="listing"><tbody>
-<tr className="search" id="search-row" style="display: none;"><td>
+<tr className="search" id="search-row" style={{ display: 'none' }}><td>
 <input type="text" id="search-bar" onKeyUp={filterTable} placeholder="Search this page..." />
 <label><input type="checkbox" id="search-exact" onClick={filterTable} /> Show exact matches only</label>&nbsp;&nbsp;
 <label><input type="checkbox" id="search-wsol-only" onClick={filterTable} /> Show only papers that have solutions</label>

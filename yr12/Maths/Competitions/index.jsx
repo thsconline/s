@@ -24,9 +24,9 @@ export default function Page() {
 </div></div>
 <div id="content-all">
 <h3><span className="title"><img src="/s/images/colours/icon_red.png" />&nbsp;&nbsp;Competitions</span></h3>
-<div id="web-list" style="width:700px;">
+<div id="web-list" style={{ width: '700px' }}>
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;

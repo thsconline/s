@@ -24,7 +24,7 @@ export default function Page() {
 </div></div>  
 <div id="content-all">
 <h4>HSC General / Standard Maths Assessment Tasks</h4>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -37,7 +37,7 @@ export default function Page() {
 <ul>
 <li>Sample answers or marking guidelines included with most papers.</li>
 <li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
-</ul></td></tr><tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>General Maths was replaced by Standard Maths in 2019.<br /></td></tr> 
+</ul></td></tr><tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>General Maths was replaced by Standard Maths in 2019.<br /></td></tr> 
 
 <tr><td><h5>Half-Yearly Exams</h5></td></tr>
 <tr><td>Blue Mountains Grammar<br />

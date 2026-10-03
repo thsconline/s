@@ -25,7 +25,7 @@ export default function Page() {
 <h3><span className="title"><img src="/s/images/colours/icon_pink.png" />&nbsp;&nbsp;HSC Languages Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;

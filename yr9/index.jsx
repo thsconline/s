@@ -24,7 +24,7 @@ export default function Page() {
 <h3><span className="title">Year 9 Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a><br /><br />
 </details>

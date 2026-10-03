@@ -25,24 +25,24 @@ export default function Page() {
 <div id="web-grid">
 <div><div>
 
-<div><a href="Biology/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Biology</span></span></a></div>
-<div><a href="Business Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Business Studies</span></span></a></div>
-<div><a href="Chemistry/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Chemistry</span></span></a></div>
-<div><a href="Earth &amp; Environmental Science/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 42px;">&nbsp;&nbsp; Earth &amp;<br />&nbsp;&nbsp; Environment Science</span></span></a></div>
-<div><a href="Economics/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Economics</span></span></a></div>
-<div><a href="Engineering Studies/"><span><img src="/s/images/colours/icon_aqua.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Engineering Studies</span></span></a></div>
+<div><a href="Biology/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Biology</span></span></a></div>
+<div><a href="Business Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Business Studies</span></span></a></div>
+<div><a href="Chemistry/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Chemistry</span></span></a></div>
+<div><a href="Earth &amp; Environmental Science/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '42px' }}>&nbsp;&nbsp; Earth &amp;<br />&nbsp;&nbsp; Environment Science</span></span></a></div>
+<div><a href="Economics/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Economics</span></span></a></div>
+<div><a href="Engineering Studies/"><span><img src="/s/images/colours/icon_aqua.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Engineering Studies</span></span></a></div>
 
 </div><div>
-<div><a href="IPT/"><span><img src="/s/images/colours/icon_blue.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; IPT</span></span></a></div>
-<div><a href="Legal Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Legal Studies</span></span></a></div>
-<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Maths (2U)</span></span></a></div>
-<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Maths Ext 1</span></span></a></div>
-<div><a href="Modern History/"><span><img src="/s/images/colours/icon_forest.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Modern History</span></span></a></div>
-<div><a href="Physics/"><span><img src="/s/images/colours/icon_purple.png" /><span style="bottom: 5px; height: 21px;">&nbsp;&nbsp; Physics</span></span></a></div>
+<div><a href="IPT/"><span><img src="/s/images/colours/icon_blue.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; IPT</span></span></a></div>
+<div><a href="Legal Studies/"><span><img src="/s/images/colours/icon_green.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Legal Studies</span></span></a></div>
+<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Maths (2U)</span></span></a></div>
+<div><a href="Maths/"><span><img src="/s/images/colours/icon_red.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Maths Ext 1</span></span></a></div>
+<div><a href="Modern History/"><span><img src="/s/images/colours/icon_forest.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Modern History</span></span></a></div>
+<div><a href="Physics/"><span><img src="/s/images/colours/icon_purple.png" /><span style={{ bottom: '5px', height: '21px' }}>&nbsp;&nbsp; Physics</span></span></a></div>
 </div></div></div>
-<div id="web-list" style="display: none;">
+<div id="web-list" style={{ display: 'none' }}>
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a><br /><br />
 </details>

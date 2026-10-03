@@ -24,7 +24,7 @@ export default function Page() {
 </div></div>  
 <div id="content-all">
 <h4>HSC Investigating Science Trial Papers</h4>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -33,8 +33,8 @@ export default function Page() {
 <a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
-<tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
-<tr className="content"><td><span style="color:#0000FF;"><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
 <tr className="content"><td>
 <ul>
 <li>Sample answers or marking guidelines included with most papers.</li>
@@ -62,7 +62,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>SSC Blackwattle Bay 2023 w. sol</a>
 </span></td></tr>
 <tr id="senior_science"><td><h5>Senior Science (2001-2018)</h5></td></tr>
-<tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>HSC Senior Science was replaced by Investigating Science &amp; Science Extension in 2019.<br /><br /></td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>HSC Senior Science was replaced by Investigating Science &amp; Science Extension in 2019.<br /><br /></td></tr>
 <tr><td>Pymble<br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4078)}>Pymble 2006</a><br />

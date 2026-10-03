@@ -25,7 +25,7 @@ export default function Page() {
 <h3><span className="title"><img src="/s/images/colours/icon_aqua.png" />&nbsp;&nbsp;Year 11 Engineering Studies Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -33,10 +33,10 @@ export default function Page() {
 </details>
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="prelimpapers.html">Engineering Studies Year 11 Yearly Papers</a><br />
-<span style="padding-left:29px;">2 papers online</span></span><br />
+<span style={{ paddingLeft: '29px' }}>2 papers online</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks.html">Engineering Studies Year 11 Internal Assessment Tasks</a><br />
-<span style="padding-left:29px;">5 papers online, 3 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>5 papers online, 3 w. sol</span></span><br />
 </div></div></div></div>
 </div>
         </>

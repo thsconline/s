@@ -26,7 +26,7 @@ export default function Page() {
 <h3><span className="title"><img src="/s/images/colours/icon_pink.png" />&nbsp;&nbsp;HSC Japanese Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -51,14 +51,14 @@ export default function Page() {
 <br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_beginners.html">Japanese Beginners Trial Papers</a><br />
-<span style="padding-left:29px;">3 papers online (no listening audio)</span></span><br />
+<span style={{ paddingLeft: '29px' }}>3 papers online (no listening audio)</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_continuers.html">Japanese Continuers Trial Papers</a><br />
-<span style="padding-left:29px;">3 papers online (no listening audio)</span></span><br />
+<span style={{ paddingLeft: '29px' }}>3 papers online (no listening audio)</span></span><br />
 <br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks_continuers.html">Japanese Continuers Internal Assessment Tasks</a><br />
-<span style="padding-left:29px;">4 papers online, 1 w. sol (no listening audio)</span></span><br />
+<span style={{ paddingLeft: '29px' }}>4 papers online, 1 w. sol (no listening audio)</span></span><br />
 <br />
 <span><img src="/s/images/icon_pdf2.png" />&nbsp;&nbsp;
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 4600)}>Japanese Kanji Booklet</a></span><br />

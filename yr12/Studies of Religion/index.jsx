@@ -25,7 +25,7 @@ export default function Page() {
 <h3><span className="title"><img src="/s/images/colours/icon_green.png" />&nbsp;&nbsp;HSC Studies of Religion Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -33,10 +33,10 @@ export default function Page() {
 </details>
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_sor1.html">Studies of Religion 1 Trial Papers </a><br />
-<span style="padding-left:29px;">1 paper online</span></span><br />
+<span style={{ paddingLeft: '29px' }}>1 paper online</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_sor2.html">Studies of Religion 2 Trial Papers </a><br />
-<span style="padding-left:29px;">1 paper online</span></span><br />
+<span style={{ paddingLeft: '29px' }}>1 paper online</span></span><br />
 </div></div></div></div>
 </div>
         </>

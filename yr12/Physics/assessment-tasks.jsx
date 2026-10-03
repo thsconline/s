@@ -24,7 +24,7 @@ export default function Page() {
 </div></div>  
 <div id="content-all">
 <h4>HSC Physics Assessment Tasks</h4>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -33,8 +33,8 @@ export default function Page() {
 <a href="index.html">Up One Folder</a></span><br /><br />
 </details>
 <table className="listing" id="papers-by-school"><tbody>
-<tr className="content"><td><span style="color:#0000FF;"><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
-<tr className="content"><td><span style="color:#0000FF;"><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
 <tr className="content"><td>
 <ul>
 <li>Sample answers or marking guidelines included with most papers.</li>
@@ -91,7 +91,7 @@ export default function Page() {
 </span></details></td></tr>
 
 <tr><td><h5 id="task-1-exams">CT1 Nov-Dec Assessments</h5></td></tr>
-<tr className="content"><td>Typically Task 1 exams held in Term 4.<br /> <span style="color:#0000FF;"><b>Note: </b></span> The year listed is that which the paper was held not the graduating HSC year</td></tr>
+<tr className="content"><td>Typically Task 1 exams held in Term 4.<br /> <span style={{ color: '#0000FF' }}><b>Note: </b></span> The year listed is that which the paper was held not the graduating HSC year</td></tr>
 <tr><td>&nbsp;</td></tr>
 
 <tr><td><details open><summary>Hurlstone</summary><br />

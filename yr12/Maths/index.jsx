@@ -25,7 +25,7 @@ export default function Page() {
 <h3><span className="title"><img src="/s/images/colours/icon_red.png" />&nbsp;&nbsp;HSC Maths Resources</span></h3>
 <div id="web-list">
 <div><div><div>
-<details className="smallscreen" style="display:none;"><summary>&nbsp;</summary>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&nbsp;</summary>
 <span><img src="/s/images/icon_home.png" />&nbsp;&nbsp;
 <a href="/s/">Home Page</a></span><br />
 <span><img src="/s/images/icon_back.png" />&nbsp;&nbsp;
@@ -42,29 +42,29 @@ export default function Page() {
 <br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_general.html">General / Standard Maths Trial Papers</a><br />
-<span style="padding-left: 29px;">190 papers online, 174 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>190 papers online, 174 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_advanced.html">Maths (2U) Trial Papers</a><br />
-<span style="padding-left: 29px;">699 papers online, 662 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>699 papers online, 662 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_extension1.html">Maths Ext 1 Trial Papers</a><br />
-<span style="padding-left: 29px;">810 papers online, 754 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>810 papers online, 754 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_extension2.html">Maths Ext 2 Trial Papers</a><br />
-<span style="padding-left: 29px;">720 papers online, 616 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>720 papers online, 616 w. sol</span></span><br />
 <br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks_general.html">General / Standard Maths Internal Assessment Tasks</a><br />
-<span style="padding-left: 29px;">35 papers online, 23 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>35 papers online, 23 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks_advanced.html">Maths (2U) Internal Assessment Tasks</a><br />
-<span style="padding-left: 29px;">397 papers online, 363 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>397 papers online, 363 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks_extension1.html">Maths Ext 1 Internal Assessment Tasks</a><br />
-<span style="padding-left: 29px;">544 papers online, 497 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>544 papers online, 497 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks_extension2.html">Maths Ext 2 Internal Assessment Tasks</a><br />
-<span style="padding-left: 29px;">558 papers online, 502 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>558 papers online, 502 w. sol</span></span><br />
 <br />
 
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
