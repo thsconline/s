@@ -1,0 +1,14 @@
+name: Deploy to Cloudflare Pages thsconline.net
+
+on:
+  push:
+    branches:
+      - thsconline-website
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Cloudflare Deploy Hook
+        run: curl -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
