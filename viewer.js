@@ -8,7 +8,7 @@ function writeshell(http)
    tags[i].parentNode.removeChild(tags[i]); //remove element by calling parentNode.removeChild()
  }
 }
-function writeworker(includeFallback = true) {
+function selectworker(includeFallback = true) {
   var workers = [
     "AKfycbzwc57zmEK1Vm9Q5L1n1my3dxRafZRfNhCZ24zSLIa9H7MhySFhNahvPfW4R3uq753_",
     "AKfycbxCi8vsX-_l5a0JP-mG1RXIbSeiuZOfteumnk96oZCgQMR9nHjikpDqpknUHp-K5hg",
