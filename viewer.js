@@ -1,4 +1,3 @@
-//document.write("<div style=\"z-index:1000\; bottom:0px !important; float:bottom; width:100%;\"><b>2024 papers for English and MX2 uploaded</b><br /></div>")
 function writeshell(http)
 {
 	document.title = http.title;
@@ -39,81 +38,58 @@ function getUrlParameter(name) {
 }
 function loadshell()
 {
-	var url = window.location.pathname;
-	var url = url.replace("&", "_");	
-	var queryx = url.split("/s/")[1].split("/")[0]
-	switch(queryx)
-	{
-	case "download":
-	try
-	{
-		var rest = url.split("/s/download/")[1]
-		window.location = "https://thsconline.github.io/s/d/"+rest
+	const rawPath = window.location.pathname;
+	
+	let decodedPath = "";
+	try {
+		decodedPath = decodeURIComponent(rawPath);
+	} catch (e) {
+		console.error("Malformed URL encoding detected:", e);
+		decodedPath = rawPath; 
 	}
-	catch(err)
+
+	let cleanString = decodedPath.replace(/&/g, '_');
+
+	const whitelistRegex = /[^A-Za-z0-9._\-\/]/g;
+	cleanString = cleanString.replace(whitelistRegex, '');
+
+	const initialSegments = cleanString.split('/').filter(Boolean);
+	const sIndex = initialSegments.indexOf('s');
+
+	window.SAFE_PATH_ARRAY = (sIndex !== -1) ? initialSegments.slice(sIndex + 1) : [];
+	
+	if (window.SAFE_PATH_ARRAY.length === 0) {
+        return;
+    }
+	const actionRoute = window.SAFE_PATH_ARRAY[0];
+	
+	switch(actionRoute)
 	{
-		window.location = "/s/"
-	}			
-	break;
 	case "admin_scripts":
 		document.write("<html><body><br><span style='color:#FF0000'><b>Whoops! This directory is not published on the web.</b></span></body></html>");
 		break;
-	case "app":
-	case "cmdtool":
-	case "cli":
-	window.location = "/cli/"
-	break;
-	// Download
-	case "d":
-		try
-		{
-			var viewno = url.split("/s/d/")[1].split("/")[0]
-			var titlex = url.split("/s/d/")[1].split("/")[1]
-
-
-			
-			var hashvalue = SHA256(viewno);
-			document.write("<html><body><br><script src=\"\/s\/download.js\" type=\"text\/javascript\"></script><script id=\"gs\" type=\"application/javascript\" src=\"https:\/\/script.google.com\/macros\/s\/AKfycbx69GPoJtf9sSevsUbWtPr46vpa01u4oNkHjFmkkWxmj62AZ0q-\/exec?export=data&field="+titlex+"&base="+viewno+"&hash="+hashvalue+"\"></script></body></html>");
-			document.title = unescape(titlex);
-		}
-		catch(err)
-		{
-			window.location = "/s/"
-		}
-		break;
-	case "frenzy":
-	try
-	{
-		var rest = url.split("/s/frenzy/")[1]
-		window.location = "https://thsconline.github.io/s/fz/"+rest
-	}
-	catch(err)
-	{
-		window.location = "/s/fz/"
-	}
-	break;
 	// Embed
 	case "em":
 	try
 	{
-		var embedUrl;
+		var dataUrl;
 		var titlex;
 		try
 		{
-			var raw = decodeURIComponent(url.split("/s/em/")[1]);
+			var raw = window.SAFE_PATH_ARRAY.slice(1).join('/');
 			if(!raw) throw new Error("Missing path");
 			if(!raw.toLowerCase().endsWith(".pdf")) raw += ".pdf";
 			var parts = raw.split("/");
 			var file = parts.pop();
 			titlex = file.replace(/\.pdf$/i, "");
 			var path = parts.join("/");
-			embedUrl = "/" + (path ? path + "/" : "") + file;
+			dataUrl = "/" + (path ? path + "/" : "") + file;
 		}
 		catch(err)
 		{
 			console.log("Embed error:", err);
 			titlex = "File not found";
-			embedUrl = "/s/index/404_html.pdf";
+			dataUrl = "/s/index/404_html.pdf";
 		}
 		if(window.self !== window.top)
 		{
@@ -128,24 +104,23 @@ function loadshell()
 		win.document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
 		win.document.write("<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"https://thsconline.github.io/s/images/icon_pdf2.png\">");
 		win.document.write("<link href=\"/s/styles.css\" rel=\"stylesheet\" type=\"text/css\">");
-		win.document.write("<style>html, body {height:100% !important;}</style>");
-		win.document.write("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js\"></script>");
+		win.document.write("<style>html, body {height:100% !important;}</style>");		
 		win.document.write("</head><body>");
 		win.document.write(
 			"<div id=\"overlaybar\" style=\"z-index:1000;width:100%;\">" +
-			unescape(titlex) +
+			titlex +
 			"<span style=\"float:right\">" +
-//			"<a target=\"_blank\" download href=\"https://thsconline.github.io" + embedUrl + "\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" onclick=\"window.close()\">Close ×</a>" +
 			"</span></div><br>"
 		);
 		win.document.write(
 			"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-			"sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
-			"src=\"https://thsconline.github.io/pdf/viewer.html?file=" + embedUrl + "\"></iframe>"
+			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
+			"allowfullscreen=\"1\" " +
+			"src=\"" + embedUrl + "\"></iframe>"
 		);
 		win.document.write("</body></html>");
-		win.document.title = unescape(titlex);
+		win.document.title = titlex;
 	}
 	catch(err)
 	{
@@ -156,25 +131,31 @@ function loadshell()
 	case "em_standalone":
 		try
 		{
-			var embedUrl;
+			var dataUrl;
 			var titlex;
+			
 			try
 			{
-			var raw = decodeURIComponent(url.split("/s/em/")[1]);
+			var raw = window.SAFE_PATH_ARRAY.slice(1).join('/');
 			if(!raw) throw new Error("Missing path");
 			if(!raw.toLowerCase().endsWith(".pdf")) raw += ".pdf";
 			var parts = raw.split("/");
 			var file = parts.pop();
 			titlex = file.replace(/\.pdf$/i, "");
 			var path = parts.join("/");
-			embedUrl = "/" + (path ? path + "/" : "") + file;
+			dataUrl = "/" + (path ? path + "/" : "") + file;
 			}
 			catch(err)
 			{
 			console.log("Embed error:", err);
 			titlex = "File not found";
-			embedUrl = "/s/index/404_html.pdf";
+			dataUrl = "/s/index/404_html.pdf";
 			}
+			
+				const viewerUrl = new URL("https://thsconline.github.io/pdf/viewer.html");
+				viewerUrl.searchParams.set("file", dataUrl || "");				
+				var embedUrl = viewerUrl.href;
+			
 				if(window.self !== window.top)
 				{
 					win=window.open("about:blank","_blank");
@@ -188,12 +169,16 @@ function loadshell()
 				win.document.write("<html><head><title>"+titlex+"</title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">");
 				win.document.write("<meta http-equiv=\"content-type\" content=\"text\/html; charset=utf-8\"><link rel=\"shortcut icon\" type=\"image\/x-icon\" href=\"https:\/\/thsconline.github.io\/s\/images\/icon_pdf2.png\">");
 				win.document.write("<link href=\"\/s\/styles.css\" rel=\"stylesheet\" type=\"text\/css\">");
-				win.document.write("<style>html, body {height:100% !important;}</style>");
-				win.document.write("<script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.6.4\/jquery.min.js\" type=\"text\/javascript\"><\/script>");
+				win.document.write("<style>html, body {height:100% !important;}</style>");				
 				win.document.write("<\/head><body>");
-				win.document.write("<iframe style=\"width:100%; height:96%;\" height=\"96%\" sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" frameborder=\"0\" id=\"viewer\" src=\"https:\/\/thsconline.github.io\/pdf\/viewer.html?file="+embedUrl+"\"><noscript>&nbsp;Enable Javascript to Load File<\/noscript><\/iframe>");
+				win.document.write(
+					"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
+					"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
+					"allowfullscreen=\"1\" " +
+					"src=\"" + embedUrl + "\"></iframe>"
+				);
 				win.document.write("</body></html>"); 	 
-				win.document.title = unescape(titlex);
+				win.document.title = titlex;
 		}
 		catch(err)
 		{
@@ -204,8 +189,8 @@ function loadshell()
 	case "fz":	
 		try
 		{
-			var dkey = url.split("/s/fz/")[1].split("/")[0]
-			var serve = url.split("/s/fz/")[1].split("/")[1]
+			var dkey = window.SAFE_PATH_ARRAY[1] || '';
+			var serve = window.SAFE_PATH_ARRAY[2] || '';
 			if(dkey == "add" || dkey == "legacycode")
 			{
 				if(dkey == "add")
@@ -260,8 +245,8 @@ function loadshell()
 			{
 				checkv = 1
 			}
-		var checkw = url.split("/s/pkey/")[1].split("/")[1]
-		var checkx = url.split("/s/pkey/")[1].split("/")[2]
+		var checkw = window.SAFE_PATH_ARRAY[2] || '';
+		var checkx = window.SAFE_PATH_ARRAY[3] || '';
 		var key = (Math.floor(date.getTime()/MILLIS_PER_DAY)+25569+-(1-checkv)+1)*17
 		if(checkw == "print" && checkx == "key")
 		{			
@@ -271,25 +256,21 @@ function loadshell()
 	case "upload":
 		window.location = "/s/upload/"
 	break;
-	case "undefined":
-		window.history.go(-1)
-	try
-	{
-		var rest = url.split("/s/undefined/")[1]
-		window.location = "https://thsconline.github.io/s/undefined/"+rest
-	}
-	catch(err)
-	{
-		window.location = "/s/"
-	}
-	break;
+
 	// Main viewer logic (headless)
 	case "v_standalone":
 		try
 		{
-			var viewno = url.split("/s/v_standalone/")[1].split("/")[0];
-			var titlex = url.split("/s/v_standalone/")[1].split("/")[1];
+			var viewno = window.SAFE_PATH_ARRAY[1] || '';
+			var titlex = window.SAFE_PATH_ARRAY[2] || '';
 			var endpoint = writeworker();
+			
+			const viewerUrl = new URL("https://thsconline.github.io/s/viewer.html");
+			viewerUrl.searchParams.set("field", titlex || "");
+			viewerUrl.searchParams.set("base", viewno || "");
+			viewerUrl.searchParams.set("w", endpoint || "");	
+			var embedUrl = viewerUrl.href;
+			
 			var redirecturl = "https://thsconline.github.io/s/viewer.html?field=" + titlex + "&base=" + viewno + "&w=" + endpoint
 			
 			var win;
@@ -318,15 +299,13 @@ function loadshell()
 
 			win.document.write(
 				"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-				"sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
+				"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
 				"allowfullscreen=\"1\" " +
-				"src=\"https://thsconline.github.io/s/viewer.html?field=" +
-				titlex + "&base=" + viewno + "&w=" + endpoint +
-				"\"></iframe>"
+				"src=\"" + embedUrl + "\"></iframe>"
 			);
 
 			win.document.write("</body></html>");
-			win.document.title = unescape(titlex);
+			win.document.title = titlex;
 
 			// =========================
 			// FETCH IN BACKGROUND
@@ -335,12 +314,11 @@ function loadshell()
 				.then(r => r.ok ? r.json() : null)
 				.then(data =>
 				{
-					var titley = unescape(titlex);
 					var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
-					if (data && Array.isArray(data[titley]))
+					if (data && Array.isArray(data[titlex]))
 					{
-						var match = data[titley].find(x =>
+						var match = data[titlex].find(x =>
 							x.url && x.url.startsWith("/s/em/")
 						);
 
@@ -377,15 +355,16 @@ function loadshell()
 	// Main viewer logic
 	case "v":
 		try
-	{
-		
-		var viewno = url.split("/s/v/")[1].split("/")[0];
-		var titlex = url.split("/s/v/")[1].split("/")[1];
-
+		{
+		var viewno = window.SAFE_PATH_ARRAY[1] || '';
+		var titlex = window.SAFE_PATH_ARRAY[2] || '';
 		var endpoint = writeworker();
 		
-		//var redirecturl = "https://thsconline.github.io/s/d/" + url.split("/s/v/")[1];
-		var redirecturl = "https://thsconline.github.io/s/viewer.html?field=" + titlex + "&base=" + viewno + "&w=" + endpoint
+		const viewerUrl = new URL("https://thsconline.github.io/s/viewer.html");
+		viewerUrl.searchParams.set("field", titlex || "");
+		viewerUrl.searchParams.set("base", viewno || "");
+		viewerUrl.searchParams.set("w", endpoint || "");	
+		var embedUrl = viewerUrl.href;
 
 		if(window.self !== window.top)
 		{
@@ -410,25 +389,21 @@ function loadshell()
 
 		win.document.write(
 			"<div id=\"overlaybar\" style=\"z-index:1000; width:100%;\">" +
-			unescape(titlex) +
+			titlex +
 			"<span id=\"overlayinsert\" style=\"float:right !important\">" +
-			//"<a target=\"blank\" href=\"https://thsconline.github.io/s/d/" + viewno + "/" + titlex + "\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</a>" +
 			"</span></div><br>"
 		);
 
 		win.document.write(
-			"<iframe style=\"width:100%; height:96%;\" height=\"96%\" " +
-			"sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
-			"allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" " +
-			"frameborder=\"0\" id=\"viewer\" " +
-			"src=\"https://thsconline.github.io/s/viewer.html?field=" +
-			titlex + "&base=" + viewno + "&w=" + endpoint +
-			"\"><noscript>&nbsp;Enable Javascript to Load File</noscript></iframe>"
+			"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
+			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
+			"allowfullscreen=\"1\" " +
+			"src=\"" + embedUrl + "\"></iframe>"
 		);
 
 		win.document.write("</body></html>");
-		win.document.title = unescape(titlex);
+		win.document.title = titlex;
 
 		// =========================
 		// FETCH IN BACKGROUND
@@ -437,12 +412,11 @@ function loadshell()
 			.then(r => r.ok ? r.json() : null)
 			.then(data =>
 			{
-				var titley = unescape(titlex);
 				var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
-				if (data && Array.isArray(data[titley]))
+				if (data && Array.isArray(data[titlex]))
 				{
-					var match = data[titley].find(x =>
+					var match = data[titlex].find(x =>
 						x.url && x.url.startsWith("/s/em/")
 					);
 
@@ -491,35 +465,39 @@ function loadshell()
 	}
 }
 /* Rewritten PDF logic 24/05/2026 */
-function pdf(input, viewno, event)
+function pdf(input, _viewno, event)
 {
 	var urlParams = new URLSearchParams(window.location.search);
 	var legacymode = urlParams.get("legacy");
-	var titlex = input.innerHTML.trim();
+	var _titlex = input.textContent.trim();
 
-	if (legacymode == "1")
-	{
-		window.open("https://thsconline.github.io/s/v/" + viewno + "/" + titlex);
-		return;
-	}
+	const viewno = (_viewno || '').replace(/[^A-Za-z0-9]/g, '');
 
+	const titlex = (_titlex || '').replace(/[^A-Za-z0-9._\-]/g, '');
 
 	var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
-	if (isMobile)
+	if (isMobile || legacymode == "1")
 	{
-		var titlex=input.innerHTML.trim();
-		// simple direct navigation (no popup system)
-		window.open("https://thsconline.github.io/s/v/" + viewno + "/" + titlex);
+		const viewerUrl = new URL(`/s/v/${viewno}/${titlex}`, "https://thsconline.github.io");
+		window.open(viewerUrl.href);
 		return;
 	}
 
 	// desktop
 	return pdfa(input, viewno, event);
 }
-async function pdfa(input, viewno, event)
+async function pdfa(input, _viewno, event)
 {
-	var titlex = input.innerHTML.trim();
+	var _titlex = input.textContent.trim();
+	const viewno = (_viewno || '').replace(/[^A-Za-z0-9]/g, '');
+
+	const titlex = (_titlex || '').replace(/[^A-Za-z0-9._\-]/g, '');
+	
+	
+	const viewerUrl = new URL(`/s/v/${viewno}/${titlex}`, "https://thsconline.github.io");
+    //const downloaderUrl = new URL(`/s/d/${viewno}/${titlex}`, "https://thsconline.github.io");
+	
 	var urlParams = new URLSearchParams(window.location.search);
 
 	var bulkdownload = urlParams.get("download");
@@ -533,8 +511,8 @@ async function pdfa(input, viewno, event)
 	{
 		var finalurl = resource?.url || (
 			mode == "download"
-				? "https://thsconline.github.io/s/d/" + viewno + "/" + titlex
-				: "https://thsconline.github.io/s/v/" + viewno + "/" + titlex
+				? viewerUrl.href // downloadUrl doesn't exist as of 2-10-2026
+				: viewerUrl.href
 		);
 
 		if (mode === "download")
@@ -556,7 +534,8 @@ async function pdfa(input, viewno, event)
 
 	try
 	{
-		var r = await fetch("https://thsconline.github.io/s/index/" + viewno + ".json");
+		const indexFile = new URL(`/s/index/${viewno}.json`, "https://thsconline.github.io");
+		var r = await fetch(indexFile.href);
 		if (r.ok) resources = await r.json();
 
 		if (resources && resources[titlex])
@@ -580,8 +559,8 @@ async function pdfa(input, viewno, event)
 	if (!resources)
 	{
 		var fallbackUrl = bulkdownload == "1"
-			? "https://thsconline.github.io/s/d/" + viewno + "/" + titlex
-			: "https://thsconline.github.io/s/v/" + viewno + "/" + titlex;
+			? viewerUrl.href // downloadUrl doesn't exist as of 2-10-2026
+			: viewerUrl.href
 
 		window.open(fallbackUrl);
 		return;
@@ -598,8 +577,8 @@ async function pdfa(input, viewno, event)
 	{
 		// find failed → fallback immediately
 		var fallbackUrl = bulkdownload == "1"
-			? "https://thsconline.github.io/s/d/" + viewno + "/" + titlex
-			: "https://thsconline.github.io/s/v/" + viewno + "/" + titlex;
+			? viewerUrl.href // downloadUrl doesn't exist as of 2-10-2026
+			: viewerUrl.href
 
 		window.open(fallbackUrl);
 		return;
@@ -683,20 +662,27 @@ String.prototype.capitalize = function(){
        return this.replace( /(^|\s)([a-z])/g , function(m,p1,p2){ return p1+p2.toUpperCase(); } );
       }
 function jumpToCollection() {
-	var searchidx = document.getElementById("serve").value;
-    	var qx = document.getElementById("selector").value;
- 	var key = document.getElementById("dkey").value;
-     	if(qx == 1)
-  	{
-		searchidx = "drive/" + searchidx
-	}
-	window.location = "https://thsconline.github.io/s/fz/"+key+"/"+searchidx+"/"	
+    const rawSearchIdx = document.getElementById("serve")?.value || "";
+    const qx = document.getElementById("selector")?.value || "";
+    const rawKey = document.getElementById("dkey")?.value || "";
+    const safeKey = rawKey.replace(/[^A-Za-z0-9._\-\/]/g, '');
+
+    let safeSearchIdx = rawSearchIdx.replace(/[^A-Za-z0-9._\-\/]/g, '');
+
+    if (qx == "1") {
+        safeSearchIdx = "drive/" + safeSearchIdx;
+    }
+    const destinationUrl = new URL(`/s/fz/${safeKey}/${safeSearchIdx}/`, "https://thsconline.github.io");
+    window.location.href = destinationUrl.href;
 }
-function passwordentry()
-{
-	var key = document.getElementById("dkey").value;
-	window.location = "https://thsconline.github.io/s/fz/"+key+"/home/"
+
+function passwordentry() {
+    const rawKey = document.getElementById("dkey")?.value || "";
+    const safeKey = rawKey.replace(/[^A-Za-z0-9._\-\/]/g, '');
+    const destinationUrl = new URL(`/s/fz/${safeKey}/home/`, "https://thsconline.github.io");
+    window.location.href = destinationUrl.href;
 }
+
 function toggleView(id1, id2)
 {
     var x = document.getElementById(id1).style.display;
