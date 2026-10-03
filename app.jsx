@@ -46,11 +46,10 @@ function writeworker() {
  */
 function Embed({ standalone = false }) {
     const params = useParams();
-
     const rawPath = params["*"] || "";
 
-    let embedUrl;
-    let titlex;
+    let embedUrl = "/s/index/404_html.pdf";
+    let titlex = "File not found";
 
     try {
         let raw = decodeURIComponent(rawPath);
@@ -66,16 +65,19 @@ function Embed({ standalone = false }) {
         const parts = raw.split("/");
         const file = parts.pop();
 
-        titlex = file.replace(/\.pdf$/i, "");
+        const cleanFile = file.replace(/&/g, '_').replace(/[^A-Za-z0-9._\-]/g, '');
+        titlex = cleanFile.replace(/\.pdf$/i, "");
 
-        const path = parts.join("/");
-
-        embedUrl =
-            "/" + (path ? path + "/" : "") + file;
+        const cleanPathSegments = parts
+            .map(segment => segment.replace(/&/g, '_').replace(/[^A-Za-z0-9._\-]/g, ''))
+            .filter(Boolean);
+        
+        const path = cleanPathSegments.join("/");
+       
+        embedUrl = "/" + (path ? path + "/" : "") + cleanFile;
     }
     catch (err) {
         console.log("Embed error:", err);
-
         titlex = "File not found";
         embedUrl = "/s/index/404_html.pdf";
     }
@@ -86,22 +88,17 @@ function Embed({ standalone = false }) {
         try {
             if (window.self !== window.top) {
                 win = window.open("about:blank", "_blank");
-
-                if (window.focus) {
-                    win.focus();
-                }
             }
             else {
                 win = window.open("about:blank", "_self");
-
-                if (window.focus) {
-                    win.focus();
-                }
             }
 
             if (!win) {
                 return;
             }
+
+            const embedUrl = new URL("https://thsconline.github.io/pdf/viewer.html");
+            embedUrl.searchParams.set("file", embedUrl);
 
             win.document.write(
                 "<html><head><title>" +
@@ -114,33 +111,26 @@ function Embed({ standalone = false }) {
                 "<style>html, body {height:100% !important;}</style>"
             );
 
-            win.document.write(
-                "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js\"></script>"
-            );
-
             win.document.write("</head><body>");
 
             if (!standalone) {
                 win.document.write(
                     "<div id=\"overlaybar\" style=\"z-index:1000;width:100%;\">" +
-                    unescape(titlex) +
+                    titlex + 
                     "<span style=\"float:right\">" +
                     "<a class=\"border\" onclick=\"window.close()\">Close ×</a>" +
                     "</span></div><br>"
                 );
             }
-
+            
             win.document.write(
                 "<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-                "sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
-                "src=\"https://thsconline.github.io/pdf/viewer.html?file=" +
-                embedUrl +
-                "\"></iframe>"
+                "sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " + 
+                "src=\"" + embedUrl.href + "\"></iframe>"
             );
 
             win.document.write("</body></html>");
-
-            win.document.title = unescape(titlex);
+            win.document.title = titlex;
         }
         catch (err) {
             window.location = "/s/";
@@ -157,20 +147,12 @@ function Embed({ standalone = false }) {
  * Main viewer endpoint.
  */
 function Viewer({ standalone = false }) {
-    const {
-        viewno,
-        titlex
-    } = useParams();
+    const { viewno: _viewno, titlex: _titlex } = useParams();
+    const [_endpoint] = useState(writeworker);
 
-    const [endpoint] = useState(writeworker);
-
-    const title = unescape(titlex);
-
-    const redirecturl =
-        "https://thsconline.github.io/s/viewer.html" +
-        "?field=" + titlex +
-        "&base=" + viewno +
-        "&w=" + endpoint;
+    const viewno = (_viewno || "").replace(/[^A-Za-z0-9]/g, '');
+    const titlex = (_titlex || "").replace(/&/g, '_').replace(/[^A-Za-z0-9._\-]/g, '');
+    const endpoint = (_endpoint || "").replace(/[^A-Za-z0-9_\-]/g, '');
 
     useEffect(() => {
         let win;
@@ -178,29 +160,23 @@ function Viewer({ standalone = false }) {
         try {
             if (window.self !== window.top) {
                 win = window.open("about:blank", "_blank");
-
-                if (window.focus) {
-                    win.focus();
-                }
             }
             else {
                 win = window.open("about:blank", "_self");
-
-                if (window.focus) {
-                    win.focus();
-                }
             }
 
             if (!win) {
                 return;
             }
 
-            /*
-             * Render immediately.
-             */
+            const embedUrl = new URL("https://thsconline.github.io/s/viewer.html");
+            embedUrl.searchParams.set("field", titlex);
+            embedUrl.searchParams.set("base", viewno);
+            embedUrl.searchParams.set("w", safeEndpoint);
+
             win.document.write(
                 "<html><head><title>" +
-                title +
+                titlex +
                 "</title>" +
                 "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">" +
                 "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">" +
@@ -209,18 +185,12 @@ function Viewer({ standalone = false }) {
                 "<style>html, body {height:100% !important;}</style>"
             );
 
-            if (!standalone) {
-                win.document.write(
-                    "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js\" type=\"text/javascript\"></script>"
-                );
-            }
-
             win.document.write("</head><body>");
 
             if (!standalone) {
                 win.document.write(
                     "<div id=\"overlaybar\" style=\"z-index:1000; width:100%;\">" +
-                    unescape(titlex) +
+                    titlex + 
                     "<span id=\"overlayinsert\" style=\"float:right !important\">" +
                     "<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close ×</a>" +
                     "</span></div><br>"
@@ -229,105 +199,63 @@ function Viewer({ standalone = false }) {
 
             win.document.write(
                 "<iframe style=\"width:100%; height:96%;\" height=\"96%\" " +
-                "sandbox=\"allow-scripts allow-popups allow-pointer-lock allow-presentation allow-same-origin allow-modals allow-top-navigation allow-downloads\" " +
-                "allowscripts=\"1\" allowdownloads=\"1\" allowfullscreen=\"1\" " +
+                "sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " + 
+                "allowfullscreen=\"1\" " +
                 "frameborder=\"0\" id=\"viewer\" " +
-                "src=\"https://thsconline.github.io/s/viewer.html?field=" +
-                titlex +
-                "&base=" +
-                viewno +
-                "&w=" +
-                endpoint +
-                "\"><noscript>&nbsp;Enable Javascript to Load File</noscript></iframe>"
+                "src=\"" + embedUrl.href + "\"></iframe>"
             );
 
             win.document.write("</body></html>");
+            win.document.title = titlex;
+			
+			// =========================
+			// FETCH IN BACKGROUND
+			// =========================
+			fetch("https://thsconline.github.io/s/index/" + viewno + ".json")
+				.then(r => r.ok ? r.json() : null)
+				.then(data =>
+				{
+					var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
-            win.document.title = unescape(titlex);
+					if (data && Array.isArray(data[titlex]))
+					{
+						var match = data[titlex].find(x =>
+							x.url && x.url.startsWith("/s/em/")
+						);
 
+						if (match)
+						{
+							win.location.href =
+								new URL(match.url, "https://thsconline.github.io").href;
+							return;
+						}
+					}
 
-            /*
-             * Fetch in background.
-             *
-             * If a matching /s/em/ URL exists, use it.
-             * On mobile, fall back to the normal viewer.
-             */
-            fetch(
-                "https://thsconline.github.io/s/index/" +
-                viewno +
-                ".json"
-            )
-                .then(r => r.ok ? r.json() : null)
-                .then(data => {
+					// fallback ONLY if mobile and no match
+					if (isMobile)
+					{
+						win.location.href = embedUrl.href;
+					}
+				})
+				.catch(() =>
+				{
+					var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
-                    const isMobile =
-                        /android|iphone|ipad|ipod|mobile/i.test(
-                            navigator.userAgent
-                        );
-
-                    if (
-                        data &&
-                        Array.isArray(data[title])
-                    ) {
-                        const match = data[title].find(
-                            x =>
-                                x.url &&
-                                x.url.startsWith("/s/em/")
-                        );
-
-                        if (match) {
-
-                            if (isMobile) {
-                                win.location.href =
-                                    match.url.replace(
-                                        "/s/em",
-                                        "https://thsconline.github.io/"
-                                    );
-                            }
-                            else {
-                                win.location.href =
-                                    new URL(
-                                        match.url,
-                                        "https://thsconline.github.io"
-                                    ).href;
-                            }
-
-                            return;
-                        }
-                    }
-
-                    if (isMobile) {
-                        win.location.href =
-                            redirecturl;
-                    }
-                })
-                .catch(() => {
-
-                    const isMobile =
-                        /android|iphone|ipad|ipod|mobile/i.test(
-                            navigator.userAgent
-                        );
-
-                    if (isMobile) {
-                        win.location.href =
-                            redirecturl;
-                    }
-                });
+					// fallback ONLY on mobile if fetch fails
+					if (isMobile)
+					{
+						win.location.href = embedUrl.href;
+					}
+				});
         }
         catch (err) {
             window.location = "/s/";
         }
-    }, [
-        viewno,
-        titlex,
-        title,
-        endpoint,
-        redirecturl,
-        standalone
-    ]);
+    }, [embedUrl, viewno, titlex, endpoint, standalone]);
 
     return null;
 }
+
 
 
 /*
@@ -394,9 +322,17 @@ function App() {
  * Mount React into the existing page wrapper
  * supplied by header.html / 404.html.
  */
-const root =
-    document.getElementById("page-wrapper");
+if (root) {
+    
+    const currentPath = window.location.pathname;
+    const isGeneratedRoute = currentPath.includes("/s/v/") || currentPath.includes("/s/v_standalone/") || currentPath.includes("/s/em/") || currentPath.includes("/s/em_standalone/");
 
+    if (isGeneratedRoute) {
+        const heading = document.createElement("h1");
+        
+        heading.textContent = "thsconline"; 
+        root.before(heading);
+    }
 if (root) {
     ReactDOM
         .createRoot(root)

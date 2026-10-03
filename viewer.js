@@ -91,6 +91,10 @@ function loadshell()
 			titlex = "File not found";
 			dataUrl = "/s/index/404_html.pdf";
 		}
+					
+		const embedUrl = new URL("https://thsconline.github.io/pdf/viewer.html");
+		embedUrl.searchParams.set("file", dataUrl || "");				
+		
 		if(window.self !== window.top)
 		{
 			win = window.open("about:blank","_blank");
@@ -117,7 +121,7 @@ function loadshell()
 			"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
 			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
 			"allowfullscreen=\"1\" " +
-			"src=\"" + embedUrl + "\"></iframe>"
+			"src=\"" + embedUrl.href + "\"></iframe>"
 		);
 		win.document.write("</body></html>");
 		win.document.title = titlex;
@@ -152,9 +156,8 @@ function loadshell()
 			dataUrl = "/s/index/404_html.pdf";
 			}
 			
-				const viewerUrl = new URL("https://thsconline.github.io/pdf/viewer.html");
-				viewerUrl.searchParams.set("file", dataUrl || "");				
-				var embedUrl = viewerUrl.href;
+				const embedUrl = new URL("https://thsconline.github.io/pdf/viewer.html");
+				embedUrl.searchParams.set("file", dataUrl || "");								
 			
 				if(window.self !== window.top)
 				{
@@ -175,7 +178,7 @@ function loadshell()
 					"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
 					"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
 					"allowfullscreen=\"1\" " +
-					"src=\"" + embedUrl + "\"></iframe>"
+					"src=\"" + embedUrl.href + "\"></iframe>"
 				);
 				win.document.write("</body></html>"); 	 
 				win.document.title = titlex;
@@ -265,11 +268,10 @@ function loadshell()
 			var titlex = window.SAFE_PATH_ARRAY[2] || '';
 			var endpoint = writeworker();
 			
-			const viewerUrl = new URL("https://thsconline.github.io/s/viewer.html");
-			viewerUrl.searchParams.set("field", titlex || "");
-			viewerUrl.searchParams.set("base", viewno || "");
-			viewerUrl.searchParams.set("w", endpoint || "");	
-			var embedUrl = viewerUrl.href;
+			const embedUrl = new URL("https://thsconline.github.io/s/viewer.html");
+			embedUrl.searchParams.set("field", titlex || "");
+			embedUrl.searchParams.set("base", viewno || "");
+			embedUrl.searchParams.set("w", endpoint || "");				
 			
 			var redirecturl = "https://thsconline.github.io/s/viewer.html?field=" + titlex + "&base=" + viewno + "&w=" + endpoint
 			
@@ -301,7 +303,7 @@ function loadshell()
 				"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
 				"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
 				"allowfullscreen=\"1\" " +
-				"src=\"" + embedUrl + "\"></iframe>"
+				"src=\"" + embedUrl.href + "\"></iframe>"
 			);
 
 			win.document.write("</body></html>");
@@ -333,7 +335,7 @@ function loadshell()
 					// fallback ONLY if mobile and no match
 					if (isMobile)
 					{
-						win.location.href = redirecturl;
+						win.location.href = embedUrl.href;
 					}
 				})
 				.catch(() =>
@@ -343,7 +345,7 @@ function loadshell()
 					// fallback ONLY on mobile if fetch fails
 					if (isMobile)
 					{
-						win.location.href = redirecturl;
+						win.location.href = embedUrl.href;
 					}
 				});
 		}
@@ -360,11 +362,10 @@ function loadshell()
 		var titlex = window.SAFE_PATH_ARRAY[2] || '';
 		var endpoint = writeworker();
 		
-		const viewerUrl = new URL("https://thsconline.github.io/s/viewer.html");
-		viewerUrl.searchParams.set("field", titlex || "");
-		viewerUrl.searchParams.set("base", viewno || "");
-		viewerUrl.searchParams.set("w", endpoint || "");	
-		var embedUrl = viewerUrl.href;
+		const embedUrl = new URL("https://thsconline.github.io/s/viewer.html");
+		embedUrl.searchParams.set("field", titlex || "");
+		embedUrl.searchParams.set("base", viewno || "");
+		embedUrl.searchParams.set("w", endpoint || "");		
 
 		if(window.self !== window.top)
 		{
@@ -399,7 +400,7 @@ function loadshell()
 			"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
 			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
 			"allowfullscreen=\"1\" " +
-			"src=\"" + embedUrl + "\"></iframe>"
+			"src=\"" + embedUrl.href + "\"></iframe>"
 		);
 
 		win.document.write("</body></html>");
@@ -438,7 +439,7 @@ function loadshell()
 				// fallback ONLY if mobile and no match
 				if (isMobile)
 				{
-					win.location.href = redirecturl;
+					win.location.href = embedUrl.href;
 				}
 			})
 			.catch(() =>
@@ -448,7 +449,7 @@ function loadshell()
 				// fallback ONLY on mobile if fetch fails
 				if (isMobile)
 				{
-					win.location.href = redirecturl;
+					win.location.href = embedUrl.href;
 				}
 			});
 
