@@ -323,17 +323,20 @@ function App() {
  * supplied by header.html / 404.html.
  */
 if (root) {
-    
     const currentPath = window.location.pathname;
-    const isGeneratedRoute = currentPath.includes("/s/v/") || currentPath.includes("/s/v_standalone/") || currentPath.includes("/s/em/") || currentPath.includes("/s/em_standalone/");
+
+    const isGeneratedRoute =
+        currentPath.includes("/s/v/") ||
+        currentPath.includes("/s/v_standalone/") ||
+        currentPath.includes("/s/em/") ||
+        currentPath.includes("/s/em_standalone/");
 
     if (isGeneratedRoute) {
         const heading = document.createElement("h1");
-        
-        heading.textContent = "thsconline"; 
+        heading.textContent = "thsconline";
         root.before(heading);
     }
-if (root) {
+
     ReactDOM
         .createRoot(root)
         .render(<App />);
