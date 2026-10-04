@@ -51,7 +51,7 @@ export default function Page() {
 <span style={{ paddingLeft: '29px' }}>810 papers online, 754 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers_extension2.html">Maths Ext 2 Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>721,papers online, 617 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>720 papers online, 616 w. sol</span></span><br />
 <br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks_general.html">General / Standard Maths Internal Assessment Tasks</a><br />
