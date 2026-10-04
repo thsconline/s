@@ -486,8 +486,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Manly 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Manly 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Manly 2024 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Manly 2025 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Manly 2026 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Manly 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Masada</summary><br />
 <span className="content">
