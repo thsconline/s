@@ -559,12 +559,33 @@ export async function onRequest(context) {
     }
 
     const action = parts[2];
-    const viewno = decodeURIComponent(parts[3]);
-    const titlex = decodeURIComponent(parts[4]);
+	let viewno;
+	let titlex;
 
-    if (!/^\d+$/.test(viewno) || !titlex) {
-        return errorResponse(400, "Invalid request");
-    }
+	try {
+		viewno = decodeURIComponent(parts[3]);
+		titlex = decodeURIComponent(parts[4]);
+	} catch {
+		return new Response(null, { status: 405 });
+	}
+
+	const whitelistRegex = /^[A-Za-z0-9._\- ]+$/;
+
+	if (
+		!viewno ||
+		viewno.length > 7 ||
+		!whitelistRegex.test(viewno)
+	) {
+		return new Response(null, { status: 405 });
+	}
+
+	if (
+		!titlex ||
+		titlex.length > 200 ||
+		!whitelistRegex.test(titlex)
+	) {
+		return new Response(null, { status: 405 });
+	}
 
     if (action === "getfilename") {
         const filename = getFileName(viewno, titlex);
