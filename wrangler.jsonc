@@ -1,0 +1,11 @@
+{
+  "name": "thsconline",
+  "pages_build_output_dir": "dist",
+
+  "services": [
+    {
+      "binding": "B2_WORKER",
+      "service": "b2-proxy"
+    }
+  ]
+}
