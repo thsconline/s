@@ -554,7 +554,9 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Girraween</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Girraween 2019 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Girraween 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Girraween 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Girraween 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Hurlstone</summary><br />
 <span className="content">

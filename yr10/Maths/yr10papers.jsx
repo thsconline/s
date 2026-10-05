@@ -107,6 +107,10 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>James Ruse 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>James Ruse 2024</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Manly</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Manly 2017</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Merewether</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Merewether 2022 w. sol</a><br />

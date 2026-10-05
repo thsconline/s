@@ -128,7 +128,9 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2022 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2023 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Girls</summary><br />
 <span className="content">

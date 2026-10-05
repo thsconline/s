@@ -354,7 +354,8 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5222)}>Normanhurst Boys 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5222)}>Normanhurst Boys 2023 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5222)}>Normanhurst Boys 2024 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5222)}>Normanhurst Boys 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5222)}>Normanhurst Boys 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>North Sydney Boys</summary><br />
 <span className="content">

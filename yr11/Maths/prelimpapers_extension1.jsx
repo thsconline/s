@@ -125,7 +125,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2023 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2024 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2026 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Glenwood</summary><br />
 <span className="content">
@@ -169,7 +170,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Hurlstone 2022</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Hurlstone 2023</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Hurlstone 2024 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Hurlstone 2025</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Hurlstone 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>International Grammar</summary><br />
 <span className="content">
@@ -229,11 +230,22 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Knox 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Knox 2023 w. sol</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Manly</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Manly 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Manly 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Manly 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Manly 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Manly 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Manly 2025 w. sol</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Moriah</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Moriah 2015 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Moriah 2016 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Moriah 2021 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Moriah 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Moriah 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Moriah 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Newington</summary><br />
 <span className="content">

@@ -165,7 +165,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Hurlstone 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Hurlstone 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Hurlstone 2023 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Hurlstone 2024 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Hurlstone 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Hurlstone 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>International Grammar</summary><br />
 <span className="content">
@@ -255,7 +256,11 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Moriah</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Moriah 2021 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Moriah 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Moriah 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Moriah 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Moriah 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Moriah 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Newington</summary><br />
 <span className="content">
@@ -367,7 +372,9 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>St George Girls 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>St George Girls 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>St George Girls 2022 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>St George Girls 2023 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>St George Girls 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>St George Girls 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>St George Girls 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Boys</summary><br />
 <span className="content">

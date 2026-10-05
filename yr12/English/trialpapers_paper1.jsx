@@ -205,7 +205,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>North Sydney Girls 2021 P1</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>North Sydney Girls 2022 P1</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>North Sydney Girls 2023 P1</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>North Sydney Girls 2024 P1</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>North Sydney Girls 2024 P1</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>North Sydney Girls 2025 P1</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Presbyterian</summary><br />
 <span className="content">
@@ -253,6 +254,7 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>St George Girls 2019 P1</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>St George Girls 2020 P1</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>St George Girls 2021 P1</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>St George Girls 2022 P1</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>St George Girls 2024 P1</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2718)}>St George Girls 2025 P1</a>

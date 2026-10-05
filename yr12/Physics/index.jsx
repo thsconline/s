@@ -35,7 +35,7 @@ export default function Page() {
 <a href="hscpapers.html">Physics HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="trialpapers.html">Physics Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>178 papers online, 124 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>180 papers online, 127 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks.html">Physics Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>37 papers online, 30 w. sol</span></span><br />

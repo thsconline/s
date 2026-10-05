@@ -238,7 +238,9 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>North Sydney Girls 2015</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>North Sydney Girls 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>North Sydney Girls 2021 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>North Sydney Girls 2023</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>North Sydney Girls 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>North Sydney Girls 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>North Sydney Girls 2024 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Penrith</summary><br />
 <span className="content">

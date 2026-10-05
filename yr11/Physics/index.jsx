@@ -33,7 +33,7 @@ export default function Page() {
 </details>
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="prelimpapers.html">Physics Year 11 Yearly Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>51 papers online, 42 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>52 papers online, 43 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&nbsp;&nbsp;
 <a href="assessment-tasks.html">Physics Year 11 Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>18 papers online, 15 w. sol</span></span><br />
