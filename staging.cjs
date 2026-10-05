@@ -20,6 +20,87 @@ const PUBLIC_API_BASE_URL =
 const CHUNK_SIZE = 4 * 1024 * 1024;
 const ONE_HOUR_MS = 60 * 60 * 1000;
 
+function validateFeedCommit() {
+  const { execFileSync } = require("child_process");
+
+  let commitTimestamp;
+  let changedFiles;
+
+  try {
+    commitTimestamp = execFileSync(
+      "git",
+      ["show", "-s", "--format=%ct", "HEAD"],
+      { encoding: "utf8" }
+    ).trim();
+
+    changedFiles = execFileSync(
+      "git",
+      ["diff-tree", "--no-commit-id", "--name-only", "-r", "HEAD"],
+      { encoding: "utf8" }
+    )
+      .split(/\r?\n/)
+      .map(x => x.trim())
+      .filter(Boolean);
+
+  } catch (err) {
+    throw new Error(
+      `Unable to inspect Git commit: ${err.message}`
+    );
+  }
+
+  const commitTime =
+    Number(commitTimestamp) * 1000;
+
+  if (!Number.isFinite(commitTime)) {
+    throw new Error(
+      "Unable to determine HEAD commit timestamp."
+    );
+  }
+
+  const age =
+    Date.now() - commitTime;
+
+  const oneHour =
+    60 * 60 * 1000;
+
+  if (age < 0) {
+    throw new Error(
+      "HEAD commit timestamp is in the future."
+    );
+  }
+
+  if (age > oneHour) {
+    throw new Error(
+      `HEAD commit is too old. ` +
+      `Commit age: ${Math.round(age / 60000)} minutes. ` +
+      `Maximum allowed age: 60 minutes.`
+    );
+  }
+
+  const feedChanged =
+    changedFiles.some(
+      file =>
+        file === "feed.atom" ||
+        file.endsWith("/feed.atom")
+    );
+
+  if (!feedChanged) {
+    throw new Error(
+      "feed.atom was not changed in the HEAD commit. " +
+      "Refusing to process papers."
+    );
+  }
+
+  console.log(
+    `✅ feed.atom was changed in HEAD commit.`
+  );
+
+  console.log(
+    `✅ HEAD commit is ${Math.round(age / 60000)} minutes old.`
+  );
+}
+
+
 
 // -----------------------------------------------------------------------------
 // B2
@@ -985,6 +1066,8 @@ async function processPaper(
 // -----------------------------------------------------------------------------
 
 async function main() {
+
+  validateFeedCommit();
   if (!fs.existsSync(ATOM_FILE)) {
     console.error(
       `❌ Execution Aborted: Target source feed cannot be found at path: ${ATOM_FILE}`
