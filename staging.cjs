@@ -437,7 +437,7 @@ function parseAtomFeed(xmlString) {
   const entries = [];
 
   const rootUpdatedMatch = xmlString.match(
-    /<feed[\s\S]*?<updated>([\s\S]*?)<\/updated>/
+    /<(?:(?:\w+):)?feed\b[^>]*>[\s\S]*?<(?:(?:\w+):)?updated\b[^>]*>([\s\S]*?)<\/(?:(?:\w+):)?updated>/i
   );
 
   const globalFeedUpdatedTime =
@@ -448,7 +448,7 @@ function parseAtomFeed(xmlString) {
       : null;
 
   const entryRegex =
-    /<entry>([\s\S]*?)<\/entry>/g;
+    /<(?:(?:\w+):)?entry\b[^>]*>([\s\S]*?)<\/(?:(?:\w+):)?entry>/gi;
 
   let match;
 
@@ -459,17 +459,17 @@ function parseAtomFeed(xmlString) {
 
     const titleMatch =
       entryBlock.match(
-        /<title>([\s\S]*?)<\/title>/
+        /<(?:(?:\w+):)?title\b[^>]*>([\s\S]*?)<\/(?:(?:\w+):)?title>/i
       );
 
     const collectionMatch =
       entryBlock.match(
-        /<collection>([\s\S]*?)<\/collection>/
+        /<(?:(?:\w+):)?collection\b[^>]*>([\s\S]*?)<\/(?:(?:\w+):)?collection>/i
       );
 
     const updatedMatch =
       entryBlock.match(
-        /<updated>([\s\S]*?)<\/updated>/
+        /<(?:(?:\w+):)?updated\b[^>]*>([\s\S]*?)<\/(?:(?:\w+):)?updated>/i
       );
 
     if (
@@ -482,11 +482,13 @@ function parseAtomFeed(xmlString) {
           updatedMatch[1].trim()
         ).getTime();
 
-      entries.push({
-        viewNo: collectionMatch[1].trim(),
-        title: titleMatch[1].trim(),
-        updatedTime
-      });
+      if (!Number.isNaN(updatedTime)) {
+        entries.push({
+          viewNo: collectionMatch[1].trim(),
+          title: titleMatch[1].trim(),
+          updatedTime
+        });
+      }
     }
   }
 
@@ -495,6 +497,7 @@ function parseAtomFeed(xmlString) {
     globalFeedUpdatedTime
   };
 }
+
 
 
 function getLatestCommitTime() {
@@ -1009,6 +1012,35 @@ async function main() {
         ATOM_FILE,
         "utf8"
       );
+
+	console.log(
+	  `📄 feed.atom size: ${feedXmlContent.length} characters`
+	);
+
+	console.log(
+	  `🔍 Entry tags found: ${
+		(feedXmlContent.match(/<(?:(?:\w+):)?entry\b/gi) || []).length
+	  }`
+	);
+
+	console.log(
+	  `🔍 Title tags found: ${
+		(feedXmlContent.match(/<(?:(?:\w+):)?title\b/gi) || []).length
+	  }`
+	);
+
+	console.log(
+	  `🔍 Collection tags found: ${
+		(feedXmlContent.match(/<(?:(?:\w+):)?collection\b/gi) || []).length
+	  }`
+	);
+
+	console.log(
+	  `🔍 Updated tags found: ${
+		(feedXmlContent.match(/<(?:(?:\w+):)?updated\b/gi) || []).length
+	  }`
+	);
+
 
     const {
       entries,
