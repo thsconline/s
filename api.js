@@ -2,7 +2,7 @@ function normalizeTitle(titlex) {
     return titlex
         .toLowerCase()
         .replace(/w\.\s*sol/gi, "")
-        .replace(/\s+/g, "");
+        .replace(/\s+/g, "-");
 }
 
 function errorResponse(status, message) {
