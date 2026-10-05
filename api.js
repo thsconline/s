@@ -584,7 +584,7 @@ export async function onRequest(context) {
     const normalizedTitle = normalizeTitle(titlex);
     const baseName = `${viewno}-${normalizedTitle}`;
 
-	if (action === "countfragments") {
+	if (action === "countfragments" || action === "getmetadata") {
 		try {
 			
 			const filename = getFileName(viewno, titlex);
