@@ -428,23 +428,29 @@ async function processPaper(viewNo, title, b2Session) {
     /*
      * Validate the expected GAS payload.
      */
-    if (
-      gasData.fileref != "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR" || !gasData.data ) {
-      console.warn(
-        `   ⚠️ GAS node failed to supply matching data stream. ` +
-        `Message: ${
-          gasData.error ||
-          "No payload content data string"
-        }`
-      );
-
-      console.warn(
-        `   🔎 GAS response keys: ` +
-        `${Object.keys(gasData).join(", ")}`
-      );
-
-      return;
-    }
+	if (gasData.fileref === "12TrRtJ9xfV4mo9O34MJ5_1YrHzjvirBR") {
+	  console.warn(
+	    "   ⚠️ GAS query succeeded, but the requested file was not found."
+	  );
+	  return;
+	}
+	
+	if (!gasData.data) {
+	  console.warn(
+	    `   ⚠️ GAS returned no content data. ` +
+	    `Possible empty file or conversion failure. ` +
+	    `Message: ${gasData.error || "No payload content data string"}`
+	  );
+	
+	  console.log(
+	    `   🔎 GAS response keys: ${Object.keys(gasData).join(", ")}`
+	  );
+	  return;
+	}
+	
+	console.log(
+	  `   ✅ GAS file data retrieved successfully (${gasData.data.length} characters).`
+	);
 
 
     /*
