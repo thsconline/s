@@ -333,7 +333,7 @@
 			currentPath.includes("/s/em/") ||
 			currentPath.includes("/s/em_standalone/");
 
-		if (isGeneratedRoute) {
+		if (!isGeneratedRoute) {
 			const heading = document.createElement("h1");
 			heading.textContent = "thsconline";
 			root.before(heading);
