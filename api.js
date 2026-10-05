@@ -586,11 +586,14 @@ export async function onRequest(context) {
 
 	if (action === "countfragments") {
 		try {
+			
+			const filename = getFileName(viewno, titlex);
 			const response = await fetchWorker(env, `${baseName}.count`);
 
 			if (!response.ok) {
 				return new Response(
 					JSON.stringify({
+						originalFileName: "404_html.pdf",
 						fragmentCount: 0,
 						error: `Count request failed with HTTP ${response.status}`
 					}),
@@ -610,6 +613,7 @@ export async function onRequest(context) {
 			} catch {
 				return new Response(
 					JSON.stringify({
+						originalFileName: "404_html.pdf",
 						fragmentCount: 0,
 						error: "Count endpoint returned invalid JSON"
 					}),
@@ -627,6 +631,7 @@ export async function onRequest(context) {
 			if (!Number.isInteger(count) || count < 0) {
 				return new Response(
 					JSON.stringify({
+						originalFileName: "404_html.pdf",
 						fragmentCount: 0,
 						error: "Count endpoint returned an invalid fragmentCount"
 					}),
@@ -641,6 +646,7 @@ export async function onRequest(context) {
 
 			return new Response(
 				JSON.stringify({
+					originalFileName: filename || "404_html.pdf",
 					fragmentCount: count
 				}),
 				{
@@ -653,6 +659,7 @@ export async function onRequest(context) {
 		} catch (error) {
 			return new Response(
 				JSON.stringify({
+					originalFileName: "404_html.pdf",
 					fragmentCount: 0,
 					error: error instanceof Error
 						? error.message
