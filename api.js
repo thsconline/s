@@ -1,9 +1,12 @@
 function normalizeTitle(titlex) {
     return titlex
         .toLowerCase()
-        .replace(/w\.\s*sol/gi, "")
-        .replace(/\s+/g, "-");
+        .replace(/\s*w\.\s*sol\s*$/i, "")
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-");
 }
+
 
 function errorResponse(status, message) {
     return new Response(message, {
