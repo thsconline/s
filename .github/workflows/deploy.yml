@@ -11,29 +11,61 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
+
+      # -----------------------------------------------------------------------
+      # STEP 1: Checkout repository
+      # -----------------------------------------------------------------------
+
       - name: Checkout Source Context
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # -----------------------------------------------------------------------
+      # STEP 2: Configure Node.js
+      # -----------------------------------------------------------------------
 
       - name: Configure Modern Runtime Node Env
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      # STEP 2: Instantly poke Cloudflare Pages to rebuild and publish your frontend
+      # -----------------------------------------------------------------------
+      # STEP 3: Instantly trigger Cloudflare Pages rebuild/publish
+      # -----------------------------------------------------------------------
+
       - name: Trigger Cloudflare Pages Deploy Hook
         run: |
           curl -f -s -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
 
-      # STEP 1: Process Atom feed items in-memory and upload fragments to Backblaze
-      - name: Execute Native In-Memory JavaScript Pipeline
+      # -----------------------------------------------------------------------
+      # STEP 4: Determine whether feed.atom was included in this push
+      # -----------------------------------------------------------------------
+
+      - name: Check Whether Upload Feed Changed
+        id: changed-files
+        uses: tj-actions/changed-files@v45
+        with:
+          files: |
+            feed.atom
+
+      # -----------------------------------------------------------------------
+      # STEP 5: Process Atom feed only when feed.atom changed
+      # -----------------------------------------------------------------------
+
+      - name: Execute Native In-Memory JavaScript Upload Pipeline
+        if: steps.changed-files.outputs.any_changed == 'true'
         env:
           GAS_SECRET_PASSWORD: ${{ secrets.GAS_WEBAPP_PASSWORD }}
-          GAS_HASH_URL: ${{ secrets.GAS_HASH_URL }}         
+          GAS_HASH_URL: ${{ secrets.GAS_HASH_URL }}
           B2_APPLICATION_KEY_ID: ${{ secrets.B2_APPLICATION_KEY_ID }}
           B2_APPLICATION_KEY: ${{ secrets.B2_APPLICATION_KEY }}
           B2_BUCKET_ID: ${{ secrets.B2_BUCKET_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          PUBLIC_API_BASE_URL: ${{ secrets.PUBLIC_API_BASE_URL }}
         run: |
           node staging.cjs
-
 
