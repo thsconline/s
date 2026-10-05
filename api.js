@@ -589,41 +589,85 @@ export async function onRequest(context) {
 			const response = await fetchWorker(env, `${baseName}.count`);
 
 			if (!response.ok) {
-				return new Response("0", {
-					status: 200,
-					headers: {
-						"Content-Type": "text/plain; charset=utf-8"
+				return new Response(
+					JSON.stringify({
+						fragmentCount: 0,
+						error: `Count request failed with HTTP ${response.status}`
+					}),
+					{
+						status: 200,
+						headers: {
+							"Content-Type": "application/json; charset=utf-8"
+						}
 					}
-				});
+				);
 			}
 
-			const text = (await response.text()).trim();
-			const count = Number.parseInt(text, 10);
+			let data;
+
+			try {
+				data = await response.json();
+			} catch {
+				return new Response(
+					JSON.stringify({
+						fragmentCount: 0,
+						error: "Count endpoint returned invalid JSON"
+					}),
+					{
+						status: 200,
+						headers: {
+							"Content-Type": "application/json; charset=utf-8"
+						}
+					}
+				);
+			}
+
+			const count = data?.fragmentCount;
 
 			if (!Number.isInteger(count) || count < 0) {
-				return new Response("0", {
-					status: 200,
-					headers: {
-						"Content-Type": "text/plain; charset=utf-8"
+				return new Response(
+					JSON.stringify({
+						fragmentCount: 0,
+						error: "Count endpoint returned an invalid fragmentCount"
+					}),
+					{
+						status: 200,
+						headers: {
+							"Content-Type": "application/json; charset=utf-8"
+						}
 					}
-				});
+				);
 			}
 
-			return new Response(String(count), {
-				status: 200,
-				headers: {
-					"Content-Type": "text/plain; charset=utf-8"
+			return new Response(
+				JSON.stringify({
+					fragmentCount: count
+				}),
+				{
+					status: 200,
+					headers: {
+						"Content-Type": "application/json; charset=utf-8"
+					}
 				}
-			});
-		} catch {
-			return new Response("0", {
-				status: 200,
-				headers: {
-					"Content-Type": "text/plain; charset=utf-8"
+			);
+		} catch (error) {
+			return new Response(
+				JSON.stringify({
+					fragmentCount: 0,
+					error: error instanceof Error
+						? error.message
+						: "Unknown error while retrieving fragment count"
+				}),
+				{
+					status: 200,
+					headers: {
+						"Content-Type": "application/json; charset=utf-8"
+					}
 				}
-			});
+			);
 		}
 	}
+
 
 
 
