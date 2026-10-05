@@ -581,9 +581,48 @@ export async function onRequest(context) {
     const normalizedTitle = normalizeTitle(titlex);
     const baseName = `${viewno}-${normalizedTitle}`;
 
-    if (action === "countfragments") {
-        return fetchWorker(env, `${baseName}.count`);
-    }
+	if (action === "countfragments") {
+		try {
+			const response = await fetchWorker(env, `${baseName}.count`);
+
+			if (!response.ok) {
+				return new Response("0", {
+					status: 200,
+					headers: {
+						"Content-Type": "text/plain; charset=utf-8"
+					}
+				});
+			}
+
+			const text = (await response.text()).trim();
+			const count = Number.parseInt(text, 10);
+
+			if (!Number.isInteger(count) || count < 0) {
+				return new Response("0", {
+					status: 200,
+					headers: {
+						"Content-Type": "text/plain; charset=utf-8"
+					}
+				});
+			}
+
+			return new Response(String(count), {
+				status: 200,
+				headers: {
+					"Content-Type": "text/plain; charset=utf-8"
+				}
+			});
+		} catch {
+			return new Response("0", {
+				status: 200,
+				headers: {
+					"Content-Type": "text/plain; charset=utf-8"
+				}
+			});
+		}
+	}
+
+
 
     if (action === "getfragment") {
         if (parts.length < 6) {
