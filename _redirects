@@ -1,0 +1,12 @@
+# Prevent Cloudflare from stripping .html 200
+/yr9/**/index.html /yr9/:splat/index.html 200
+/yr10/**/index.html /yr10/:splat/index.html 200
+/yr11/**/index.html /yr11/:splat/index.html 200
+/yr12/**/index.html /yr12/:splat/index.html 200
+
+/yr9/**/*.html /yr9/:splat.html 200
+/yr10/**/*.html /yr10/:splat.html 200
+/yr11/**/*.html /yr11/:splat.html 200
+/yr12/**/*.html /yr12/:splat.html 200
+
+/* /404.html 200
