@@ -339,7 +339,7 @@ if ($PDFTemplateCode -eq "AllAvailable") {
 		Write-Host -ForegroundColor Cyan `
 			"Initial upload: culling feed.atom to year $Year..."
 
-		$FeedStagingScript = Join-Path $PSScriptRoot "thsc_stage_feed.ps1"
+		$FeedStagingScript = Join-Path $PSScriptRoot "thsc_paper_stage_feed.ps1"
 
 		try {
 			& $FeedStagingScript -Year $Year -ErrorAction Stop
