@@ -574,7 +574,7 @@ export const routes = [
         canonical: Yr10_index_Page1Canonical
     },
     {
-        path: "/s/yr10/Maths/assessment-tasks.html.html",
+        path: "/s/yr10/Maths/assessment-tasks.html",
         component: Yr10_Maths_assessment_tasks_Page2,
         title: Yr10_Maths_assessment_tasks_Page2Title,
         canonical: Yr10_Maths_assessment_tasks_Page2Canonical
@@ -586,7 +586,7 @@ export const routes = [
         canonical: Yr10_Maths_index_Page3Canonical
     },
     {
-        path: "/s/yr10/Maths/yr10papers.html.html",
+        path: "/s/yr10/Maths/yr10papers.html",
         component: Yr10_Maths_yr10papers_Page4,
         title: Yr10_Maths_yr10papers_Page4Title,
         canonical: Yr10_Maths_yr10papers_Page4Canonical
@@ -598,13 +598,13 @@ export const routes = [
         canonical: Yr10_Science_index_Page5Canonical
     },
     {
-        path: "/s/yr10/Science/yr10papers.html.html",
+        path: "/s/yr10/Science/yr10papers.html",
         component: Yr10_Science_yr10papers_Page6,
         title: Yr10_Science_yr10papers_Page6Title,
         canonical: Yr10_Science_yr10papers_Page6Canonical
     },
     {
-        path: "/s/yr11/Biology/assessment-tasks.html.html",
+        path: "/s/yr11/Biology/assessment-tasks.html",
         component: Yr11_Biology_assessment_tasks_Page7,
         title: Yr11_Biology_assessment_tasks_Page7Title,
         canonical: Yr11_Biology_assessment_tasks_Page7Canonical
@@ -616,7 +616,7 @@ export const routes = [
         canonical: Yr11_Biology_index_Page8Canonical
     },
     {
-        path: "/s/yr11/Biology/prelimpapers.html.html",
+        path: "/s/yr11/Biology/prelimpapers.html",
         component: Yr11_Biology_prelimpapers_Page9,
         title: Yr11_Biology_prelimpapers_Page9Title,
         canonical: Yr11_Biology_prelimpapers_Page9Canonical
@@ -628,13 +628,13 @@ export const routes = [
         canonical: Yr11_Business_Studies_index_Page10Canonical
     },
     {
-        path: "/s/yr11/Business Studies/prelimpapers.html.html",
+        path: "/s/yr11/Business Studies/prelimpapers.html",
         component: Yr11_Business_Studies_prelimpapers_Page11,
         title: Yr11_Business_Studies_prelimpapers_Page11Title,
         canonical: Yr11_Business_Studies_prelimpapers_Page11Canonical
     },
     {
-        path: "/s/yr11/Chemistry/assessment-tasks.html.html",
+        path: "/s/yr11/Chemistry/assessment-tasks.html",
         component: Yr11_Chemistry_assessment_tasks_Page12,
         title: Yr11_Chemistry_assessment_tasks_Page12Title,
         canonical: Yr11_Chemistry_assessment_tasks_Page12Canonical
@@ -646,7 +646,7 @@ export const routes = [
         canonical: Yr11_Chemistry_index_Page13Canonical
     },
     {
-        path: "/s/yr11/Chemistry/prelimpapers.html.html",
+        path: "/s/yr11/Chemistry/prelimpapers.html",
         component: Yr11_Chemistry_prelimpapers_Page14,
         title: Yr11_Chemistry_prelimpapers_Page14Title,
         canonical: Yr11_Chemistry_prelimpapers_Page14Canonical
@@ -658,13 +658,13 @@ export const routes = [
         canonical: Yr11_Earth_Environmental_Science_index_Page15Canonical
     },
     {
-        path: "/s/yr11/Earth & Environmental Science/prelimpapers.html.html",
+        path: "/s/yr11/Earth & Environmental Science/prelimpapers.html",
         component: Yr11_Earth_Environmental_Science_prelimpapers_Page16,
         title: Yr11_Earth_Environmental_Science_prelimpapers_Page16Title,
         canonical: Yr11_Earth_Environmental_Science_prelimpapers_Page16Canonical
     },
     {
-        path: "/s/yr11/Economics/assessment-tasks.html.html",
+        path: "/s/yr11/Economics/assessment-tasks.html",
         component: Yr11_Economics_assessment_tasks_Page17,
         title: Yr11_Economics_assessment_tasks_Page17Title,
         canonical: Yr11_Economics_assessment_tasks_Page17Canonical
@@ -676,13 +676,13 @@ export const routes = [
         canonical: Yr11_Economics_index_Page18Canonical
     },
     {
-        path: "/s/yr11/Economics/prelimpapers.html.html",
+        path: "/s/yr11/Economics/prelimpapers.html",
         component: Yr11_Economics_prelimpapers_Page19,
         title: Yr11_Economics_prelimpapers_Page19Title,
         canonical: Yr11_Economics_prelimpapers_Page19Canonical
     },
     {
-        path: "/s/yr11/Engineering Studies/assessment-tasks.html.html",
+        path: "/s/yr11/Engineering Studies/assessment-tasks.html",
         component: Yr11_Engineering_Studies_assessment_tasks_Page20,
         title: Yr11_Engineering_Studies_assessment_tasks_Page20Title,
         canonical: Yr11_Engineering_Studies_assessment_tasks_Page20Canonical
@@ -694,7 +694,7 @@ export const routes = [
         canonical: Yr11_Engineering_Studies_index_Page21Canonical
     },
     {
-        path: "/s/yr11/Engineering Studies/prelimpapers.html.html",
+        path: "/s/yr11/Engineering Studies/prelimpapers.html",
         component: Yr11_Engineering_Studies_prelimpapers_Page22,
         title: Yr11_Engineering_Studies_prelimpapers_Page22Title,
         canonical: Yr11_Engineering_Studies_prelimpapers_Page22Canonical
@@ -712,7 +712,7 @@ export const routes = [
         canonical: Yr11_IPT_index_Page24Canonical
     },
     {
-        path: "/s/yr11/IPT/prelimpapers.html.html",
+        path: "/s/yr11/IPT/prelimpapers.html",
         component: Yr11_IPT_prelimpapers_Page25,
         title: Yr11_IPT_prelimpapers_Page25Title,
         canonical: Yr11_IPT_prelimpapers_Page25Canonical
@@ -724,25 +724,25 @@ export const routes = [
         canonical: Yr11_Legal_Studies_index_Page26Canonical
     },
     {
-        path: "/s/yr11/Legal Studies/prelimpapers.html.html",
+        path: "/s/yr11/Legal Studies/prelimpapers.html",
         component: Yr11_Legal_Studies_prelimpapers_Page27,
         title: Yr11_Legal_Studies_prelimpapers_Page27Title,
         canonical: Yr11_Legal_Studies_prelimpapers_Page27Canonical
     },
     {
-        path: "/s/yr11/Maths/assessment-tasks_accelerated.html.html",
+        path: "/s/yr11/Maths/assessment-tasks_accelerated.html",
         component: Yr11_Maths_assessment_tasks_accelerated_Page28,
         title: Yr11_Maths_assessment_tasks_accelerated_Page28Title,
         canonical: Yr11_Maths_assessment_tasks_accelerated_Page28Canonical
     },
     {
-        path: "/s/yr11/Maths/assessment-tasks_advanced.html.html",
+        path: "/s/yr11/Maths/assessment-tasks_advanced.html",
         component: Yr11_Maths_assessment_tasks_advanced_Page29,
         title: Yr11_Maths_assessment_tasks_advanced_Page29Title,
         canonical: Yr11_Maths_assessment_tasks_advanced_Page29Canonical
     },
     {
-        path: "/s/yr11/Maths/assessment-tasks_extension1.html.html",
+        path: "/s/yr11/Maths/assessment-tasks_extension1.html",
         component: Yr11_Maths_assessment_tasks_extension1_Page30,
         title: Yr11_Maths_assessment_tasks_extension1_Page30Title,
         canonical: Yr11_Maths_assessment_tasks_extension1_Page30Canonical
@@ -754,25 +754,25 @@ export const routes = [
         canonical: Yr11_Maths_index_Page31Canonical
     },
     {
-        path: "/s/yr11/Maths/prelimpapers_accelerated.html.html",
+        path: "/s/yr11/Maths/prelimpapers_accelerated.html",
         component: Yr11_Maths_prelimpapers_accelerated_Page32,
         title: Yr11_Maths_prelimpapers_accelerated_Page32Title,
         canonical: Yr11_Maths_prelimpapers_accelerated_Page32Canonical
     },
     {
-        path: "/s/yr11/Maths/prelimpapers_advanced.html.html",
+        path: "/s/yr11/Maths/prelimpapers_advanced.html",
         component: Yr11_Maths_prelimpapers_advanced_Page33,
         title: Yr11_Maths_prelimpapers_advanced_Page33Title,
         canonical: Yr11_Maths_prelimpapers_advanced_Page33Canonical
     },
     {
-        path: "/s/yr11/Maths/prelimpapers_extension1.html.html",
+        path: "/s/yr11/Maths/prelimpapers_extension1.html",
         component: Yr11_Maths_prelimpapers_extension1_Page34,
         title: Yr11_Maths_prelimpapers_extension1_Page34Title,
         canonical: Yr11_Maths_prelimpapers_extension1_Page34Canonical
     },
     {
-        path: "/s/yr11/Maths/prelimpapers_general.html.html",
+        path: "/s/yr11/Maths/prelimpapers_general.html",
         component: Yr11_Maths_prelimpapers_general_Page35,
         title: Yr11_Maths_prelimpapers_general_Page35Title,
         canonical: Yr11_Maths_prelimpapers_general_Page35Canonical
@@ -784,13 +784,13 @@ export const routes = [
         canonical: Yr11_Modern_History_index_Page36Canonical
     },
     {
-        path: "/s/yr11/Modern History/prelimpapers.html.html",
+        path: "/s/yr11/Modern History/prelimpapers.html",
         component: Yr11_Modern_History_prelimpapers_Page37,
         title: Yr11_Modern_History_prelimpapers_Page37Title,
         canonical: Yr11_Modern_History_prelimpapers_Page37Canonical
     },
     {
-        path: "/s/yr11/Physics/assessment-tasks.html.html",
+        path: "/s/yr11/Physics/assessment-tasks.html",
         component: Yr11_Physics_assessment_tasks_Page38,
         title: Yr11_Physics_assessment_tasks_Page38Title,
         canonical: Yr11_Physics_assessment_tasks_Page38Canonical
@@ -802,13 +802,13 @@ export const routes = [
         canonical: Yr11_Physics_index_Page39Canonical
     },
     {
-        path: "/s/yr11/Physics/prelimpapers.html.html",
+        path: "/s/yr11/Physics/prelimpapers.html",
         component: Yr11_Physics_prelimpapers_Page40,
         title: Yr11_Physics_prelimpapers_Page40Title,
         canonical: Yr11_Physics_prelimpapers_Page40Canonical
     },
     {
-        path: "/s/yr12/Agriculture/assessment-tasks.html.html",
+        path: "/s/yr12/Agriculture/assessment-tasks.html",
         component: Yr12_Agriculture_assessment_tasks_Page41,
         title: Yr12_Agriculture_assessment_tasks_Page41Title,
         canonical: Yr12_Agriculture_assessment_tasks_Page41Canonical
@@ -820,13 +820,13 @@ export const routes = [
         canonical: Yr12_Agriculture_index_Page42Canonical
     },
     {
-        path: "/s/yr12/Agriculture/trialpapers.html.html",
+        path: "/s/yr12/Agriculture/trialpapers.html",
         component: Yr12_Agriculture_trialpapers_Page43,
         title: Yr12_Agriculture_trialpapers_Page43Title,
         canonical: Yr12_Agriculture_trialpapers_Page43Canonical
     },
     {
-        path: "/s/yr12/Ancient History/hscpapers.html.html",
+        path: "/s/yr12/Ancient History/hscpapers.html",
         component: Yr12_Ancient_History_hscpapers_Page44,
         title: Yr12_Ancient_History_hscpapers_Page44Title,
         canonical: Yr12_Ancient_History_hscpapers_Page44Canonical
@@ -838,19 +838,19 @@ export const routes = [
         canonical: Yr12_Ancient_History_index_Page45Canonical
     },
     {
-        path: "/s/yr12/Ancient History/trialpapers.html.html",
+        path: "/s/yr12/Ancient History/trialpapers.html",
         component: Yr12_Ancient_History_trialpapers_Page46,
         title: Yr12_Ancient_History_trialpapers_Page46Title,
         canonical: Yr12_Ancient_History_trialpapers_Page46Canonical
     },
     {
-        path: "/s/yr12/Biology/assessment-tasks.html.html",
+        path: "/s/yr12/Biology/assessment-tasks.html",
         component: Yr12_Biology_assessment_tasks_Page47,
         title: Yr12_Biology_assessment_tasks_Page47Title,
         canonical: Yr12_Biology_assessment_tasks_Page47Canonical
     },
     {
-        path: "/s/yr12/Biology/hscpapers.html.html",
+        path: "/s/yr12/Biology/hscpapers.html",
         component: Yr12_Biology_hscpapers_Page48,
         title: Yr12_Biology_hscpapers_Page48Title,
         canonical: Yr12_Biology_hscpapers_Page48Canonical
@@ -862,19 +862,19 @@ export const routes = [
         canonical: Yr12_Biology_index_Page49Canonical
     },
     {
-        path: "/s/yr12/Biology/trialpapers.html.html",
+        path: "/s/yr12/Biology/trialpapers.html",
         component: Yr12_Biology_trialpapers_Page50,
         title: Yr12_Biology_trialpapers_Page50Title,
         canonical: Yr12_Biology_trialpapers_Page50Canonical
     },
     {
-        path: "/s/yr12/Business Studies/assessment-tasks.html.html",
+        path: "/s/yr12/Business Studies/assessment-tasks.html",
         component: Yr12_Business_Studies_assessment_tasks_Page51,
         title: Yr12_Business_Studies_assessment_tasks_Page51Title,
         canonical: Yr12_Business_Studies_assessment_tasks_Page51Canonical
     },
     {
-        path: "/s/yr12/Business Studies/hscpapers.html.html",
+        path: "/s/yr12/Business Studies/hscpapers.html",
         component: Yr12_Business_Studies_hscpapers_Page52,
         title: Yr12_Business_Studies_hscpapers_Page52Title,
         canonical: Yr12_Business_Studies_hscpapers_Page52Canonical
@@ -886,19 +886,19 @@ export const routes = [
         canonical: Yr12_Business_Studies_index_Page53Canonical
     },
     {
-        path: "/s/yr12/Business Studies/trialpapers.html.html",
+        path: "/s/yr12/Business Studies/trialpapers.html",
         component: Yr12_Business_Studies_trialpapers_Page54,
         title: Yr12_Business_Studies_trialpapers_Page54Title,
         canonical: Yr12_Business_Studies_trialpapers_Page54Canonical
     },
     {
-        path: "/s/yr12/Chemistry/assessment-tasks.html.html",
+        path: "/s/yr12/Chemistry/assessment-tasks.html",
         component: Yr12_Chemistry_assessment_tasks_Page55,
         title: Yr12_Chemistry_assessment_tasks_Page55Title,
         canonical: Yr12_Chemistry_assessment_tasks_Page55Canonical
     },
     {
-        path: "/s/yr12/Chemistry/hscpapers.html.html",
+        path: "/s/yr12/Chemistry/hscpapers.html",
         component: Yr12_Chemistry_hscpapers_Page56,
         title: Yr12_Chemistry_hscpapers_Page56Title,
         canonical: Yr12_Chemistry_hscpapers_Page56Canonical
@@ -910,13 +910,13 @@ export const routes = [
         canonical: Yr12_Chemistry_index_Page57Canonical
     },
     {
-        path: "/s/yr12/Chemistry/trialpapers.html.html",
+        path: "/s/yr12/Chemistry/trialpapers.html",
         component: Yr12_Chemistry_trialpapers_Page58,
         title: Yr12_Chemistry_trialpapers_Page58Title,
         canonical: Yr12_Chemistry_trialpapers_Page58Canonical
     },
     {
-        path: "/s/yr12/Earth & Environmental Science/hscpapers.html.html",
+        path: "/s/yr12/Earth & Environmental Science/hscpapers.html",
         component: Yr12_Earth_Environmental_Science_hscpapers_Page59,
         title: Yr12_Earth_Environmental_Science_hscpapers_Page59Title,
         canonical: Yr12_Earth_Environmental_Science_hscpapers_Page59Canonical
@@ -928,19 +928,19 @@ export const routes = [
         canonical: Yr12_Earth_Environmental_Science_index_Page60Canonical
     },
     {
-        path: "/s/yr12/Earth & Environmental Science/trialpapers.html.html",
+        path: "/s/yr12/Earth & Environmental Science/trialpapers.html",
         component: Yr12_Earth_Environmental_Science_trialpapers_Page61,
         title: Yr12_Earth_Environmental_Science_trialpapers_Page61Title,
         canonical: Yr12_Earth_Environmental_Science_trialpapers_Page61Canonical
     },
     {
-        path: "/s/yr12/Economics/assessment-tasks.html.html",
+        path: "/s/yr12/Economics/assessment-tasks.html",
         component: Yr12_Economics_assessment_tasks_Page62,
         title: Yr12_Economics_assessment_tasks_Page62Title,
         canonical: Yr12_Economics_assessment_tasks_Page62Canonical
     },
     {
-        path: "/s/yr12/Economics/hscpapers.html.html",
+        path: "/s/yr12/Economics/hscpapers.html",
         component: Yr12_Economics_hscpapers_Page63,
         title: Yr12_Economics_hscpapers_Page63Title,
         canonical: Yr12_Economics_hscpapers_Page63Canonical
@@ -952,19 +952,19 @@ export const routes = [
         canonical: Yr12_Economics_index_Page64Canonical
     },
     {
-        path: "/s/yr12/Economics/trialpapers.html.html",
+        path: "/s/yr12/Economics/trialpapers.html",
         component: Yr12_Economics_trialpapers_Page65,
         title: Yr12_Economics_trialpapers_Page65Title,
         canonical: Yr12_Economics_trialpapers_Page65Canonical
     },
     {
-        path: "/s/yr12/Engineering Studies/assessment-tasks.html.html",
+        path: "/s/yr12/Engineering Studies/assessment-tasks.html",
         component: Yr12_Engineering_Studies_assessment_tasks_Page66,
         title: Yr12_Engineering_Studies_assessment_tasks_Page66Title,
         canonical: Yr12_Engineering_Studies_assessment_tasks_Page66Canonical
     },
     {
-        path: "/s/yr12/Engineering Studies/hscpapers.html.html",
+        path: "/s/yr12/Engineering Studies/hscpapers.html",
         component: Yr12_Engineering_Studies_hscpapers_Page67,
         title: Yr12_Engineering_Studies_hscpapers_Page67Title,
         canonical: Yr12_Engineering_Studies_hscpapers_Page67Canonical
@@ -976,7 +976,7 @@ export const routes = [
         canonical: Yr12_Engineering_Studies_index_Page68Canonical
     },
     {
-        path: "/s/yr12/Engineering Studies/trialpapers.html.html",
+        path: "/s/yr12/Engineering Studies/trialpapers.html",
         component: Yr12_Engineering_Studies_trialpapers_Page69,
         title: Yr12_Engineering_Studies_trialpapers_Page69Title,
         canonical: Yr12_Engineering_Studies_trialpapers_Page69Canonical
@@ -988,19 +988,19 @@ export const routes = [
         canonical: Yr12_English_Ext_1_index_Page70Canonical
     },
     {
-        path: "/s/yr12/English Ext 1/trialpapers_extension1.html.html",
+        path: "/s/yr12/English Ext 1/trialpapers_extension1.html",
         component: Yr12_English_Ext_1_trialpapers_extension1_Page71,
         title: Yr12_English_Ext_1_trialpapers_extension1_Page71Title,
         canonical: Yr12_English_Ext_1_trialpapers_extension1_Page71Canonical
     },
     {
-        path: "/s/yr12/English/assessment-tasks.html.html",
+        path: "/s/yr12/English/assessment-tasks.html",
         component: Yr12_English_assessment_tasks_Page72,
         title: Yr12_English_assessment_tasks_Page72Title,
         canonical: Yr12_English_assessment_tasks_Page72Canonical
     },
     {
-        path: "/s/yr12/English/hscpapers.html.html",
+        path: "/s/yr12/English/hscpapers.html",
         component: Yr12_English_hscpapers_Page73,
         title: Yr12_English_hscpapers_Page73Title,
         canonical: Yr12_English_hscpapers_Page73Canonical
@@ -1012,19 +1012,19 @@ export const routes = [
         canonical: Yr12_English_index_Page74Canonical
     },
     {
-        path: "/s/yr12/English/trialpapers_paper1.html.html",
+        path: "/s/yr12/English/trialpapers_paper1.html",
         component: Yr12_English_trialpapers_paper1_Page75,
         title: Yr12_English_trialpapers_paper1_Page75Title,
         canonical: Yr12_English_trialpapers_paper1_Page75Canonical
     },
     {
-        path: "/s/yr12/English/trialpapers_paper2_advanced.html.html",
+        path: "/s/yr12/English/trialpapers_paper2_advanced.html",
         component: Yr12_English_trialpapers_paper2_advanced_Page76,
         title: Yr12_English_trialpapers_paper2_advanced_Page76Title,
         canonical: Yr12_English_trialpapers_paper2_advanced_Page76Canonical
     },
     {
-        path: "/s/yr12/English/trialpapers_paper2_standard.html.html",
+        path: "/s/yr12/English/trialpapers_paper2_standard.html",
         component: Yr12_English_trialpapers_paper2_standard_Page77,
         title: Yr12_English_trialpapers_paper2_standard_Page77Title,
         canonical: Yr12_English_trialpapers_paper2_standard_Page77Canonical
@@ -1036,7 +1036,7 @@ export const routes = [
         canonical: Yr12_History_Extension_index_Page78Canonical
     },
     {
-        path: "/s/yr12/History Extension/trialpapers.html.html",
+        path: "/s/yr12/History Extension/trialpapers.html",
         component: Yr12_History_Extension_trialpapers_Page79,
         title: Yr12_History_Extension_trialpapers_Page79Title,
         canonical: Yr12_History_Extension_trialpapers_Page79Canonical
@@ -1054,13 +1054,13 @@ export const routes = [
         canonical: Yr12_Investigating_Science_index_Page81Canonical
     },
     {
-        path: "/s/yr12/Investigating Science/trialpapers.html.html",
+        path: "/s/yr12/Investigating Science/trialpapers.html",
         component: Yr12_Investigating_Science_trialpapers_Page82,
         title: Yr12_Investigating_Science_trialpapers_Page82Title,
         canonical: Yr12_Investigating_Science_trialpapers_Page82Canonical
     },
     {
-        path: "/s/yr12/IPT/assessment-tasks.html.html",
+        path: "/s/yr12/IPT/assessment-tasks.html",
         component: Yr12_IPT_assessment_tasks_Page83,
         title: Yr12_IPT_assessment_tasks_Page83Title,
         canonical: Yr12_IPT_assessment_tasks_Page83Canonical
@@ -1072,13 +1072,13 @@ export const routes = [
         canonical: Yr12_IPT_index_Page84Canonical
     },
     {
-        path: "/s/yr12/IPT/trialpapers.html.html",
+        path: "/s/yr12/IPT/trialpapers.html",
         component: Yr12_IPT_trialpapers_Page85,
         title: Yr12_IPT_trialpapers_Page85Title,
         canonical: Yr12_IPT_trialpapers_Page85Canonical
     },
     {
-        path: "/s/yr12/Legal Studies/hscpapers.html.html",
+        path: "/s/yr12/Legal Studies/hscpapers.html",
         component: Yr12_Legal_Studies_hscpapers_Page86,
         title: Yr12_Legal_Studies_hscpapers_Page86Title,
         canonical: Yr12_Legal_Studies_hscpapers_Page86Canonical
@@ -1090,7 +1090,7 @@ export const routes = [
         canonical: Yr12_Legal_Studies_index_Page87Canonical
     },
     {
-        path: "/s/yr12/Legal Studies/trialpapers.html.html",
+        path: "/s/yr12/Legal Studies/trialpapers.html",
         component: Yr12_Legal_Studies_trialpapers_Page88,
         title: Yr12_Legal_Studies_trialpapers_Page88Title,
         canonical: Yr12_Legal_Studies_trialpapers_Page88Canonical
@@ -1102,19 +1102,19 @@ export const routes = [
         canonical: Yr12_LOTE_index_Page89Canonical
     },
     {
-        path: "/s/yr12/LOTE/Japanese/assessment-tasks_continuers.html.html",
+        path: "/s/yr12/LOTE/Japanese/assessment-tasks_continuers.html",
         component: Yr12_LOTE_Japanese_assessment_tasks_continuers_Page90,
         title: Yr12_LOTE_Japanese_assessment_tasks_continuers_Page90Title,
         canonical: Yr12_LOTE_Japanese_assessment_tasks_continuers_Page90Canonical
     },
     {
-        path: "/s/yr12/LOTE/Japanese/hscpapers_continuers.html.html",
+        path: "/s/yr12/LOTE/Japanese/hscpapers_continuers.html",
         component: Yr12_LOTE_Japanese_hscpapers_continuers_Page91,
         title: Yr12_LOTE_Japanese_hscpapers_continuers_Page91Title,
         canonical: Yr12_LOTE_Japanese_hscpapers_continuers_Page91Canonical
     },
     {
-        path: "/s/yr12/LOTE/Japanese/hscpapers_extension.html.html",
+        path: "/s/yr12/LOTE/Japanese/hscpapers_extension.html",
         component: Yr12_LOTE_Japanese_hscpapers_extension_Page92,
         title: Yr12_LOTE_Japanese_hscpapers_extension_Page92Title,
         canonical: Yr12_LOTE_Japanese_hscpapers_extension_Page92Canonical
@@ -1126,13 +1126,13 @@ export const routes = [
         canonical: Yr12_LOTE_Japanese_index_Page93Canonical
     },
     {
-        path: "/s/yr12/LOTE/Japanese/trialpapers_beginners.html.html",
+        path: "/s/yr12/LOTE/Japanese/trialpapers_beginners.html",
         component: Yr12_LOTE_Japanese_trialpapers_beginners_Page94,
         title: Yr12_LOTE_Japanese_trialpapers_beginners_Page94Title,
         canonical: Yr12_LOTE_Japanese_trialpapers_beginners_Page94Canonical
     },
     {
-        path: "/s/yr12/LOTE/Japanese/trialpapers_continuers.html.html",
+        path: "/s/yr12/LOTE/Japanese/trialpapers_continuers.html",
         component: Yr12_LOTE_Japanese_trialpapers_continuers_Page95,
         title: Yr12_LOTE_Japanese_trialpapers_continuers_Page95Title,
         canonical: Yr12_LOTE_Japanese_trialpapers_continuers_Page95Canonical
@@ -1144,79 +1144,79 @@ export const routes = [
         canonical: Yr12_LOTE_Latin_index_Page96Canonical
     },
     {
-        path: "/s/yr12/LOTE/Latin/trialpapers_continuers.html.html",
+        path: "/s/yr12/LOTE/Latin/trialpapers_continuers.html",
         component: Yr12_LOTE_Latin_trialpapers_continuers_Page97,
         title: Yr12_LOTE_Latin_trialpapers_continuers_Page97Title,
         canonical: Yr12_LOTE_Latin_trialpapers_continuers_Page97Canonical
     },
     {
-        path: "/s/yr12/LOTE/Latin/trialpapers_extension.html.html",
+        path: "/s/yr12/LOTE/Latin/trialpapers_extension.html",
         component: Yr12_LOTE_Latin_trialpapers_extension_Page98,
         title: Yr12_LOTE_Latin_trialpapers_extension_Page98Title,
         canonical: Yr12_LOTE_Latin_trialpapers_extension_Page98Canonical
     },
     {
-        path: "/s/yr12/Maths/assessment-tasks_advanced.html.html",
+        path: "/s/yr12/Maths/assessment-tasks_advanced.html",
         component: Yr12_Maths_assessment_tasks_advanced_Page99,
         title: Yr12_Maths_assessment_tasks_advanced_Page99Title,
         canonical: Yr12_Maths_assessment_tasks_advanced_Page99Canonical
     },
     {
-        path: "/s/yr12/Maths/assessment-tasks_extension1.html.html",
+        path: "/s/yr12/Maths/assessment-tasks_extension1.html",
         component: Yr12_Maths_assessment_tasks_extension1_Page100,
         title: Yr12_Maths_assessment_tasks_extension1_Page100Title,
         canonical: Yr12_Maths_assessment_tasks_extension1_Page100Canonical
     },
     {
-        path: "/s/yr12/Maths/assessment-tasks_extension2.html.html",
+        path: "/s/yr12/Maths/assessment-tasks_extension2.html",
         component: Yr12_Maths_assessment_tasks_extension2_Page101,
         title: Yr12_Maths_assessment_tasks_extension2_Page101Title,
         canonical: Yr12_Maths_assessment_tasks_extension2_Page101Canonical
     },
     {
-        path: "/s/yr12/Maths/assessment-tasks_general.html.html",
+        path: "/s/yr12/Maths/assessment-tasks_general.html",
         component: Yr12_Maths_assessment_tasks_general_Page102,
         title: Yr12_Maths_assessment_tasks_general_Page102Title,
         canonical: Yr12_Maths_assessment_tasks_general_Page102Canonical
     },
     {
-        path: "/s/yr12/Maths/Competitions/cp_apmo.html.html",
+        path: "/s/yr12/Maths/Competitions/cp_apmo.html",
         component: Yr12_Maths_Competitions_cp_apmo_Page103,
         title: Yr12_Maths_Competitions_cp_apmo_Page103Title,
         canonical: Yr12_Maths_Competitions_cp_apmo_Page103Canonical
     },
     {
-        path: "/s/yr12/Maths/Competitions/cp_balkan.html.html",
+        path: "/s/yr12/Maths/Competitions/cp_balkan.html",
         component: Yr12_Maths_Competitions_cp_balkan_Page104,
         title: Yr12_Maths_Competitions_cp_balkan_Page104Title,
         canonical: Yr12_Maths_Competitions_cp_balkan_Page104Canonical
     },
     {
-        path: "/s/yr12/Maths/Competitions/cp_cmo.html.html",
+        path: "/s/yr12/Maths/Competitions/cp_cmo.html",
         component: Yr12_Maths_Competitions_cp_cmo_Page105,
         title: Yr12_Maths_Competitions_cp_cmo_Page105Title,
         canonical: Yr12_Maths_Competitions_cp_cmo_Page105Canonical
     },
     {
-        path: "/s/yr12/Maths/Competitions/cp_imo.html.html",
+        path: "/s/yr12/Maths/Competitions/cp_imo.html",
         component: Yr12_Maths_Competitions_cp_imo_Page106,
         title: Yr12_Maths_Competitions_cp_imo_Page106Title,
         canonical: Yr12_Maths_Competitions_cp_imo_Page106Canonical
     },
     {
-        path: "/s/yr12/Maths/Competitions/cp_nordic.html.html",
+        path: "/s/yr12/Maths/Competitions/cp_nordic.html",
         component: Yr12_Maths_Competitions_cp_nordic_Page107,
         title: Yr12_Maths_Competitions_cp_nordic_Page107Title,
         canonical: Yr12_Maths_Competitions_cp_nordic_Page107Canonical
     },
     {
-        path: "/s/yr12/Maths/Competitions/cp_putnam.html.html",
+        path: "/s/yr12/Maths/Competitions/cp_putnam.html",
         component: Yr12_Maths_Competitions_cp_putnam_Page108,
         title: Yr12_Maths_Competitions_cp_putnam_Page108Title,
         canonical: Yr12_Maths_Competitions_cp_putnam_Page108Canonical
     },
     {
-        path: "/s/yr12/Maths/Competitions/cp_unsw.html.html",
+        path: "/s/yr12/Maths/Competitions/cp_unsw.html",
         component: Yr12_Maths_Competitions_cp_unsw_Page109,
         title: Yr12_Maths_Competitions_cp_unsw_Page109Title,
         canonical: Yr12_Maths_Competitions_cp_unsw_Page109Canonical
@@ -1228,25 +1228,25 @@ export const routes = [
         canonical: Yr12_Maths_Competitions_index_Page110Canonical
     },
     {
-        path: "/s/yr12/Maths/hscpapers_advanced.html.html",
+        path: "/s/yr12/Maths/hscpapers_advanced.html",
         component: Yr12_Maths_hscpapers_advanced_Page111,
         title: Yr12_Maths_hscpapers_advanced_Page111Title,
         canonical: Yr12_Maths_hscpapers_advanced_Page111Canonical
     },
     {
-        path: "/s/yr12/Maths/hscpapers_extension1.html.html",
+        path: "/s/yr12/Maths/hscpapers_extension1.html",
         component: Yr12_Maths_hscpapers_extension1_Page112,
         title: Yr12_Maths_hscpapers_extension1_Page112Title,
         canonical: Yr12_Maths_hscpapers_extension1_Page112Canonical
     },
     {
-        path: "/s/yr12/Maths/hscpapers_extension2.html.html",
+        path: "/s/yr12/Maths/hscpapers_extension2.html",
         component: Yr12_Maths_hscpapers_extension2_Page113,
         title: Yr12_Maths_hscpapers_extension2_Page113Title,
         canonical: Yr12_Maths_hscpapers_extension2_Page113Canonical
     },
     {
-        path: "/s/yr12/Maths/hscpapers_general.html.html",
+        path: "/s/yr12/Maths/hscpapers_general.html",
         component: Yr12_Maths_hscpapers_general_Page114,
         title: Yr12_Maths_hscpapers_general_Page114Title,
         canonical: Yr12_Maths_hscpapers_general_Page114Canonical
@@ -1258,31 +1258,31 @@ export const routes = [
         canonical: Yr12_Maths_index_Page115Canonical
     },
     {
-        path: "/s/yr12/Maths/trialpapers_advanced.html.html",
+        path: "/s/yr12/Maths/trialpapers_advanced.html",
         component: Yr12_Maths_trialpapers_advanced_Page116,
         title: Yr12_Maths_trialpapers_advanced_Page116Title,
         canonical: Yr12_Maths_trialpapers_advanced_Page116Canonical
     },
     {
-        path: "/s/yr12/Maths/trialpapers_extension1.html.html",
+        path: "/s/yr12/Maths/trialpapers_extension1.html",
         component: Yr12_Maths_trialpapers_extension1_Page117,
         title: Yr12_Maths_trialpapers_extension1_Page117Title,
         canonical: Yr12_Maths_trialpapers_extension1_Page117Canonical
     },
     {
-        path: "/s/yr12/Maths/trialpapers_extension2.html.html",
+        path: "/s/yr12/Maths/trialpapers_extension2.html",
         component: Yr12_Maths_trialpapers_extension2_Page118,
         title: Yr12_Maths_trialpapers_extension2_Page118Title,
         canonical: Yr12_Maths_trialpapers_extension2_Page118Canonical
     },
     {
-        path: "/s/yr12/Maths/trialpapers_general.html.html",
+        path: "/s/yr12/Maths/trialpapers_general.html",
         component: Yr12_Maths_trialpapers_general_Page119,
         title: Yr12_Maths_trialpapers_general_Page119Title,
         canonical: Yr12_Maths_trialpapers_general_Page119Canonical
     },
     {
-        path: "/s/yr12/Modern History/hscpapers.html.html",
+        path: "/s/yr12/Modern History/hscpapers.html",
         component: Yr12_Modern_History_hscpapers_Page120,
         title: Yr12_Modern_History_hscpapers_Page120Title,
         canonical: Yr12_Modern_History_hscpapers_Page120Canonical
@@ -1294,7 +1294,7 @@ export const routes = [
         canonical: Yr12_Modern_History_index_Page121Canonical
     },
     {
-        path: "/s/yr12/Modern History/trialpapers.html.html",
+        path: "/s/yr12/Modern History/trialpapers.html",
         component: Yr12_Modern_History_trialpapers_Page122,
         title: Yr12_Modern_History_trialpapers_Page122Title,
         canonical: Yr12_Modern_History_trialpapers_Page122Canonical
@@ -1306,19 +1306,19 @@ export const routes = [
         canonical: Yr12_PDHPE_index_Page123Canonical
     },
     {
-        path: "/s/yr12/PDHPE/trialpapers.html.html",
+        path: "/s/yr12/PDHPE/trialpapers.html",
         component: Yr12_PDHPE_trialpapers_Page124,
         title: Yr12_PDHPE_trialpapers_Page124Title,
         canonical: Yr12_PDHPE_trialpapers_Page124Canonical
     },
     {
-        path: "/s/yr12/Physics/assessment-tasks.html.html",
+        path: "/s/yr12/Physics/assessment-tasks.html",
         component: Yr12_Physics_assessment_tasks_Page125,
         title: Yr12_Physics_assessment_tasks_Page125Title,
         canonical: Yr12_Physics_assessment_tasks_Page125Canonical
     },
     {
-        path: "/s/yr12/Physics/hscpapers.html.html",
+        path: "/s/yr12/Physics/hscpapers.html",
         component: Yr12_Physics_hscpapers_Page126,
         title: Yr12_Physics_hscpapers_Page126Title,
         canonical: Yr12_Physics_hscpapers_Page126Canonical
@@ -1330,7 +1330,7 @@ export const routes = [
         canonical: Yr12_Physics_index_Page127Canonical
     },
     {
-        path: "/s/yr12/Physics/trialpapers.html.html",
+        path: "/s/yr12/Physics/trialpapers.html",
         component: Yr12_Physics_trialpapers_Page128,
         title: Yr12_Physics_trialpapers_Page128Title,
         canonical: Yr12_Physics_trialpapers_Page128Canonical
@@ -1342,7 +1342,7 @@ export const routes = [
         canonical: Yr12_Society_Culture_index_Page129Canonical
     },
     {
-        path: "/s/yr12/Society & Culture/trialpapers.html.html",
+        path: "/s/yr12/Society & Culture/trialpapers.html",
         component: Yr12_Society_Culture_trialpapers_Page130,
         title: Yr12_Society_Culture_trialpapers_Page130Title,
         canonical: Yr12_Society_Culture_trialpapers_Page130Canonical
@@ -1354,7 +1354,7 @@ export const routes = [
         canonical: Yr12_Software_index_Page131Canonical
     },
     {
-        path: "/s/yr12/Software/trialpapers.html.html",
+        path: "/s/yr12/Software/trialpapers.html",
         component: Yr12_Software_trialpapers_Page132,
         title: Yr12_Software_trialpapers_Page132Title,
         canonical: Yr12_Software_trialpapers_Page132Canonical
@@ -1366,13 +1366,13 @@ export const routes = [
         canonical: Yr12_Studies_of_Religion_index_Page133Canonical
     },
     {
-        path: "/s/yr12/Studies of Religion/trialpapers_sor1.html.html",
+        path: "/s/yr12/Studies of Religion/trialpapers_sor1.html",
         component: Yr12_Studies_of_Religion_trialpapers_sor1_Page134,
         title: Yr12_Studies_of_Religion_trialpapers_sor1_Page134Title,
         canonical: Yr12_Studies_of_Religion_trialpapers_sor1_Page134Canonical
     },
     {
-        path: "/s/yr12/Studies of Religion/trialpapers_sor2.html.html",
+        path: "/s/yr12/Studies of Religion/trialpapers_sor2.html",
         component: Yr12_Studies_of_Religion_trialpapers_sor2_Page135,
         title: Yr12_Studies_of_Religion_trialpapers_sor2_Page135Title,
         canonical: Yr12_Studies_of_Religion_trialpapers_sor2_Page135Canonical
@@ -1384,7 +1384,7 @@ export const routes = [
         canonical: Yr12_Visual_Arts_index_Page136Canonical
     },
     {
-        path: "/s/yr12/Visual Arts/trialpapers.html.html",
+        path: "/s/yr12/Visual Arts/trialpapers.html",
         component: Yr12_Visual_Arts_trialpapers_Page137,
         title: Yr12_Visual_Arts_trialpapers_Page137Title,
         canonical: Yr12_Visual_Arts_trialpapers_Page137Canonical
@@ -1396,7 +1396,7 @@ export const routes = [
         canonical: Yr9_index_Page138Canonical
     },
     {
-        path: "/s/yr9/Maths/assessment-tasks.html.html",
+        path: "/s/yr9/Maths/assessment-tasks.html",
         component: Yr9_Maths_assessment_tasks_Page139,
         title: Yr9_Maths_assessment_tasks_Page139Title,
         canonical: Yr9_Maths_assessment_tasks_Page139Canonical
@@ -1408,7 +1408,7 @@ export const routes = [
         canonical: Yr9_Maths_index_Page140Canonical
     },
     {
-        path: "/s/yr9/Maths/yr9papers.html.html",
+        path: "/s/yr9/Maths/yr9papers.html",
         component: Yr9_Maths_yr9papers_Page141,
         title: Yr9_Maths_yr9papers_Page141Title,
         canonical: Yr9_Maths_yr9papers_Page141Canonical
