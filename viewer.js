@@ -40,8 +40,6 @@ function selectworker(includeFallback = true) {
     : fallback;
 }
 
-function getUrlParameter(name) {
-}
 function loadshell()
 {
 	const rawPath = window.location.pathname;
@@ -55,10 +53,19 @@ function loadshell()
 	}
 
 	let cleanString = decodedPath.replace(/&/g, '_');
-
+	// Temporarily protect the allowed abbreviations.
+	cleanString = cleanString
+		.replace(/\(Adv\.\)/g, '___ADV___')
+		.replace(/\(Std\.\)/g, '___STD___');
+	
 	const whitelistRegex = /[^A-Za-z0-9._\-\/ ]/g;
 	cleanString = cleanString.replace(whitelistRegex, '');
 
+	// Restore allowed parentheses.
+	cleanString = cleanString
+    .replace(/___ADV___/g, '(Adv.)')
+    .replace(/___STD___/g, '(Std.)');
+	
 	const initialSegments = cleanString.split('/').filter(Boolean);
 	const sIndex = initialSegments.indexOf('s');
 
@@ -479,7 +486,12 @@ function pdf(input, _viewno, event)
 	var _titlex = input.textContent.trim();
 
 	const viewno = String(_viewno ?? '').replace(/[^A-Za-z0-9]/g, '');
-	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\- ]/g, '');
+	const titlex = String(_titlex ?? '')
+    .replace(/\(Adv\.\)/g, '__ADV__')
+    .replace(/\(Std\.\)/g, '__STD__')
+    .replace(/[^A-Za-z0-9._\- ]/g, '')
+    .replace(/__ADV__/g, '(Adv.)')
+    .replace(/__STD__/g, '(Std.)');
 
 	var isMobile = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
 
@@ -497,7 +509,12 @@ async function pdfa(input, _viewno, event)
 {
 	var _titlex = input.textContent.trim();
 	const viewno = String(_viewno ?? '').replace(/[^A-Za-z0-9]/g, '');
-	const titlex = String(_titlex ?? '').replace(/[^A-Za-z0-9._\- ]/g, '');
+	const titlex = String(_titlex ?? '')
+    .replace(/\(Adv\.\)/g, '__ADV__')
+    .replace(/\(Std\.\)/g, '__STD__')
+    .replace(/[^A-Za-z0-9._\- ]/g, '')
+    .replace(/__ADV__/g, '(Adv.)')
+    .replace(/__STD__/g, '(Std.)');
 	
 	const viewerUrl = new URL(`/s/v/${viewno}/${titlex}`, "https://thsconline.github.io");
     //const downloaderUrl = new URL(`/s/d/${viewno}/${titlex}`, "https://thsconline.github.io");

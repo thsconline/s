@@ -811,27 +811,29 @@ export async function onRequest(context) {
         });
     }
 
-    const whitelistRegex = /^[A-Za-z0-9._\- ]+$/;
+	const whitelistRegex = /^[A-Za-z0-9._\- ]+$/;
 
-    if (
-        !viewno ||
-        viewno.length > 7 ||
-        !whitelistRegex.test(viewno)
-    ) {
-        return corsResponse(request, null, {
-            status: 400
-        });
-    }
+	if (
+		!viewno ||
+		viewno.length > 7 ||
+		!whitelistRegex.test(viewno)
+	) {
+		return corsResponse(request, null, {
+			status: 400
+		});
+	}
+	
+	const titleWhitelistRegex = /^[A-Za-z0-9._\- ()]+$/;
+	const validParenthesesRegex = /^(?:[^()]|\((?:Adv\.|Std\.)\))*$/;
 
-    if (
-        !titlex ||
-        titlex.length > 200 ||
-        !whitelistRegex.test(titlex)
-    ) {
-        return corsResponse(request, null, {
-            status: 400
-        });
-    }
+	if (
+		!titlex ||
+		titlex.length > 200 ||
+		!titleWhitelistRegex.test(titlex) ||
+		!validParenthesesRegex.test(titlex)
+	) {
+		return corsResponse(request, null, { status: 400 });
+	}
 
 
     /* =====================================================
