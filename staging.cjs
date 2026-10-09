@@ -4,7 +4,6 @@ const crypto = require("crypto");
 const { execSync } = require("child_process");
 
 const PASSWORD = process.env.GAS_SECRET_PASSWORD;
-const GAS_HASH_URL = process.env.GAS_HASH_URL;
 const ATOM_FILE = "./feed.atom";
 
 const B2_KEY_ID = process.env.B2_APPLICATION_KEY_ID;
@@ -12,30 +11,43 @@ const B2_APP_KEY = process.env.B2_APPLICATION_KEY;
 const B2_BUCKET_ID = process.env.B2_BUCKET_ID;
 
 const CLOUDFLARE_API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
+
 const CLOUDFLARE_ZONE_ID = process.env.CLOUDFLARE_ZONE_ID;
 
-const PUBLIC_API_BASE_URL =
-  process.env.PUBLIC_API_BASE_URL || "https://thsconline.net";
+const CLOUDFLARE_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
+
+const KV_NAMESPACE_ID = process.env.KV_NAMESPACE_ID;
+
+const PUBLIC_API_BASE_URL =  process.env.PUBLIC_API_BASE_URL ||  "https://thsconline.net";
 
 const CHUNK_SIZE = 4 * 1024 * 1024;
-const ONE_HOUR_MS = 60 * 60 * 1000;
+
+
+// -----------------------------------------------------------------------------
+// Validation
+// -----------------------------------------------------------------------------
+
+function requireEnv(name) {
+  const value = process.env[name];
+
+  if (!value) {
+    throw new Error(
+      `Missing ${name} environment variable.`
+    );
+  }
+
+  return value;
+}
+
 
 // -----------------------------------------------------------------------------
 // B2
 // -----------------------------------------------------------------------------
 
 async function getB2AuthTokens() {
-  if (!B2_KEY_ID) {
-    throw new Error("Missing B2_APPLICATION_KEY_ID environment variable.");
-  }
-
-  if (!B2_APP_KEY) {
-    throw new Error("Missing B2_APPLICATION_KEY environment variable.");
-  }
-
-  if (!B2_BUCKET_ID) {
-    throw new Error("Missing B2_BUCKET_ID environment variable.");
-  }
+  requireEnv("B2_APPLICATION_KEY_ID");
+  requireEnv("B2_APPLICATION_KEY");
+  requireEnv("B2_BUCKET_ID");
 
   const credentials = Buffer
     .from(`${B2_KEY_ID}:${B2_APP_KEY}`)
@@ -68,7 +80,10 @@ async function getB2AuthTokens() {
     !data.apiInfo.storageApi.apiUrl ||
     !data.authorizationToken
   ) {
-    console.error("B2 authorization response:", responseText);
+    console.error(
+      "B2 authorization response:",
+      responseText
+    );
 
     throw new Error(
       "B2 authorization response is missing apiUrl or authorizationToken."
@@ -79,7 +94,10 @@ async function getB2AuthTokens() {
 }
 
 
-async function getB2UploadUrl(apiUrl, authToken) {
+async function getB2UploadUrl(
+  apiUrl,
+  authToken
+) {
   const response = await fetch(
     `${apiUrl}/b2api/v4/b2_get_upload_url`,
     {
@@ -104,7 +122,10 @@ async function getB2UploadUrl(apiUrl, authToken) {
 
   const data = await response.json();
 
-  if (!data.uploadUrl || !data.authorizationToken) {
+  if (
+    !data.uploadUrl ||
+    !data.authorizationToken
+  ) {
     throw new Error(
       "B2 upload URL response is missing uploadUrl or authorizationToken."
     );
@@ -125,19 +146,26 @@ async function uploadBufferToB2(
     .update(dataBuffer)
     .digest("hex");
 
-  const encodedFilename = encodeURIComponent(filename);
+  const encodedFilename =
+    encodeURIComponent(filename);
 
-  const response = await fetch(uploadUrl, {
-    method: "POST",
-    headers: {
-      Authorization: uploadAuthToken,
-      "X-Bz-File-Name": encodedFilename,
-      "Content-Type": "application/octet-stream",
-      "Content-Length": String(dataBuffer.length),
-      "X-Bz-Content-Sha1": contentSha1
-    },
-    body: dataBuffer
-  });
+  const response = await fetch(
+    uploadUrl,
+    {
+      method: "POST",
+      headers: {
+        Authorization: uploadAuthToken,
+        "X-Bz-File-Name": encodedFilename,
+        "Content-Type":
+          "application/octet-stream",
+        "Content-Length":
+          String(dataBuffer.length),
+        "X-Bz-Content-Sha1":
+          contentSha1
+      },
+      body: dataBuffer
+    }
+  );
 
   if (!response.ok) {
     const details = await response.text();
@@ -148,7 +176,8 @@ async function uploadBufferToB2(
     );
   }
 
-  const result = await response.json();
+  const result =
+    await response.json();
 
   if (!result.fileId) {
     throw new Error(
@@ -166,36 +195,57 @@ async function listExistingPaperFragments(
   fileBaseName
 ) {
   const files = [];
+
   let startFileName;
   let startFileId;
 
   while (true) {
-    const params = new URLSearchParams();
+    const params =
+      new URLSearchParams();
 
-    params.set("bucketId", B2_BUCKET_ID);
-    params.set("prefix", `${fileBaseName}.`);
-    params.set("maxFileCount", "1000");
+    params.set(
+      "bucketId",
+      B2_BUCKET_ID
+    );
+
+    params.set(
+      "prefix",
+      `${fileBaseName}.`
+    );
+
+    params.set(
+      "maxFileCount",
+      "1000"
+    );
 
     if (startFileName) {
-      params.set("startFileName", startFileName);
+      params.set(
+        "startFileName",
+        startFileName
+      );
     }
 
     if (startFileId) {
-      params.set("startFileId", startFileId);
+      params.set(
+        "startFileId",
+        startFileId
+      );
     }
 
-    const response = await fetch(
-      `${apiUrl}/b2api/v4/b2_list_file_versions?${params.toString()}`,
-      {
-        method: "GET",
-        headers: {
-          Authorization: authToken
+    const response =
+      await fetch(
+        `${apiUrl}/b2api/v4/b2_list_file_versions?${params.toString()}`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: authToken
+          }
         }
-      }
-    );
+      );
 
     if (!response.ok) {
-      const details = await response.text();
+      const details =
+        await response.text();
 
       throw new Error(
         `B2 list_file_versions failed ` +
@@ -203,31 +253,42 @@ async function listExistingPaperFragments(
       );
     }
 
-    const data = await response.json();
+    const data =
+      await response.json();
 
     if (Array.isArray(data.files)) {
       for (const file of data.files) {
-        const match = file.fileName.match(
-          new RegExp(`^${escapeRegExp(fileBaseName)}\\.(\\d+)$`)
-        );
+        const match =
+          file.fileName.match(
+            new RegExp(
+              `^${escapeRegExp(fileBaseName)}\\.(\\d+)$`
+            )
+          );
 
         if (match) {
           files.push({
             fileId: file.fileId,
             fileName: file.fileName,
-            fragmentIndex: Number(match[1]),
+            fragmentIndex:
+              Number(match[1]),
             action: file.action
           });
         }
       }
     }
 
-    if (!data.nextFileName || !data.nextFileId) {
+    if (
+      !data.nextFileName ||
+      !data.nextFileId
+    ) {
       break;
     }
 
-    startFileName = data.nextFileName;
-    startFileId = data.nextFileId;
+    startFileName =
+      data.nextFileName;
+
+    startFileId =
+      data.nextFileId;
   }
 
   return files;
@@ -240,23 +301,26 @@ async function deleteB2FileVersion(
   fileName,
   fileId
 ) {
-  const response = await fetch(
-    `${apiUrl}/b2api/v4/b2_delete_file_version`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: authToken,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        fileName,
-        fileId
-      })
-    }
-  );
+  const response =
+    await fetch(
+      `${apiUrl}/b2api/v4/b2_delete_file_version`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: authToken,
+          "Content-Type":
+            "application/json"
+        },
+        body: JSON.stringify({
+          fileName,
+          fileId
+        })
+      }
+    );
 
   if (!response.ok) {
-    const details = await response.text();
+    const details =
+      await response.text();
 
     throw new Error(
       `B2 delete_file_version failed for ${fileName} ` +
@@ -277,20 +341,136 @@ function escapeRegExp(value) {
 
 
 // -----------------------------------------------------------------------------
-// Cloudflare
+// Cloudflare KV
 // -----------------------------------------------------------------------------
 
-async function purgeCloudflareUrls(urls) {
-  if (!CLOUDFLARE_API_TOKEN) {
+function buildKVUrl(key) {
+  requireEnv(
+    "CLOUDFLARE_ACCOUNT_ID"
+  );
+
+  requireEnv(
+    "KV_NAMESPACE_ID"
+  );
+
+  return (
+    `https://api.cloudflare.com/client/v4/` +
+    `accounts/${encodeURIComponent(CLOUDFLARE_ACCOUNT_ID)}/` +
+    `storage/kv/namespaces/${encodeURIComponent(KV_NAMESPACE_ID)}/` +
+    `values/${encodeURIComponent(key)}`
+  );
+}
+
+
+async function getKVCount(key) {
+  requireEnv(
+    "CLOUDFLARE_API_TOKEN"
+  );
+
+  const response =
+    await fetch(
+      buildKVUrl(key),
+      {
+        method: "GET",
+        headers: {
+          Authorization:
+            `Bearer ${CLOUDFLARE_API_TOKEN}`
+        }
+      }
+    );
+
+  if (response.status === 404) {
+    return null;
+  }
+
+  if (!response.ok) {
+    const details =
+      await response.text();
+
     throw new Error(
-      "Missing CLOUDFLARE_API_TOKEN environment variable."
+      `KV read failed (${response.status} ${response.statusText}): ${details}`
     );
   }
 
-  if (!CLOUDFLARE_ZONE_ID) {
+  const text =
+    await response.text();
+
+  const count =
+    Number(text.trim());
+
+  if (
+    !Number.isInteger(count) ||
+    count < 0
+  ) {
     throw new Error(
-      "Missing CLOUDFLARE_ZONE_ID environment variable."
+      `KV value for "${key}" is invalid: ${text}`
     );
+  }
+
+  return count;
+}
+
+
+async function putKVCount(
+  key,
+  count
+) {
+  requireEnv(
+    "CLOUDFLARE_API_TOKEN"
+  );
+
+  const response =
+    await fetch(
+      buildKVUrl(key),
+      {
+        method: "PUT",
+        headers: {
+          Authorization:
+            `Bearer ${CLOUDFLARE_API_TOKEN}`,
+          "Content-Type":
+            "text/plain; charset=utf-8"
+        },
+        body: String(count)
+      }
+    );
+
+  if (!response.ok) {
+    const details =
+      await response.text();
+
+    throw new Error(
+      `KV write failed (${response.status} ${response.statusText}): ${details}`
+    );
+  }
+
+  const result =
+    await response.json();
+
+  if (!result.success) {
+    throw new Error(
+      `KV write was not successful: ${JSON.stringify(result)}`
+    );
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Cloudflare Cache Purge
+// -----------------------------------------------------------------------------
+
+async function purgeCloudflareUrls(
+  urls
+) {
+  requireEnv(
+    "CLOUDFLARE_API_TOKEN"
+  );
+
+  requireEnv(
+    "CLOUDFLARE_ZONE_ID"
+  );
+
+  if (urls.length === 0) {
+    return;
   }
 
   const batchSize = 100;
@@ -300,32 +480,41 @@ async function purgeCloudflareUrls(urls) {
     offset < urls.length;
     offset += batchSize
   ) {
-    const batch = urls.slice(
-      offset,
-      offset + batchSize
-    );
+    const batch =
+      urls.slice(
+        offset,
+        offset + batchSize
+      );
 
     console.log(
       `   ☁️ Purging Cloudflare cache for ${batch.length} URL(s)...`
     );
 
-    const response = await fetch(
-      `https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${CLOUDFLARE_API_TOKEN}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          files: batch
-        })
-      }
-    );
+    const response =
+      await fetch(
+        `https://api.cloudflare.com/client/v4/` +
+        `zones/${CLOUDFLARE_ZONE_ID}/purge_cache`,
+        {
+          method: "POST",
+          headers: {
+            Authorization:
+              `Bearer ${CLOUDFLARE_API_TOKEN}`,
+            "Content-Type":
+              "application/json"
+          },
+          body: JSON.stringify({
+            files: batch
+          })
+        }
+      );
 
-    const result = await response.json();
+    const result =
+      await response.json();
 
-    if (!response.ok || !result.success) {
+    if (
+      !response.ok ||
+      !result.success
+    ) {
       throw new Error(
         `Cloudflare cache purge failed ` +
         `(${response.status} ${response.statusText}): ` +
@@ -345,10 +534,11 @@ function buildCloudflarePurgeUrls(
   title,
   fragmentCount
 ) {
-  const base = PUBLIC_API_BASE_URL.replace(
-    /\/+$/,
-    ""
-  );
+  const base =
+    PUBLIC_API_BASE_URL.replace(
+      /\/+$/,
+      ""
+    );
 
   const encodedViewNo =
     encodeURIComponent(viewNo);
@@ -357,9 +547,11 @@ function buildCloudflarePurgeUrls(
     encodeURIComponent(title);
 
   const urls = [
-    `${base}/api/v1/getfilename/${encodedViewNo}/${encodedTitle}`,
-    `${base}/api/v1/getmetadata/${encodedViewNo}/${encodedTitle}`,
-    `${base}/api/v1/countfragments/${encodedViewNo}/${encodedTitle}`
+    `${base}/api/v1/getmetadata/` +
+      `${encodedViewNo}/${encodedTitle}`,
+
+    `${base}/api/v1/countfragments/` +
+      `${encodedViewNo}/${encodedTitle}`
   ];
 
   for (
@@ -380,65 +572,18 @@ function buildCloudflarePurgeUrls(
 
 
 // -----------------------------------------------------------------------------
-// API
-// -----------------------------------------------------------------------------
-
-async function getFragmentCount(
-  viewNo,
-  title
-) {
-  const base =
-    PUBLIC_API_BASE_URL.replace(
-      /\/+$/,
-      ""
-    );
-
-  const url =
-    `${base}/api/v1/countfragments/` +
-    `${encodeURIComponent(viewNo)}/` +
-    `${encodeURIComponent(title)}`;
-
-  const response = await fetch(url, {
-    method: "GET",
-    headers: {
-      Accept: "application/json"
-    }
-  });
-
-  if (!response.ok) {
-    const details = await response.text();
-
-    throw new Error(
-      `countfragments failed (${response.status} ${response.statusText}): ${details}`
-    );
-  }
-
-  const data = await response.json();
-
-  if (
-    typeof data.fragmentCount !== "number" ||
-    !Number.isInteger(data.fragmentCount) ||
-    data.fragmentCount < 0
-  ) {
-    throw new Error(
-      `Invalid countfragments response: ${JSON.stringify(data)}`
-    );
-  }
-
-  return data.fragmentCount;
-}
-
-
-// -----------------------------------------------------------------------------
 // Feed
 // -----------------------------------------------------------------------------
 
-function parseAtomFeed(xmlString) {
+function parseAtomFeed(
+  xmlString
+) {
   const entries = [];
 
-  const rootUpdatedMatch = xmlString.match(
-    /<(?:(?:\w+):)?feed\b[^>]*>[\s\S]*?<(?:(?:\w+):)?updated\b[^>]*>([\s\S]*?)<\/(?:(?:\w+):)?updated>/i
-  );
+  const rootUpdatedMatch =
+    xmlString.match(
+      /<(?:(?:\w+):)?feed\b[^>]*>[\s\S]*?<(?:(?:\w+):)?updated\b[^>]*>([\s\S]*?)<\/(?:(?:\w+):)?updated>/i
+    );
 
   const globalFeedUpdatedTime =
     rootUpdatedMatch
@@ -455,7 +600,8 @@ function parseAtomFeed(xmlString) {
   while (
     (match = entryRegex.exec(xmlString)) !== null
   ) {
-    const entryBlock = match[1];
+    const entryBlock =
+      match[1];
 
     const titleMatch =
       entryBlock.match(
@@ -482,10 +628,18 @@ function parseAtomFeed(xmlString) {
           updatedMatch[1].trim()
         ).getTime();
 
-      if (!Number.isNaN(updatedTime)) {
+      if (
+        !Number.isNaN(
+          updatedTime
+        )
+      ) {
         entries.push({
-          viewNo: collectionMatch[1].trim(),
-          title: titleMatch[1].trim(),
+          viewNo:
+            collectionMatch[1].trim(),
+
+          title:
+            titleMatch[1].trim(),
+
           updatedTime
         });
       }
@@ -499,51 +653,13 @@ function parseAtomFeed(xmlString) {
 }
 
 
-
-function getLatestCommitTime() {
-  return Number(
-    execSync(
-      "git log -1 --format=%ct",
-      {
-        encoding: "utf8"
-      }
-    ).trim()
-  ) * 1000;
-}
-
-
-function wasFeedAtomChangedInCurrentCommit() {
-  const output = execSync(
-    "git diff-tree --no-commit-id --name-only -r HEAD",
-    {
-      encoding: "utf8"
-    }
-  );
-
-  const changedFiles = output
-    .split("\n")
-    .map(file => file.trim())
-    .filter(Boolean);
-
-  const feedPath =
-    ATOM_FILE.replace(
-      /^\.\//,
-      ""
-    );
-
-  return changedFiles.some(
-    file =>
-      file === feedPath ||
-      file === "feed.atom"
-  );
-}
-
-
 // -----------------------------------------------------------------------------
 // GAS
 // -----------------------------------------------------------------------------
 
-function selectWorker(includeFallback = true) {
+function selectWorker(
+  includeFallback = true
+) {
   const workers = [
     "AKfycbzwc57zmEK1Vm9Q5L1n1my3dxRafZRfNhCZ24zSLIa9H7MhySFhNahvPfW4R3uq753_",
     "AKfycbxCi8vsX-_l5a0JP-mG1RXIbSeiuZOfteumnk96oZCgQMR9nHjikpDqpknUHp-K5hg",
@@ -568,7 +684,8 @@ function selectWorker(includeFallback = true) {
   if (!includeFallback) {
     return workers[
       Math.floor(
-        Math.random() * workers.length
+        Math.random() *
+        workers.length
       )
     ];
   }
@@ -576,18 +693,23 @@ function selectWorker(includeFallback = true) {
   return Math.random() < 15 / 16
     ? workers[
         Math.floor(
-          Math.random() * workers.length
+          Math.random() *
+          workers.length
         )
       ]
     : fallback;
 }
 
 
+// -----------------------------------------------------------------------------
+// File base name
+// -----------------------------------------------------------------------------
+
 function buildFileBaseName(
   viewNo,
   title
 ) {
-  let normalizedTitle =
+  const normalizedTitle =
     title
       .toLowerCase()
       .replace(
@@ -632,6 +754,40 @@ async function processPaper(
   console.log(
     `📁 Generated file base name: ${fileBaseName}`
   );
+
+  /*
+   * KV key deliberately matches the B2/API base name.
+   *
+   * Example:
+   * 5328-2025-acme-trials
+   */
+  const kvKey =
+    `${fileBaseName}.count`;
+
+  console.log(
+    `🔑 KV key: ${kvKey}`
+  );
+
+  /*
+   * ---------------------------------------------------------------------------
+   * READ PREVIOUS COUNT FROM KV
+   * ---------------------------------------------------------------------------
+   */
+
+  let previousKVCount =
+    await getKVCount(kvKey);
+
+  if (
+    previousKVCount === null
+  ) {
+    console.log(
+      "   ℹ️ No existing KV count found."
+    );
+  } else {
+    console.log(
+      `   📊 Previous KV fragment count: ${previousKVCount}`
+    );
+  }
 
   const workerToken =
     selectWorker(false);
@@ -686,10 +842,6 @@ async function processPaper(
       `password=${PASSWORD ? "SET" : "MISSING"}`
     );
 
-    console.log(
-      `   ⏳ Sending GET request to script.google.com...`
-    );
-
     const gasRequestStarted =
       Date.now();
 
@@ -739,14 +891,14 @@ async function processPaper(
     }
 
     console.log(
-      `   📦 Parsing GAS JSON response...`
+      "   📦 Parsing GAS JSON response..."
     );
 
     const gasData =
       await response.json();
 
     console.log(
-      `   ✅ GAS JSON response parsed successfully.`
+      "   ✅ GAS JSON response parsed successfully."
     );
 
     if (
@@ -767,10 +919,6 @@ async function processPaper(
         `Message: ${gasData.error || "No payload content data string"}`
       );
 
-      console.log(
-        `   🔎 GAS response keys: ${Object.keys(gasData).join(", ")}`
-      );
-
       return;
     }
 
@@ -789,7 +937,7 @@ async function processPaper(
     );
 
     console.log(
-      `   🗜️ Applying in-memory GZIP compression...`
+      "   🗜️ Applying in-memory GZIP compression..."
     );
 
     const gzippedBuffer =
@@ -807,23 +955,15 @@ async function processPaper(
         CHUNK_SIZE
       );
 
-    let oldFragmentCount = 0;
+    console.log(
+      `   📊 New fragment count: ${newFragmentCount}`
+    );
 
-    try {
-      oldFragmentCount =
-        await getFragmentCount(
-          viewNo,
-          title
-        );
-
-      console.log(
-        `   📊 Existing fragment count: ${oldFragmentCount}`
-      );
-    } catch (err) {
-      console.log(
-        `   ℹ️ Existing file not available: ${err.message}`
-      );
-    }
+    /*
+     * -------------------------------------------------------------------------
+     * UPLOAD NEW FRAGMENTS
+     * -------------------------------------------------------------------------
+     */
 
     let offset = 0;
     let fragmentIndex = 0;
@@ -874,32 +1014,22 @@ async function processPaper(
       `✅ Uploaded ${newFragmentCount} new fragments.`
     );
 
-    const uploadedFragmentCount =
-      await getFragmentCount(
-        viewNo,
-        title
-      );
+    /*
+     * -------------------------------------------------------------------------
+     * REMOVE STALE B2 FRAGMENTS
+     * -------------------------------------------------------------------------
+     *
+     * We use the previous KV count to determine whether there may be stale
+     * fragments. If KV did not exist, we still inspect B2 only when necessary
+     * to clean up old fragments.
+     */
 
     if (
-      uploadedFragmentCount !==
-      newFragmentCount
-    ) {
-      throw new Error(
-        `Fragment count verification failed. ` +
-        `Expected ${newFragmentCount}, got ${uploadedFragmentCount}.`
-      );
-    }
-
-    console.log(
-      `✅ New fragment count verified: ${uploadedFragmentCount}`
-    );
-
-    if (
-      oldFragmentCount >
-      newFragmentCount
+      previousKVCount !== null &&
+      previousKVCount > newFragmentCount
     ) {
       console.log(
-        `🗑️ Removing ${oldFragmentCount - newFragmentCount} stale fragment(s)...`
+        `   🗑️ Removing ${previousKVCount - newFragmentCount} stale fragment(s)...`
       );
 
       const existingFiles =
@@ -909,7 +1039,9 @@ async function processPaper(
           fileBaseName
         );
 
-      for (const file of existingFiles) {
+      for (
+        const file of existingFiles
+      ) {
         if (
           file.fragmentIndex >=
           newFragmentCount
@@ -928,29 +1060,74 @@ async function processPaper(
       }
     }
 
-    const finalFragmentCount =
-      await getFragmentCount(
-        viewNo,
-        title
+    /*
+     * -------------------------------------------------------------------------
+     * KV CHANGE TEST
+     * -------------------------------------------------------------------------
+     */
+
+    const kvChanged =
+      previousKVCount === null ||
+      previousKVCount !==
+        newFragmentCount;
+
+    if (!kvChanged) {
+      console.log(
+        `   ✅ KV count unchanged (${newFragmentCount}).`
       );
 
-    if (
-      finalFragmentCount !==
-      newFragmentCount
-    ) {
-      throw new Error(
-        `Final fragment count verification failed. ` +
-        `Expected ${newFragmentCount}, got ${finalFragmentCount}.`
+      console.log(
+        "   ⏩ Skipping KV write."
       );
+
+      console.log(
+        "   ⏩ Skipping Cloudflare cache purge."
+      );
+
+      return;
     }
 
+    /*
+     * -------------------------------------------------------------------------
+     * KV WRITE
+     * -------------------------------------------------------------------------
+     */
+
     console.log(
-      `✅ Final fragment count verified: ${finalFragmentCount}`
+      `   🔄 KV count changed: ` +
+      `${previousKVCount === null ? "missing" : previousKVCount} → ` +
+      `${newFragmentCount}`
     );
+
+    await putKVCount(
+      kvKey,
+      newFragmentCount
+    );
+
+    console.log(
+      `   ✅ KV updated: ${kvKey} = ${newFragmentCount}`
+    );
+
+    /*
+     * -------------------------------------------------------------------------
+     * CLOUDFLARE PURGE
+     * -------------------------------------------------------------------------
+     *
+     * Purge the greater of the old and new counts.
+     *
+     * This is important when a file shrinks:
+     *
+     * old = 15
+     * new = 12
+     *
+     * We purge 0–14, including stale 12–14 URLs.
+     */
 
     const purgeFragmentCount =
       Math.max(
-        oldFragmentCount,
+        previousKVCount === null
+          ? 0
+          : previousKVCount,
         newFragmentCount
       );
 
@@ -963,6 +1140,25 @@ async function processPaper(
 
     console.log(
       `☁️ Purging ${purgeUrls.length} Cloudflare URL(s)...`
+    );
+
+    /*
+     * Print the COMPLETE purge list.
+     */
+    console.log(
+      "\n----- CLOUDFLARE PURGE URL LIST -----"
+    );
+
+    for (
+      const purgeUrl of purgeUrls
+    ) {
+      console.log(
+        purgeUrl
+      );
+    }
+
+    console.log(
+      "----- END CLOUDFLARE PURGE URL LIST -----\n"
     );
 
     await purgeCloudflareUrls(
@@ -986,13 +1182,12 @@ async function processPaper(
 // Main
 // -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-// Main
-// -----------------------------------------------------------------------------
-
 async function main() {
-
-  if (!fs.existsSync(ATOM_FILE)) {
+  if (
+    !fs.existsSync(
+      ATOM_FILE
+    )
+  ) {
     console.error(
       `❌ Execution Aborted: Target source feed cannot be found at path: ${ATOM_FILE}`
     );
@@ -1001,7 +1196,6 @@ async function main() {
   }
 
   try {
-
     console.log(
       "📖 Loading and parsing database records from source: " +
       `${ATOM_FILE}...`
@@ -1013,34 +1207,49 @@ async function main() {
         "utf8"
       );
 
-	console.log(
-	  `📄 feed.atom size: ${feedXmlContent.length} characters`
-	);
+    console.log(
+      `📄 feed.atom size: ${feedXmlContent.length} characters`
+    );
 
-	console.log(
-	  `🔍 Entry tags found: ${
-		(feedXmlContent.match(/<(?:(?:\w+):)?entry\b/gi) || []).length
-	  }`
-	);
+    console.log(
+      `🔍 Entry tags found: ${
+        (
+          feedXmlContent.match(
+            /<(?:(?:\w+):)?entry\b/gi
+          ) || []
+        ).length
+      }`
+    );
 
-	console.log(
-	  `🔍 Title tags found: ${
-		(feedXmlContent.match(/<(?:(?:\w+):)?title\b/gi) || []).length
-	  }`
-	);
+    console.log(
+      `🔍 Title tags found: ${
+        (
+          feedXmlContent.match(
+            /<(?:(?:\w+):)?title\b/gi
+          ) || []
+        ).length
+      }`
+    );
 
-	console.log(
-	  `🔍 Collection tags found: ${
-		(feedXmlContent.match(/<(?:(?:\w+):)?collection\b/gi) || []).length
-	  }`
-	);
+    console.log(
+      `🔍 Collection tags found: ${
+        (
+          feedXmlContent.match(
+            /<(?:(?:\w+):)?collection\b/gi
+          ) || []
+        ).length
+      }`
+    );
 
-	console.log(
-	  `🔍 Updated tags found: ${
-		(feedXmlContent.match(/<(?:(?:\w+):)?updated\b/gi) || []).length
-	  }`
-	);
-
+    console.log(
+      `🔍 Updated tags found: ${
+        (
+          feedXmlContent.match(
+            /<(?:(?:\w+):)?updated\b/gi
+          ) || []
+        ).length
+      }`
+    );
 
     const {
       entries,
@@ -1050,7 +1259,9 @@ async function main() {
         feedXmlContent
       );
 
-    if (entries.length === 0) {
+    if (
+      entries.length === 0
+    ) {
       console.warn(
         "⚠️ Warning: No valid items extracted out of the feed file tags."
       );
@@ -1110,15 +1321,16 @@ async function main() {
       `📝 Discovered ${entries.length} active records inside feed. Beginning processing timelines...`
     );
 
-    for (const paper of entries) {
+    for (
+      const paper of entries
+    ) {
       console.log(
         `\n🔎 Evaluating entry timeline status for: "${paper.title}"`
       );
 
       if (
-        globalFeedUpdatedTime &&
         paper.updatedTime ===
-          globalFeedUpdatedTime
+        globalFeedUpdatedTime
       ) {
         console.log(
           "🚀 Match! Item has a current batch timestamp. Launching execution pipeline..."
@@ -1150,5 +1362,5 @@ async function main() {
   }
 }
 
-main();
 
+main();
