@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-09T12:22:36Z</updated>
+  <updated>2026-10-09T12:23:16Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Girraween 2023 w. sol</title>
@@ -1632,5 +1632,15 @@
     <title>Manly 2024 w. sol</title>
     <collection>5338</collection>
     <updated>2026-10-09T12:22:36Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Normanhurst Boys 2024 w. sol</title>
+    <collection>5328</collection>
+    <updated>2026-10-09T12:22:43Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2024 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-09T12:23:16Z</updated>
   </entry>
 </feed>
