@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-09T12:22:30Z</updated>
+  <updated>2026-10-09T12:22:36Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Girraween 2023 w. sol</title>
@@ -1627,5 +1627,10 @@
     <title>Knox 2024 w. sol</title>
     <collection>5348</collection>
     <updated>2026-10-09T12:22:30Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Manly 2024 w. sol</title>
+    <collection>5338</collection>
+    <updated>2026-10-09T12:22:36Z</updated>
   </entry>
 </feed>
