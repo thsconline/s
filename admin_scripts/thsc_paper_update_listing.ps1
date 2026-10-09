@@ -3,69 +3,194 @@ Param (
     [Parameter(Mandatory=$true)]
     $PDFTemplateCode,
 
-    [switch]$StageOnly
+    [switch]$StageOnly,
+
+    [DateTime]$LastRunUtc,
+
+    [DateTime]$RunStartedUtc,
+
+    [switch]$Initial,
+
+    [int]$Year
 )
+
+
+
 
 $host.ui.RawUI.WindowTitle = "thsconline admin script $PDFTemplateCode"
 Set-Location $PSScriptRoot
 $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
 
+function Set-ConsoleProgress {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$Activity,
+
+        [Parameter(Mandatory = $true)]
+        [int]$Current,
+
+        [Parameter(Mandatory = $true)]
+        [int]$Total
+    )
+
+    $Percent = if ($Total -le 0) {
+        100
+    }
+    else {
+        [math]::Min(100, [math]::Floor(($Current / $Total) * 100))
+    }
+
+    $Width = 30
+    $Filled = [math]::Floor(($Percent / 100) * $Width)
+    $Empty = $Width - $Filled
+
+    Write-Host -NoNewline "`r$Activity "
+
+    Write-Host -NoNewline (" " * $Filled) `
+        -BackgroundColor Green
+
+    Write-Host -NoNewline (" " * $Empty) `
+        -BackgroundColor DarkGray
+
+    Write-Host -NoNewline (" {0,3}% ({1}/{2})" -f $Percent, $Current, $Total)
+}
+
+function Clear-ConsoleProgress {
+    Write-Host -NoNewline ("`r" + (" " * [Console]::WindowWidth) + "`r")
+}
+
+
+$HistoryFile = Join-Path (Split-Path $PSScriptRoot -Parent) "feed.history.json"
+
+
+
+if ($null -eq $RunStartedUtc) {
+    $RunStartedUtc = (Get-Date).ToUniversalTime()
+}
+
+if ($null -eq $LastRunUtc) {
+    if (Test-Path $HistoryFile) {
+        try {
+            $History = Get-Content -Raw -Encoding UTF8 $HistoryFile |
+                ConvertFrom-Json
+
+            if ($History.LastRunUtc) {
+                $LastRunUtc = [DateTime]::Parse(
+                    $History.LastRunUtc
+                ).ToUniversalTime()
+            }
+        }
+        catch {
+            Write-Warning `
+                "Could not read $HistoryFile. Treating this as the first incremental run."
+        }
+    }
+}
+
+# Use the earliest representable timestamp for a first run.
+$EffectiveLastRunUtc = [DateTime]::MinValue
+
+if ($null -eq $LastRunUtc -or $LastRunUtc -eq [DateTime]::MinValue) {
+    $LastRunUtc = [DateTime]::MinValue
+}
+else {
+    # Small overlap protects against filesystem timestamp precision issues.
+    $EffectiveLastRunUtc = $LastRunUtc.AddMinutes(-2)
+}
 . .\ForEach-Parallel.ps1
 
 if ($PDFTemplateCode -eq "AllAvailable") {
     $host.UI.RawUI.WindowTitle = "thsconline admin script AllAvailable"
-    $TemplateGroups = Get-ChildItem ".\config_files\*.json" |
-        ForEach-Object { $_.BaseName } |
-        Group-Object {
-            if ($_.Length -ge 3) { $_.Substring(0,3) } else { $_ }
-        }
+
+    $Templates = Get-ChildItem ".\config_files\*.json" |
+        ForEach-Object { $_.BaseName }
 
     Write-Host -ForegroundColor Cyan "Staging all templates..."
 
-    $StagedUpdates = @(
-        $TemplateGroups | ForEach-Parallel -MaxRunspaces 6 -ArgumentList $PSScriptRoot -ScriptBlock {
-            $group = $_.Group
-            $scriptRoot = $0
-            $ProgressPreference = "SilentlyContinue"
+    # Capture one consistent time and history timestamp for the whole batch.
+    $AllRunStartedUtc = (Get-Date).ToUniversalTime()
+    $AllLastRunUtc = [DateTime]::MinValue
 
-            foreach ($template in $group) {
-                Write-Host -ForegroundColor Magenta "Staging template $template"
-                & (Join-Path $scriptRoot "thsc_paper_update_listing.ps1") `
-                    -PDFTemplateCode $template `
-                    -StageOnly
+    if (Test-Path $HistoryFile) {
+        try {
+            $History = Get-Content -Raw -Encoding UTF8 $HistoryFile |
+                ConvertFrom-Json
+
+            if ($History.LastRunUtc) {
+                $AllLastRunUtc = [DateTime]::Parse(
+                    $History.LastRunUtc
+                ).ToUniversalTime()
             }
         }
+        catch {
+            Write-Warning "Could not read $HistoryFile. Treating this as the first incremental run."
+        }
+    }
+
+    $StagedUpdates = @(
+        $Templates | ForEach-Parallel `
+            -MaxRunspaces 6 `
+            -ArgumentList $PSScriptRoot, $AllLastRunUtc, $AllRunStartedUtc `
+            -ScriptBlock {
+                $scriptRoot = $0
+                $lastRunUtc = [DateTime]$1
+                $runStartedUtc = [DateTime]$2
+                $template = $_
+
+                Write-Host -ForegroundColor Magenta "Staging template $template"
+
+                $childParams = @{
+                    PDFTemplateCode = $template
+                    StageOnly       = $true
+                    LastRunUtc      = $lastRunUtc
+                    RunStartedUtc   = $runStartedUtc
+                }
+
+                & (Join-Path $scriptRoot "thsc_paper_update_listing.ps1") @childParams
+            }
     )
 
     Write-Host ""
     Write-Host -ForegroundColor Cyan "Committing staged changes..."
 
-    foreach ($Update in $StagedUpdates) {
-        if ($null -eq $Update) { continue }
+	$CommitTasks = @(
+		foreach ($Update in $StagedUpdates) {
+			if ($null -eq $Update) { continue }
 
-        if ($Update.PapersFilePath -and $null -ne $Update.PapersFileContent) {
-            Set-Content -Encoding UTF8 `
-                -Path $Update.PapersFilePath `
-                -Value $Update.PapersFileContent
+			if ($Update.PapersFilePath -and $null -ne $Update.PapersFileContent) {
+				[PSCustomObject]@{
+					Path    = $Update.PapersFilePath
+					Content = $Update.PapersFileContent
+				}
+			}
 
-            Write-Host -ForegroundColor Green `
-                "Updated $($Update.PapersFilePath)"
-        }
-    }
+			if ($Update.IndexFilePath -and $null -ne $Update.IndexFileContent) {
+				[PSCustomObject]@{
+					Path    = $Update.IndexFilePath
+					Content = $Update.IndexFileContent
+				}
+			}
+		}
+	)
 
-    foreach ($Update in $StagedUpdates) {
-        if ($null -eq $Update) { continue }
+	$CommitTotal = $CommitTasks.Count
+	$CommitCurrent = 0
 
-        if ($Update.IndexFilePath -and $null -ne $Update.IndexFileContent) {
-            Set-Content -Encoding UTF8 `
-                -Path $Update.IndexFilePath `
-                -Value $Update.IndexFileContent
+	foreach ($Task in $CommitTasks) {
+		$CommitCurrent++
 
-            Write-Host -ForegroundColor Green `
-                "Updated $($Update.IndexFilePath)"
-        }
-    }
+		Set-ConsoleProgress `
+			-Activity "Committing files" `
+			-Current $CommitCurrent `
+			-Total $CommitTotal
+
+		Set-Content -Encoding UTF8 `
+			-Path $Task.Path `
+			-Value $Task.Content
+	}
+
+	Clear-ConsoleProgress	
 
     $FeedFile = Join-Path (Split-Path $PSScriptRoot -Parent) "feed.atom"
 
@@ -81,70 +206,86 @@ if ($PDFTemplateCode -eq "AllAvailable") {
     }
 
     $FeedChanged = $false
+	
+	$AllFeedUpdates = @(
+		foreach ($Update in $StagedUpdates) {
+			if ($null -eq $Update) { continue }
 
-    foreach ($Update in $StagedUpdates) {
-        if ($null -eq $Update) { continue }
+			foreach ($FeedUpdate in @($Update.FeedUpdates)) {
+				if ($null -ne $FeedUpdate) {
+					$FeedUpdate
+				}
+			}
+		}
+	)
 
-        foreach ($FeedUpdate in @($Update.FeedUpdates)) {
-            if ($null -eq $FeedUpdate) { continue }
+	$FeedTotal = $AllFeedUpdates.Count
+	$FeedCurrent = 0
 
-            $PKeyTitle = ([string]$FeedUpdate.Title).Trim()
-            $PKeyCollection = ([string]$FeedUpdate.Collection).Trim()
+	foreach ($FeedUpdate in $AllFeedUpdates) {
+		$FeedCurrent++
 
-            $ExistingEntry = @(
-                $Feed.entry |
-                    Where-Object {
-                        ([string]$_.title).Trim() -eq $PKeyTitle -and
-                        ([string]$_.collection).Trim() -eq $PKeyCollection
-                    }
-            ) | Select-Object -First 1
+		Set-ConsoleProgress `
+			-Activity "Updating feed" `
+			-Current $FeedCurrent `
+			-Total $FeedTotal
 
-            $FileUpdated = [DateTime]$FeedUpdate.Updated
+		$PKeyTitle = ([string]$FeedUpdate.Title).Trim()
+		$PKeyCollection = ([string]$FeedUpdate.Collection).Trim()
 
-            if ($null -eq $ExistingEntry) {
-                $Entry = $FeedXml.CreateElement("entry")
+		$ExistingEntry = @(
+			$Feed.entry |
+				Where-Object {
+					([string]$_.title).Trim() -eq $PKeyTitle -and
+					([string]$_.collection).Trim() -eq $PKeyCollection
+				}
+		) | Select-Object -First 1
 
-                $Title = $FeedXml.CreateElement("title")
-                $Title.InnerText = $PKeyTitle
+		$FileUpdated = [DateTime]$FeedUpdate.FileUpdated
 
-                $Collection = $FeedXml.CreateElement("collection")
-                $Collection.InnerText = $PKeyCollection
+		if ($null -eq $ExistingEntry) {
+			$Entry = $FeedXml.CreateElement("entry")
 
-                $Updated = $FeedXml.CreateElement("updated")
-                $Updated.InnerText = $FileUpdated.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+			$Title = $FeedXml.CreateElement("title")
+			$Title.InnerText = $PKeyTitle
 
-                $Entry.AppendChild($Title) | Out-Null
-                $Entry.AppendChild($Collection) | Out-Null
-                $Entry.AppendChild($Updated) | Out-Null
-                $Feed.AppendChild($Entry) | Out-Null
+			$Collection = $FeedXml.CreateElement("collection")
+			$Collection.InnerText = $PKeyCollection
 
-                $FeedChanged = $true
+			$Updated = $FeedXml.CreateElement("updated")
+			$Updated.InnerText = $FileUpdated.ToUniversalTime().ToString(
+				"yyyy-MM-ddTHH:mm:ssZ"
+			)
 
-                Write-Host -ForegroundColor Green `
-                    "Added feed entry: $PKeyTitle [$PKeyCollection]"
-            }
-            else {
-                try {
-                    $ExistingUpdated = [DateTime]::Parse(
-                        [string]$ExistingEntry.updated
-                    ).ToUniversalTime()
-                }
-                catch {
-                    $ExistingUpdated = [DateTime]::MinValue.ToUniversalTime()
-                }
+			$Entry.AppendChild($Title) | Out-Null
+			$Entry.AppendChild($Collection) | Out-Null
+			$Entry.AppendChild($Updated) | Out-Null
+			$Feed.AppendChild($Entry) | Out-Null
 
-                if ($FileUpdated.ToUniversalTime() -gt $ExistingUpdated) {
-                    $ExistingEntry.updated =
-                        $FileUpdated.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+			$FeedChanged = $true
+		}
+		else {
+			try {
+				$ExistingUpdated = [DateTime]::Parse(
+					[string]$ExistingEntry.updated
+				).ToUniversalTime()
+			}
+			catch {
+				$ExistingUpdated = [DateTime]::MinValue.ToUniversalTime()
+			}
 
-                    $FeedChanged = $true
+			if ($FileUpdated.ToUniversalTime() -gt $ExistingUpdated) {
+				$ExistingEntry.updated =
+					$FileUpdated.ToUniversalTime().ToString(
+						"yyyy-MM-ddTHH:mm:ssZ"
+					)
 
-                    Write-Host -ForegroundColor Yellow `
-                        "Updated feed entry: $PKeyTitle [$PKeyCollection]"
-                }
-            }
-        }
-    }
+				$FeedChanged = $true
+			}
+		}
+	}
+
+	Clear-ConsoleProgress
 
     if ($FeedChanged) {
         $Feed.updated = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
@@ -168,9 +309,51 @@ if ($PDFTemplateCode -eq "AllAvailable") {
         Write-Host "feed.atom unchanged."
     }
 
-    Write-Host ""
-    Write-Host -ForegroundColor Green "All templates staged and committed."
-    exit
+	@{
+		LastRunUtc = $AllRunStartedUtc.ToString("o")
+	} |
+		ConvertTo-Json |
+		Set-Content -Encoding UTF8 -Path $HistoryFile
+
+	Write-Host -ForegroundColor Green `
+		"feed.history.json updated to $AllRunStartedUtc"
+
+	if ($Initial) {
+		Write-Host ""
+		Write-Host -ForegroundColor Cyan `
+			"Initial upload: culling feed.atom to year $Year..."
+
+		$FeedStagingScript = Join-Path $PSScriptRoot "thsc_stage_feed.ps1"
+
+		try {
+			& $FeedStagingScript -Year $Year -ErrorAction Stop
+
+			if ($?) {
+				Write-Host -ForegroundColor Green `
+					"Initial feed setup for year $Year complete."
+			}
+		}
+		catch {
+			throw "Initial feed year-culling script failed: $($_.Exception.Message)"
+		}
+
+		Write-Host -ForegroundColor Green `
+			"Initial feed setup for year $Year complete."
+	}
+
+	@{
+		LastRunUtc = $AllRunStartedUtc.ToString("o")
+	} |
+		ConvertTo-Json |
+		Set-Content -Encoding UTF8 -Path $HistoryFile
+
+	Write-Host -ForegroundColor Green `
+		"feed.history.json updated to $AllRunStartedUtc"
+
+	Write-Host ""
+	Write-Host -ForegroundColor Green "All templates staged and committed."
+	exit
+
 }
 
 try {
@@ -385,18 +568,54 @@ $FeedPapers = $Schools | ForEach-Object {
 }
 
 foreach ($File in $FeedPapers) {
-    $DisplayTitle = (
-        $File.Name `
-            -replace [regex]::Escape($WithSolutionsSuffix), "w. sol" `
-            -replace [regex]::Escape($WithoutSolutionsSuffix), ""
-    ).Trim()
+
+    $FileUpdatedUtc = $File.LastWriteTimeUtc
+
+    $ChangedSinceLastRun =
+        $null -eq $EffectiveLastRunUtc -or
+        (
+            $FileUpdatedUtc -gt $EffectiveLastRunUtc -and
+            $FileUpdatedUtc -le $RunStartedUtc
+        )
+
+    if (!$ChangedSinceLastRun) {
+        continue
+    }
+
+	$DisplayTitle = (
+		$File.Name `
+			-replace [regex]::Escape($WithSolutionsSuffix), "w. sol" `
+			-replace [regex]::Escape($WithoutSolutionsSuffix), ""
+	).Trim()
+
+	switch ($PDFTemplateCode) {
+		"2718" {
+			$DisplayTitle = "$DisplayTitle P1"
+		}
+
+		"2727" {
+			$DisplayTitle = "$DisplayTitle P2 (Std.)"
+		}
+
+		"2728" {
+			$DisplayTitle = "$DisplayTitle P2 (Adv.)"
+		}
+	}
+
 
     $FeedUpdates += [PSCustomObject]@{
         Title = $DisplayTitle
         Collection = ([string]$PDFTemplateCode).Trim()
-        Updated = $File.LastWriteTimeUtc
+        FileUpdated = $FileUpdatedUtc
     }
 }
+
+$BatchUpdated = $null
+
+if ($FeedUpdates.Count -gt 0) {
+    $BatchUpdated = (Get-Date).ToUniversalTime()
+}
+
 
 if ($StageOnly) {
     [PSCustomObject]@{
@@ -445,7 +664,7 @@ foreach ($FeedUpdate in $FeedUpdates) {
         $Collection = $FeedXml.CreateElement("collection")
         $Collection.InnerText = $PKeyCollection
         $Updated = $FeedXml.CreateElement("updated")
-        $Updated.InnerText = ([DateTime]$FeedUpdate.Updated).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+		$Updated.InnerText = $BatchUpdated.ToString("yyyy-MM-ddTHH:mm:ssZ")
 
         $Entry.AppendChild($Title) | Out-Null
         $Entry.AppendChild($Collection) | Out-Null
@@ -455,22 +674,16 @@ foreach ($FeedUpdate in $FeedUpdates) {
         $FeedChanged = $true
     }
     else {
-        try {
-            $ExistingUpdated = [DateTime]::Parse([string]$ExistingEntry.updated).ToUniversalTime()
-        }
-        catch {
-            $ExistingUpdated = [DateTime]::MinValue.ToUniversalTime()
-        }
+		$ExistingEntry.updated =
+			$BatchUpdated.ToString("yyyy-MM-ddTHH:mm:ssZ")
 
-        if ([DateTime]$FeedUpdate.Updated -gt $ExistingUpdated) {
-            $ExistingEntry.updated = ([DateTime]$FeedUpdate.Updated).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
-            $FeedChanged = $true
-        }
-    }
+		$FeedChanged = $true
+	}
+
 }
 
 if ($FeedChanged) {
-    $Feed.updated = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+    $Feed.updated = $BatchUpdated.ToString("yyyy-MM-ddTHH:mm:ssZ")
     $Settings = New-Object System.Xml.XmlWriterSettings
     $Settings.Encoding = New-Object System.Text.UTF8Encoding($false)
     $Settings.Indent = $true
@@ -486,3 +699,15 @@ if ($FeedChanged) {
 else {
     Write-Host "feed.atom unchanged."
 }
+
+if ($FeedChanged) {
+    @{
+        LastRunUtc = $RunStartedUtc.ToString("o")
+    } |
+        ConvertTo-Json |
+        Set-Content -Encoding UTF8 -Path $HistoryFile
+
+    Write-Host -ForegroundColor Green `
+        "feed.history.json updated to $RunStartedUtc"
+}
+
