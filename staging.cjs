@@ -762,7 +762,7 @@ async function processPaper(
    * 5328-2025-acme-trials
    */
   const kvKey =
-    `${fileBaseName}.count`;
+    `${fileBaseName}`;
 
   console.log(
     `🔑 KV key: ${kvKey}`
