@@ -151,7 +151,13 @@
 		const [_endpoint] = useState(writeworker);
 
 		const viewno = (_viewno || "").replace(/[^A-Za-z0-9]/g, '');
-		const titlex = (_titlex || "").replace(/&/g, '_').replace(/[^A-Za-z0-9._\- ]/g, '');
+		const titlex = (_titlex || "")
+		.replace(/&/g, '_')
+		.replace(/\(Std\.\)/g, '__STD__')
+		.replace(/\(Adv\.\)/g, '__ADV__')
+		.replace(/[^A-Za-z0-9._\- ]/g, '')
+		.replace(/__STD__/g, '(Std.)')
+		.replace(/__ADV__/g, '(Adv.)');
 		const endpoint = (_endpoint || "").replace(/[^A-Za-z0-9_\-]/g, '');
 
 		useEffect(() => {
