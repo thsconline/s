@@ -803,6 +803,7 @@ body.dark-mode .homepage-footer a:hover {
 		margin: 0 auto;
 		display: grid;		
 		gap: 14px;
+		display: none !important; /* hide notice in CF pages */
 	}
     .notice {
 	  margin-top: 30px;	  
@@ -836,3 +837,5 @@ body.dark-mode .homepage-footer a:hover {
     .notice p {
       margin: 0;
     }
+	
+	
