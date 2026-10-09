@@ -1,8 +1,7 @@
 param(
     [Parameter(Mandatory = $true)]
     [string]$PDFTemplateCode,
-
-    [int]$PaperId = 5348,
+    [Parameter(Mandatory = $true)]
     [int]$Year = 2025,
     [string]$TitleFilter = "",
 
@@ -20,7 +19,7 @@ $Content = Get-Content $PapersFile -Raw -Encoding UTF8
 
 # Match the paper ID and year using regex only.
 $Pattern = '<a\s+href="#v"\s+onClick="pdf\(this,\s*' +
-    [regex]::Escape([string]$PaperId) +
+    [regex]::Escape([string]$PDFTemplateCode) +
     '\)"[^>]*>(?<titlex>[^<]*' +
     [regex]::Escape([string]$Year) +
     '[^<]*)</a>'
@@ -46,7 +45,7 @@ foreach ($Match in $AnchorMatches) {
     }
 
     $EncodedTitle = [uri]::EscapeDataString($titlex)
-    $Uri = "https://www.thsconline.net/api/v1/getmetadata/$PaperId/$EncodedTitle"
+    $Uri = "https://www.thsconline.net/api/v1/getmetadata/$PDFTemplateCode/$EncodedTitle"
 
     try {
         $Response = Invoke-RestMethod `
