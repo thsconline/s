@@ -1,0 +1,157 @@
+﻿// AUTO-GENERATED OUTPUT
+// Source: yr12\Business Studies\trialpapers.html
+
+export const title = "THSC Online - HSC Business Studies Trial Papers";
+export const canonical = "https://www.thsconline.net/s/yr12/Business%20Studies/trialpapers.html";
+
+export default function Page() {
+    return (
+        <>
+<div id="navigation">
+<ul>
+<li className="element"><a href="/s/">THSC Home</a></li>
+<li className="element reducible"><a href="/s/yr9/">Year 9</a></li>
+<li className="element"><a href="/s/yr10/">Year 10</a></li>
+<li className="element"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li className="current"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li className="element reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline →</a>&#160;
+<a href="/s/yr12/">Year 12 - HSC →</a>&#160;
+<a href="/s/yr12/Business Studies/">Business Studies →</a>&#160;
+<a className="current" href="/s/yr12/Business Studies/trialpapers.html">Past Trials →</a>&#160;
+<a className="reverse" href="#v" onClick={toggleSearchBar}>&#160;&#160;🔎︎ [<i>Search</i>]</a>
+<a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
+</div></div>  
+<div id="content-all">
+<h4>HSC Business Studies Trial Papers</h4>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&#160;</summary>
+<span><img src="/s/images/icon_home.png" />&#160;&#160;
+<a href="/s/">Home Page</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="../">Back to Year 12 - HSC</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="index.html">Up One Folder</a></span><br /><br />
+</details>
+<table className="listing" id="papers-by-school"><tbody>
+<tr className="search" id="search-row" style={{ display: 'none' }}><td>
+<input type="text" id="search-bar" onKeyUp={filterTable} placeholder="Search this page..." />
+<label><input type="checkbox" id="search-exact" onClick={filterTable} /> Show exact matches only</label>&#160;&#160;
+<label><input type="checkbox" id="search-wsol-only" onClick={filterTable} /> Show only papers that have solutions</label>
+<br />
+<span id="search-message"></span>
+</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
+<tr className="content"><td>
+<ul>
+<li>Sample answers or marking guidelines included with most papers.</li>
+<li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
+</ul></td></tr>
+
+<tr><td><details open><summary>Abbotsleigh</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Abbotsleigh 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Abbotsleigh 2016</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Barker</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Barker 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Barker 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Barker 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Barker 2023</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Cherrybrook Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Cherrybrook Tech 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Cherrybrook Tech 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Cherrybrook Tech 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Cherrybrook Tech 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Cherrybrook Tech 2021</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Hills Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Hills Grammar 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Hills Grammar 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Hills Grammar 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Hills Grammar 2015 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Killara</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Killara 2022</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Knox</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Knox 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Knox 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Knox 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Knox 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Knox 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Knox 2022 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Newington</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Newington 2020 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Penrith</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Penrith 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Penrith 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Penrith 2021 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Pymble</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Pymble 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Pymble 2013</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Pymble 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Pymble 2015 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Ravenswood</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Ravenswood 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Ravenswood 2014</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Ravenswood 2015</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Riverview</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Riverview 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Riverview 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Riverview 2017</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Roseville</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Roseville 2012 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Scots</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Scots 2012</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Shore</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Shore 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Shore 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Shore 2013</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Shore 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Shore 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Shore 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Shore 2025 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Sydney Boys 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Sydney Boys 2014 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Sydney Tech 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Sydney Tech 2008</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Sydney Tech 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1578)}>Sydney Tech 2013 w. sol</a>
+</span></details></td></tr>
+
+</tbody></table>
+</div>
+        </>
+    );
+}

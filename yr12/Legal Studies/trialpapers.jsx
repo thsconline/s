@@ -1,0 +1,137 @@
+﻿// AUTO-GENERATED OUTPUT
+// Source: yr12\Legal Studies\trialpapers.html
+
+export const title = "THSC Online - HSC Legal Studies Trial Papers";
+export const canonical = "https://www.thsconline.net/s/yr12/Legal%20Studies/trialpapers.html";
+
+export default function Page() {
+    return (
+        <>
+<div id="navigation">
+<ul>
+<li className="element"><a href="/s/">THSC Home</a></li>
+<li className="element reducible"><a href="/s/yr9/">Year 9</a></li>
+<li className="element"><a href="/s/yr10/">Year 10</a></li>
+<li className="element"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li className="current"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li className="element reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline →</a>&#160;
+<a href="/s/yr12/">Year 12 - HSC →</a>&#160;
+<a href="/s/yr12/Legal Studies/">Legal Studies →</a>&#160;
+<a className="current" href="/s/yr12/Legal Studies/trialpapers.html">Past Trials →</a>&#160;
+<a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
+</div></div>  
+<div id="content-all">
+<h4>HSC Legal Studies Trial Papers</h4>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&#160;</summary>
+<span><img src="/s/images/icon_home.png" />&#160;&#160;
+<a href="/s/">Home Page</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="../">Back to Year 12 - HSC</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="index.html">Up One Folder</a></span><br />
+<span><img src="/s/images/icon_search.png" />&#160;&#160;
+<a href="#v" onClick={(e) => { toggleSearchBar(); e.currentTarget.closest('details').open = false; }}>Search</a></span><br /><br />
+</details>
+<table className="listing" id="papers-by-school"><tbody>
+<tr className="search" id="search-row" style={{ display: 'none' }}><td>
+<input type="text" id="search-bar" onKeyUp={filterTable} placeholder="Search this page..." />
+<label><input type="checkbox" id="search-exact" onClick={filterTable} /> Show exact matches only</label>&#160;&#160;
+<label><input type="checkbox" id="search-wsol-only" onClick={filterTable} /> Show only papers that have solutions</label>
+<br />
+<span id="search-message"></span>
+</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Some materials listed are from old syllabus prescriptions. <span className="reducible"><a href="trialpapers.html?filter=new-syllabus">Show only current syllabus materials</a></span></td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
+<tr className="content"><td>
+<ul>
+<li>Sample answers or marking guidelines included with most papers.</li>
+<li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
+</ul></td></tr>
+
+<tr><td><details open><summary>Barker</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Barker 2005</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Barker 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Barker 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Barker 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Barker 2019</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Barker 2022</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Barker 2024</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Baulkham Hills</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2013</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2017</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2018</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2019</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Baulkham Hills 2025 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Cranbrook</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Cranbrook 2011</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Cranbrook 2012</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Cranbrook 2013</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Fort St</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Fort St 2022</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Fort St 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Fort St 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Hurlstone</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Hurlstone 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Hurlstone 2019</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Knox</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Knox 2012</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Knox 2016</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Knox 2017</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Knox 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Knox 2019</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Knox 2022</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Knox 2024</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Pymble</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Pymble 2011</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Pymble 2012</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Pymble 2014</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Pymble 2015</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Pymble 2017</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Pymble 2018</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Pymble 2022</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Riverview</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Riverview 2024</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Roseville</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Roseville 2015</a>
+</span></details></td></tr>
+<tr><td><details open><summary>St Catherines</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>St Catherines 2014 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5028)}>Sydney Tech 2021</a>
+</span></details></td></tr>
+
+</tbody></table>
+</div>
+        </>
+    );
+}

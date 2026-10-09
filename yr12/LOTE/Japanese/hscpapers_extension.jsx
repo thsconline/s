@@ -1,0 +1,152 @@
+﻿// AUTO-GENERATED OUTPUT
+// Source: yr12\LOTE\Japanese\hscpapers_extension.html
+
+export const title = "THSC Online - HSC Japanese Extension Papers";
+export const canonical = "https://www.thsconline.net/s/yr12/LOTE/Japanese/hscpapers_extension.html";
+
+export default function Page() {
+    return (
+        <>
+<div id="navigation">
+<ul>
+<li className="element"><a href="/s/">THSC Home</a></li>
+<li className="element reducible"><a href="/s/yr9/">Year 9</a></li>
+<li className="element"><a href="/s/yr10/">Year 10</a></li>
+<li className="element"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li className="current"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li className="element reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline →</a>&#160;
+<a href="/s/yr12/">Year 12 - HSC →</a>&#160;
+<a href="/s/yr12/LOTE/">Languages →</a>&#160;
+<a href="/s/yr12/LOTE/Japanese/">Japanese Extension →</a>&#160;
+<a className="current" href="/s/yr12/Japanese/hscpapers_extension.html">Past HSC →</a>&#160;
+<a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
+</div></div>
+<div id="content-all">
+<h4>HSC Japanese Extension Papers</h4>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&#160;</summary>
+<span><img src="/s/images/icon_home.png" />&#160;&#160;
+<a href="/s/">Home Page</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="../">Back to Year 12 - HSC</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="index.html">Up One Folder</a></span><br /><br />
+</details>
+<table className="listing" id="papers-by-school"><tbody>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
+<tr className="content"><td>
+<ul>
+<li>Sample answers or marking guidelines included with most papers.</li>
+<li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
+</ul></td></tr>
+<tr><td>2001<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2001 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2001 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2001 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2002<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2002 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2002 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2002 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2003<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2003 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2003 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2003 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2004<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2004 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2004 Marking Guidelines</a><br />
+</span></td></tr>
+<tr><td>2005<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2005 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2005 Marking Guidelines</a><br />
+</span></td></tr>
+<tr><td>2006<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2006 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2006 Marking Guidelines</a><br />
+</span></td></tr>
+<tr><td>2007<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2007 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2007 Marking Guidelines</a><br />
+</span></td></tr>
+<tr><td>2008<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2008 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2008 Marking Guidelines</a><br />
+</span></td></tr>
+<tr><td>2009<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2009 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2009 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2009 Sample Answers</a><br />
+</span></td></tr>
+<tr><td>2010<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2010 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2010 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2010 Sample Answers</a><br />
+</span></td></tr>
+<tr><td>2011<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2011 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2011 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2011 Sample Answers</a><br />
+</span></td></tr>
+<tr><td>2012<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2012 HSC</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2012 Marking Guidelines</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2012 Sample Answers</a><br />
+</span></td></tr>
+<tr><td>2013<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2013 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2013 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2013 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2014<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2014 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2014 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2014 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2015<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2015 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2015 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2015 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2016<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2016 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2016 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2016 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2017<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2017 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2017 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2017 Marking Guidelines</a>
+</span></td></tr>
+<tr><td>2018<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2018 HSC (Written Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2018 HSC (Oral Exam)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 4630)}>2018 Marking Guidelines</a>
+</span></td></tr>
+</tbody></table>
+</div>
+        </>
+    );
+}

@@ -1,0 +1,57 @@
+﻿// AUTO-GENERATED OUTPUT
+// Source: yr12\Maths\Competitions\cp_balkan.html
+
+export const title = "THSC Online - Balkan Mathematical Olympiad";
+export const canonical = "https://www.thsconline.net/s/yr12/Maths/Competitions/cp_balkan.html";
+
+export default function Page() {
+    return (
+        <>
+<div id="navigation">
+<ul>
+<li className="element"><a href="/s/">THSC Home</a></li>
+<li className="element reducible"><a href="/s/yr9/">Year 9</a></li>
+<li className="element"><a href="/s/yr10/">Year 10</a></li>
+<li className="element"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li className="current"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li className="element reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline →</a>&#160;
+<a href="/s/yr12/">Year 12 - HSC →</a>&#160;    
+<a href="/s/yr12/Maths/">Maths (Extracurricular) →</a>&#160;    
+<a href="/s/yr12/Maths/Competitions/">Competitions →</a>&#160;
+<a className="current" href="/s/yr12/Maths/Competitions/cp_balkan.html">Balkan →</a>&#160;
+<a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
+</div></div>
+<div id="content-all">
+<h4>Balkan Mathematical Olympiad</h4>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&#160;</summary>
+<span><img src="/s/images/icon_home.png" />&#160;&#160;
+<a href="/s/">Home Page</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="../">Back to Year 12 - HSC</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="index.html">Up One Folder</a></span><br /><br />
+</details>
+<table className="listing" id="papers-by-school"><tbody>
+<tr><td> <br />
+<span className="content">  
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 1984-2007</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2009</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2010</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2011</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2011 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2012</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2012 Solutions</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2013</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5405)}>Balkan 2016 w. sol</a><br />
+</span></td></tr>
+</tbody></table>
+</div>
+        </>
+    );
+}

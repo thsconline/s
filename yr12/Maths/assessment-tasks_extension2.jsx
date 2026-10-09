@@ -1,0 +1,912 @@
+﻿// AUTO-GENERATED OUTPUT
+// Source: yr12\Maths\assessment-tasks_extension2.html
+
+export const title = "THSC Online - HSC Maths Ext 2 Assessment Tasks";
+export const canonical = "https://www.thsconline.net/s/yr12/Maths/assessment-tasks_extension2.html";
+
+export default function Page() {
+    return (
+        <>
+<div id="navigation">
+<ul>
+<li className="element"><a href="/s/">THSC Home</a></li>
+<li className="element reducible"><a href="/s/yr9/">Year 9</a></li>
+<li className="element"><a href="/s/yr10/">Year 10</a></li>
+<li className="element"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li className="current"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li className="element reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline →</a>&#160;
+<a href="/s/yr12/">Year 12 - HSC →</a>&#160;
+<a href="/s/yr12/Maths/">Maths Ext 2 →</a>&#160;
+<a className="current" href="/s/yr12/Maths/assessment-tasks_extension2.html">Past Assessment Tasks →</a>&#160;
+<a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
+</div></div>  
+<div id="content-all">
+<h4>HSC Maths Ext 2 Assessment Tasks</h4>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&#160;</summary>
+<span><img src="/s/images/icon_home.png" />&#160;&#160;
+<a href="/s/">Home Page</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="../">Back to Year 12 - HSC</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="index.html">Up One Folder</a></span><br /><br />
+</details>
+<table className="listing" id="papers-by-school"><tbody>
+<tr className="content"><td>
+<ul>
+<li>Sample answers or marking guidelines included with most papers.</li>
+<li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
+<li><span style={{ color: '#0000FF' }}><b>Note: </b></span>Papers are grouped by when they were held in the calendar year.</li>
+</ul></td></tr>
+<tr><td><h5 id="half-yearly-exams">Half-Yearly Exams</h5></td></tr>
+<tr><td>Abbotsleigh<br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Abbotsleigh 1998 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Abbotsleigh 1999 w. sol</a>
+</span></td></tr>
+
+<tr><td><details open><summary>Abbotsleigh</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Abbotsleigh 1998 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Abbotsleigh 1999 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Barker</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Barker 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Barker 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Barker 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Barker 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Baulkham Hills</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2000</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2016</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Baulkham Hills 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Blue Mountains Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Blue Mountains Grammar 2009</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Blue Mountains Grammar 2010</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Cheltenham Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Cheltenham Girls 2007 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Girraween</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Girraween 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Girraween 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Girraween 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Girraween 2018 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Gosford</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Gosford 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Hurlstone</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Hurlstone 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Hurlstone 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Hurlstone 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Hurlstone 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Hurlstone 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Hurlstone 2010 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Inaburra</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Inaburra 1999 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Inaburra 2003</a>
+</span></details></td></tr>
+<tr><td><details open><summary>International Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>International Grammar 1999 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>James Ruse</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 1996</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 1997</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 1999</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2000</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>James Ruse 2018 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Kambala</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Kambala 2008 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Killara</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Kincoppal</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Kincoppal 2002 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Knox</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Knox 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Knox 2008</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Knox 2009</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Knox 2010</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Knox 2011</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Knox 2012</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Loreto Kirribilli</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Loreto Kirribilli 1999 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Loreto Kirribilli 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Masada</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Masada 1999 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Moriah</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Moriah 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Moriah 2009 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Newington</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Newington 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Newington 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Newington 2012 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Riverview</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Riverview 2004</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Riverview 2008</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Scots</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Scots 2015 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Shore</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Shore 2022</a>
+</span></details></td></tr>
+<tr><td><details open><summary>St Aloysius</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>St Aloysius 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>St Aloysius 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>St Aloysius 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>St Aloysius 2012 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>St George Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>St George Girls 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>St George Girls 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>St George Girls 2009 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 1997</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 1998</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Boys 2018 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Grammar 2018 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Trinity Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Trinity Grammar 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Trinity Grammar 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Trinity Grammar 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Trinity Grammar 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Trinity Grammar 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Trinity Grammar 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Trinity Grammar 2017 w. sol</a>
+</span></details></td></tr>
+
+<tr><td><h5 id="task-1-exams">CT1 Nov-Dec Assessments</h5></td></tr>
+<tr className="content"><td>Typically Task 1 exams held in Term 4.<br /> <span style={{ color: '#0000FF' }}><b>Note: </b></span> The year listed is that which the paper was held not the graduating HSC year</td></tr>
+<tr><td>&#160;</td></tr>
+
+<tr><td><details open><summary>Baulkham Hills</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2017</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Baulkham Hills 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Caringbah</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Caringbah 2021 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Cranbrook</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Cranbrook 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Cranbrook 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Cranbrook 2025</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Fort St</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Fort St 2002 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Girraween</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2016</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Girraween 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Gosford</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 1998 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Gosford 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Hurlstone</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2004</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2012</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2020</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Hurlstone 2024</a>
+</span></details></td></tr>
+<tr><td><details open><summary>International Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>International Grammar 1996 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>James Ruse</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 1995</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 1996 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 1997 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 1998 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 1999 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2000</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2003</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>James Ruse 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Kambala</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Kambala 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Kambala 2023</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Kambala 2025 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Killara</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2022</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Killara 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Knox</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Knox 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Knox 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Knox 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Knox 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Knox 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Knox 2014 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Loreto Kirribilli</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Loreto Kirribilli 2011 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Newington</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Newington 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Newington 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Newington 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Newington 2012 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Normanhurst Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Normanhurst Boys 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Normanhurst Boys 2021 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>North Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Boys 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>North Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>North Sydney Girls 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Pittwater House</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Pittwater House 2006</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Pymble</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Pymble 2021 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Riverview</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Riverview 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Riverview 2008 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>St George Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>St George Girls 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>St George Girls 2014</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Boys 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Boys 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Boys 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Boys 2022 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Girls 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Girls 2008</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Girls 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Girls 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Girls 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Girls 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Girls 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Grammar 2019 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Tech 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Sydney Tech 2015 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Taylors</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5341)}>Taylors 2005 w. sol</a>
+</span></details></td></tr>
+
+<tr><td><h5 id="task-2-exams">CT2 Feb-Mar Assessments</h5></td></tr>
+<tr className="content"><td>Typically Task 2 exams held in Term 1. See also the <a href="#half-yearly-exams">HY exams posted above.</a></td></tr>
+<tr><td>&#160;</td></tr>
+
+<tr><td><details open><summary>Danebank</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Danebank 2007 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Fort St</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Fort St 2002</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Fort St 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Fort St 2025 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Girraween</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Girraween 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Girraween 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Girraween 2025 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Hurlstone</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Hurlstone 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Hurlstone 2022</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Hurlstone 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Hurlstone 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Hurlstone 2025 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>James Ruse</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>James Ruse 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>James Ruse 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>James Ruse 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>James Ruse 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>James Ruse 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Killara</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Killara 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Killara 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Killara 2024</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Kings</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Kings 2020 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Manly</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Manly 2022</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Manly 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Manly 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Normanhurst Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Normanhurst Boys 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Normanhurst Boys 2022 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>North Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Boys 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Boys 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Boys 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Boys 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Boys 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Boys 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Boys 2015 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>North Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>North Sydney Girls 2017 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Scots</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Scots 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Scots 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Scots 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Scots 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Scots 2023</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Scots 2024</a>
+</span></details></td></tr>
+<tr><td><details open><summary>St Catherines</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>St Catherines 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>St Catherines 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>St Catherines 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>St Catherines 2010 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Boys 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Boys 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Boys 2022</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 1999 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2000 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5342)}>Sydney Girls 2021 w. sol</a>
+</span></details></td></tr>
+
+<tr><td><h5 id="task-3-exams">CT3 May-Jun Assessments</h5></td></tr>
+<tr className="content"><td>Typically Task 3 exams held in Term 2</td></tr>
+<tr><td>&#160;</td></tr>
+
+<tr><td><details open><summary>Barker</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Barker 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Barker 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Barker 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Baulkham Hills</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2015</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Baulkham Hills 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Caringbah</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Caringbah 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Caringbah 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Cherrybrook Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Cherrybrook Tech 2008</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Girraween</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Girraween 2001 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Girraween 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Girraween 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Girraween 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Girraween 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Girraween 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Girraween 2007 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Gosford</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Gosford 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Hurlstone</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Hurlstone 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Hurlstone 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Hurlstone 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>James Ruse</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>James Ruse 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Killara</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2008</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2013</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Killara 2024</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Knox</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Knox 2006 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Loreto Kirribilli</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Loreto Kirribilli 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Newington</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Newington 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Newington 2008</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Newington 2012 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Normanhurst Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Normanhurst Boys 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Normanhurst Boys 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Normanhurst Boys 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Normanhurst Boys 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>North Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Boys 2009 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>North Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>North Sydney Girls 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Ravenswood</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Ravenswood 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Riverview</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Riverview 2004</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Scots</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Scots 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Scots 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Scots 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Scots 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Scots 2014 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>St George Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>St George Girls 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>St George Girls 2007</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>St George Girls 2009 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 1997</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 1998</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2001 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Boys 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Girls 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Girls 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Girls 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Girls 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Grammar 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Grammar 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Grammar 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Grammar 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Grammar 2017 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2003 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5343)}>Sydney Tech 2024 w. sol</a>
+</span></details></td></tr>
+
+<tr><td><h5 id="task-4-exams">CT4 Aug-Sep Assessments</h5></td></tr>
+<tr className="content"><td>Typically Task 4 exams held in Term 3. Only applies to schools that hold trials in Term 2. </td></tr>
+<tr><td>&#160;</td></tr>
+
+<tr><td><details open><summary>North Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5344)}>North Sydney Boys 2022 w. sol</a>
+</span></details></td></tr>
+
+</tbody></table>
+</div>
+        </>
+    );
+}

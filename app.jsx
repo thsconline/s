@@ -10,6 +10,39 @@
 
 	import { routes } from "./routes.jsx";
 
+	function Headers({ title, canonical }) {
+    useEffect(() => {
+        // Update document title
+        if (title) {
+            document.title = title;
+        }
+
+        // Find existing canonical link
+        let canonicalLink = document.head.querySelector(
+            'link[rel="canonical"]'
+        );
+
+        if (canonical) {
+            // Create canonical link if missing
+            if (!canonicalLink) {
+                canonicalLink = document.createElement("link");
+                canonicalLink.rel = "canonical";
+                document.head.appendChild(canonicalLink);
+            }
+
+            canonicalLink.href = canonical;
+        } else if (canonicalLink) {
+            canonicalLink.remove();
+        }
+
+        return () => {
+            // Remove canonical when leaving this route
+            canonicalLink?.remove();
+        };
+    }, [title, canonical]);
+
+    return null;
+}
 
 	function writeworker() {
 		const workers = [
@@ -298,11 +331,24 @@
 
 					{/* Generated HTML → JSX routes */}
 					{routes.map(
-						({ path, component: Component }) => (
+						({
+							path,
+							component: Component,
+							title,
+							canonical
+						}) => (
 							<Route
 								key={path}
 								path={path}
-								element={<Component />}
+								element={
+									<>
+										<Headers
+											title={title}
+											canonical={canonical}
+										/>
+										<Component />
+									</>
+								}
 							/>
 						)
 					)}

@@ -1,0 +1,91 @@
+﻿// AUTO-GENERATED OUTPUT
+// Source: yr11\Maths\prelimpapers_general.html
+
+export const title = "THSC Online - Year 11 General / Standard Maths Past Yearly Exams";
+export const canonical = "https://www.thsconline.net/s/yr11/Maths/prelimpapers_general.html";
+
+export default function Page() {
+    return (
+        <>
+<div id="navigation">
+<ul>
+<li className="element"><a href="/s/">THSC Home</a></li>
+<li className="element reducible"><a href="/s/yr9/">Year 9</a></li>
+<li className="element"><a href="/s/yr10/">Year 10</a></li>
+<li className="current"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li className="element"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li className="element reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline →</a>&#160;
+<a href="/s/yr11/">Year 11 - Preliminary →</a>&#160;
+<a href="/s/yr11/Maths/">General / Standard Maths →</a>&#160;
+<a className="current" href="/s/yr11/Maths/prelimpapers_general.html">Past Yearly Exams →</a>&#160;
+<a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
+</div></div>  
+<div id="content-all">
+<h4>Year 11 General Maths Yearly Exams</h4>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&#160;</summary>
+<span><img src="/s/images/icon_home.png" />&#160;&#160;
+<a href="/s/">Home Page</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="../">Back to Year 11 - Preliminary</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="index.html">Up One Folder</a></span><br /><br />
+</details>
+<table className="listing" id="papers-by-school"><tbody>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
+<tr className="content"><td>
+<ul>
+<li>Sample answers or marking guidelines included with most papers.</li>
+<li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
+</ul></td></tr>
+<tr id="standard"><td><h5>Standard Maths (2018 onwards)</h5></td></tr>
+
+<tr><td><details open><summary>Cherrybrook Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Cherrybrook Tech 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Cherrybrook Tech 2019 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Kings</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Kings 2018 w. sol</a>
+</span></details></td></tr>
+
+<tr id="general"><td><h5>General Maths (1994-2017)</h5></td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Year 11 General Maths was replaced by Standard Maths in 2018.<br /><br /></td></tr>  
+
+<tr><td><details open><summary>Cheltenham Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Cheltenham Girls 2024</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Cheltenham Girls 2025</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Cherrybrook Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Cherrybrook Tech 2001</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Cherrybrook Tech 2002 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Cherrybrook Tech 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Epping Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Epping Boys 2005</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Epping Boys 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Epping Boys 2009 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Kings</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Kings 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Kings 2017 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Trinity Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Trinity Grammar 2009</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5218)}>Trinity Grammar 2010</a>
+</span></details></td></tr>
+
+</tbody></table>
+</div>
+        </>
+    );
+}

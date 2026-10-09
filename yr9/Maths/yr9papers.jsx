@@ -1,0 +1,165 @@
+﻿// AUTO-GENERATED OUTPUT
+// Source: yr9\Maths\yr9papers.html
+
+export const title = "THSC Online - Year 9 Maths Papers";
+export const canonical = "https://www.thsconline.net/s/yr9/Maths/yr9papers.html";
+
+export default function Page() {
+    return (
+        <>
+<div id="navigation">
+<ul>
+<li className="element"><a href="/s/">THSC Home</a></li>
+<li className="current reducible"><a href="/s/yr9/">Year 9</a></li>
+<li className="element"><a href="/s/yr10/">Year 10</a></li>
+<li className="element"><a href="/s/yr11/">Year 11 - Preliminary</a></li>
+<li className="element"><a href="/s/yr12/">Year 12 - HSC</a></li>
+<li className="element reducible"><a href="/s/upload/">Upload Files</a></li>
+</ul>
+<div id="folder-tree">
+<a href="/s/">thsconline →</a>&#160;
+<a href="/s/yr9/">Year 9 →</a>&#160;
+<a href="/s/yr9/Maths/">Maths →</a>&#160;
+<a className="current" href="/s/yr9/Maths/yr9papers.html">Past Yearly Exams →</a>&#160;
+<a className="reverse" href="index.html">↖ [<i>Up One Folder</i>]</a>
+</div></div>
+<div id="content-all">
+<h4>Year 9 Maths Papers</h4>
+<details className="smallscreen" style={{ display: 'none' }}><summary>&#160;</summary>
+<span><img src="/s/images/icon_home.png" />&#160;&#160;
+<a href="/s/">Home Page</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="../">Back to Year 9</a></span><br />
+<span><img src="/s/images/icon_back.png" />&#160;&#160;
+<a href="index.html">Up One Folder</a></span><br /><br />
+</details>
+<table className="listing" id="papers-by-school"><tbody>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note: </b></span>Some materials listed are from old syllabus prescriptions.</td></tr>
+<tr className="content"><td><span style={{ color: '#0000FF' }}><b>Note 2: </b></span>2021 exams were conducted online, so the format of materials listed may differ slightly.</td></tr>
+<tr className="content"><td>
+<ul>
+<li>Sample answers or marking guidelines included with most papers.</li>
+<li>To contribute past papers or other practice questions, <a href="/s/upload">upload files here</a></li>
+</ul></td></tr>
+
+<tr><td><details open><summary>Baulkham Hills</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2011</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2014</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2015</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2017</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2018</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2020</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Hornsby Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Hornsby Girls 2021</a>
+</span></details></td></tr>
+<tr><td><details open><summary>James Ruse</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2004 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2005 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2006 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2007 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2008 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2015</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>James Ruse 2017</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Kings</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Kings 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Kings 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Kings 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Kings 2022 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Normanhurst Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Normanhurst Boys 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Normanhurst Boys 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Normanhurst Boys 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Normanhurst Boys 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Normanhurst Boys 2020 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>North Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2012 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2019</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2020 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Penrith</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Penrith 2018</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Penrith 2022 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>St George Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>St George Girls 2024 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2004</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2005</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2006</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2007</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2008</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2009</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2010</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2011</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2012</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2013</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Boys 2025 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Girls 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Girls 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Girls 2016 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Grammar</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Grammar 2023 w. sol</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Sydney Tech</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2025 w. sol</a>
+</span></details></td></tr>
+
+</tbody></table>
+</div>
+        </>
+    );
+}
