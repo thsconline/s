@@ -4,18 +4,21 @@
 
 [CmdletBinding(SupportsShouldProcess = $true)]
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$RootPath,
-
     [string]$BaseUrl = "https://www.thsconline.net/s/"
 )
 
 $ErrorActionPreference = "Stop"
-$root = (Resolve-Path -LiteralPath $RootPath).Path
+
+# Root is one folder above the script's directory
+$root = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..")).Path
+$rootPrefix = $root.TrimEnd('\', '/') + '\'
 $BaseUrl = $BaseUrl.TrimEnd('/') + '/'
 
 $files = Get-ChildItem -LiteralPath $root -Recurse -File |
-    Where-Object { $_.Extension -match '^\.html?$' }
+    Where-Object {
+        $_.Extension -match '^\.html?$' -and
+        $_.Name -notin @('404.html', 'header.html')
+    }
 
 $updated = 0
 $unchanged = 0
@@ -24,9 +27,7 @@ $failed = 0
 
 foreach ($file in $files) {
     try {
-        $relativePath = [System.IO.Path]::GetRelativePath(
-            $root, $file.FullName
-        ) -replace '\\', '/'
+        $relativePath = $file.FullName.Substring($rootPrefix.Length) -replace '\\', '/'
 
         # Convert index.html to its directory URL.
         if ($relativePath -match '(?i)(^|/)index\.html?$') {
@@ -74,10 +75,8 @@ foreach ($file in $files) {
                 $headPattern,
                 [System.Text.RegularExpressions.MatchEvaluator]{
                     param($match)
-                    $match.Groups[1].Value + "`r`n    " + $canonicalTag
-                },
-                1
-            )
+                    $match.Groups[1].Value + "`r`n" + $canonicalTag
+                }, 1)
         }
 
         if ($newHtml -ceq $html) {
