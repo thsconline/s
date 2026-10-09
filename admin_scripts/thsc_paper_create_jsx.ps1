@@ -195,7 +195,7 @@ function Get-RoutePath {
         return "/s/$Route"
     }
 
-    return "/s/$Route.html"
+    return "/s/$Route"
 }
 
 
