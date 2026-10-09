@@ -249,7 +249,7 @@ function loadshell()
 
 		win.document.write(
 			"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
+			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads allow-modals\" " +
 			"allowfullscreen=\"1\" " +
 			"src=\"" + embedUrl.href + "\"></iframe>"
 		);

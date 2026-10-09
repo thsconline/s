@@ -158,7 +158,7 @@
 				
 				win.document.write(
 					"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-					"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " + 
+					"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads allow-modals\" " + 
 					"src=\"" + embedUrl.href + "\"></iframe>"
 				);
 
