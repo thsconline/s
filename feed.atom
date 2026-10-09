@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-09T10:47:54Z</updated>
+  <updated>2026-10-09T10:50:35Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Sydney Grammar 2026 w. sol</title>
@@ -37,5 +37,20 @@
     <title>Blacktown Boys 2026 w. sol</title>
     <collection>5348</collection>
     <updated>2026-10-09T10:47:54Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Penrith 2025 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-09T10:50:35Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2025 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-09T10:50:35Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2025 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-09T10:50:35Z</updated>
   </entry>
 </feed>
