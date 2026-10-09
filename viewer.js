@@ -40,6 +40,121 @@ function selectworker(includeFallback = true) {
     : fallback;
 }
 
+async function download(viewno, titlex) {
+    const API = "https://www.thsconline.net/api/v1";
+    const encode = encodeURIComponent;
+
+    if (!viewno || !titlex) {
+        throw new Error("viewno and titlex are required.");
+    }
+
+    const request = async (url) => {
+        const response = await fetch(url, { cache: "no-cache" });
+
+        if (!response.ok) {
+            throw new Error(`Request failed: HTTP ${response.status}`);
+        }
+
+        return response;
+    };
+
+    // 1. Fetch metadata
+    const metadataUrl =
+        `${API}/getmetadata/${encode(viewno)}/${encode(titlex)}`;
+
+    const metadata = await (await request(metadataUrl)).json();
+
+    if (metadata.error) {
+        throw new Error(metadata.error);
+    }
+
+    const fragmentCount = Number(metadata.fragmentCount);
+
+    if (!Number.isSafeInteger(fragmentCount) || fragmentCount < 1) {
+        throw new Error("Invalid fragment count.");
+    }
+
+    // 2. Download all fragments concurrently, preserving index order
+    const fragments = await Promise.all(
+        Array.from({ length: fragmentCount }, (_, index) => {
+            const url =
+                `${API}/getfragment/${encode(viewno)}/` +
+                `${encode(titlex)}/${index}`;
+
+            return request(url).then(response => response.arrayBuffer());
+        })
+    );
+
+    // 3. Combine fragments into the original GZIP stream
+    const totalLength = fragments.reduce(
+        (total, fragment) => total + fragment.byteLength,
+        0
+    );
+
+    const gzip = new Uint8Array(totalLength);
+    let offset = 0;
+
+    for (const fragment of fragments) {
+        gzip.set(new Uint8Array(fragment), offset);
+        offset += fragment.byteLength;
+    }
+
+    // 4. Decompress GZIP to PDF bytes
+    if (typeof DecompressionStream === "undefined") {
+        throw new Error(
+            "Your browser is not supported. Please update your browser."
+        );
+    }
+
+    const decompressedStream = new Blob([gzip])
+        .stream()
+        .pipeThrough(new DecompressionStream("gzip"));
+
+    const pdfBytes = new Uint8Array(
+        await new Response(decompressedStream).arrayBuffer()
+    );
+
+    // 5. Validate PDF signature
+    if (
+        pdfBytes.length < 5 ||
+        String.fromCharCode(...pdfBytes.subarray(0, 5)) !== "%PDF-"
+    ) {
+        throw new Error("The decompressed data is not a valid PDF.");
+    }
+
+    // 6. Create PDF Blob
+    const pdfBlob = new Blob([pdfBytes], {
+        type: "application/pdf"
+    });
+
+    // 7. Determine a safe filename
+    let filename = metadata.originalFileName || `${titlex}.pdf`;
+
+    filename = filename.split(/[\\/]/).pop();
+
+    if (!filename.toLowerCase().endsWith(".pdf")) {
+        filename = filename.replace(/\.gz$/i, "");
+        filename = filename.replace(/\.[^.]+$/, "") + ".pdf";
+    }
+
+    // 8. Trigger download
+    const objectUrl = URL.createObjectURL(pdfBlob);
+    const link = document.createElement("a");
+
+    link.href = objectUrl;
+    link.download = filename;
+    link.style.display = "none";
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    // Revoke after the browser has had time to process the download
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
+
+    return pdfBlob;
+}
+
 function loadshell()
 {
 	const rawPath = window.location.pathname;
@@ -127,9 +242,11 @@ function loadshell()
 			"<div id=\"overlaybar\" style=\"z-index:1000;width:100%;\">" +
 			titlex +
 			"<span style=\"float:right\">" +
+			"<a href=\"javascript:download('" + viewno + "','" + titlex + "')\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" onclick=\"window.close()\">Close ×</a>" +
 			"</span></div><br>"
 		);
+
 		win.document.write(
 			"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
 			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +

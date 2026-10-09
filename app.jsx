@@ -228,10 +228,11 @@
 
 				if (!standalone) {
 					win.document.write(
-						"<div id=\"overlaybar\" style=\"z-index:1000; width:100%;\">" +
-						titlex + 
-						"<span id=\"overlayinsert\" style=\"float:right !important\">" +
-						"<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close ×</a>" +
+						"<div id=\"overlaybar\" style=\"z-index:1000;width:100%;\">" +
+						titlex +
+						"<span style=\"float:right\">" +
+						"<a href=\"javascript:download('" + viewno + "','" + titlex + "')\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
+						"<a class=\"border\" onclick=\"window.close()\">Close ×</a>" +
 						"</span></div><br>"
 					);
 				}

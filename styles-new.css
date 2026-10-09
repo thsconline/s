@@ -531,8 +531,7 @@ tr.content a {
    ========================================= */
 
 .search {
-    margin: 0;
-    padding: 0;
+    padding-bottom:20px;
 
     background: transparent;
     border: 0;
@@ -649,8 +648,7 @@ tr.content a {
 #search-message {
     display: block;
 
-    margin: 3px 0 0;
-
+    margin: 3px 0 15px;    
     color: #e04416;
 
     font-size: 11px;
