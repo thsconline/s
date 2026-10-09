@@ -5,11 +5,17 @@ param(
     [int]$Year = 2025,
     [string]$TitleFilter = "",
 
-    [switch]$UploadMissing
+    [switch]$UploadMissing,
+	[switch]$PrintURL
 )
+
 
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
+
+if ($PrintURL -and $UploadMissing) {
+    throw "-PrintURL cannot be used with -UploadMissing."
+}
 
 $Params = Get-Content ".\config_files\$PDFTemplateCode.json" -Raw |
     ConvertFrom-Json
@@ -47,6 +53,10 @@ foreach ($Match in $AnchorMatches) {
     $EncodedTitle = [uri]::EscapeDataString($titlex)
     $Uri = "https://www.thsconline.net/api/v1/getmetadata/$PDFTemplateCode/$EncodedTitle"
 
+	if ($PrintURL) {
+		Write-Output $Uri
+		continue
+	}
     try {
         $Response = Invoke-RestMethod `
             -Uri $Uri `
