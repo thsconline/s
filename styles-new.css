@@ -1,0 +1,2463 @@
+/* =========================================================
+   THSC Online — Modern Responsive Stylesheet
+   Original HTML compatible
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Design tokens
+   --------------------------------------------------------- */
+
+:root {
+    --bg: #f4f6ff;
+    --surface: #ffffff;
+    --surface-soft: #f5f5ff;
+
+    --border: #d9dcf5;
+    --border-hover: #aeb4ee;
+
+    --text: #15152f;
+    --text-muted: #5f6180;
+
+    --primary: #0000ff;
+    --primary-dark: #0000cc;
+    --primary-deep: #17176b;
+    --primary-soft: #eeeeff;
+
+    --indigo: #5555ff;
+    --indigo-dark: #3030d9;
+    --indigo-soft: #f3f3ff;
+	--indigo-vsoft: #f9f9ff;
+	
+
+    --hover: #FF4500;
+
+    --success: #22c55e;
+
+    --radius: 12px;
+    --radius-sm: 8px;
+
+    --shadow-sm:
+        0 1px 2px rgba(20, 20, 90, 0.05),
+        0 2px 6px rgba(20, 20, 90, 0.06);
+
+    --shadow-md:
+        0 12px 30px rgba(20, 20, 100, 0.12);
+
+    --shadow-lg:
+        0 20px 50px rgba(20, 20, 100, 0.15);
+}
+
+
+/* ---------------------------------------------------------
+   Reset / base
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    direction: ltr;
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(85, 85, 255, 0.12),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #f8f8ff 0%,
+            var(--bg) 45%,
+            #eef0ff 100%
+        );
+
+    color: var(--text);
+
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+           
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    font-stretch: normal;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ---------------------------------------------------------
+   Global links
+   --------------------------------------------------------- */
+
+a,
+a:link,
+a:visited {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: var(--hover);
+    text-decoration: none;
+}
+
+a img {
+    border: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   Headings
+   --------------------------------------------------------- */
+
+h1 {
+    position: relative;
+    display: inline-block;
+
+    margin: 0;
+    padding: 25px 0 0 max(28px, calc((100vw - 1920px) / 2));
+
+    background: transparent;
+    color: #11112f;	
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+/* The original cool underline, modernised */
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 4px;
+
+    margin-top:7px;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0000ff 0%,
+            #5555ff 55%,
+            #7777ff 100%
+        );
+
+
+}
+
+h2 {
+    margin: 0 0 12px;
+    padding-top: 14px;
+
+    color: #555555;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 0 0 20px;
+    padding: 0;
+
+    color: var(--text);
+
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+}
+
+h4 {
+    margin: 0 0 18px;
+    padding: 0;
+
+    color: var(--text);
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+h5 {
+    display: inline-block;
+
+    width: 100%;
+
+    margin: 0 0 8px;
+    padding: 4px 0 5px;
+
+    border-bottom: 2px solid var(--indigo);
+
+    color: var(--primary);
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 14px 0px 0px;
+	color: #555555;
+	text-decoration: none !important;
+	font-size-adjust: none;
+	font-stretch: normal;
+}
+
+h3 {
+	font-size: 20px;
+	padding-top: 3px !important;
+	padding-bottom: 1px !important;
+	padding-bottom: 3px !important;
+}
+
+h4 {
+	font-size: 20px;
+	padding-top: 3px !important;
+	padding-bottom: 0px !important;
+	margin-bottom: 10px !important;
+}
+#web-list h4
+{
+	margin-top: 20px;
+}
+h5 {
+	font-size: 16px;
+	padding-top: 3px !important;	
+	/*border: 0.5px solid #0000FF;*/
+	border-bottom: 1px solid #5555FF;
+	font-weight: normal;
+	color: #5555FF;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
+	
+}
+
+h5.grey
+{
+	font-size: 16px;
+	padding-left: 4px !important;
+	border: 0.5px solid #AAAAAA;
+	border-bottom: 2.5px solid #AAAAAA;
+	font-weight: bold;
+	color: black;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 4px;
+}
+
+
+/* ---------------------------------------------------------
+   Main page wrapper
+   --------------------------------------------------------- */
+
+#page-wrapper {
+    position: relative;
+
+    width: min(1920px, calc(100% - 48px));
+
+    min-width: 0;
+
+    margin: 28px auto 55px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* ---------------------------------------------------------
+   Navigation
+   --------------------------------------------------------- */
+
+#navigation {
+    margin: 0;
+
+    padding: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #11115f 0%,
+            #1717a8 48%,
+            #0000ff 100%
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 -1px 0 rgba(255,255,255,0.12);
+}
+
+#navigation > ul {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    margin: 0;
+    padding: 8px 12px;
+
+    list-style: none;
+}
+
+#navigation > ul li {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.16s ease,
+        transform 0.16s ease;
+}
+
+#navigation > ul li a,
+#navigation > ul li a:link,
+#navigation > ul li a:visited {
+    display: inline-block;
+
+    padding: 10px 14px;
+
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+#navigation > ul li.element:hover,
+#navigation > ul li.current {
+    background: rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.12);
+
+    transform: translateY(-1px);
+}
+
+#navigation > ul li.current {
+    /*background: #111111;*/
+    background: rgba(255, 255, 255, 0.32);
+	box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.12);
+
+
+/*    box-shadow:
+        0 4px 12px rgba(0, 0, 80, 0.25);*/
+}
+
+#navigation > ul li.element:hover a,
+#navigation > ul li.current a {
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   Breadcrumb / folder tree
+   --------------------------------------------------------- */
+
+#folder-tree {
+    display: flex;
+	align-items: center;
+    gap: 6px;
+
+    min-height: 44px;
+
+    padding: 9px 18px;
+
+    background: #fafaff;
+
+    border-top: 1px solid rgba(85, 85, 255, 0.08);
+    border-bottom: 1px solid var(--border);
+
+    color: #5555aa;
+
+    font-size: 12px;
+}
+
+#folder-tree a,
+#folder-tree a:link,
+#folder-tree a:visited {
+    color: #5555aa !important;    
+
+    text-decoration: none;
+	padding: 5px 10px;
+
+    border-radius: 7px;
+
+
+}
+
+#folder-tree a:hover,
+#folder-tree a:active {
+    color: var(--hover) !important;
+
+    background: var(--primary-soft) !important;
+}
+
+#folder-tree .current {
+    color: var(--primary) !important;
+    background: var(--primary-soft) !important;    
+}
+
+
+#folder-tree .reverse {
+	margin-left: 6px;
+    padding: 5px 10px;
+
+    border-radius: 7px;
+
+    background: var(--primary-soft) !important;
+
+    color: var(--primary) !important;
+    
+}
+
+#folder-tree > :not(.reverse) + .reverse {
+    margin-left: auto !important; /* force right align for reverse items */
+}
+
+
+#folder-tree .reverse:hover {
+    background: var(--indigo-soft) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Main content
+   --------------------------------------------------------- */
+
+#content-all {
+    width: 100%;
+
+    min-height: 515px;
+
+    margin: 0;
+
+    padding: 28px 28px 24px;
+}
+
+#content-all > h3,
+#content-all > h4 {
+    position: relative;
+
+    margin-bottom: 22px;
+}
+
+#content-all > h3 .title {
+    color: var(--text);
+}
+
+
+/* ---------------------------------------------------------
+   Intro / content table
+   --------------------------------------------------------- */
+
+tr.content td {
+    padding: 18px 22px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    color: var(--text);
+
+    box-shadow: var(--shadow-sm);
+}
+
+tr.content ul {
+    margin: 0;
+    padding-left: 20px;
+
+    color: var(--text-muted);
+}
+
+tr.content li + li {
+    margin-top: 5px;
+}
+
+tr.content a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* =========================================
+   Search
+   ========================================= */
+
+.search {
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+#search-row {
+    position: relative;
+}
+
+#search-row td {
+    position: relative;
+
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+}
+
+
+/* -----------------------------------------
+   Search input
+   ----------------------------------------- */
+
+#search-bar {
+    box-sizing: border-box;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 9px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+#search-bar::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+#search-bar:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 255, 0.08);
+}
+
+
+/* -----------------------------------------
+   Search options
+   ----------------------------------------- */
+
+#search-row label {
+    display: inline-flex;
+    align-items: center;
+
+    margin: 0 0 0 14px;
+    padding: 0;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+    line-height: 1;
+
+    font-weight: 400 !important;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition:
+        color 0.15s ease,
+        opacity 0.2s ease;
+}
+
+#search-row label:hover {
+    color: var(--text);
+}
+
+
+/* -----------------------------------------
+   Checkboxes
+   ----------------------------------------- */
+
+#search-row input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+
+    margin: 0 4px 0 0;
+
+    accent-color: var(--primary);
+}
+
+
+/* -----------------------------------------
+   Search message
+   ----------------------------------------- */
+
+#search-message {
+    display: block;
+
+    margin: 3px 0 0;
+
+    color: #e04416;
+
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   Wide screens
+   ========================================= */
+
+@media (min-width: 700px) {
+
+    /*
+     * Float the options into the top-right
+     * of the search field.
+     */
+
+    #search-row label {
+        position: relative;
+
+        top: -27px;
+
+        float: right;
+
+        margin-left: 16px;
+
+        color: color-mix(
+            in srgb,
+            var(--text-muted) 70%,
+            transparent
+        );
+
+        opacity: 0.65;
+    }
+
+    #search-row label:hover {
+        color: var(--text);
+        opacity: 1;
+    }
+
+    #search-row td:focus-within label {
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================================
+   Search result state
+   ========================================= */
+
+#search-message:empty {
+    display: none;
+}
+
+
+/* =========================================
+   Search → automatically expand details
+   ========================================= */
+
+#search-row:has(#search-message[data-active]) ~ tr details .content {
+    display: inline-block;
+}
+
+#search-row:has(#search-message[data-active]) ~ tr details > summary {
+    list-style: none;
+}
+
+#search-row:has(#search-message[data-active]) ~ tr details > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* =========================================
+   Reduced motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #search-bar,
+    #search-row label {
+        transition: none;
+    }
+}
+
+
+
+
+/* =========================================
+   Very wide screens
+   ========================================= */
+
+@media (min-width: 1100px) {
+
+    #search-row label {
+        font-size: 11px;
+        opacity: 0.45;
+    }
+
+    #search-row td:focus-within label {
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================================
+   Reduced motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #search-bar,
+    #search-row label {
+        transition: none;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Buttons
+   --------------------------------------------------------- */
+
+input[type="button"],
+input[type="submit"] {
+    margin-top: 10px;
+
+    padding: 9px 16px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0000ff,
+            #5555ff
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,255,0.18);
+
+    transition:
+        background 0.15s ease,
+        transform 0.12s ease,
+        box-shadow 0.15s ease;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background: #0000cc !important;
+
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 14px rgba(0,0,180,0.22);
+}
+
+input[type="button"]:active,
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   Modern subject grid
+   ---------------------------------------------------------
+
+   IMPORTANT:
+   Original dimensions were:
+
+       width:  200px
+       height: 90px
+
+   These are now MINIMUM dimensions.
+
+   The cells may therefore grow when there is room, rather
+   than remaining locked at 200 x 90.
+   --------------------------------------------------------- */
+
+#web-grid {
+    width: 100%;
+
+    margin-top: 20px;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    scrollbar-width: thin;
+}
+
+#web-grid > div {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(200px, 1fr));
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin: 0;
+
+    overflow: visible;
+	margin-top: 3px;
+}
+
+/*
+   Flatten the original table-like structure.
+
+   The HTML has:
+       outer
+         row
+           cell
+           cell
+           cell
+           cell
+
+   We turn the cells into responsive grid items.
+*/
+
+#web-grid > div > div {
+    display: contents;
+}
+
+#web-grid > div > div > div {
+    position: relative;
+
+    display: inline-block;
+
+    width: auto;
+    min-width: 200px;
+
+    height: auto;
+    min-height: 90px;
+
+    padding: 0;
+}
+
+
+/* Subject card */
+
+#web-grid > div > div > div > a {
+    display: inline-block;
+
+    width: 100%;
+    min-width: 200px;
+
+    height: 100%;
+    min-height: 90px;
+
+    color: var(--text);
+
+    text-decoration: none;
+}
+
+
+/* Outer coloured card */
+
+#web-grid > div > div > div > a > span {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+    min-width: 200px;
+
+    min-height: 90px;
+
+    margin: 0;
+
+    padding: 12px 14px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fafaff 100%
+        );
+
+    color: var(--text);
+
+    font-size: 14px !important;   
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color 0.16s ease,
+        background 0.16s ease,
+        box-shadow 0.16s ease,
+        transform 0.16s ease;
+}
+
+
+/* Subject icon */
+
+#web-grid > div > div > div > a > span > img {
+    flex: 0 0 auto;
+    
+    height: 14px;
+
+    margin: 0 8px 0 0;
+
+    object-fit: contain;
+}
+
+
+/*
+   The nested span contains the text.
+
+   Override the old inline positioning without requiring
+   any HTML changes.
+*/
+
+#web-grid > div > div > div > a > span > span {
+    position: static !important;
+
+    display: flex !important;
+
+    align-items: center;
+
+    width: auto !important;
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    color: inherit !important;
+
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* Card hover */
+
+#web-grid > div > div > div > a > span:hover {
+    border-color: #9999ff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f4ff,
+            #e9e9ff
+        );
+
+    color: var(--primary);
+
+    box-shadow: var(--shadow-md);
+
+    transform: translateY(-2px);
+}
+
+
+/*
+   Preserve the original orange hover/active link colour
+   while making the card itself indigo.
+*/
+
+#web-grid a:hover,
+#web-grid a:active {
+    color: var(--hover);
+}
+
+#web-grid > div > div > div > a:hover > span {
+    border-color: var(--indigo);
+
+    box-shadow:
+        0 10px 24px rgba(0,0,180,0.14);
+}
+
+
+/* ---------------------------------------------------------
+   Responsive grid scaling
+   --------------------------------------------------------- */
+
+/*
+   Large screens:
+   Four columns, but each cell can grow beyond 200px.
+*/
+
+@media (min-width: 1150px) {
+    #web-grid > div {
+        grid-template-columns:
+            repeat(4, minmax(200px, 1fr));
+    }
+}
+
+
+/*
+   Medium screens:
+   Three columns, still respecting 200px minimum.
+*/
+
+@media (max-width: 1149px) {
+    #web-grid > div {
+        grid-template-columns:
+            repeat(3, minmax(200px, 1fr));
+    }
+}
+
+
+/*
+   Smaller desktop/tablet:
+   Two columns.
+*/
+
+@media (max-width: 850px) {
+    #web-grid > div {
+        grid-template-columns:
+            repeat(2, minmax(200px, 1fr));
+    }
+}
+
+
+/*
+   Phones:
+   One column.
+
+   The 200px minimum is retained, but the actual card can
+   become wider than 200px.
+*/
+
+@media (max-width: 500px) {
+    #web-grid > div {
+        grid-template-columns:
+            minmax(200px, 1fr);
+    }
+
+    #web-grid > div > div > div > a,
+    #web-grid > div > div > div > a > span {
+        min-width: 200px;
+    }
+}
+
+
+/* =========================================================
+   WEB GRID — SUBJECT COLOUR OVERRIDES
+   Scoped ONLY to #web-grid
+   ========================================================= */
+
+/*
+   The existing HTML already tells us the subject colour through
+   the icon filename, so we can colour the cards without changing
+   the HTML.
+*/
+
+#web-grid > div > div > div > a > span {
+    --subject-colour: #4f46e5;
+    --subject-soft: #eef2ff;
+    --subject-border: #c7d2fe;
+
+    border-left: 4px solid var(--subject-colour);
+}
+
+/* ---------------------------------------------------------
+   Aqua
+   Agriculture / Engineering Studies
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_aqua"]
+) {
+    --subject-colour: #0891b2;
+    --subject-soft: #ecfeff;
+    --subject-border: #67e8f9;
+}
+
+/* ---------------------------------------------------------
+   Forest
+   Ancient History / History Extension / Modern History
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_forest"]
+) {
+    --subject-colour: #15803d;
+    --subject-soft: #f0fdf4;
+    --subject-border: #86efac;
+}
+
+/* ---------------------------------------------------------
+   Purple
+   Biology / Chemistry / Physics / Investigating Science
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_purple"]
+) {
+    --subject-colour: #7c3aed;
+    --subject-soft: #f5f3ff;
+    --subject-border: #c4b5fd;
+}
+
+/* ---------------------------------------------------------
+   Green
+   Business / Economics / Legal / Studies of Religion
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_green"]
+) {
+    --subject-colour: #16a34a;
+    --subject-soft: #f0fdf4;
+    --subject-border: #86efac;
+}
+
+/* ---------------------------------------------------------
+   Yellow
+   English
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_yellow"]
+) {
+    --subject-colour: #ca8a04;
+    --subject-soft: #fefce8;
+    --subject-border: #fde047;
+}
+
+/* ---------------------------------------------------------
+   Blue
+   IPT / Software Engineering
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_blue"]
+) {
+    --subject-colour: #2563eb;
+    --subject-soft: #eff6ff;
+    --subject-border: #93c5fd;
+}
+
+/* ---------------------------------------------------------
+   Pink
+   LOTE
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_pink"]
+) {
+    --subject-colour: #db2777;
+    --subject-soft: #fdf2f8;
+    --subject-border: #f9a8d4;
+}
+
+/* ---------------------------------------------------------
+   Red
+   Maths
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_red"]
+) {
+    --subject-colour: #dc2626;
+    --subject-soft: #fef2f2;
+    --subject-border: #fca5a5;
+}
+
+/* ---------------------------------------------------------
+   Orange
+   PDHPE / Society & Culture
+   High-contrast orange
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_orange"]
+) {
+    --subject-colour: #ea580c;
+    --subject-soft: #fff7ed;
+    --subject-border: #fdba74;
+}
+
+/* ---------------------------------------------------------
+   Rose
+   Visual Arts
+   --------------------------------------------------------- */
+
+#web-grid > div > div > div > a > span:has(
+    img[src*="icon_rose"]
+) {
+    --subject-colour: #e11d48;
+    --subject-soft: #fff1f2;
+    --subject-border: #fda4af;
+}
+
+
+/* =========================================================
+   CARD APPEARANCE
+   ========================================================= */
+
+#web-grid > div > div > div > a > span {
+    background: #ffffff;
+    border-top-color: var(--subject-border);
+    border-right-color: var(--subject-border);
+    border-bottom-color: var(--subject-border);
+
+    transition:
+        background-color 0.16s ease,
+        border-color 0.16s ease,
+        box-shadow 0.16s ease,
+        transform 0.16s ease;
+		
+	
+}
+
+
+/* The text portion of the card */
+
+#web-grid > div > div > div > a > span > span:before
+{
+	padding-left:10px;
+}
+
+#web-grid > div > div > div > a > span > span {
+ /*   background: var(--subject-soft) !important;*/
+    color: var(--subject-colour) !important;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.16s ease,
+        color 0.16s ease;
+	
+}
+
+
+/* Hover */
+
+#web-grid > div > div > div > a > span:hover {
+    background: var(--subject-soft) !important;
+    border-color: var(--subject-colour) !important;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.10);
+
+    transform: translateY(-2px);
+}
+
+
+/* Strong coloured label on hover */
+
+
+/*
+#web-grid > div > div > div > a > span:hover > span {
+    background: var(--subject-colour) !important;
+    color: #ffffff !important;
+}*/
+
+
+/* Keep the icon clean */
+
+#web-grid > div > div > div > a > span img {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   GRID DIMENSIONS
+   Original 200 × 90 becomes the MINIMUM.
+   Cards can grow with the available space.
+   ========================================================= */
+
+#web-grid > div > div > div {
+    min-width: 200px;
+
+    height: 90px;
+    min-height: 90px;
+
+    position: relative;
+}
+
+
+/*
+   Let the actual grid expand naturally when there is more room.
+*/
+
+#web-grid > div {
+    width: 100%;
+}
+
+
+/* =========================================================
+   DARK MODE
+   Still scoped exclusively to the grid.
+   ========================================================= */
+
+body.dark-mode #web-grid > div > div > div > a > span {
+    background: #111827;
+    border-top-color: color-mix(
+        in srgb,
+        var(--subject-colour) 55%,
+        #374151
+    );
+    border-right-color: color-mix(
+        in srgb,
+        var(--subject-colour) 55%,
+        #374151
+    );
+    border-bottom-color: color-mix(
+        in srgb,
+        var(--subject-colour) 55%,
+        #374151
+    );
+}
+
+body.dark-mode #web-grid > div > div > div > a > span > span {
+    background: color-mix(
+        in srgb,
+        var(--subject-colour) 18%,
+        #111827
+    ) !important;
+
+    color: color-mix(
+        in srgb,
+        var(--subject-colour) 75%,
+        #ffffff
+    ) !important;
+}
+
+body.dark-mode #web-grid > div > div > div > a > span:hover > span {
+    background: var(--subject-colour) !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   Web list / mobile list view
+   --------------------------------------------------------- */
+
+#web-list {
+    width: 100%;
+}
+
+#web-list > div {
+    display: inline-block;
+
+    width: 100%;
+}
+
+#web-list > div > div {
+    display: inline-block;
+
+    width: 100%;
+}
+
+#web-list > div > div > div {
+    display: inline-block;
+
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+#web-list .smallscreen {
+    margin-bottom: 16px;
+}
+
+
+/* Individual list links */
+
+#web-list > div > div > div > img {
+    vertical-align: middle;
+
+    margin-right: 5px;
+}
+
+#web-list > div > div > div > a {
+    display: inline-block;
+
+    padding: 5px 0;
+
+    color: var(--primary);
+    
+}
+
+#web-list > div > div > div:has(span) {
+	line-height:1.9
+}
+
+#web-list > div > div > div > a:hover {
+    color: var(--hover);
+}
+
+
+/* ---------------------------------------------------------
+   Small-screen navigation
+   --------------------------------------------------------- */
+/* =========================================================
+   MOBILE QUICK NAVIGATION
+   ========================================================= */
+
+.smallscreen {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 18px;
+    padding: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fafaff 0%,
+            #f3f3ff 100%
+        );
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(20, 20, 90, 0.06);
+}
+
+
+/* ---------------------------------------------------------
+   Individual navigation rows
+   --------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------
+   Hamburger container
+   --------------------------------------------------------- */
+/* ---------------------------------------------------------
+   Closed state — tiny hamburger button
+   --------------------------------------------------------- */
+
+.smallscreen {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    z-index: 1000;
+
+    display: none;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Hamburger button
+   --------------------------------------------------------- */
+
+.smallscreen > summary {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--surface);
+
+    color: var(--primary);
+
+    cursor: pointer;
+
+    list-style: none;
+
+    box-shadow:
+        0 1px 4px rgba(20,20,90,0.08);
+
+    font-size: 0;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+/* Remove native disclosure triangle */
+
+.smallscreen > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Hamburger icon */
+
+.smallscreen > summary::before {
+    content: "☰";
+
+    font-size: 17px;
+
+    line-height: 1;
+
+    font-weight: normal;
+}
+
+
+/* Hover */
+
+.smallscreen > summary:hover {
+    background: var(--primary-soft);
+
+    border-color: var(--border-hover);
+}
+
+
+/* ---------------------------------------------------------
+   OPEN STATE
+   --------------------------------------------------------- */
+
+.smallscreen[open] {
+    width: 260px;
+    height: auto;
+
+    padding: 7px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    background: rgba(255,255,255,0.98);
+
+    box-shadow:
+        0 12px 30px rgba(20,20,90,0.16),
+        0 3px 8px rgba(20,20,90,0.08);
+}
+
+
+/* Keep hamburger in the top-right of popup */
+
+.smallscreen[open] > summary {
+    position: absolute;
+
+    top: 6px;
+    right: 6px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+
+/* Change hamburger to × when open */
+
+.smallscreen[open] > summary::before {
+    content: "×";
+
+    font-size: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   Menu items
+   --------------------------------------------------------- */
+
+.smallscreen > span {
+    display: flex;
+    align-items: center;
+
+    min-height: 42px;
+
+    margin: 0;
+
+    padding: 7px 9px;
+
+    border-radius: 7px;
+}
+
+.smallscreen[open] > span:first-of-type {
+    margin-top: 38px;
+}
+
+.smallscreen > span img {
+    flex: 0 0 auto;
+
+    width: 17px;
+    height: 17px;
+
+    margin-right: 9px;
+
+    object-fit: contain;
+
+    opacity: 0.7;
+}
+
+.smallscreen > span a {
+    flex: 1;
+
+    color: var(--text) !important;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.smallscreen > span:hover {
+    background: var(--primary-soft);
+}
+
+.smallscreen > span:hover a {
+    color: var(--primary) !important;
+}
+
+
+/* ---------------------------------------------------------
+   Remove the HTML <br> elements
+   --------------------------------------------------------- */
+
+.smallscreen > br {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------
+   Separator before Search
+   --------------------------------------------------------- */
+
+.smallscreen > span:last-of-type {
+    margin-top: 4px;
+
+    padding-top: 11px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* ---------------------------------------------------------
+   Mobile only
+   --------------------------------------------------------- */
+
+@media (max-width: 840px) {
+
+    .smallscreen {
+        display: block !important;
+    }
+
+    /*
+     * Give the heading a little breathing room from
+     * the hamburger without moving the button.
+     */
+
+    #content-all > h4 {
+        padding-right: 42px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Small phones
+   --------------------------------------------------------- */
+
+@media (max-width: 500px) {
+
+    .smallscreen {
+        top: 6px;
+        right: 6px;
+    }
+
+    .smallscreen[open] {
+        width: min(260px, calc(100vw - 28px));
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Dark mode
+   --------------------------------------------------------- */
+
+body.dark-mode .smallscreen[open] {
+    background: rgba(21,21,51,0.98);
+
+    border-color: #29295c;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.45);
+}
+
+body.dark-mode .smallscreen > summary {
+    background: #151533;
+
+    border-color: #29295c;
+
+    color: #aaaaff;
+}
+
+body.dark-mode .smallscreen[open] > summary {
+    background: transparent;
+
+    border-color: transparent;
+}
+
+body.dark-mode .smallscreen > span:hover {
+    background: #20204f;
+}
+
+body.dark-mode .smallscreen > span a {
+    color: #eeeeff !important;
+}
+
+body.dark-mode .smallscreen > span:hover a {
+    color: #aaaaff !important;
+}
+
+body.dark-mode .smallscreen > span:last-of-type {
+    border-color: #29295c;
+}
+
+/* ---------------------------------------------------------
+   Tables / paper listings
+   --------------------------------------------------------- */
+
+#content-all table.listing {
+    width: 100%;
+
+    margin: 18px 0 0;
+
+    border-collapse: separate;
+
+    border-spacing: 0 10px;
+
+    table-layout: auto;
+	
+}
+
+#content-all table.listing td {
+    vertical-align: top;
+}
+
+
+/* School / category row */
+
+table.listing > tbody > tr:not(.search):not(.content):not(:has(h5)) > td
+ {
+    padding: 18px 20px;
+
+    background: var(--surface);
+
+    border-radius: var(--radius);
+
+    color: var(--text);
+
+    font-weight: bold;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+table.listing > tbody > tr > td > details > summary {
+  cursor: pointer;  
+}
+
+table.listing > tbody > tr > td > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+table.listing > tbody > tr > td > details > summary::after {
+  content: "＋";
+  float: right;
+}
+
+
+/* Paper links */
+
+table.listing span.content {       
+    padding: 0;
+    font-weight: normal !important;
+}
+
+table.listing span.content br {
+    display: none;
+}
+
+table.listing span.content a {
+    display: inline-block;
+
+    min-width: 200px;
+
+    padding: 9px 11px;
+	
+    border-radius: 8px;
+
+    background: var(--indigo-vsoft);
+
+    color: #0000ff;
+
+    font-size: 12px;
+    
+
+    line-height: 1.35;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+table.listing span.content a:hover {
+    background: var(--indigo-soft);
+
+    border-color: #9999ff;
+
+    color: var(--hover);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* Intro rows */
+
+#content-all table.listing tr.content td {
+    font-weight: normal !important;
+}
+
+
+/* ---------------------------------------------------------
+   PDF viewer
+   --------------------------------------------------------- */
+
+#viewer {
+    width: 100%;
+    height: 95%;
+
+    margin-top: 3px;
+}
+
+#openFile,
+#viewBookmark,
+#secondaryOpenFile,
+#secondaryViewBookmark {
+    display: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   Overlay bar
+   --------------------------------------------------------- */
+
+
+#overlaybar
+{
+	position:absolute;
+	top:0px;
+	width:100%;
+	background-color: #5555FF;
+	z-index: 2;
+	padding: 3px 0px 3px;
+	color:#FFFFFF;
+}
+
+#overlaybar a,
+#overlaybar a:link,
+#overlaybar a:visited {
+    padding: 2px 5px;
+
+    border-radius: 5px;
+
+    background: #0000cc;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+#overlaybar a:hover,
+#overlaybar a:active {
+    background: #222222;
+
+    color: #ffffff;
+}
+
+#overlaybar #overlayinsert {
+    float: right;
+}
+
+
+/* ---------------------------------------------------------
+   PDF popup
+   --------------------------------------------------------- */
+
+.pdf-popup {
+    position: absolute;
+
+    min-width: 260px;
+    max-width: 320px;
+
+    padding: 12px;
+
+    background: #eeeeff;
+
+    border: 1px solid #aaaaff;
+
+    border-radius: 10px;
+
+    color: #333355;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25);
+
+    z-index: 999999;
+    
+}
+
+.pdf-popup a {
+    display: inline-block;
+
+    margin: 6px 0;
+
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+.pdf-popup a:hover {
+    color: var(--hover);
+}
+
+.pdf-progress {
+    height: 6px;
+
+    margin-top: 10px;
+
+    background: #333333;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+.pdf-progress-bar {
+    width: 100%;
+    height: 100%;
+
+    background: var(--success);
+
+    transform-origin: right;
+    transform: scaleX(1);
+
+    transition: transform linear;
+}
+
+.pdf-popup button {
+    margin-top: 8px;
+
+    padding: 6px 10px;
+
+    border: 0;
+
+    border-radius: 6px;
+
+    background: #444444;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------
+   Footer
+   --------------------------------------------------------- */
+
+#footer {
+    padding: 0;
+
+    background: #fafaff;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 12px;
+
+    color: #7777aa;
+}
+
+#footer #folder-tree {
+    border: 0;
+
+    background: transparent;
+}
+
+
+/* ---------------------------------------------------------
+   Accessibility
+   --------------------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(0, 0, 255, 0.25);
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   Responsive page layout
+   --------------------------------------------------------- */
+
+@media (max-width: 1095px) {
+    #navigation > ul .reducible {
+        display: none;
+    }
+}
+
+@media (max-width: 995px) {
+    .layout-searchbox {
+        display: none !important;
+    }
+}
+
+@media (max-width: 840px) {
+    #web-grid {
+        display: none !important;
+    }
+
+    #web-list {
+        display: block !important;
+    }
+
+    .smallscreen {
+        display: block !important;
+    }
+
+    #folder-tree {
+        display: none !important;
+    }
+	
+	#content-all {
+		position: relative;
+	}
+}
+
+@media (max-width: 795px) {
+    .reverse-element,
+    .reverse-wedge {
+        display: none;
+    }
+
+    #content-all {
+        padding: 24px 20px 20px;
+    }
+
+    #content-all h3 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 695px) {
+    #navigation {
+        display: none !important;
+    }
+
+    #page-wrapper {
+        width: calc(100% - 28px);
+
+        margin: 18px auto 35px;
+
+        border-radius: 13px;
+    }
+
+    #content-all {
+        padding: 22px 16px 18px;
+    }
+
+    h1 {
+        padding-left: 20px;
+
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    #page-wrapper {
+        width: calc(100% - 16px);
+
+        margin: 12px auto 25px;
+
+        border-radius: 11px;
+    }
+
+    #content-all {
+        padding: 20px 12px 16px;
+    }
+
+    #content-all h3 {
+        margin-bottom: 16px;
+
+        font-size: 21px;
+    }
+
+    table.listing {
+        border-spacing: 0 8px;
+    }
+
+    table.listing > tbody > tr:not(.search):not(.content) > td {
+        padding: 15px;
+    }
+
+    table.listing span.content {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 6px;
+    }
+
+    table.listing span.content a {
+        padding: 8px 9px;
+
+        font-size: 12px;
+    }
+
+    tr.content td {
+        padding: 15px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Dark mode
+   --------------------------------------------------------- */
+
+body.dark-mode {
+	--hover: #aaaaff;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(85,85,255,0.16),
+            transparent 35%
+        ),
+        #080819 !important;
+
+    color: #eeeeff;
+}
+
+body.dark-mode #page-wrapper {
+    background: #10102a;
+
+    border-color: #29295c;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.55);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+    color: #f4f4ff;
+}
+
+body.dark-mode h1::after {
+    background:
+        linear-gradient(
+            90deg,
+            #5555ff,
+            #aaaaff
+        );
+}
+
+body.dark-mode h5 {
+    border-color: #5555ff;
+}
+
+body.dark-mode #navigation {
+    background:
+        linear-gradient(
+            135deg,
+            #05051e,
+            #101080,
+            #0000cc
+        );
+}
+
+body.dark-mode #navigation > ul li:hover,
+body.dark-mode #navigation > ul li.current {
+    background: #0000aa;
+}
+
+body.dark-mode #folder-tree,
+body.dark-mode #footer {
+    background: #0d0d25;
+    border-color: #29295c;
+}
+
+body.dark-mode #folder-tree a,
+body.dark-mode #folder-tree a:link,
+body.dark-mode #folder-tree a:visited {
+    color: #aaaaff !important;
+}
+
+body.dark-mode #content-all a {
+    color: #9999ff;
+}
+
+body.dark-mode #content-all a:hover,
+body.dark-mode #content-all a:active {
+    color: #ffaa00;
+}
+
+body.dark-mode #search-bar,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #17173b;
+
+    border-color: #41417a;
+
+    color: #ffffff;
+}
+
+body.dark-mode .search {
+    background: #151533;
+
+    border-color: #29295c;
+}
+
+body.dark-mode table.listing > tbody > tr:not(.search):not(.content) > td {
+    background: #151533;
+
+    border-color: #29295c;
+
+    color: #eeeeff;
+}
+
+body.dark-mode table.listing span.content a {
+    background: #1b1b45;
+
+    border-color: #303064;
+
+    color: #ccccff;
+}
+
+body.dark-mode table.listing span.content a:hover {
+    background: #24245d;
+
+    border-color: #6666ff;
+
+    color: #ffaa00;
+}
+
+body.dark-mode #web-grid
+    > div
+    > div
+    > div
+    > a
+    > span {
+    background:
+        linear-gradient(
+            135deg,
+            #151533,
+            #1b1b45
+        );
+
+    border-color: #303064;
+
+    color: #eeeeff;
+}
+
+body.dark-mode #web-grid
+    > div
+    > div
+    > div
+    > a
+    > span:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #20204f,
+            #292966
+        );
+
+    border-color: #6666ff;
+
+    color: #ffaa00;
+}
+
+body.dark-mode .pdf-popup {
+    background: #19193d;
+
+    border-color: #45457d;
+
+    color: #eeeeff;
+}
+
+body.dark-mode #overlaybar {
+    background:
+        linear-gradient(
+            90deg,
+            #3030cc,
+            #0000ff
+        );
+}
+
+
+/* ---------------------------------------------------------
+   Legacy compatibility
+   --------------------------------------------------------- */
+
+/*
+   Keeps the old fixed-width behaviour only as a minimum
+   constraint where legacy code expects it.
+*/
+
+@media (max-width: 445px) {
+    #content-all {
+        overflow-x: auto;
+    }
+
+    #page-wrapper {
+        width: calc(100% - 16px);
+
+        min-width: 0;
+
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+table.listing > tbody > tr > td > details {
+  interpolate-size: allow-keywords;
+}
+
+table.listing > tbody > tr > td > details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+table.listing > tbody > tr > td > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+table.listing > tbody > tr > td > details > summary::after {
+  content: "＋";
+}
+
+table.listing > tbody > tr > td > details[open] > summary::after {
+  content: "−";
+}
+
+table.listing > tbody > tr > td > details .content {
+  display: inline-block;  
+  transition: height 300ms ease;
+}
+
+table.listing > tbody > tr > td > details[open] .content {
+  height: auto;
+}
