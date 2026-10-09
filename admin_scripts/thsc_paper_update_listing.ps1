@@ -63,13 +63,21 @@ function Clear-ConsoleProgress {
 
 $HistoryFile = Join-Path (Split-Path $PSScriptRoot -Parent) "feed.history.json"
 
-
-
 if ($null -eq $RunStartedUtc) {
     $RunStartedUtc = (Get-Date).ToUniversalTime()
 }
 
-if ($null -eq $LastRunUtc) {
+if ($Initial -and $PSBoundParameters.ContainsKey("Year")) {
+    # Initial upload for a specified year: ignore feed.history.json.
+    $LastRunUtc = [DateTime]::new(
+        $Year, 1, 1, 0, 0, 0, [DateTimeKind]::Utc
+    )
+
+    Write-Host -ForegroundColor Cyan `
+        "Initial upload: ignoring feed.history.json; starting from $($LastRunUtc.ToString('yyyy-MM-ddTHH:mm:ssZ'))."
+}
+elseif ($null -eq $LastRunUtc) {
+    # Normal incremental run: load the previous timestamp from history.
     if (Test-Path $HistoryFile) {
         try {
             $History = Get-Content -Raw -Encoding UTF8 $HistoryFile |
@@ -88,11 +96,10 @@ if ($null -eq $LastRunUtc) {
     }
 }
 
-# Use the earliest representable timestamp for a first run.
-$EffectiveLastRunUtc = [DateTime]::MinValue
-
+# Calculate the effective starting timestamp.
 if ($null -eq $LastRunUtc -or $LastRunUtc -eq [DateTime]::MinValue) {
     $LastRunUtc = [DateTime]::MinValue
+    $EffectiveLastRunUtc = [DateTime]::MinValue
 }
 else {
     # Small overlap protects against filesystem timestamp precision issues.
@@ -112,21 +119,30 @@ if ($PDFTemplateCode -eq "AllAvailable") {
     $AllRunStartedUtc = (Get-Date).ToUniversalTime()
     $AllLastRunUtc = [DateTime]::MinValue
 
-    if (Test-Path $HistoryFile) {
-        try {
-            $History = Get-Content -Raw -Encoding UTF8 $HistoryFile |
-                ConvertFrom-Json
+    if ($Initial -and $PSBoundParameters.ContainsKey("Year")) {
+		$AllLastRunUtc = [DateTime]::new(
+			$Year, 1, 1, 0, 0, 0, [DateTimeKind]::Utc
+		)
 
-            if ($History.LastRunUtc) {
-                $AllLastRunUtc = [DateTime]::Parse(
-                    $History.LastRunUtc
-                ).ToUniversalTime()
-            }
-        }
-        catch {
-            Write-Warning "Could not read $HistoryFile. Treating this as the first incremental run."
-        }
-    }
+		Write-Host -ForegroundColor Cyan `
+			"Initial upload: ignoring feed.history.json; starting from $($AllLastRunUtc.ToString('yyyy-MM-ddTHH:mm:ssZ'))."
+	}
+	elseif (Test-Path $HistoryFile) {
+		try {
+			$History = Get-Content -Raw -Encoding UTF8 $HistoryFile |
+				ConvertFrom-Json
+
+			if ($History.LastRunUtc) {
+				$AllLastRunUtc = [DateTime]::Parse(
+					$History.LastRunUtc
+				).ToUniversalTime()
+			}
+		}
+		catch {
+			Write-Warning `
+				"Could not read $HistoryFile. Treating this as the first incremental run."
+		}
+	}
 
     $StagedUpdates = @(
         $Templates | ForEach-Parallel `
