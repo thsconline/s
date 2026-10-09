@@ -67,7 +67,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2012 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2016 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2020</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2022</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2024 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Abbotsleigh 2025 w. sol</a>
