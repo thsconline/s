@@ -19,6 +19,8 @@ const CLOUDFLARE_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
 const KV_NAMESPACE_ID = process.env.KV_NAMESPACE_ID;
 
 const PUBLIC_API_BASE_URL =  process.env.PUBLIC_API_BASE_URL ||  "https://thsconline.net";
+const PUBLIC_API_BASE_URLWWW =  process.env.PUBLIC_API_BASE_URLWWW ||  "https://www.thsconline.net";
+
 
 const CHUNK_SIZE = 4 * 1024 * 1024;
 
@@ -534,37 +536,27 @@ function buildCloudflarePurgeUrls(
   title,
   fragmentCount
 ) {
-  const base =
-    PUBLIC_API_BASE_URL.replace(
-      /\/+$/,
-      ""
-    );
-
-  const encodedViewNo =
-    encodeURIComponent(viewNo);
-
-  const encodedTitle =
-    encodeURIComponent(title);
-
-  const urls = [
-    `${base}/api/v1/getmetadata/` +
-      `${encodedViewNo}/${encodedTitle}`,
-
-    `${base}/api/v1/countfragments/` +
-      `${encodedViewNo}/${encodedTitle}`
+  const bases = [
+    PUBLIC_API_BASE_URL.replace(/\/+$/, ""),
+    PUBLIC_API_BASE_URLWWW.replace(/\/+$/, "")
   ];
 
-  for (
-    let fragmentIndex = 0;
-    fragmentIndex < fragmentCount;
-    fragmentIndex++
-  ) {
+  const encodedViewNo = encodeURIComponent(viewNo);
+  const encodedTitle = encodeURIComponent(title);
+
+  const urls = [];
+
+  for (const base of [...new Set(bases)]) {
     urls.push(
-      `${base}/api/v1/getfragment/` +
-      `${encodedViewNo}/` +
-      `${encodedTitle}/` +
-      `${fragmentIndex}`
+      `${base}/api/v1/getmetadata/${encodedViewNo}/${encodedTitle}`,
+      `${base}/api/v1/countfragments/${encodedViewNo}/${encodedTitle}`
     );
+
+    for (let fragmentIndex = 0; fragmentIndex < fragmentCount; fragmentIndex++) {
+      urls.push(
+        `${base}/api/v1/getfragment/${encodedViewNo}/${encodedTitle}/${fragmentIndex}`
+      );
+    }
   }
 
   return urls;
