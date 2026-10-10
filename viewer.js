@@ -242,7 +242,6 @@ function loadshell()
 			"<div id=\"overlaybar\" style=\"z-index:1000;width:100%;\">" +
 			titlex +
 			"<span style=\"float:right\">" +
-			"<a href=\"javascript:download('" + viewno + "','" + titlex + "')\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" onclick=\"window.close()\">Close ×</a>" +
 			"</span></div><br>"
 		);
@@ -306,7 +305,7 @@ function loadshell()
 				win.document.write("<\/head><body>");
 				win.document.write(
 					"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-					"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
+					"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads allow-modals\" " +
 					"allowfullscreen=\"1\" " +
 					"src=\"" + embedUrl.href + "\"></iframe>"
 				);
@@ -431,7 +430,7 @@ function loadshell()
 
 			win.document.write(
 				"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-				"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
+				"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads allow-modals\" " +
 				"allowfullscreen=\"1\" " +
 				"src=\"" + embedUrl.href + "\"></iframe>"
 			);
@@ -522,13 +521,14 @@ function loadshell()
 			"<div id=\"overlaybar\" style=\"z-index:1000; width:100%;\">" +
 			titlex +
 			"<span id=\"overlayinsert\" style=\"float:right !important\">" +
+			"<a href=\"javascript:download('" + viewno + "','" + titlex + "')\" class=\"border\">Download File</a>&nbsp;&nbsp;" +
 			"<a class=\"border\" href=\"#v\" onclick=\"window.close()\">Close &#215;</a>" +
 			"</span></div><br>"
 		);
 
 		win.document.write(
 			"<iframe style=\"width:100%;height:96%;\" frameborder=\"0\" " +
-			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads\" " +
+			"sandbox=\"allow-scripts allow-popups allow-same-origin allow-downloads allow-modals\" " +
 			"allowfullscreen=\"1\" " +
 			"src=\"" + embedUrl.href + "\"></iframe>"
 		);
