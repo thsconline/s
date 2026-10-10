@@ -1,1661 +1,1491 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-10T11:07:14Z</updated>
+  <updated>2026-10-10T11:36:39Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Barker 2019</title>
     <collection>1368</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>1368</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
-    <collection>1368</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Penrith 2020</title>
-    <collection>1368</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
-    <collection>1368</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
-    <collection>1368</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>Ascham 2019 w. sol</title>
     <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Hornsby Girls 2019</title>
     <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Penrith 2019 w. sol</title>
     <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2020</title>
+    <title>Shore 2019 w. sol</title>
     <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2020 w. sol</title>
+    <title>Sydney Boys 2019</title>
     <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2020 w. sol</title>
+    <title>Sydney Girls 2019 w. sol</title>
     <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Sydney Grammar 2019</title>
     <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2020</title>
-    <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
-    <collection>1378</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Newington 2020 w. sol</title>
+    <title>Knox 2019 w. sol</title>
     <collection>1578</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2020 w. sol</title>
+    <title>Shore 2019 w. sol</title>
     <collection>1578</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2020 w. sol</title>
-    <collection>1578</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Barker 2019</title>
     <collection>1818</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>1818</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Girraween 2019</title>
     <collection>1818</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2020</title>
+    <title>International Grammar 2019</title>
     <collection>1818</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>1818</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>1818</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
+    <title>Sydney Boys 2019</title>
     <collection>1818</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Giraween 2020</title>
+    <title>Sydney Girls 2019 w. sol</title>
+    <collection>1818</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>James Ruse 2019 w. sol</title>
     <collection>1821</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020</title>
-    <collection>1821</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <title>Cranbrook 2019 w. sol</title>
+    <collection>1826</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020</title>
-    <collection>1821</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <title>James Ruse 2019 w. sol</title>
+    <collection>1826</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Abbotsleigh 2020 w. sol</title>
+    <title>Ascham 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2020 w. sol</title>
+    <title>Barker 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Cheltenham Girls 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cheltenham Girls 2020 w. sol</title>
+    <title>Cranbrook 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Gosford 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>Hornsby Girls 2019</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2020 w. sol</title>
+    <title>Knox 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Loreto Normanhurst 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2020 w. sol</title>
+    <title>North Sydney Boys 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Strathfield Girls 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Penrith 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2020</title>
+    <title>Pymble 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
+    <title>Shore 2019 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020</title>
+    <title>St George Girls 2019</title>
+    <collection>1828</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2019 w. sol</title>
+    <collection>1828</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Girls 2019</title>
+    <collection>1828</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2019 w. sol</title>
+    <collection>1828</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2019</title>
     <collection>2478</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>2478</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
-    <collection>2478</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
-    <collection>2478</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2020 P1</title>
+    <title>Abbotsleigh 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 P1</title>
+    <title>Ascham 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 P1</title>
+    <title>Barker 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020 P1</title>
+    <title>Baulkham Hills 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 P1</title>
+    <title>Cherrybrook Tech 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Homebush Boys 2020 P1</title>
+    <title>Cranbrook 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 P1</title>
+    <title>Fort St 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 P1</title>
+    <title>Glenwood 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 P1</title>
+    <title>Hornsby Girls 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 P1</title>
+    <title>Hurlstone 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 P1</title>
+    <title>James Ruse 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 P1</title>
+    <title>Killara 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2020 P1</title>
+    <title>Kirrawee 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2020 P1</title>
+    <title>Merewether 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 P1</title>
+    <title>Normanhurst Boys 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2020 P1</title>
+    <title>North Sydney Boys 2019 P1</title>
     <collection>2718</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020 P2 (Std.)</title>
+    <title>North Sydney Girls 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Pymble 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Riverview 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Shore 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St George Girls 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St Ursulas 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Girls 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2019 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Killara 2019 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 P2 (Std.)</title>
-    <collection>2727</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Shore 2020 P2 (Std.)</title>
-    <collection>2727</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 P2 (Adv.)</title>
+    <title>Abbotsleigh 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 P2 (Adv.)</title>
+    <title>Barker 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020 P2 (Adv.)</title>
+    <title>Baulkham Hills 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 P2 (Adv.)</title>
+    <title>Cherrybrook Tech 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Homebush Boys 2020 P2 (Adv.)</title>
+    <title>Cranbrook 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 P2 (Adv.)</title>
+    <title>Fort St 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 P2 (Adv.)</title>
+    <title>Hornsby Girls 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 P2 (Adv.)</title>
+    <title>James Ruse 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 P2 (Adv.)</title>
+    <title>Killara 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Riverview 2020 P2 (Adv.)</title>
+    <title>Kirrawee 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 P2 (Adv.)</title>
+    <title>Knox 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2020 P2 (Adv.)</title>
+    <title>Normanhurst Boys 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2020 P2 (Adv.)</title>
+    <title>North Sydney Boys 2019 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020</title>
+    <title>North Sydney Girls 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Pymble 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Riverview 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Roseville 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Shore 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St George Girls 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Girls 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2019 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Barker 2019</title>
     <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020</title>
+    <title>Cranbrook 2019</title>
     <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020</title>
+    <title>Riverview 2019</title>
     <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Danebank 2020</title>
+    <title>St George Girls 2019</title>
     <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>James Ruse 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Kambala 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Kincoppal 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Newington 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>North Sydney Girls 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Riverview 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Girls 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2020</title>
-    <collection>2738</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Barker 2019</title>
     <collection>5028</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020</title>
+    <title>Baulkham Hills 2019</title>
+    <collection>5028</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Hurlstone 2019</title>
+    <collection>5028</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Knox 2019</title>
+    <collection>5028</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>North Sydney Boys 2019</title>
     <collection>5098</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
-    <collection>5098</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 w. sol</title>
+    <title>Girraween 2019</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Hurlstone 2019</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Scots 2020</title>
+    <title>NBCS 2019 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>North Sydney Boys 2019 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
+    <title>Scots 2019</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
+    <collection>5108</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Tech 2019 w. sol</title>
+    <collection>5108</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Cherrybrook Tech 2019 w. sol</title>
+    <collection>5218</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Cherrybrook Tech 2019 w. sol</title>
     <collection>5221</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Newington 2020</title>
+    <title>Knox 2019 w. sol</title>
     <collection>5221</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020</title>
+    <title>Barker 2019 w. sol</title>
     <collection>5222</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Knox 2019 w. sol</title>
     <collection>5222</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5222</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
+    <collection>5222</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5226</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 w. sol</title>
-    <collection>5226</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2020</title>
+    <title>Ascham 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2020 w. sol</title>
+    <title>Caringbah 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 w. sol</title>
+    <title>Cherrybrook Tech 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 w. sol</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Gosford 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>Hornsby Girls 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 w. sol</title>
+    <title>International Grammar 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>International Grammar 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kambala 2020 w. sol</title>
+    <title>Kambala 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Knox 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Loreto Kirribilli 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Riverview 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Riverview 2020 w. sol</title>
+    <title>SCEGGS 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Roseville 2020</title>
+    <title>St George Girls 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2020 w. sol</title>
+    <title>Sydney Girls 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
+    <title>Sydney Tech 2019 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Cherrybrook Tech 2019 w. sol</title>
     <collection>5231</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2020</title>
+    <title>Hornsby Girls 2019</title>
     <collection>5231</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Knox 2019 w. sol</title>
     <collection>5231</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020</title>
+    <title>North Sydney Boys 2019 w. sol</title>
+    <collection>5231</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2019 w. sol</title>
+    <collection>5231</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Knox 2019 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5236</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2020 w. sol</title>
+    <title>Blacktown Boys 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 w. sol</title>
+    <title>Caringbah 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Glenwood 2020 w. sol</title>
+    <title>Glenwood 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2020 w. sol</title>
+    <title>Gosford 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020</title>
+    <title>Hornsby Girls 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>International Grammar 2020 w. sol</title>
+    <title>Hurlstone 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>International Grammar 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2020 w. sol</title>
+    <title>Kings 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>Knox 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2020</title>
+    <title>Manly 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Abbotsleigh 2020 w. sol</title>
+    <title>Pymble 2019 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>SCEGGS 2019 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2019 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Girls 2019 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2019 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Tech 2019 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Ascham 2019 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2020</title>
+    <title>Barker 2019 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
+    <title>Kambala 2019 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2020 w. sol</title>
+    <title>Manly 2019 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 w. sol</title>
+    <title>Pymble 2019 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>Shore 2019 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T11:07:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 w. sol</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Kambala 2020 w. sol</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Manly 2020 w. sol</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Merewether 2020 w. sol</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Pymble 2020</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Shore 2020 w. sol</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>St George Girls 2020 w. sol</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
-    <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Glenwood 2019 w. sol</title>
     <collection>5321</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5321</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Glenwood 2020 w. sol</title>
+    <title>Sydney Tech 2019 w. sol</title>
     <collection>5321</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>5322</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5322</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>5323</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
-    <collection>5326</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
-    <collection>5326</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Cheltenham Girls 2020 w. sol</title>
-    <collection>5326</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2020 w. sol</title>
+    <title>Barker 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Amity 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2020</title>
+    <title>Blacktown Boys 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
+    <title>Caringbah 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2020 w. sol</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 w. sol</title>
+    <title>Gosford 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2020 w. sol</title>
+    <title>Hornsby Girls 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Danebank 2020 w. sol</title>
+    <title>Hurlstone 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Glenwood 2020 w. sol</title>
+    <title>Manly 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>North Sydney Boys 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 w. sol</title>
+    <title>Penrith 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Presbyterian 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
+    <title>St George Girls 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>Sydney Girls 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Sydney Tech 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2020 w. sol</title>
+    <title>Trinity Grammar 2019 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2020 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Trinity Grammar 2020 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Glenwood 2019 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Glenwood 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Sydney Boys 2019</title>
     <collection>5331</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
+    <title>Sydney Tech 2019 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
-    <collection>5331</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5332</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
-    <collection>5332</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
-    <collection>5332</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
-    <collection>5332</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Cheltenham Girls 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020</title>
-    <collection>5333</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
-    <collection>5333</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Killara 2020</title>
-    <collection>5333</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
-    <collection>5333</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
-    <collection>5334</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
-    <collection>5336</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2020</title>
+    <title>Ascham 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
+    <title>Blacktown Boys 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Caringbah 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2020 w. sol</title>
+    <title>Cherrybrook Tech 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cheltenham Girls 2020 w. sol</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2020 w. sol</title>
+    <title>Gosford 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020</title>
+    <title>Hornsby Girls 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 w. sol</title>
+    <title>Hurlstone 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Glenwood 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2020 w. sol</title>
+    <title>Manly 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2020 w. sol</title>
+    <title>North Sydney Boys 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Penrith 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
+    <title>Pymble 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2020 w. sol</title>
+    <title>Shore 2019</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Merewether 2020 w. sol</title>
+    <title>St George Girls 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Newcastle Grammar 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>Sydney Girls 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Sydney Tech 2019 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Riverview 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>St George Girls 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Trinity Grammar 2020 w. sol</title>
-    <collection>5338</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
+    <title>North Sydney Boys 2019 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 w. sol</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>5342</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
-    <collection>5342</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Kings 2020 w. sol</title>
-    <collection>5342</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
-    <collection>5342</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
-    <collection>5342</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
-    <collection>5344</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
-    <collection>5346</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Ascham 2020 w. sol</title>
+    <title>Ascham 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
+    <title>Baulkham Hills 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Blacktown Boys 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2020 w. sol</title>
+    <title>Caringbah 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 w. sol</title>
+    <title>Fort St 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2020 w. sol</title>
+    <title>Girraween 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2020 w. sol</title>
+    <title>Gosford 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Hornsby Girls 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2020 w. sol</title>
+    <title>Hurlstone 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2020 w. sol</title>
+    <title>Killara 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Manly 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2020 w. sol</title>
+    <title>North Sydney Boys 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>North Sydney Girls 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
+    <title>Penrith 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>St George Girls 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Sydney Girls 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
+    <title>Sydney Tech 2019 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2020 w. sol</title>
-    <collection>5348</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>St George Girls 2020</title>
+    <title>Barker 2019</title>
     <collection>5528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2020 w. sol</title>
+    <title>Knox 2019</title>
+    <collection>5528</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Shore 2019</title>
+    <collection>5528</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Ascham 2019 w. sol</title>
     <collection>6428</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2020 w. sol</title>
+    <title>Shore 2019 w. sol</title>
     <collection>6428</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2020 w. sol</title>
+    <title>Hornsby Girls 2019 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>Normanhurst Boys 2019 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2020 w. sol</title>
+    <title>Sydney Grammar 2019 w. sol</title>
+    <collection>6518</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>James Ruse 2019</title>
     <collection>6526</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
+    <title>Shore 2019 w. sol</title>
     <collection>6526</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2020 w. sol</title>
-    <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <title>Sydney Boys 2019 w. sol</title>
+    <collection>6526</collection>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2020 w. sol</title>
+    <title>Caringbah 2019</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2020 w. sol</title>
+    <title>Cherrybrook Tech 2019</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2020 w. sol</title>
+    <title>Hornsby Girls 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2020 w. sol</title>
+    <title>James Ruse 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2020 w. sol</title>
+    <title>Newington 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kotara 2020 w. sol</title>
+    <title>North Sydney Boys 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2020 w. sol</title>
+    <title>Penrith 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2020 w. sol</title>
+    <title>Shore 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2020 w. sol</title>
+    <title>Sydney Boys 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2020</title>
+    <title>Sydney Grammar 2019 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Shore 2020 w. sol</title>
-    <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2020 w. sol</title>
-    <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Girls 2020 w. sol</title>
-    <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2020 w. sol</title>
-    <collection>6528</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
-  </entry>
-  <entry>
-    <title>Riverview 2020 P2 (Std.)</title>
-    <collection>2727</collection>
-    <updated>2026-10-10T11:04:14Z</updated>
+    <updated>2026-10-10T11:36:39Z</updated>
   </entry>
 </feed>
