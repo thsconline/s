@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-10T01:31:18Z</updated>
+  <updated>2026-10-10T01:31:58Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Fort St 2022 w. sol</title>
@@ -1957,5 +1957,95 @@
     <title>North Sydney Boys 2025 P2 (Adv.)</title>
     <collection>2728</collection>
     <updated>2026-10-10T01:31:18Z</updated>
+  </entry>
+  <entry>
+    <title>Pymble 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Caringbah 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Cherrybrook Tech 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Riverview 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Barker 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Sydney Boys 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Newington 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Abbotsleigh 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Shore 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Knox 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>St George Girls 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Sydney Girls 2024 w. sol</title>
+    <collection>1818</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Knox 2024 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Abbotsleigh 2024 w. sol</title>
+    <collection>1828</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Manly 2024 w. sol</title>
+    <collection>5338</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>North Sydney Girls 2024</title>
+    <collection>1378</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>Cheltenham Girls 2024</title>
+    <collection>5218</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
+  </entry>
+  <entry>
+    <title>James Ruse 2024 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:31:58Z</updated>
   </entry>
 </feed>
