@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-10T03:20:48Z</updated>
+  <updated>2026-10-10T03:22:15Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Ravenswood 2021 w. sol</title>
@@ -311,77 +311,77 @@
   <entry xmlns="">
     <title>Ascham 2021 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Killara 2021 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Knox 2021 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Newington 2021 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Shore 2021 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Abbotsleigh 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Baulkham Hills 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Caringbah 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Cheltenham Girls 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Hurlstone 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Knox 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Newington 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>North Sydney Girls 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Sydney Boys 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Sydney Grammar 2021 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Sydney Boys 2021</title>
@@ -1176,7 +1176,7 @@
   <entry xmlns="">
     <title>James Ruse 2021 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-10T01:49:20Z</updated>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
   <entry xmlns="">
     <title>Killara 2021 w. sol</title>
@@ -1587,5 +1587,10 @@
     <title>Abbotsleigh 2022 P2 (Std.)</title>
     <collection>2727</collection>
     <updated>2026-10-10T03:20:48Z</updated>
+  </entry>
+  <entry>
+    <title>Baulkham Hills 2021 w. sol</title>
+    <collection>6528</collection>
+    <updated>2026-10-10T03:22:15Z</updated>
   </entry>
 </feed>
