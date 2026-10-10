@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-09T14:51:53Z</updated>
+  <updated>2026-10-10T01:29:05Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Fort St 2022 w. sol</title>
@@ -1772,5 +1772,65 @@
     <title>Sydney Grammar 2022 w. sol</title>
     <collection>6528</collection>
     <updated>2026-10-09T14:51:53Z</updated>
+  </entry>
+  <entry>
+    <title>Girraween 2023 w. sol</title>
+    <collection>1368</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Cheltenham Girls 2023 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Sydney Boys 2023 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Kinross Wolaroi 2023</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Ascham 2023 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Cranbrook 2023 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Killara 2023</title>
+    <collection>6428</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Pymble 2023 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Blacktown Boys 2023 w. sol</title>
+    <collection>5228</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Fort St 2023 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>James Ruse 2023 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Barker 2023 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-10T01:29:05Z</updated>
   </entry>
 </feed>
