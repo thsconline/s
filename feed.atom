@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-10T01:29:05Z</updated>
+  <updated>2026-10-10T01:30:28Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Fort St 2022 w. sol</title>
@@ -1832,5 +1832,65 @@
     <title>Barker 2023 P2 (Adv.)</title>
     <collection>2728</collection>
     <updated>2026-10-10T01:29:05Z</updated>
+  </entry>
+  <entry>
+    <title>Sydney Girls 2026 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>North Sydney Girls 2026 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Sydney Grammar 2026 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Killara 2026 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Fort St 2026 P1</title>
+    <collection>2718</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Blacktown Boys 2026 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>St George Girls 2026 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Girraween 2026 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Blacktown Boys 2026 w. sol</title>
+    <collection>5328</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Hurlstone 2026 w. sol</title>
+    <collection>5328</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Gosford 2026 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
+  </entry>
+  <entry>
+    <title>Gosford 2026 w. sol</title>
+    <collection>5328</collection>
+    <updated>2026-10-10T01:30:28Z</updated>
   </entry>
 </feed>
