@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-10T08:12:21Z</updated>
+  <updated>2026-10-10T11:07:14Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Girraween 2020 w. sol</title>
@@ -341,82 +341,82 @@
   <entry xmlns="">
     <title>Cranbrook 2020 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Killara 2020 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Shore 2020 P2 (Std.)</title>
     <collection>2727</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Baulkham Hills 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Caringbah 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Cranbrook 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Fort St 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Homebush Boys 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Hornsby Girls 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Hurlstone 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>James Ruse 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>North Sydney Boys 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Riverview 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Sydney Boys 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Sydney Girls 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Sydney Grammar 2020 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Barker 2020</title>
@@ -846,7 +846,7 @@
   <entry xmlns="">
     <title>Hornsby Girls 2020 w. sol</title>
     <collection>5318</collection>
-    <updated>2026-10-10T08:12:21Z</updated>
+    <updated>2026-10-10T11:07:14Z</updated>
   </entry>
   <entry xmlns="">
     <title>Hunters Hill 2020 w. sol</title>
@@ -1652,5 +1652,10 @@
     <title>Sydney Grammar 2020 w. sol</title>
     <collection>6528</collection>
     <updated>2026-10-10T08:12:21Z</updated>
+  </entry>
+  <entry>
+    <title>Riverview 2020 P2 (Std.)</title>
+    <collection>2727</collection>
+    <updated>2026-10-10T11:04:14Z</updated>
   </entry>
 </feed>
