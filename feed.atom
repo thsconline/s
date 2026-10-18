@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-18T06:51:30Z</updated>
+  <updated>2026-10-18T12:11:23Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Barker 2019</title>
@@ -1837,5 +1837,30 @@
     <title>Sydney Grammar 2023</title>
     <collection>6528</collection>
     <updated>2026-10-17T13:12:09Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St George Girls 2020 w. sol</title>
+    <collection>5318</collection>
+    <updated>2026-10-18T09:24:00Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St George Girls 2024 w. sol</title>
+    <collection>5318</collection>
+    <updated>2026-10-18T09:20:28Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St George Girls 2025 w. sol</title>
+    <collection>5318</collection>
+    <updated>2026-10-18T08:12:40Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St George Girls 2026 w. sol</title>
+    <collection>5318</collection>
+    <updated>2026-10-18T08:06:59Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Abbotsleigh 2001 w. sol</title>
+    <collection>5328</collection>
+    <updated>2026-10-18T12:04:42Z</updated>
   </entry>
 </feed>

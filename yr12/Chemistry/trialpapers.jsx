@@ -92,6 +92,10 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2020 w. sol</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Blacktown Boys</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Blacktown Boys 2019 w. sol</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Caringbah</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2010</a><br />
@@ -125,7 +129,7 @@ export default function Page() {
 <tr><td><details open><summary>Fort St</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Fort St 2019 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Fort St 2020</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Fort St 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Fort St 2024 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Girraween</summary><br />

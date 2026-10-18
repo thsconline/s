@@ -34,7 +34,7 @@ export default function Page() {
 </details>
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_extension1.html">English Ext 1 Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>41 papers online</span></span><br />
+<span style={{ paddingLeft: '29px' }}>54 papers online</span></span><br />
 </div></div></div></div>
 </div>
         </>

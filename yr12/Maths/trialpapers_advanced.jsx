@@ -53,7 +53,7 @@ export default function Page() {
 <tr><td><details open><summary>Abbotsleigh</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 1991 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2001</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2001 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2003 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2004 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2006 w. sol</a><br />
@@ -65,7 +65,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2024 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2025</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Abbotsleigh 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Amity</summary><br />
 <span className="content">
@@ -505,7 +505,8 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Loreto Kirribilli</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Loreto Kirribilli 2001 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Loreto Kirribilli 2001 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Loreto Kirribilli 2024 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Manly</summary><br />
 <span className="content">
@@ -708,7 +709,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Riverview 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Riverview 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Riverview 2023 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Riverview 2024 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Riverview 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Riverview 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Roseville</summary><br />
 <span className="content">

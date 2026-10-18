@@ -36,7 +36,7 @@ export default function Page() {
 <a href="hscpapers.html">Chemistry HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers.html">Chemistry Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>184 papers online, 143 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>185 papers online, 145 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="assessment-tasks.html">Chemistry Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>107 papers online, 72 w. sol</span></span><br />

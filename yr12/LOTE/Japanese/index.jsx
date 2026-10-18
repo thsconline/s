@@ -42,13 +42,13 @@ export default function Page() {
 <a href="hscpapers_extension.html">Japanese Extension HSC Papers</a></span><br />
 <br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
-<a href="sacepapers_continuers.html">Japanese Continuers SACE (South Australia) Papers</a></span><br />
+<a target="_blank" href="https://www.dropbox.com/scl/fo/3sak19y7p9g982kpsi7g7/ADX72HGhVQIQQ9PTJFZyg48/SACE?rlkey=wle0lfu16vsiatypifg80f7lj&e=1&dl=0">Japanese Continuers SACE (South Australia) Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
-<a href="vcepapers_continuers.html">Japanese SL VCE (Victoria) Papers</a></span><br />
+<a target="_blank" href="https://www.dropbox.com/scl/fo/3sak19y7p9g982kpsi7g7/ADc_meeKeWd8GbjY3mxHzhM/VCE?rlkey=wle0lfu16vsiatypifg80f7lj&e=1&dl=0">Japanese SL VCE (Victoria) Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
-<a href="wacepapers_continuers.html">Japanese SL WACE (Western Australia) Papers</a></span><br />
+<a target="_blank" href="https://www.dropbox.com/scl/fo/3sak19y7p9g982kpsi7g7/AFs0L4E1JO2khlzVM53rbII/WACE?rlkey=wle0lfu16vsiatypifg80f7lj&e=1&dl=0">Japanese SL WACE (Western Australia) Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
-<a href="tcepapers_continuers.html">Japanese TCE (Tasmania) Papers</a></span><br />
+<a target="_blank" href="https://www.dropbox.com/scl/fo/3sak19y7p9g982kpsi7g7/AKLZKDQI9fAmt1OKdpnaIEw/TCE?rlkey=wle0lfu16vsiatypifg80f7lj&e=1&dl=0">Japanese TCE (Tasmania) Papers</a></span><br />
 <br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_beginners.html">Japanese Beginners Trial Papers</a><br />

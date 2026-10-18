@@ -44,12 +44,12 @@ export default function Page() {
 
 <tr><td><details open><summary>Baulkham Hills</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2010</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2010 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2011 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2012 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2013 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2014 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2015</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2015 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2016 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2017 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Baulkham Hills 2018 w. sol</a><br />
