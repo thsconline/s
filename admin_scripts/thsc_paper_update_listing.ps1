@@ -238,7 +238,19 @@ if ($PDFTemplateCode -eq "AllAvailable") {
 	$FeedTotal = $AllFeedUpdates.Count
 	$FeedCurrent = 0
 
-	foreach ($FeedUpdate in $AllFeedUpdates) {
+	$FilteredFeedUpdates = $AllFeedUpdates
+
+	if ($Initial -and $PSBoundParameters.ContainsKey("Year")) {
+		$YearPattern = "(?<!\d)$Year(?!\d)"
+
+		$FilteredFeedUpdates = @(
+			$AllFeedUpdates | Where-Object {
+				$_.Title -match $YearPattern
+			}
+		)
+	}
+
+	foreach ($FeedUpdate in $FilteredFeedUpdates) {
 		$FeedCurrent++
 
 		Set-ConsoleProgress `
@@ -661,7 +673,19 @@ if (!(Test-Path $FeedFile)) {
 $Feed = $FeedXml.feed
 $FeedChanged = $false
 
-foreach ($FeedUpdate in $FeedUpdates) {
+$FilteredFeedUpdates = $FeedUpdates
+
+if ($Initial -and $PSBoundParameters.ContainsKey("Year")) {
+    $YearPattern = "(?<!\d)$Year(?!\d)"
+
+    $FilteredFeedUpdates = @(
+        $FeedUpdates | Where-Object {
+            $_.Title -match $YearPattern
+        }
+    )
+}
+
+foreach ($FeedUpdate in $FilteredFeedUpdates) {
     $PKeyTitle = ([string]$FeedUpdate.Title).Trim()
     $PKeyCollection = ([string]$FeedUpdate.Collection).Trim()
 

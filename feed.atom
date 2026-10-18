@@ -1,801 +1,856 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-18T13:00:04Z</updated>
+  <updated>2026-10-18T13:35:26Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Shore 2017 w. sol</title>
+    <collection>1378</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2018</title>
-    <collection>1368</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Smiths Hill 2017</title>
+    <collection>1378</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Presbyterian 2018 w. sol</title>
-    <collection>1368</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
-    <collection>1368</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Knox 2018 w. sol</title>
+    <title>Riverview 2017</title>
     <collection>1578</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
     <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2018</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Cranbrook 2017 w. sol</title>
+    <collection>1826</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Caringbah 2017 w. sol</title>
+    <collection>1828</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Presbyterian 2018 w. sol</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Sydney Grammar 2017 w. sol</title>
+    <collection>1828</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2018 w. sol</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Riverview 2018</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
-    <collection>1821</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>North Sydney Girls 2018</title>
-    <collection>1821</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Scots 2018 w. sol</title>
-    <collection>1821</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Ascham 2018 w. sol</title>
+    <title>Abbotsleigh 2017 w. sol</title>
     <collection>2478</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>2478</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2018 w. sol</title>
+    <title>Newington 2017 w. sol</title>
     <collection>2478</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018</title>
+    <title>Riverview 2017</title>
+    <collection>2478</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2017 w. sol</title>
+    <collection>2478</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Caringbah 2017 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Barker 2017 w. sol</title>
     <collection>5028</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2018 w. sol</title>
+    <title>Baulkham Hills 2017</title>
     <collection>5028</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2018 w. sol</title>
+    <title>Knox 2017</title>
     <collection>5028</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2018</title>
+    <title>Pymble 2017</title>
     <collection>5028</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018</title>
+    <title>Baulkham Hills 2017</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>James Ruse 2017</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2018</title>
+    <title>Normanhurst Boys 2017 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
+    <title>Sydney Boys 2017 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
+    <collection>5098</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Scots 2018 w. sol</title>
+    <title>Manly 2017</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
+    <title>Scots 2017 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2018 w. sol</title>
+    <title>Sydney Boys 2017 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2018 w. sol</title>
-    <collection>5218</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Sydney Grammar 2017 w. sol</title>
+    <collection>5108</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kings 2018 w. sol</title>
-    <collection>5218</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Sydney Tech 2017 w. sol</title>
+    <collection>5108</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2018 w. sol</title>
+    <title>Kings 2017 w. sol</title>
+    <collection>5218G</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Cherrybrook Tech 2017 w. sol</title>
     <collection>5221</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2018 w. sol</title>
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5222</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>North Sydney Girls 2017 w. sol</title>
+    <collection>5222</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5226</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
+    <collection>5226</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2017 w. sol</title>
+    <collection>5226</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2018 w. sol</title>
+    <title>Caringbah 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>International Grammar 2018 w. sol</title>
+    <title>Cherrybrook Tech 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>Cranbrook 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2018 w. sol</title>
+    <title>International Grammar 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Riverview 2018 w. sol</title>
+    <title>Shore 2017</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2018 w. sol</title>
+    <title>St Aloysius 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2018 w. sol</title>
+    <title>Sydney Girls 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2018 w. sol</title>
+    <title>Sydney Tech 2017 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>Trinity Grammar 2017 w. sol</title>
+    <collection>5228</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Cherrybrook Tech 2017 w. sol</title>
     <collection>5231</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2018</title>
+    <title>North Sydney Boys 2017 w. sol</title>
+    <collection>5231</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2018 w. sol</title>
+    <title>North Sydney Girls 2017 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5236</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
+    <collection>5236</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Barker 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2018 w. sol</title>
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>International Grammar 2018 w. sol</title>
+    <title>Caringbah 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018</title>
+    <title>Cherrybrook Tech 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2018</title>
+    <title>Fort St 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>Gosford 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2018 w. sol</title>
+    <title>International Grammar 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2018</title>
+    <title>Knox 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2018 w. sol</title>
+    <title>Pymble 2017 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Girls 2017 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Tech 2017 w. sol</title>
+    <collection>5238</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Boys 2017 w. sol</title>
+    <collection>5321</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Girraween 2017 w. sol</title>
     <collection>5322</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Scots 2018 w. sol</title>
-    <collection>5323</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Girraween 2018 w. sol</title>
+    <title>Girraween 2017 w. sol</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
+    <collection>5326</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2017 w. sol</title>
+    <collection>5326</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2018 w. sol</title>
+    <title>Caringbah 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2018 w. sol</title>
+    <title>Cranbrook 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2018 w. sol</title>
+    <title>Fort St 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2018 w. sol</title>
+    <title>Girraween 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2018 w. sol</title>
+    <title>Gosford 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2018 w. sol</title>
+    <title>Hornsby Girls 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2018 w. sol</title>
+    <title>Hunters Hill 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2018 w. sol</title>
+    <title>Hurlstone 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>Killara 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2018 w. sol</title>
+    <title>Kirrawee 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kirrawee 2018 w. sol</title>
+    <title>Manly 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2018 w. sol</title>
+    <title>Normanhurst Boys 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>North Sydney Girls 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2018 w. sol</title>
+    <title>Penrith 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2018 w. sol</title>
+    <title>Pymble 2017</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2018 w. sol</title>
+    <title>Shore 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2018 w. sol</title>
+    <title>St George Girls 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
+    <title>Sydney Boys 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2018 w. sol</title>
+    <title>Sydney Girls 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2018 w. sol</title>
+    <title>Sydney Tech 2017 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>Pymble 2017</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2018 w. sol</title>
-    <collection>5333</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5334</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2018 w. sol</title>
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>Girraween 2017 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
+    <collection>5336</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Killara 2017 w. sol</title>
+    <collection>5336</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2017 w. sol</title>
+    <collection>5336</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2018 w. sol</title>
+    <title>Caringbah 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2018 w. sol</title>
+    <title>Cherrybrook Tech 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2018</title>
+    <title>Cranbrook 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2018 w. sol</title>
+    <title>Fort St 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2018 w. sol</title>
+    <title>Girraween 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2018 w. sol</title>
+    <title>Gosford 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2018 w. sol</title>
+    <title>Hornsby Girls 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2018 w. sol</title>
+    <title>Hunters Hill 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2018 w. sol</title>
+    <title>Hurlstone 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2018 w. sol</title>
+    <title>Killara 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2018 w. sol</title>
+    <title>Manly 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Merewether 2018 w. sol</title>
+    <title>Normanhurst Boys 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>North Sydney Girls 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2018 w. sol</title>
+    <title>Penrith 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2018 w. sol</title>
+    <title>Shore 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2018 w. sol</title>
+    <title>St George Girls 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
+    <title>Sydney Boys 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2018 w. sol</title>
+    <title>Sydney Girls 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2018 w. sol</title>
+    <title>Sydney Tech 2017 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2018 w. sol</title>
+    <title>Baulkham Hills 2017</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>Girraween 2017 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>North Sydney Girls 2017 w. sol</title>
+    <collection>5341</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Girls 2017 w. sol</title>
+    <collection>5342</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2018 w. sol</title>
+    <title>Killara 2017 w. sol</title>
+    <collection>5343</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Girls 2017 w. sol</title>
+    <collection>5343</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2017 w. sol</title>
+    <collection>5343</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>Girraween 2017 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>Trinity Grammar 2017 w. sol</title>
+    <collection>5346</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Blacktown Boys 2018 w. sol</title>
+    <title>Caringbah 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2018 w. sol</title>
+    <title>Fort St 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2018 w. sol</title>
+    <title>Girraween 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2018 w. sol</title>
+    <title>Gosford 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2018 w. sol</title>
+    <title>Hunters Hill 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2018 w. sol</title>
+    <title>Hurlstone 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2018 w. sol</title>
+    <title>James Ruse 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2018 w. sol</title>
+    <title>Killara 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
+    <title>Manly 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2018 w. sol</title>
+    <title>Normanhurst Boys 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2018 w. sol</title>
+    <title>North Sydney Boys 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2018 w. sol</title>
+    <title>North Sydney Girls 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2018 w. sol</title>
+    <title>Penrith 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2018 w. sol</title>
+    <title>St George Girls 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2018 w. sol</title>
+    <title>Sydney Boys 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2018 w. sol</title>
+    <title>Sydney Girls 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
+    <title>Sydney Grammar 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2018 w. sol</title>
+    <title>Sydney Tech 2017 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
-    <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2018 w. sol</title>
-    <collection>5348</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Shore 2018 w. sol</title>
+    <title>Newcastle Grammar 2017</title>
     <collection>6428</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2018 w. sol</title>
+    <title>Shore 2017 w. sol</title>
+    <collection>6428</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2017 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2018 w. sol</title>
-    <collection>6518</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Caringbah 2017 w. sol</title>
+    <collection>6528</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2018 w. sol</title>
-    <collection>6518</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Manly 2018 w. sol</title>
-    <collection>6518</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Boys 2018 w. sol</title>
-    <collection>6518</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
-    <collection>6518</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2018 w. sol</title>
-    <collection>6526</collection>
-    <updated>2026-10-18T13:00:04Z</updated>
+    <title>Girraween 2017</title>
+    <collection>6528</collection>
+    <updated>2026-10-18T13:35:26Z</updated>
   </entry>
 </feed>
