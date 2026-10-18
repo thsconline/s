@@ -235,7 +235,7 @@ if ($PDFTemplateCode -eq "AllAvailable") {
 		}
 	)
 
-	$FeedTotal = $AllFeedUpdates.Count
+	
 	$FeedCurrent = 0
 
 	$FilteredFeedUpdates = $AllFeedUpdates
@@ -249,7 +249,7 @@ if ($PDFTemplateCode -eq "AllAvailable") {
 			}
 		)
 	}
-
+	$FeedTotal = $FilteredFeedUpdates.Count
 	foreach ($FeedUpdate in $FilteredFeedUpdates) {
 		$FeedCurrent++
 
