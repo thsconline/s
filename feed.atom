@@ -1,1311 +1,1396 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-18T13:35:57Z</updated>
+  <updated>2026-10-18T13:37:50Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
-    <collection>1378</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2016</title>
+    <title>Cherrybrook Tech 2015 w. sol</title>
     <collection>1578</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Hills Grammar 2015 w. sol</title>
+    <collection>1578</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Pymble 2015 w. sol</title>
+    <collection>1578</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Ravenswood 2015</title>
+    <collection>1578</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Shore 2015 w. sol</title>
+    <collection>1578</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>James Ruse 2015 w. sol</title>
     <collection>1818</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
-    <collection>1818</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Giraween 2015</title>
     <collection>1821</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2016 w. sol</title>
+    <title>James Ruse 2015</title>
+    <collection>1821</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Cranbrook 2015</title>
     <collection>1826</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>1826</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
-    <collection>1826</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Ascham 2015 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kings 2016</title>
+    <title>Newington 2015 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>1828</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
-    <collection>1828</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2016</title>
+    <title>Riverview 2015 w. sol</title>
     <collection>2478</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Newington 2016 w. sol</title>
-    <collection>2478</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>SCEGGS 2016 w. sol</title>
-    <collection>2478</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2016</title>
-    <collection>2478</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Cranbrook 2016 P2 (Adv.)</title>
+    <title>Barker 2015 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Newington 2016 P2 (Adv.)</title>
+    <title>Burwood Girls 2015 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 P2 (Adv.)</title>
+    <title>Hurlstone 2015 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 P2 (Adv.)</title>
+    <title>Kirrawee 2015 P2 (Adv.)</title>
     <collection>2728</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2016 w. sol</title>
+    <title>Port Hacking 2015 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Ryde Secondary 2015 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>St Catherines 2015 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Strathfield Girls 2015 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2015 P2 (Adv.)</title>
+    <collection>2728</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>James Ruse 2015</title>
+    <collection>2738</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5028</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Pymble 2015</title>
     <collection>5028</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2016</title>
+    <title>Roseville 2015</title>
     <collection>5028</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2016 w. sol</title>
+    <title>Baulkham Hills 2015</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>James Ruse 2015</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Normanhurst Boys 2015 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5098</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Sydney Girls 2015 w. sol</title>
+    <collection>5098</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Grammar 2015 w. sol</title>
+    <collection>5098</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>James Ruse 2015</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Scots 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Sydney Grammar 2015</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5108</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2016 w. sol</title>
-    <collection>5218G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Kings 2016 w. sol</title>
-    <collection>5218G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5222</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5222</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
+    <collection>5222</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5226</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Hills Grammar 2015 w. sol</title>
     <collection>5226</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5226</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
+    <collection>5226</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2015 w. sol</title>
+    <collection>5226</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2016 w. sol</title>
+    <title>Caringbah 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2016 w. sol</title>
+    <title>International Grammar 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>International Grammar 2016 w. sol</title>
+    <title>Kambala 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kambala 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2016 w. sol</title>
+    <title>Penrith 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St Aloysius 2016</title>
+    <title>Shore 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2016</title>
+    <title>St Aloysius 2015</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016 w. sol</title>
+    <title>Sydney Girls 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
+    <title>Trinity Grammar 2015 w. sol</title>
     <collection>5228</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Cherrybrook Tech 2015 w. sol</title>
     <collection>5231</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
+    <collection>5231</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5232</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
+    <collection>5232</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5236</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hills Grammar 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5236</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016 w. sol</title>
+    <title>Sydney Girls 2015 w. sol</title>
     <collection>5236</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5236</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5236</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Trinity Grammar 2015 w. sol</title>
+    <collection>5236</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2016</title>
+    <title>Caringbah 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2016 w. sol</title>
+    <title>Fort St 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2016 w. sol</title>
+    <title>Gosford 2015</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016</title>
+    <title>Hurlstone 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>International Grammar 2016 w. sol</title>
+    <title>International Grammar 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016</title>
+    <title>Knox 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2016 w. sol</title>
+    <title>Moriah 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Moriah 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Sydney Girls 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016 w. sol</title>
+    <title>Trinity Grammar 2015 w. sol</title>
     <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
-    <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
-    <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
-    <collection>5238</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2016 w. sol</title>
+    <title>Barker 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2016 w. sol</title>
+    <title>Frensham 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2016 w. sol</title>
+    <title>Hills Grammar 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>International Grammar 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2016 w. sol</title>
+    <title>Kinross Wolaroi 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>MLC 2016 w. sol</title>
+    <title>Knox 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2016 w. sol</title>
+    <title>Pymble 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5318G</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5321</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5321</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5321</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
+    <collection>5321</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Newington 2015 w. sol</title>
+    <collection>5321</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Boys 2015 w. sol</title>
+    <collection>5321</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Girls 2015 w. sol</title>
+    <collection>5321</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Girraween 2015 w. sol</title>
     <collection>5322</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5322</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5322</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5323</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>James Ruse 2015</title>
     <collection>5323</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
+    <collection>5323</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2015 w. sol</title>
+    <collection>5323</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Tech 2015 w. sol</title>
+    <collection>5323</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5324</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Scots 2016 w. sol</title>
+    <title>Moriah 2015</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2016 w. sol</title>
+    <title>Newington 2015</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Shore 2015 w. sol</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5326</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Abbotsleigh 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
+    <collection>5326</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2015 w. sol</title>
+    <collection>5326</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Barker 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Barker 2016 w. sol</title>
+    <title>Caringbah 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Cherrybrook Tech 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2016 w. sol</title>
+    <title>Fort St 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2016 w. sol</title>
+    <title>Frensham 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hills Grammar 2016 w. sol</title>
+    <title>Hills Grammar 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2016 w. sol</title>
+    <title>Hurlstone 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2016 w. sol</title>
+    <title>International Grammar 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>International Grammar 2016 w. sol</title>
+    <title>Kinross Wolaroi 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Kirrawee 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>Knox 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kinross Wolaroi 2016 w. sol</title>
+    <title>Manly 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Kirrawee 2016 w. sol</title>
+    <title>Newington 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2016 w. sol</title>
+    <title>Normanhurst Boys 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>MLC 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2016 w. sol</title>
+    <title>Penrith 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Presbyterian 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>Pymble 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2016 w. sol</title>
+    <title>Shore 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Presbyterian 2016 w. sol</title>
+    <title>St George Girls 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2016 w. sol</title>
+    <title>Sydney Girls 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St Catherines 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Trinity Grammar 2015 w. sol</title>
     <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
-    <collection>5328</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Cherrybrook Tech 2015</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5331</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
+    <collection>5331</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Boys 2015 w. sol</title>
+    <collection>5331</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Girls 2015 w. sol</title>
+    <collection>5331</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Boys 2015 w. sol</title>
+    <collection>5331</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Sydney Girls 2015 w. sol</title>
+    <collection>5331</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5332</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
     <collection>5332</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Loreto Kirribilli 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5333</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
+    <collection>5333</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5334</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Loreto Kirribilli 2016 w. sol</title>
+    <title>Newington 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>SCEGGS 2016 w. sol</title>
+    <title>Penrith 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2016 w. sol</title>
+    <title>Shore 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>St George Girls 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5336</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Abbotsleigh 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
+    <collection>5336</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Trinity Grammar 2015 w. sol</title>
+    <collection>5336</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Ascham 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2016 w. sol</title>
+    <title>Barker 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2016 w. sol</title>
+    <title>Caringbah 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cheltenham Girls 2016</title>
+    <title>Cheltenham Girls 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cherrybrook Tech 2016 w. sol</title>
+    <title>Cherrybrook Tech 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Cranbrook 2016 w. sol</title>
+    <title>Fort St 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2016 w. sol</title>
+    <title>Frensham 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2016 w. sol</title>
+    <title>Hills Grammar 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2016 w. sol</title>
+    <title>Hunters Hill 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2016 w. sol</title>
+    <title>Hurlstone 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>International Grammar 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2016 w. sol</title>
+    <title>Kambala 2015</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>MLC 2016 w. sol</title>
+    <title>Kinross Wolaroi 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Newcastle Grammar 2016 w. sol</title>
+    <title>Knox 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2016 w. sol</title>
+    <title>Manly 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Normanhurst Boys 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2016 w. sol</title>
+    <title>Penrith 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2016 w. sol</title>
+    <title>Pymble 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St Catherines 2016 w. sol</title>
+    <title>Shore 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2016 w. sol</title>
+    <title>St George Girls 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016 w. sol</title>
+    <title>Sydney Girls 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
+    <title>Trinity Grammar 2015 w. sol</title>
     <collection>5338</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5341</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5342</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
+    <collection>5342</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>Baulkham Hills 2015</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Loreto Kirribilli 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ravenswood 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <title>North Sydney Boys 2015 w. sol</title>
+    <collection>5344</collection>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
-    <collection>5343</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Baulkham Hills 2016</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Killara 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>Scots 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Loreto Kirribilli 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
+    <title>Trinity Grammar 2015 w. sol</title>
     <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
-    <collection>5346</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Abbotsleigh 2016 w. sol</title>
+    <title>Ascham 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Ascham 2016 w. sol</title>
+    <title>Barker 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Caringbah 2016 w. sol</title>
+    <title>Caringbah 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Fort St 2016 w. sol</title>
+    <title>Cherrybrook Tech 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Fort St 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Gosford 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hornsby Girls 2016 w. sol</title>
+    <title>Gosford 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hunters Hill 2016 w. sol</title>
+    <title>Hills Grammar 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Hurlstone 2016 w. sol</title>
+    <title>Hunters Hill 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Hurlstone 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Killara 2016 w. sol</title>
+    <title>International Grammar 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Knox 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2016 w. sol</title>
+    <title>Kinross Wolaroi 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>MLC 2016 w. sol</title>
+    <title>Knox 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Normanhurst Boys 2016 w. sol</title>
+    <title>Manly 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Boys 2016 w. sol</title>
+    <title>Masada 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>North Sydney Girls 2016 w. sol</title>
+    <title>Normanhurst Boys 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Penrith 2016 w. sol</title>
+    <title>North Sydney Boys 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>PHCS 2016 w. sol</title>
+    <title>North Sydney Girls 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Pymble 2016 w. sol</title>
+    <title>Penrith 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St Catherines 2016 w. sol</title>
+    <title>Roseville 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>St George Girls 2016 w. sol</title>
+    <title>St George Girls 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Boys 2016 w. sol</title>
+    <title>Sydney Boys 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Girls 2016 w. sol</title>
+    <title>Sydney Girls 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
+    <title>Sydney Tech 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Trinity Grammar 2016 w. sol</title>
+    <title>Trinity Grammar 2015 w. sol</title>
     <collection>5348</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Newcastle Grammar 2016</title>
+    <title>Scots Albury 2015</title>
     <collection>6428</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Shore 2016 w. sol</title>
+    <title>Shore 2015 w. sol</title>
     <collection>6428</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
+    <title>Baulkham Hills 2015 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>James Ruse 2015 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Manly 2016 w. sol</title>
+    <title>Manly 2015 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Sydney Grammar 2016 w. sol</title>
+    <title>Sydney Grammar 2015 w. sol</title>
     <collection>6518</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Baulkham Hills 2016 w. sol</title>
-    <collection>6526</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Ascham 2016 w. sol</title>
+    <title>Ascham 2015</title>
     <collection>6528</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Girraween 2016 w. sol</title>
+    <title>Girraween 2015 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>James Ruse 2016 w. sol</title>
+    <title>Newington 2015 w. sol</title>
     <collection>6528</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
   <entry xmlns="">
-    <title>Newington 2016 w. sol</title>
+    <title>North Sydney Girls 2015</title>
     <collection>6528</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
-  </entry>
-  <entry xmlns="">
-    <title>Sydney Tech 2016 w. sol</title>
-    <collection>6528</collection>
-    <updated>2026-10-18T13:35:57Z</updated>
+    <updated>2026-10-18T13:37:50Z</updated>
   </entry>
 </feed>
