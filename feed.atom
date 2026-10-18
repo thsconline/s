@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://w3.org">
   <title>THSC Online Change Log</title>
-  <updated>2026-10-18T12:11:23Z</updated>
+  <updated>2026-10-18T12:30:30Z</updated>
   <id>urn:uuid:thsconline-papers-root</id>
   <entry xmlns="">
     <title>Barker 2019</title>
@@ -1862,5 +1862,10 @@
     <title>Abbotsleigh 2001 w. sol</title>
     <collection>5328</collection>
     <updated>2026-10-18T12:04:42Z</updated>
+  </entry>
+  <entry xmlns="">
+    <title>James Ruse 2024 w. sol</title>
+    <collection>5348</collection>
+    <updated>2026-10-18T12:30:08Z</updated>
   </entry>
 </feed>
