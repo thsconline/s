@@ -158,37 +158,51 @@ async function download(viewno, titlex) {
 function loadshell()
 {
 	const rawPath = window.location.pathname;
-	
+
+	// Separate path array for fz routes, preserving valid encoded characters
+	const rawSegments = rawPath.split("/").filter(Boolean);
+	const rawSIndex = rawSegments.indexOf("s");
+
+	window.FZ_PATH_ARRAY = (rawSIndex !== -1)
+	  ? rawSegments.slice(rawSIndex + 1).map(function(segment) {
+		  return segment.replace(/[^A-Za-z0-9._!+=\-]/g, "");
+		})
+	  : [];
+
 	let decodedPath = "";
 	try {
-		decodedPath = decodeURIComponent(rawPath);
+	  decodedPath = decodeURIComponent(rawPath);
 	} catch (e) {
-		console.error("Malformed URL encoding detected:", e);
-		decodedPath = rawPath; 
+	  console.error("Malformed URL encoding detected:", e);
+	  decodedPath = rawPath;
 	}
 
-	let cleanString = decodedPath.replace(/&/g, '_');
+	let cleanString = decodedPath.replace(/&/g, "_");
+
 	// Temporarily protect the allowed abbreviations.
 	cleanString = cleanString
-		.replace(/\(Adv\.\)/g, '___ADV___')
-		.replace(/\(Std\.\)/g, '___STD___');
-	
+	  .replace(/\(Adv\.\)/g, "___ADV___")
+	  .replace(/\(Std\.\)/g, "___STD___");
+
 	const whitelistRegex = /[^A-Za-z0-9._\-\/ ]/g;
-	cleanString = cleanString.replace(whitelistRegex, '');
+	cleanString = cleanString.replace(whitelistRegex, "");
 
 	// Restore allowed parentheses.
 	cleanString = cleanString
-    .replace(/___ADV___/g, '(Adv.)')
-    .replace(/___STD___/g, '(Std.)');
-	
-	const initialSegments = cleanString.split('/').filter(Boolean);
-	const sIndex = initialSegments.indexOf('s');
+	  .replace(/___ADV___/g, "(Adv.)")
+	  .replace(/___STD___/g, "(Std.)");
 
-	window.SAFE_PATH_ARRAY = (sIndex !== -1) ? initialSegments.slice(sIndex + 1) : [];
-	
+	const initialSegments = cleanString.split("/").filter(Boolean);
+	const sIndex = initialSegments.indexOf("s");
+
+	window.SAFE_PATH_ARRAY = (sIndex !== -1)
+	  ? initialSegments.slice(sIndex + 1)
+	  : [];
+
 	if (window.SAFE_PATH_ARRAY.length === 0) {
-        return;
-    }
+	  return;
+	}
+
 	const actionRoute = window.SAFE_PATH_ARRAY[0];
 	
 	switch(actionRoute)
@@ -321,8 +335,8 @@ function loadshell()
 	case "fz":	
 		try
 		{
-			var dkey = window.SAFE_PATH_ARRAY[1] || '';
-			var serve = window.SAFE_PATH_ARRAY[2] || '';
+			var dkey = window.FZ_PATH_ARRAY[1] || '';
+			var serve = window.FZ_PATH_ARRAY[2] || '';
 			if(dkey == "add" || dkey == "legacycode")
 			{
 				if(dkey == "add")
