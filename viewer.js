@@ -177,9 +177,11 @@ function loadshell()
 	  decodedPath = rawPath;
 	}
 
-	let cleanString = decodedPath.replace(/&/g, "_");
+	let cleanString = decodedPath
+	  .replace(/&amp; Solutions/g, "___AMP_SOLUTIONS___")
+	  .replace(/& Solutions/g, "___SOLUTIONS___")
+	  .replace(/&/g, "_");
 
-	// Temporarily protect the allowed abbreviations.
 	cleanString = cleanString
 	  .replace(/\(Adv\.\)/g, "___ADV___")
 	  .replace(/\(Std\.\)/g, "___STD___");
@@ -187,10 +189,11 @@ function loadshell()
 	const whitelistRegex = /[^A-Za-z0-9._\-\/ ]/g;
 	cleanString = cleanString.replace(whitelistRegex, "");
 
-	// Restore allowed parentheses.
 	cleanString = cleanString
 	  .replace(/___ADV___/g, "(Adv.)")
-	  .replace(/___STD___/g, "(Std.)");
+	  .replace(/___STD___/g, "(Std.)")
+	  .replace(/___SOLUTIONS___/g, "& Solutions")
+	  .replace(/___AMP_SOLUTIONS___/g, "& Solutions");
 
 	const initialSegments = cleanString.split("/").filter(Boolean);
 	const sIndex = initialSegments.indexOf("s");
