@@ -37,7 +37,7 @@ export default function Page() {
 <span style={{ paddingLeft: '29px' }}>15 papers online, 9 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="prelimpapers_advanced.html">Maths (2U) Year 11 Yearly Papers </a><br />
-<span style={{ paddingLeft: '29px' }}>298 papers online, 269 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>305 papers online, 275 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="prelimpapers_accelerated.html">Maths Accelerated Year 11 Yearly Papers </a><br />
 <span style={{ paddingLeft: '29px' }}>13 papers online, 13 w. sol</span></span><br />

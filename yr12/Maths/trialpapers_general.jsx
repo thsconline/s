@@ -177,10 +177,12 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Pymble 2020</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Pymble 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Pymble 2023 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Pymble 2024</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Pymble 2024</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Pymble 2026 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Riverview</summary><br />
 <span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Riverview 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Riverview 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Riverview 2024 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5318)}>Riverview 2025 w. sol</a>

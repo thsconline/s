@@ -11,7 +11,9 @@ Param (
 
     [switch]$Initial,
 
-    [int]$Year
+    [int]$Year,
+	
+	[switch]$SkipFeed
 )
 
 
@@ -315,6 +317,10 @@ if ($PDFTemplateCode -eq "AllAvailable") {
 
 	Clear-ConsoleProgress
 
+	if ($SkipFeed) {
+		$FeedChanged = $false
+	}
+
     if ($FeedChanged) {
         $Feed.updated = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 
@@ -336,6 +342,7 @@ if ($PDFTemplateCode -eq "AllAvailable") {
     else {
         Write-Host "feed.atom unchanged."
     }
+	
 
 	@{
 		LastRunUtc = $AllRunStartedUtc.ToString("o")

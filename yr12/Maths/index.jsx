@@ -43,13 +43,13 @@ export default function Page() {
 <br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_general.html">General / Standard Maths Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>190 papers online, 174 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>192 papers online, 176 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_advanced.html">Maths (2U) Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>699 papers online, 662 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>702 papers online, 666 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_extension1.html">Maths Ext 1 Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>810 papers online, 754 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>811 papers online, 754 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_extension2.html">Maths Ext 2 Trial Papers</a><br />
 <span style={{ paddingLeft: '29px' }}>720 papers online, 616 w. sol</span></span><br />
