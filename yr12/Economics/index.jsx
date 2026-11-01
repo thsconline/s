@@ -37,7 +37,7 @@ export default function Page() {
 <a href="hscpapers.html">Economics HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers.html">Economics Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>88 papers online, 59 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>92 papers online, 62 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="assessment-tasks.html">Economics Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>11 papers online, 5 w. sol</span></span><br />

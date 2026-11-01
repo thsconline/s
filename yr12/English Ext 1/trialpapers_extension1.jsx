@@ -137,6 +137,10 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>North Sydney Girls 2020</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>North Sydney Girls 2022</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Pymble</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Pymble 2024</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Riverview</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Riverview 2019</a><br />

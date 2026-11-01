@@ -93,7 +93,14 @@ export default function Page() {
 <tr><td><details open><summary>Cheltenham Girls</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2009 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2010 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2021</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Cheltenham Girls 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Cherrybrook Tech</summary><br />
 <span className="content">

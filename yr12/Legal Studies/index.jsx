@@ -36,7 +36,7 @@ export default function Page() {
 <a href="hscpapers.html">Legal Studies HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers.html">Legal Studies Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>45 papers online, 16 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>46 papers online, 16 w. sol</span></span><br />
 </div></div></div></div>
 </div>
         </>

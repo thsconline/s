@@ -100,7 +100,8 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Manly 2015 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Manly 2016 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Manly 2018 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Manly 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Manly 2020 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Normanhurst Boys</summary><br />
 <span className="content">

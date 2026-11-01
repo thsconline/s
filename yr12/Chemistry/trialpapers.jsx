@@ -82,7 +82,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Barker 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Barker 2022</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Barker 2023</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Barker 2024 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Barker 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Barker 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Baulkham Hills</summary><br />
 <span className="content">
@@ -102,8 +103,10 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2011</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2012</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2019</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2022 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2023 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Caringbah 2024</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Cheltenham Girls</summary><br />
 <span className="content">
@@ -210,7 +213,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Knox 2006</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Knox 2007</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Knox 2019 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Knox 2020 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Knox 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Knox 2026</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Loreto Normanhurst</summary><br />
 <span className="content">
@@ -218,6 +222,7 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Manly</summary><br />
 <span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Manly 2019</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Manly 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Manly 2023 w. sol</a>
 </span></details></td></tr>
@@ -233,7 +238,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Normanhurst Boys 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Normanhurst Boys 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Normanhurst Boys 2022 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Normanhurst Boys 2023 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Normanhurst Boys 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Normanhurst Boys 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>North Sydney Boys</summary><br />
 <span className="content">
@@ -267,7 +273,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Pymble 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Pymble 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Pymble 2023 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Pymble 2024</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Pymble 2024</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Pymble 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Riverview</summary><br />
 <span className="content">
@@ -286,7 +293,8 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Smiths Hill</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Smiths Hill 2022 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Smiths Hill 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Smiths Hill 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>St George Girls</summary><br />
 <span className="content">
@@ -337,13 +345,15 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Grammar 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Grammar 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Grammar 2024 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Grammar 2025 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Grammar 2025 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Grammar 2026 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Tech</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Tech 2012 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Tech 2013 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Tech 2021 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Tech 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Sydney Tech 2025</a>
 </span></details></td></tr>
 
 </tbody></table>

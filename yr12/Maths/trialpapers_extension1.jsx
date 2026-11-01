@@ -595,7 +595,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Newcastle Grammar 2021 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Newcastle Grammar 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Newcastle Grammar 2023 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Newcastle Grammar 2024 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Newcastle Grammar 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5338)}>Newcastle Grammar 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Newington</summary><br />
 <span className="content">

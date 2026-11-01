@@ -110,7 +110,8 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Manly</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Manly 2017</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Manly 2017</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Manly 2023 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Merewether</summary><br />
 <span className="content">
@@ -153,7 +154,11 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2007 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2008 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2009 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2010 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2010 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>North Sydney Girls 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Penrith</summary><br />
 <span className="content">

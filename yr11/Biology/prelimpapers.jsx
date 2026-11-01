@@ -73,6 +73,11 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Knox 2018</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Manly</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Manly 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Manly 2020 w. sol</a>
+</span></details></td></tr>
 <tr><td><details open><summary>North Sydney Girls</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>North Sydney Girls 2014</a><br />

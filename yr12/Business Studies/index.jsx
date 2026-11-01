@@ -36,7 +36,7 @@ export default function Page() {
 <a href="hscpapers.html">Business Studies HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers.html">Business Studies Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>51 papers online, 40 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>52 papers online, 40 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="assessment-tasks.html">Business Studies Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>8 papers online, 6 w. sol</span></span><br />

@@ -73,7 +73,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Barker 2001</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Barker 2003</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Barker 2020 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Barker 2021</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Barker 2021</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Barker 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Baulkham Hills</summary><br />
 <span className="content">
@@ -106,7 +107,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Cheltenham Girls 2008 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Cheltenham Girls 2009 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Cheltenham Girls 2010 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Cheltenham Girls 2011 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Cheltenham Girls 2011 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>Cheltenham Girls 2020 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Cherrybrook Tech</summary><br />
 <span className="content">

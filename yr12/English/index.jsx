@@ -53,7 +53,7 @@ export default function Page() {
 <br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_paper2_advanced.html">English Trial Paper 2 Advanced</a><br />
-<span style={{ paddingLeft: '29px' }}>147 papers online + 1 additional practice resource</span></span><br />
+<span style={{ paddingLeft: '29px' }}>156 papers online + 1 additional practice resource</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_paper2_standard.html">English Trial Paper 2 Standard</a><br />
 <span style={{ paddingLeft: '29px' }}>19 papers online</span></span><br />

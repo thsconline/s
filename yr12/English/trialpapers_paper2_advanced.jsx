@@ -118,6 +118,13 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Cranbrook 2019 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Cranbrook 2020 P2 (Adv.)</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Danebank</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Danebank 2019 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Danebank 2020 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Danebank 2022 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Danebank 2026 P2 (Adv.)</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Fort St</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Fort St 2003 P2 (Adv.)</a><br />
@@ -126,7 +133,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Fort St 2019 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Fort St 2020 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Fort St 2023 P2 (Adv.)</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Fort St 2025 P2 (Adv.)</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Fort St 2025 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Fort St 2026 P2 (Adv.)</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Girraween</summary><br />
 <span className="content">
@@ -189,7 +197,12 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2009 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2019 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2021 P2 (Adv.)</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2024 P2 (Adv.)</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2024 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Knox 2026 P2 (Adv.)</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Manly</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Manly 2025 P2 (Adv.)</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Muirfield</summary><br />
 <span className="content">
@@ -213,7 +226,8 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>North Sydney Boys 2019 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>North Sydney Boys 2020 P2 (Adv.)</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>North Sydney Boys 2025 P2 (Adv.)</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>North Sydney Boys 2025 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>North Sydney Boys 2026 P2 (Adv.)</a>
 </span></details></td></tr>
 <tr><td><details open><summary>North Sydney Girls</summary><br />
 <span className="content">
@@ -235,7 +249,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Pymble 2010 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Pymble 2019 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Pymble 2023 P2 (Adv.)</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Pymble 2024 P2 (Adv.)</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Pymble 2024 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Pymble 2025 P2 (Adv.)</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Riverview</summary><br />
 <span className="content">

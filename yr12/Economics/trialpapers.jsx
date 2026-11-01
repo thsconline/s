@@ -57,7 +57,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Abbotsleigh 2016</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Abbotsleigh 2017 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Abbotsleigh 2021 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Abbotsleigh 2023 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Abbotsleigh 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Abbotsleigh 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Ascham</summary><br />
 <span className="content">
@@ -72,7 +73,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Barker 2012 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Barker 2013 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Barker 2020</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Barker 2022 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Barker 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Barker 2024 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Baulkham Hills</summary><br />
 <span className="content">
@@ -140,6 +142,10 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>North Sydney Girls 2010</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>North Sydney Girls 2011</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Oxley</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Oxley 2025</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Pymble</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Pymble 2001</a><br />
@@ -196,6 +202,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Sydney Grammar 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Sydney Grammar 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Sydney Grammar 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Sydney Grammar 2024 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2478)}>Sydney Grammar 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Tech</summary><br />

@@ -104,6 +104,13 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1378)}>Kings 2013</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1378)}>Kings 2014</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Manly</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1378)}>Manly 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1378)}>Manly 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1378)}>Manly 2021 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1378)}>Manly 2022 w. sol</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Normanhurst Boys</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1378)}>Normanhurst Boys 2021</a>

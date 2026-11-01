@@ -96,6 +96,10 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Shore 2020 P2 (Std.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Shore 2021 P2 (Std.)</a>
 </span></details></td></tr>
+<tr><td><details open><summary>St Aloysius</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>St Aloysius 2022 P2 (Std.)</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Sydney Grammar</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Sydney Grammar 2022 P2 (Std.)</a>
