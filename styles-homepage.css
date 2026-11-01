@@ -813,10 +813,14 @@ body.dark-mode .homepage-footer a:hover {
         font-size: 25px !important;
     }
 
-    .container#links > span > a {
+    .container#links > span > a	{
         min-height: 68px;
         padding: 14px 38px 14px 16px;
         font-size: 14px;
+    }
+	
+	 .container#links > span > a:link, , .container#links > span > a:visited {
+		color: #0000FF !important;
     }
 
     .homepage-footer {
