@@ -61,7 +61,8 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Baulkham Hills</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Baulkham Hills 2020</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Baulkham Hills 2020</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Baulkham Hills 2024</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Caringbah</summary><br />
 <span className="content">
@@ -175,7 +176,8 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Grammar</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Sydney Grammar 2020</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Sydney Grammar 2020</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2738)}>Sydney Grammar 2024</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Trinity Grammar</summary><br />
 <span className="content">

@@ -87,6 +87,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Caringbah 2018 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Caringbah 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Caringbah 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Caringbah 2024 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Caringbah 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Cherrybrook Tech</summary><br />
@@ -113,7 +114,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Fort St 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Fort St 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Fort St 2021 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Fort St 2022 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Fort St 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Fort St 2023 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Girraween</summary><br />
 <span className="content">
@@ -127,6 +129,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2022 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2025 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5238)}>Girraween 2026 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Glenwood</summary><br />

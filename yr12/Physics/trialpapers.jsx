@@ -173,6 +173,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>James Ruse 2013 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>James Ruse 2014 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>James Ruse 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>James Ruse 2017 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>James Ruse 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>James Ruse 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6528)}>James Ruse 2021 w. sol</a><br />

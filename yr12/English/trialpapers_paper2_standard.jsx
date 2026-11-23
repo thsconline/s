@@ -79,12 +79,17 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Knox</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Knox 2021 P2 (Std.)</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Knox 2021 P2 (Std.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Knox 2023 P2 (Std.)</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Newington</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Newington 2021 P2 (Std.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Newington 2022 P2 (Std.)</a>
+</span></details></td></tr>
+<tr><td><details open><summary>Pymble</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Pymble 2023 P2 (Std.)</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Riverview</summary><br />
 <span className="content">
@@ -102,7 +107,8 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Grammar</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Sydney Grammar 2022 P2 (Std.)</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Sydney Grammar 2022 P2 (Std.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2727)}>Sydney Grammar 2023 P2 (Std.)</a>
 </span></details></td></tr>
 
 </tbody></table>

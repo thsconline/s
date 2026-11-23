@@ -314,8 +314,10 @@ export default function Page() {
 <tr><td><details open><summary>Penrith</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Penrith 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Penrith 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Penrith 2022 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Penrith 2023 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Penrith 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5228)}>Penrith 2024 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Presbyterian</summary><br />
 <span className="content">

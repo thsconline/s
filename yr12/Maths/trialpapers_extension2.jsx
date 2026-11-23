@@ -682,6 +682,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Riverview 2008 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Riverview 2009</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Riverview 2010</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Riverview 2024</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5348)}>Riverview 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Roseville</summary><br />

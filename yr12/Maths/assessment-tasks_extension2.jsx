@@ -83,6 +83,12 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Blue Mountains Grammar 2009</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Blue Mountains Grammar 2010</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Caringbah</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Caringbah 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Caringbah 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Caringbah 2024 w. sol</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Cheltenham Girls</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Cheltenham Girls 2007 w. sol</a>
@@ -154,7 +160,6 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2003 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2006 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2007 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2008 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2009 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Killara 2011 w. sol</a><br />
@@ -277,7 +282,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2013 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2014 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2015 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2016 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5346)}>Sydney Tech 2021 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Trinity Grammar</summary><br />
 <span className="content">

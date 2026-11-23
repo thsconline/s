@@ -91,7 +91,9 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2009 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2015 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2019 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2020 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2021</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Baulkham Hills 2022 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Blacktown Boys</summary><br />
 <span className="content">
@@ -129,6 +131,11 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Cranbrook 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Cranbrook 2021 w. sol</a>
 </span></details></td></tr>
+<tr><td><details open><summary>Danebank</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Danebank 2022</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Danebank 2023</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Fort St</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Fort St 2019 w. sol</a><br />
@@ -143,7 +150,8 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Girraween 2016 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Girraween 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Girraween 2020 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Girraween 2022 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Girraween 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Girraween 2024 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Gosford</summary><br />
 <span className="content">
@@ -289,7 +297,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Shore 2019 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Shore 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Shore 2021 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Shore 2022</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1828)}>Shore 2022 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Smiths Hill</summary><br />
 <span className="content">

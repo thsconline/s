@@ -223,7 +223,7 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Danebank 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Danebank 2021</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Danebank 2022 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Danebank 2023</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5328)}>Danebank 2023 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Fort St</summary><br />
 <span className="content">

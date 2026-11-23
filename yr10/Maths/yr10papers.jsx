@@ -216,7 +216,9 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Sydney Grammar 2017 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Sydney Grammar 2018 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Sydney Grammar 2019 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Sydney Grammar 2020 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Sydney Grammar 2020 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Sydney Grammar 2022 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5108)}>Sydney Grammar 2025</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Tech</summary><br />
 <span className="content">

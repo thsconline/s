@@ -123,6 +123,9 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Riverview</summary><br />
 <span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Riverview 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Riverview 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Riverview 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Riverview 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 6518)}>Riverview 2024</a>
 </span></details></td></tr>

@@ -86,7 +86,8 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Shore</summary><br />
 <span className="content">
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5528)}>Shore 2019</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5528)}>Shore 2019</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5528)}>Shore 2021</a>
 </span></details></td></tr>
 <tr><td><details open><summary>St Augustines</summary><br />
 <span className="content">

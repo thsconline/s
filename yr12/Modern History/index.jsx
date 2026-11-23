@@ -36,7 +36,7 @@ export default function Page() {
 <a href="hscpapers.html">Modern History HSC Papers</a></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers.html">Modern History Trial Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>19 papers online</span></span><br />
+<span style={{ paddingLeft: '29px' }}>20 papers online</span></span><br />
 </div></div></div></div>
 </div>
         </>

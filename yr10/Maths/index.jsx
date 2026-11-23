@@ -34,7 +34,7 @@ export default function Page() {
 </details>
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="yr10papers.html">Maths Year 10 Yearly Papers </a><br />
-<span style={{ paddingLeft: '29px' }}>131 papers online, 114 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>133 papers online, 115 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="assessment-tasks.html">Maths Year 10 Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>33 papers online, 30 w. sol</span></span><br />  

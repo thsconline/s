@@ -35,7 +35,7 @@ export default function Page() {
 </details>
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="prelimpapers.html">Biology Year 11 Yearly Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>34 papers online, 20 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>35 papers online, 21 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="assessment-tasks.html">Biology Year 11 Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>2 papers online, 1 w. sol</span></span><br />

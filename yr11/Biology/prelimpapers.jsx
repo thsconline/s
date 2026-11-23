@@ -54,7 +54,8 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Girraween 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Girraween 2022 w. sol</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Girraween 2023 w. sol</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Girraween 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 1368)}>Girraween 2025 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Hornsby Girls</summary><br />
 <span className="content">

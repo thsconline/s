@@ -271,7 +271,8 @@ export default function Page() {
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Shore 2019 P2 (Adv.)</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Shore 2022 P2 (Adv.)</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Shore 2024 P2 (Adv.)</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Shore 2024 P2 (Adv.)</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 2728)}>Shore 2025 P2 (Adv.)</a>
 </span></details></td></tr>
 <tr><td><details open><summary>St Catherines</summary><br />
 <span className="content">

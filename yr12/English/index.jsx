@@ -37,7 +37,7 @@ export default function Page() {
 <br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_paper1.html">English Trial Paper 1 (Texts &amp; Human Experience)</a><br />
-<span style={{ paddingLeft: '29px' }}>139 papers online + 13 additional practice papers</span></span><br />
+<span style={{ paddingLeft: '29px' }}>140 papers online + 13 additional practice papers</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_paper1.html#AOS Discovery">English Trial Paper 1 (AOS Discovery)</a><br />
 <span style={{ paddingLeft: '29px' }}>26 papers online + 24 additional practice papers</span></span><br />
@@ -53,10 +53,10 @@ export default function Page() {
 <br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_paper2_advanced.html">English Trial Paper 2 Advanced</a><br />
-<span style={{ paddingLeft: '29px' }}>156 papers online + 1 additional practice resource</span></span><br />
+<span style={{ paddingLeft: '29px' }}>157 papers online + 1 additional practice resource</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="trialpapers_paper2_standard.html">English Trial Paper 2 Standard</a><br />
-<span style={{ paddingLeft: '29px' }}>20 papers online</span></span><br />
+<span style={{ paddingLeft: '29px' }}>23 papers online</span></span><br />
 <br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="assessment-tasks.html">English Internal Assessment Tasks</a><br />

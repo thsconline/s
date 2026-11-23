@@ -34,7 +34,7 @@ export default function Page() {
 </details>
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="prelimpapers.html">Chemistry Year 11 Yearly Papers</a><br />
-<span style={{ paddingLeft: '29px' }}>76 papers online, 55 w. sol</span></span><br />
+<span style={{ paddingLeft: '29px' }}>96 papers online, 73 w. sol</span></span><br />
 <span><img src="/s/images/icon_folder.png" />&#160;&#160;
 <a href="assessment-tasks.html">Chemistry Year 11 Internal Assessment Tasks</a><br />
 <span style={{ paddingLeft: '29px' }}>19 papers online, 11 w. sol</span></span><br />

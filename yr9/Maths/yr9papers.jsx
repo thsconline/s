@@ -50,7 +50,9 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2015</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2017</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2018</a><br />
-<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2020</a>
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2020</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2023</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Baulkham Hills 2024</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Hornsby Girls</summary><br />
 <span className="content">
@@ -101,6 +103,13 @@ export default function Page() {
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2019</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Boys 2020 w. sol</a>
 </span></details></td></tr>
+<tr><td><details open><summary>North Sydney Girls</summary><br />
+<span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Girls 2019</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Girls 2023 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Girls 2024 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>North Sydney Girls 2025 w. sol</a>
+</span></details></td></tr>
 <tr><td><details open><summary>Penrith</summary><br />
 <span className="content">
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Penrith 2018</a><br />
@@ -108,6 +117,9 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>St George Girls</summary><br />
 <span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>St George Girls 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>St George Girls 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>St George Girls 2018 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>St George Girls 2024 w. sol</a>
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Boys</summary><br />
@@ -155,7 +167,16 @@ export default function Page() {
 </span></details></td></tr>
 <tr><td><details open><summary>Sydney Tech</summary><br />
 <span className="content">
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2009 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2011 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2013 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2014 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2015 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2016 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2017 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2018 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2019 w. sol</a><br />
+<a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2020 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2023 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2024 w. sol</a><br />
 <a href="#v" onClick={(e) => pdf(e.currentTarget, 5098)}>Sydney Tech 2025 w. sol</a>
