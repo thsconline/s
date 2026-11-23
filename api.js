@@ -140,6 +140,16 @@ function getFileName(viewno, titlex) {
             fieldname = fieldname.replace("w. sol Business Studies Trials", "Business Studies Trials & Solutions");
             break;
 
+		case "1811":
+			fieldname = titlex + " Chemistry PT1.pdf";
+			fieldname=fieldname.replace("w. sol Chemistry PT1", "Chemistry PT1 & Solutions");
+			break;
+			
+		case "1812":
+			fieldname = titlex + " Chemistry PT2.pdf";
+			fieldname=fieldname.replace("w. sol Chemistry PT2", "Chemistry PT2 & Solutions");
+			break;
+
         case "1816":
             fieldname = titlex + " Chemistry Prelim HY.pdf";
             fieldname = fieldname.replace("w. sol Chemistry Prelim HY", "Chemistry Prelim HY & Solutions");
@@ -153,6 +163,11 @@ function getFileName(viewno, titlex) {
         case "1821":
             fieldname = titlex + " Chemistry CT1.pdf";
             fieldname = fieldname.replace("w. sol Chemistry CT1", "Chemistry CT1 & Solutions");
+            break;
+
+        case "1822":
+            fieldname = titlex + " Chemistry CT2.pdf";
+            fieldname = fieldname.replace("w. sol Chemistry CT2", "Chemistry CT2 & Solutions");
             break;
 
         case "1823":
@@ -271,6 +286,16 @@ function getFileName(viewno, titlex) {
             fieldname = titlex + " Engineering Studies Trials.pdf";
             fieldname = fieldname.replace("w. sol Engineering Studies Trials", "Engineering Studies Trials & Solutions");
             break;
+
+		case "3068": 
+			fieldname = titlex + " Geography Prelim Yearly.pdf";
+			fieldname=fieldname.replace("w. sol Geography Prelim Yearly", "Geography Prelim Yearly & Solutions");
+			break;
+			
+		case "3078": 
+			fieldname = titlex + " Geography Trials.pdf";
+			fieldname=fieldname.replace("w. sol Geography Trials", "Geography Trials & Solutions");
+			break;
 
         case "3638":
             titlexy = titlex.replace(" History Extension Trials", "");
@@ -655,8 +680,22 @@ function getFileName(viewno, titlex) {
             titlexy = titlex.replace(" PDHPE Trials", "");
             fieldname = titlexy + " PDHPE Trials.pdf";
             fieldname = fieldname.replace("w. sol PDHPE Trials", "PDHPE Trials & Solutions");
+			
+			if (Number(titlex.replace(" w. sol", "").split(" ").pop()) >= 2026) {
+                fieldname = fieldname.replace("PDHPE", "Health & Movement Science");
+            }
             break;
-
+			
+		case "6511":
+			fieldname = titlex + " Physics PT1.pdf";
+			fieldname=fieldname.replace("w. sol Physics PT1", "Physics PT1 & Solutions");
+			break;
+			
+		case "6512":
+			fieldname = titlex + " Physics PT2.pdf";
+			fieldname=fieldname.replace("w. sol Physics PT2", "Physics PT2 & Solutions");
+			break;
+			
         case "6516":
             fieldname = titlex + " Physics Prelim HY.pdf";
             fieldname = fieldname.replace("w. sol Physics Prelim HY", "Physics Prelim HY & Solutions");
@@ -671,7 +710,12 @@ function getFileName(viewno, titlex) {
             fieldname = titlex + " Physics CT1.pdf";
             fieldname = fieldname.replace("w. sol Physics CT1", "Physics CT1 & Solutions");
             break;
-
+			
+		case "6522":
+			fieldname = titlex + " Physics CT2.pdf";
+			fieldname=fieldname.replace("w. sol Physics CT3", "Physics CT3 & Solutions");
+			break;
+			
         case "6523":
             fieldname = titlex + " Physics CT3.pdf";
             fieldname = fieldname.replace("w. sol Physics CT3", "Physics CT3 & Solutions");
